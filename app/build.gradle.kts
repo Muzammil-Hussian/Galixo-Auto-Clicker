@@ -44,6 +44,9 @@ dependencies {
     implementation(project(":core:common:display"))
     implementation(project(":core:common:overlays"))
     implementation(project(":core:common:ui"))
+
+    implementation(project(":core:scenarios"))
+
     implementation(project(":feature:backup"))
     implementation(project(":feature:notifications"))
     implementation(project(":core:common:permissions"))
