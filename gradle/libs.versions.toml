@@ -1,0 +1,113 @@
+[versions]
+
+# Android SDK
+androidCompileSdk = "34"
+androidMinSdk = "24"
+
+# Build script
+googleFirebaseCrashlyticsGradle = "3.0.2"
+googleServices = "4.4.2"
+agp = "8.6.1"
+kotlin = "2.0.21"
+kotlinxCoroutines = "1.8.0"
+ksp = "2.0.21-1.0.28"
+
+
+#AndroidX
+androidxAnnotation = "1.9.1"
+androidxAppCompat = "1.7.0"
+androidxCardView = "1.0.0"
+androidxConstraintLayout = "2.2.0"
+coreKtx = "1.13.0"
+androidxDatastore = "1.1.1"
+androidxFragmentKtx = "1.8.5"
+androidxLifecycle = "2.8.7"
+androidxLifecycleExtension = "2.2.0"
+androidxNavigation = "2.8.4"
+androidxRecyclerView = "1.3.2"
+androidxRoom = "2.6.1"
+androidxSplashScreen = "1.0.1"
+androidxVectorDrawable = "1.2.0"
+
+# Other
+airbnbLottie = "6.5.0"
+googleMaterial = "1.12.0"
+kotlinSerializationJson = "1.6.3"
+googleDaggerHilt = "2.51"
+
+# PlayStore only
+googleFirebaseBom = "33.6.0"
+googleFirebaseCrashlytics = "19.2.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+
+[libraries]
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+androidx-room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "androidxRoom" }
+google-firebase-crashlytics-gradlePlugin = { group = "com.google.firebase.crashlytics", name = "com.google.firebase.crashlytics.gradle.plugin", version.ref = "googleFirebaseCrashlyticsGradle" }
+google-gms-gradlePlugin = { group = "com.google.gms.google-services", name = "com.google.gms.google-services.gradle.plugin", version.ref = "googleServices" }
+
+# Dependencies used in build-logic. Might seem unused but check in files if that is the case
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "androidxRoom" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinSerializationJson" }
+
+# Androidx
+androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "androidxAnnotation" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppCompat" }
+androidx-cardView = { group = "androidx.cardview", name = "cardview", version.ref = "androidxCardView" }
+androidx-constraintLayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidxConstraintLayout" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "androidxSplashScreen" }
+androidx-datastore = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "androidxDatastore" }
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "androidxFragmentKtx" }
+androidx-recyclerView = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "androidxRecyclerView" }
+androidx-lifecycle-common-java8 = { group = "androidx.lifecycle", name = "lifecycle-common-java8", version.ref = "androidxLifecycle" }
+androidx-lifecycle-extensions = { group = "androidx.lifecycle", name = "lifecycle-extensions", version.ref = "androidxLifecycleExtension" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "androidxLifecycle" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidxLifecycle" }
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "androidxNavigation" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "androidxNavigation" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "androidxRoom" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "androidxRoom" }
+androidx-vectorDrawable = { group = "androidx.vectordrawable", name = "vectordrawable-animated", version.ref = "androidxVectorDrawable" }
+
+# Other
+airbnb-lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "airbnbLottie" }
+google-material = { group = "com.google.android.material", name = "material", version.ref = "googleMaterial" }
+kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect", version.ref = "kotlin" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+
+google-dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "googleDaggerHilt" }
+google-dagger-hilt-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "googleDaggerHilt" }
+google-dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "googleDaggerHilt" }
+
+google-firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "googleFirebaseBom" }
+google-firebase-crashlytics-ktx = { group = "com.google.firebase", name = "firebase-crashlytics-ktx", version.ref = "googleFirebaseCrashlytics" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+[plugins]
+# Plugins from external providers
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+androidxNavigationSafeArgs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "androidxNavigation" }
+androidxRoom = { id = "androidx.room", version.ref = "androidxRoom" }
+googleDaggerHiltAndroid = { id = "com.google.dagger.hilt.android", version.ref = "googleDaggerHilt" }
+googleKsp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+googleGms = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+googleCrashlytics = { id = "com.google.firebase.crashlytics", version.ref = "googleFirebaseCrashlyticsGradle" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrainsKotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+
+# Plugins defined by this project
+galixo-androidApplication = { id = "com.galixo.ai.gradle.android.application", version = "unspecified" }
+galixo-androidLibrary = { id = "com.galixo.ai.gradle.android.library", version = "unspecified" }
+galixo-androidRoom = { id = "com.galixo.ai.gradle.android.room", version = "unspecified" }
+galixo-crashlytics = { id = "com.galixo.ai.gradle.crashlytics", version = "unspecified" }
+galixo-hilt = { id = "com.galixo.ai.gradle.android.hilt", version = "unspecified" }
+galixo-kotlinSerialization = { id = "com.galixo.ai.gradle.android.kotlin.serialization", version = "unspecified" }
