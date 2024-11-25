@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="default_thickness">1dp</dimen>
+    <dimen name="default_outer_radius">30dp</dimen>
+    <dimen name="default_inner_radius">4dp</dimen>
+    <dimen name="default_corner_radius">2dp</dimen>
+
+    <dimen name="text_size_item_title">14sp</dimen>
+    <dimen name="text_size_list_item_text_small">14sp</dimen>
+    <dimen name="text_size_list_item_text">16sp</dimen>
+    <dimen name="text_size_list_item_text_big">17sp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+    <dimen name="text_size_overlay_big">30sp</dimen>
+
+
+    <dimen name="margin_horizontal_extra_large">32dp</dimen>
+    <dimen name="margin_horizontal_large">24dp</dimen>
+    <dimen name="margin_horizontal_default">16dp</dimen>
+    <dimen name="margin_horizontal_intermediate">12dp</dimen>
+    <dimen name="margin_horizontal_small">8dp</dimen>
+    <dimen name="margin_horizontal_mini">4dp</dimen>
+    <dimen name="margin_vertical_extra_large">16dp</dimen>
+    <dimen name="margin_vertical_large">12dp</dimen>
+    <dimen name="margin_vertical_default">8dp</dimen>
+    <dimen name="margin_vertical_small">4dp</dimen>
+    <dimen name="margin_vertical_mini">2dp</dimen>
+
+    <dimen name="drawable_padding_small">2dp</dimen>
+
+    <dimen name="elevation_level_2">3dp</dimen>
+    <dimen name="elevation_level_3">6dp</dimen>
+
+    <dimen name="image_button_size">48dp</dimen>
+    <dimen name="item_height">48dp</dimen>
+    <dimen name="item_height_big">62dp</dimen>
+    <dimen name="item_selector">70dp</dimen>
+    <dimen name="item_with_button">80dp</dimen>
+
+    <dimen name="card_view_width_horizontal_list">100dp</dimen>
+    <dimen name="card_view_height_horizontal_list">100dp</dimen>
+
+    <dimen name="dialog_top_bar_height">65dp</dimen>
+    <dimen name="dialog_choice_item_icon_size">32dp</dimen>
+
+    <dimen name="android_bottom_navigation_height">80dp</dimen>
+    <dimen name="margin_fab_secondary_bottom">24dp</dimen>
+
+    <dimen name="dropdown_item_icon_size">24dp</dimen>
+
+    <dimen name="bottom_sheet_min_height">600dp</dimen>
+
+    <dimen name="overlay_menu_btn_size">32dp</dimen>
+
+    <dimen name="overlay_position_selector_thickness">6dp</dimen>
+    <dimen name="overlay_position_selector_radius">20dp</dimen>
+    <dimen name="overlay_position_selector_inner_radius">3dp</dimen>
+    <dimen name="overlay_click_selector_thickness">1dp</dimen>
+    <dimen name="overlay_click_selector_radius">20dp</dimen>
+    <dimen name="overlay_click_selector_inner_radius">3dp</dimen>
+
+    <dimen name="overlay_gesture_recorder_thickness">10dp</dimen>
+    <dimen name="overlay_gesture_recorder_length">60dp</dimen>
+
+    <!-- This must be equals to android_bottom_navigation_height + 16dp-->
+    <dimen name="dialog_create_copy_buttons_bottom_margin">96dp</dimen>
+    <dimen name="empty_list_height">435dp</dimen>
+
+    <dimen name="field_min_height">48dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="padding_4_dp">4dp</dimen>
+    <dimen name="padding_8_dp">8dp</dimen>
+    <dimen name="padding_12_dp">12dp</dimen>
+    <dimen name="padding_16_dp">16dp</dimen>
+    <dimen name="padding_24_dp">24dp</dimen>
+    <dimen name="padding_32_dp">32dp</dimen>
+
+
+    <dimen name="click_point_size">48dp</dimen>
+
+    <!--    Paddings, margins-->
+    <dimen name="dialog_horizontal_margin">24dp</dimen>
+    <dimen name="dialog_vertical_margin">16dp</dimen>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_16_dp"
+    tools:context="com.galixo.autoClicker.core.common.permissions.ui.PermissionDialogFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/lottieAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkerGrey"
+        android:minHeight="240dp"
+        android:visibility="gone"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialAlertDialog.Rounded" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/empty_lottie_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="240dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        tools:lottie_rawRes="@raw/animation_accessibility_service" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_8_dp"
+        android:text="@string/how_to_enable"
+        android:textAppearance="@style/SubHeadingStyle" />
+
+    <TextView
+        android:id="@+id/desc_permission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:lineSpacingExtra="10dp"
+        android:text="@string/description_how_to_enable"
+        android:textAppearance="@style/Description" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_16_dp">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/button_deny_permission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_16_dp"
+            android:text="@string/cancel"
+            android:textAppearance="@style/ButtonHeading"
+            android:textColor="@color/normalTextColor" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/button_request_permission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_request_permission"
+            android:textAppearance="@style/ButtonHeading" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,144 @@
+package com.galixo.autoClicker.core.common.permissions
+
+import android.content.Context
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import com.galixo.autoClicker.core.common.permissions.model.Permission
+import com.galixo.autoClicker.core.common.permissions.ui.PermissionDialogFragment
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import dagger.hilt.android.scopes.ActivityRetainedScoped
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import javax.inject.Inject
+
+
+@ActivityRetainedScoped
+class PermissionsController @Inject constructor() {
+
+    private val permissionsRequestedLeft: MutableSet<Permission> =
+        mutableSetOf()
+
+    private val _currentRequestedPermission: MutableStateFlow<Permission?> =
+        MutableStateFlow(null)
+    val currentRequestedPermission: StateFlow<Permission?> = _currentRequestedPermission
+
+    private var allGrantedCallback: (() -> Unit)? = null
+    private var mandatoryDeniedCallback: (() -> Unit)? = null
+
+
+    fun startPermissionsUiFlow(
+        activity: AppCompatActivity,
+        permissions: List<Permission>,
+        onAllGranted: () -> Unit,
+        onMandatoryDenied: (() -> Unit)? = null,
+    ) {
+        if (permissions.isEmpty()) return
+
+        permissionsRequestedLeft.clear()
+        allGrantedCallback = onAllGranted
+        mandatoryDeniedCallback = onMandatoryDenied
+
+        permissions.forEach { permission ->
+            if (!permission.checkIfGranted(activity)) permissionsRequestedLeft.add(permission)
+        }
+
+        Log.i(TAG, "Requesting missing permissions $permissions")
+
+        handleNextPermission(activity)
+    }
+
+    private fun handleNextPermission(activity: AppCompatActivity) {
+        // All granted ? We are good
+        if (permissionsRequestedLeft.isEmpty()) {
+            Log.i(TAG, "All permission are granted !")
+            notifyAllGranted()
+            return
+        }
+
+        // Take the next permission on the list
+        val nextPermission = permissionsRequestedLeft.popFirst()
+
+        // This permission is optional and has already been requested, skip it
+        if (nextPermission.isOptionalAndRequestedBefore(activity)) {
+            Log.d(TAG, "Skipping already requested permission $nextPermission")
+            handleNextPermission(activity)
+            return
+        }
+
+        // Show the dialog and handle the result
+        Log.i(TAG, "show permission dialog for $nextPermission")
+        activity.showPermissionDialogFragment(nextPermission) { isGranted ->
+            Log.i(TAG, "onPermissionDialogResult: $nextPermission isGranted=$isGranted")
+
+            if (isGranted || nextPermission.isOptional()) handleNextPermission(activity)
+            else activity.showMandatoryPermissionDeniedDialog()
+        }
+    }
+
+    private fun notifyAllGranted() {
+        allGrantedCallback?.invoke()
+        clear()
+    }
+
+    private fun notifyMandatoryDenied() {
+        mandatoryDeniedCallback?.invoke()
+        clear()
+    }
+
+    private fun clear() {
+        allGrantedCallback = null
+        mandatoryDeniedCallback = null
+        _currentRequestedPermission.value = null
+        permissionsRequestedLeft.clear()
+    }
+
+    private fun AppCompatActivity.showPermissionDialogFragment(
+        permission: Permission,
+        resultListener: (isGranted: Boolean) -> Unit
+    ) {
+        // Setup the result listener on the permission request
+        supportFragmentManager.setFragmentResultListener(
+            FRAGMENT_RESULT_KEY_PERMISSION_STATE,
+            this
+        ) { _, bundle ->
+            _currentRequestedPermission.value = null
+            resultListener(bundle.getBoolean(EXTRA_RESULT_KEY_PERMISSION_STATE))
+        }
+
+        // Show the permission request dialog
+        _currentRequestedPermission.value = permission
+        PermissionDialogFragment().show(supportFragmentManager, FRAGMENT_TAG_PERMISSION_DIALOG)
+    }
+
+    private fun AppCompatActivity.showMandatoryPermissionDeniedDialog() {
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.dialog_title_permission_mandatory_denied)
+            .setMessage(R.string.message_permission_mandatory_denied)
+            .setPositiveButton(android.R.string.ok) { _, _ -> notifyMandatoryDenied() }
+            .setOnCancelListener { notifyMandatoryDenied() }
+            .create()
+            .show()
+    }
+
+    private fun Permission.isOptionalAndRequestedBefore(context: Context) =
+        isOptional() && hasBeenRequestedBefore(context)
+
+    private fun MutableSet<Permission>.popFirst(): Permission =
+        first().also(::remove)
+}
+
+/** Tag for permission dialog fragment. */
+internal const val FRAGMENT_TAG_PERMISSION_DIALOG = "PermissionDialog"
+
+/** Fragment result key for the permission granted or not state once dialog is closed. */
+internal const val FRAGMENT_RESULT_KEY_PERMISSION_STATE = ":$FRAGMENT_TAG_PERMISSION_DIALOG:state"
+
+/**
+ * Key for [FRAGMENT_RESULT_KEY_PERMISSION_STATE] result bundle.
+ * Boolean indicating the permission state.
+ */
+internal const val EXTRA_RESULT_KEY_PERMISSION_STATE =
+    "$FRAGMENT_RESULT_KEY_PERMISSION_STATE:isGranted"
+
+
+private const val TAG = "PermissionsController"

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dialog_title_permission_accessibility">Accessibility service</string>
+    <string name="dialog_title_permission_notification">Notification</string>
+
+    <string name="dialog_title_permission_battery">Optimize Battery Usage</string>
+
+    <string name="dialog_title_permission_mandatory_denied">Permission denied</string>
+    <string name="dialog_title_permission_overlay">Overlay</string>
+
+
+    <string name="message_permission_desc_overlay">The overlay permission is required in order to show Auto Clicker
+        interface over the applications you want to automate, allowing you to configure your scenario without stopping
+        the other application.</string>
+    <string name="message_permission_desc_accessibility">Enable Accessibility Services for Auto Clicker to automate clicks in other apps.</string>
+
+    <string name="message_permission_desc_battery">Enable this permission to run the app in background under ultra power saving mode.</string>
+    <string name="message_permission_desc_notification">Optional: Shows the notification while the application is running in order
+        to easily return to the scenario selection screen.</string>
+    <string name="message_permission_mandatory_denied">This permission is mandatory for Auto Clicker.It won\'t be able to work correctly without it.</string>
+
+    <string name="button_request_permission">Request permission</string>
+    <string name="button_deny">Deny</string>
+    <string name="how_to_enable">How to enable</string>
+    <string name="description_how_to_enable">Tap the “Grant Permission” button and\n1. Find “Install service” in settings\n2. Find “Auto Clicker”\n3. Enable the permission</string>
+</resources>
