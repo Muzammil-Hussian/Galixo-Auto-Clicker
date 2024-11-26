@@ -33,7 +33,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 open class MainMenu(
-    private val Scenario: Scenario,
+    private val scenario: Scenario,
     private val onStopClicked: () -> Unit,
 ) : OverlayMenu(theme = R.style.AppTheme) {
 
@@ -53,7 +53,7 @@ open class MainMenu(
 
     override fun onCreate() {
         super.onCreate()
-        viewModel.startTemporaryEdition(Scenario)
+        viewModel.startTemporaryEdition(scenario)
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 launch { viewModel.isPlaying.collect(::updateMenuPlayingState) }
@@ -74,13 +74,13 @@ open class MainMenu(
     }
 
     private fun addPointIfSingleModeCreated() {
-        val isMultiMode = Scenario.scenarioMode == ScenarioMode.MULTI_MODE
+        val isMultiMode = scenario.scenarioMode == ScenarioMode.MULTI_MODE
         setMenuItemVisibility(viewBinding.btnAddClickAction, isMultiMode)
         setMenuItemVisibility(viewBinding.btnAddSwipeAction, isMultiMode)
         setMenuItemVisibility(viewBinding.btnRemoveLastAddedAction, isMultiMode)
         setMenuItemVisibility(viewBinding.lineBottom, isMultiMode)
 
-        if (isMultiMode.not() && Scenario.actions.isEmpty()) {
+        if (isMultiMode.not() && scenario.actions.isEmpty()) {
             onCreateClickAction()
         }
     }
@@ -255,13 +255,13 @@ open class MainMenu(
 
     private fun onCreateClickAction() {
         lifecycleScope.launch(Dispatchers.IO) {
-            val dumbClick = viewModel.createNewClick(
+            val click = viewModel.createNewClick(
                 context, Point(
                     displayConfigManager.displayConfig.sizePx.x / 2,
                     displayConfigManager.displayConfig.sizePx.y / 2
                 )
             )
-            viewModel.addNewAction(dumbClick)
+            viewModel.addNewAction(click)
         }
 
     }
@@ -275,10 +275,10 @@ open class MainMenu(
             val fromPoint = Point(centerPoint.x - 250, centerPoint.y + 200)
             val toPoint = Point(centerPoint.x + 250, centerPoint.y + 200)
 
-            val dumbSwipe =
+            val swipe =
                 viewModel.createNewSwipe(context = context, from = fromPoint, to = toPoint)
 
-            viewModel.addNewAction(dumbSwipe)
+            viewModel.addNewAction(swipe)
         }
     }
 

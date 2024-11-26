@@ -5,8 +5,8 @@
       - Text for menu items.
       - Should be short and concise.
       -->
-    <string name="menu_item_title_dumb_actions">Actions</string>
-    <string name="menu_item_title_dumb_config">Config</string>
+    <string name="menu_item_title_actions">Actions</string>
+    <string name="menu_item_title_config">Config</string>
 
     <string name="content_desc_show_actions">Show or hide the actions created</string>
     <string name="content_desc_open_action_list">Open the list of actions</string>

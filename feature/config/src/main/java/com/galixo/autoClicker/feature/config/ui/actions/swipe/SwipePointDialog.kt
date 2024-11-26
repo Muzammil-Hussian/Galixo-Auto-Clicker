@@ -44,7 +44,7 @@ class SwipePointDialog(
     private lateinit var viewBinding: DialogConfigSwipeActionBinding
 
     override fun onCreateView(): ViewGroup {
-        viewModel.setEditedDumbSwipe(swipeAction)
+        viewModel.setEditedSwipe(swipeAction)
         viewBinding = DialogConfigSwipeActionBinding.inflate(LayoutInflater.from(context)).apply {
 
             with(interval) {
@@ -95,7 +95,7 @@ class SwipePointDialog(
                 launch { viewModel.repeatDelay.collect(::updateRepeatInterval) }
                 launch { viewModel.selectedUnitItem.collect(viewBinding.interval.timeUnitField::setSelectedItem) }
 
-                launch { viewModel.swipeDuration.collect(::updateDumbSwipePressDuration) }
+                launch { viewModel.swipeDuration.collect(::updateSwipePressDuration) }
 //                launch { viewModel.swipeDurationError.collect(viewBinding.swipeDuration.fieldText::setError) }
             }
         }
@@ -128,8 +128,8 @@ class SwipePointDialog(
     }
 
     private fun onSaveButtonClicked() {
-        viewModel.getEditedDumbSwipe()?.let { editedDumbSwipe ->
-            onConfirmClicked(editedDumbSwipe)
+        viewModel.getEditedSwipe()?.let { editedSwipe ->
+            onConfirmClicked(editedSwipe)
             back()
         }
     }
@@ -140,7 +140,7 @@ class SwipePointDialog(
     }
 
 
-    private fun updateDumbSwipePressDuration(duration: String) {
+    private fun updateSwipePressDuration(duration: String) {
         viewBinding.swipeDuration.fieldText.setText(duration, InputType.TYPE_CLASS_NUMBER)
     }
 

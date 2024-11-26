@@ -18,53 +18,53 @@ import javax.inject.Inject
 
 class SwipePointViewModel @Inject constructor() : ViewModel() {
 
-    private val _editedDumbSwipe: MutableStateFlow<Action.Swipe?> = MutableStateFlow(null)
-    private val editedDumbSwipe: Flow<Action.Swipe> = _editedDumbSwipe.filterNotNull()
+    private val _editedSwipe: MutableStateFlow<Action.Swipe?> = MutableStateFlow(null)
+    private val editedSwipe: Flow<Action.Swipe> = _editedSwipe.filterNotNull()
 
     private val _selectedUnitItem: MutableStateFlow<TimeUnitDropDownItem> = MutableStateFlow(TimeUnitDropDownItem.Milliseconds)
     val selectedUnitItem: Flow<TimeUnitDropDownItem> = _selectedUnitItem
 
 
     /** The duration between the press and release of the swipe in milliseconds. */
-    val swipeDuration: Flow<String> = editedDumbSwipe
+    val swipeDuration: Flow<String> = editedSwipe
         .map { it.swipeDurationMs.toString() }
         .take(1)
 
     /** Tells if the press duration value is valid or not. */
-    val swipeDurationError: Flow<Boolean> = editedDumbSwipe
+    val swipeDurationError: Flow<Boolean> = editedSwipe
         .map { it.swipeDurationMs <= 0 }
 
 
     @OptIn(ExperimentalCoroutinesApi::class)
     val repeatDelay: Flow<String> = selectedUnitItem
         .flatMapLatest { unitItem ->
-            editedDumbSwipe
+            editedSwipe
                 .map { unitItem.formatDuration(it.repeatDelayMs) }
                 .take(1)
         }
 
 
-    fun setEditedDumbSwipe(swipe: Action.Swipe) {
+    fun setEditedSwipe(swipe: Action.Swipe) {
         _selectedUnitItem.value = swipe.repeatDelayMs.findAppropriateTimeUnit()
-        _editedDumbSwipe.value = swipe.copy()
+        _editedSwipe.value = swipe.copy()
     }
 
-    fun getEditedDumbSwipe(): Action.Swipe? = _editedDumbSwipe.value
+    fun getEditedSwipe(): Action.Swipe? = _editedSwipe.value
 
 
     fun setPressDurationMs(durationMs: Long) {
-        _editedDumbSwipe.value = _editedDumbSwipe.value?.copy(swipeDurationMs = durationMs)
+        _editedSwipe.value = _editedSwipe.value?.copy(swipeDurationMs = durationMs)
     }
 
     fun setRepeatDelay(delayMs: Long) {
-        _editedDumbSwipe.value = _editedDumbSwipe.value?.let { oldValue ->
+        _editedSwipe.value = _editedSwipe.value?.let { oldValue ->
             val newDelayMs = delayMs.toDurationMs(_selectedUnitItem.value)
             if (oldValue.repeatDelayMs == newDelayMs) return
             oldValue.copy(repeatDelayMs = delayMs)
         }
     }
 
-    fun getRepeatDelayMs() = _editedDumbSwipe.value?.repeatDelayMs ?: 0L
+    fun getRepeatDelayMs() = _editedSwipe.value?.repeatDelayMs ?: 0L
 
     fun setTimeUnit(unit: TimeUnitDropDownItem) { _selectedUnitItem.value = unit }
 

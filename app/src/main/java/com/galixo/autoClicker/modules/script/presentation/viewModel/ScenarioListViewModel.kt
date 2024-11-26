@@ -18,12 +18,12 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ScenarioListViewModel @Inject constructor(
-    private val dumbRepository: IMainRepository,
-    private val dumbEditionRepository: EditionRepository
+    private val mainRepository: IMainRepository,
+    private val editionRepository: EditionRepository
 ) : ViewModel() {
 
-    /** Only Dumb scenario */
-    val allScenarios: Flow<List<Scenario>> = dumbRepository.scenarios
+    /** Only scenario */
+    val allScenarios: Flow<List<Scenario>> = mainRepository.scenarios
 
     fun onDuplicationScenario(scenario: Scenario) = viewModelScope.launch(Dispatchers.IO) {
 
@@ -39,7 +39,7 @@ class ScenarioListViewModel @Inject constructor(
             randomize = scenario.randomize,
             scenarioMode = scenario.scenarioMode
         )
-        dumbRepository.addScenario(newScenario)
+        mainRepository.addScenario(newScenario)
     }
 
     fun addScenario(
@@ -60,7 +60,7 @@ class ScenarioListViewModel @Inject constructor(
                 scenarioMode = scenarioMode
             )
 
-        dumbRepository.addScenario(scenario).also {
+        mainRepository.addScenario(scenario).also {
             // Invoke the callback with the new scenario's database ID
             withContext(Dispatchers.Main) {
                 onCreationComplete.invoke(scenario)
@@ -75,7 +75,7 @@ class ScenarioListViewModel @Inject constructor(
      */
     fun renameScenario(item: Scenario, newName: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            dumbEditionRepository.updateScenario(item.copy(name = newName))
+            editionRepository.updateScenario(item.copy(name = newName))
         }
     }
 
@@ -88,7 +88,7 @@ class ScenarioListViewModel @Inject constructor(
      */
     fun deleteScenario(scenario: Scenario) {
         viewModelScope.launch(Dispatchers.IO) {
-            dumbRepository.deleteScenario(scenario)
+            mainRepository.deleteScenario(scenario)
         }
     }
 }

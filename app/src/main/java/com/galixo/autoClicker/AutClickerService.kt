@@ -6,6 +6,8 @@ import android.app.Service
 import android.content.Intent
 import android.view.KeyEvent
 import android.view.accessibility.AccessibilityEvent
+import com.galixo.autoClicker.AutoClickerService.Companion.LOCAL_SERVICE_INSTANCE
+import com.galixo.autoClicker.AutoClickerService.Companion.getLocalService
 import com.galixo.autoClicker.core.common.base.AndroidExecutor
 import com.galixo.autoClicker.core.common.base.Dumpable
 import com.galixo.autoClicker.core.common.base.requestFilterKeyEvents
@@ -82,7 +84,7 @@ class AutoClickerService : AccessibilityService(), AndroidExecutor {
     lateinit var displayConfigManager: DisplayConfigManager
 
     @Inject
-    lateinit var dumbEngine: ScenarioEngine
+    lateinit var scenarioEngine: ScenarioEngine
 
 
     private var currentScenarioName: String? = null
@@ -95,7 +97,7 @@ class AutoClickerService : AccessibilityService(), AndroidExecutor {
             context = this,
             overlayManager = overlayManager,
             displayConfigManager = displayConfigManager,
-            dumbEngine = dumbEngine,
+            scenarioEngine = scenarioEngine,
             androidExecutor = this,
             onStart = { name ->
                 currentScenarioName = name
@@ -160,7 +162,7 @@ class AutoClickerService : AccessibilityService(), AndroidExecutor {
 
         displayConfigManager.dump(writer)
         overlayManager.dump(writer)
-        dumbEngine.dump(writer)
+        scenarioEngine.dump(writer)
     }
 
     override fun onInterrupt() {}

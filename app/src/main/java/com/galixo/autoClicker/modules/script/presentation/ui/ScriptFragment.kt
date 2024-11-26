@@ -9,6 +9,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.galixo.autClicker.feature.backup.ui.BackupDialogFragment
+import com.galixo.autClicker.feature.backup.ui.BackupDialogFragment.Companion.FRAGMENT_TAG_BACKUP_DIALOG
 import com.galixo.autoClicker.R
 import com.galixo.autoClicker.core.common.base.extensions.beGoneIf
 import com.galixo.autoClicker.core.common.base.extensions.beVisibleIf
@@ -162,7 +164,7 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
         ScenariosToBackup: Collection<Long>? = null,
     ) {
         activity?.let {
-    //        BackupDialogFragment.newInstance(isImport, ScenariosToBackup).show(it.supportFragmentManager, FRAGMENT_TAG_BACKUP_DIALOG)
+            BackupDialogFragment.newInstance(isImport, ScenariosToBackup).show(it.supportFragmentManager, FRAGMENT_TAG_BACKUP_DIALOG)
         }
     }
 

@@ -23,7 +23,7 @@ class LocalService(
     private val context: Context,
     private val overlayManager: OverlayManager,
     private val displayConfigManager: DisplayConfigManager,
-    private val dumbEngine: ScenarioEngine,
+    private val scenarioEngine: ScenarioEngine,
     private val androidExecutor: AndroidExecutor,
     private val onStart: (name: String) -> Unit,
     private val onStop: () -> Unit,
@@ -46,13 +46,13 @@ class LocalService(
 
 
     init {
-        dumbEngine.isRunning
-            .onEach { dumbIsRunning ->
-                onStateChanged(dumbIsRunning, overlayManager.isStackHidden())
+        scenarioEngine.isRunning
+            .onEach { isRunning ->
+                onStateChanged(isRunning, overlayManager.isStackHidden())
             }.launchIn(serviceScope)
 
         overlayManager.onVisibilityChangedListener = {
-            onStateChanged(dumbEngine.isRunning.value, overlayManager.isStackHidden())
+            onStateChanged(scenarioEngine.isRunning.value, overlayManager.isStackHidden())
         }
 
     }
@@ -69,7 +69,7 @@ class LocalService(
         startJob = serviceScope.launch {
             delay(500)
 
-            dumbEngine.init(androidExecutor, scenario)
+            scenarioEngine.init(androidExecutor, scenario)
 
             overlayManager.navigateTo(
                 context = context,
@@ -86,7 +86,7 @@ class LocalService(
             startJob?.join()
             startJob = null
 
-            dumbEngine.release()
+            scenarioEngine.release()
             overlayManager.closeAll(context)
             displayConfigManager.stopMonitoring(context)
 

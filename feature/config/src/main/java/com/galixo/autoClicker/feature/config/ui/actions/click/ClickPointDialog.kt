@@ -78,8 +78,8 @@ class ClickPointDialog(
                 }
 
                 actionDone.setDebouncedOnClickListener {
-                    viewModel.getEditedClick()?.let { editedDumbClick ->
-                        onConfirmClicked.invoke(editedDumbClick)
+                    viewModel.getEditedClick()?.let { editedClick ->
+                        onConfirmClicked.invoke(editedClick)
                         back()
                     }
                 }
@@ -92,7 +92,7 @@ class ClickPointDialog(
     override fun onDialogCreated(dialog: Dialog) {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
-                launch { viewModel.repeatDelay.collect(::updateDumbClickRepeatDelay) }
+                launch { viewModel.repeatDelay.collect(::updateClickRepeatDelay) }
                 launch { viewModel.selectedUnitItem.collect(viewBinding.interval.timeUnitField::setSelectedItem) }
             }
         }
@@ -124,7 +124,7 @@ class ClickPointDialog(
         viewBinding.actionButtons.actionDone.isEnabled = isValidConfig
     }
 
-    private fun updateDumbClickRepeatDelay(delay: String) {
+    private fun updateClickRepeatDelay(delay: String) {
         viewBinding.interval.fieldText.setText(delay, InputType.TYPE_CLASS_NUMBER)
     }
 }

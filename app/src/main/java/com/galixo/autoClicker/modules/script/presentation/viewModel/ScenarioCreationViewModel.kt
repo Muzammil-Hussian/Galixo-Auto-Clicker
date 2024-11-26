@@ -6,10 +6,8 @@ import androidx.lifecycle.viewModelScope
 import com.galixo.autoClicker.R
 import com.galixo.autoClicker.core.common.base.identifier.DATABASE_ID_INSERTION
 import com.galixo.autoClicker.core.common.base.identifier.Identifier
-import com.galixo.autoClicker.core.scenarios.domain.IMainRepository
 import com.galixo.autoClicker.core.scenarios.domain.model.Scenario
 import com.galixo.autoClicker.core.scenarios.domain.model.ScenarioMode
-import com.galixo.autoClicker.feature.config.domain.EditionRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -24,8 +22,6 @@ import javax.inject.Inject
 @HiltViewModel
 class ScenarioCreationViewModel @Inject constructor(
     @ApplicationContext val context: Context,
-    private val mainRepository: IMainRepository,
-    private val dumbEditionRepository: EditionRepository,
 ) : ViewModel() {
 
 
@@ -71,9 +67,6 @@ class ScenarioCreationViewModel @Inject constructor(
             randomize = false,
             scenarioMode = scenarioMode
         )
-
-//        val scenarioDbId = dumbRepository.addScenario(scenario)
-
         return scenario
     }
 }
