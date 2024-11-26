@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">Tuis</string>
+    <string name="title_script">Skrip</string>
+    <string name="title_setting">Instelling</string>
+    <string name="activity_title">Scenario\'s</string>
+    <string name="accessibility_service_description">Hierdie toepassing benodig hierdie diens om die klikke
+wat u geskep het, in te voeg in die ander toepassings sodra die voorwaardes opgespoor is.\n\nGeen
+data sal van hierdie toepassing versamel word nie.</string>
+    <string name="accessibility_permission">Toeganklikheidsmagtiging</string>
+    <string name="accessibility_permission_desc">Laat asseblief Auto Clicker toe om toegangsdienste vir
+toepassingkenmerke te gebruik.</string>
+    <string name="simulating_click_point">• Klikke op die skerm van die toestel simuleer</string>
+    <string name="simulating_swipe_point">• Veegbewegings op die skerm van die toestel
+simuleer</string>
+    <string name="why_permission_desc">Hoekom gebruik ons hierdie magtiging?</string>
+    <string name="permission_use_desc">Auto Clicker gebruik die toeganklikheidsdiens API-magtiging om
+die volgende kernfunksies moontlik te maak.</string>
+    <string name="grant_permission">Gee toestemming</string>
+    <string name="permission_required">Toestemming benodig</string>
+    <string name="single_mode">Enkelmodus</string>
+    <string name="multi_mode">Meervoudige modus</string>
+    <string name="single_mode_desc">Tik \'n enkele posisie herhaaldelik teen gespesifiseerde
+intervalle</string>
+    <string name="multi_mode_desc">Stel \'n reeks tikke/vee in op verskillende posisies</string>
+    <string name="how_to_use">Hoe om te gebruik?</string>
+    <string name="dialog_title_permission_accessibility">Toeganklikheidsdiens</string>
+    <string name="dialog_title_permission_notification">Kennisgewing</string>
+    <string name="dialog_title_permission_mandatory_denied">Toestemming geweier</string>
+    <string name="dialog_title_permission_overlay">Oorlê</string>
+    <string name="message_permission_desc_overlay">Die oorlegtoestemming is nodig om AutoClicker se
+koppelvlak oor die toepassings wat u wil outomatiseer te wys, wat u toelaat om u scenario te
+konfigureer sonder om die ander toepassing te stop.</string>
+    <string name="message_permission_desc_notification">Opsioneel: Vertoon die kennisgewing terwyl die
+toepassing werk sodat u maklik na die scenarioseleksieskerm kan terugkeer.</string>
+    <string name="message_permission_mandatory_denied">Hierdie toestemming is noodsaaklik vir
+AutoClicker om behoorlik te werk. Dit sal nie reg kan werk sonder dit nie.</string>
+    <string name="splash_content_description">Klik sonder moeite</string>
+    <string name="please_wait">Wag asseblief</string>
+    <string name="select_language">Kies taal</string>
+    <string name="continue_">Aanhou</string>
+    <string name="watch_tutorial">Kyk na tutoriaal</string>
+    <string name="select_distinct_language">Kies \'n ander taal</string>
+    <string name="interval">Interval</string>
+    <string name="start_auto_clicker">Begin Auto Klikker</string>
+    <string name="stop_auto_clicker">Stop Auto Klikker</string>
+    <string name="add_clicking_target">Voeg klikdoel by</string>
+    <string name="remove_clicking_target">Verwyder klikdoel</string>
+    <string name="add_swiping_target">Voeg veegdoel by</string>
+    <string name="save_script">Stoor skrip</string>
+    <string name="edit_script_setting">Wysig skripinstelling</string>
+    <string name="drag_action">Sleep die teikenaksiepunt om dit enige plek te skuif</string>
+    <string name="drag_n_swipe_action">Sleep die begin-/eindpunt van die aksie na enige plek. Stel
+interval op beide punte in.</string>
+    <string name="interval_desc">Interval is die tydsgaping tussen twee opeenvolgende klikke.</string>
+    <string name="anti_detection">Anti-opsporing</string>
+    <string name="anti_detection_desc">Genereer \'n ewekansige hoeveelheid tyd en radius na elke klik ommeer menslik te lyk.</string>
+    <string name="interval_before_the_next_action">Interval voor die volgende aksie</string>
+    <string name="swipe_duration">Vee duur</string>
+    <string name="repeat_mode">Herhaalmodus</string>
+    <string name="change_language">Verander taal</string>
+    <string name="english_default">Engels (verstek)</string>
+    <string name="rate_us">Gradeer ons</string>
+    <string name="feedback">Terugvoer</string>
+    <string name="privacy_policy">Privaatheidsbeleid</string>
+    <string name="play">Speel</string>
+    <string name="add">Voeg by</string>
+    <string name="start">Begin</string>
+    <string name="stop">Stop</string>
+    <string name="close">Maak toe</string>
+    <string name="save">Stoor</string>
+    <string name="drag">Sleep</string>
+    <string name="remove">Verwyder</string>
+    <string name="swipe">Vee</string>
+    <string name="pause">Pouse</string>
+    <string name="cancel">Kanselleer</string>
+    <string name="save_script_desc">Stoor jou klikspoed, duur en teikentoepassings om produktiwiteit te
+verhoog!</string>
+    <string name="rename">Hernoem</string>
+    <string name="duplicate">Dupliseer</string>
+    <string name="delete">Vee uit</string>
+    <string name="export">Uitvoer</string>
+    <string name="notification_message">Druk om die scenario te verander</string>
+    <string name="notification_title">Scenario: %1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">Laai skrip van stoorgelheid</string>
+    <string name="default_scenario_name">MySkrip</string>
+    <string name="toast_denied_foreground_permission">Gebruiker het voorgronddienstoestemming
+geweier</string>
+    <string name="dialog_title_delete_scenario">Vee Scenario uit</string>
+    <string name="message_delete_scenario">Hierdie aksie sal %1$s uitvee. Is jy seker?</string>
+    <string name="hint_rename_scenario">Voer jou nuwe naam in…</string>
+    <string name="dialog_title_rename_scenario">Hernoem scenario</string>
+    <string name="error_empty_scenario_name">Veld kan nie leeg wees nie</string>
+    <string name="item_title_single_mode_scenario">Enkelpuntmodus</string>
+    <string name="item_desc_single_mode_scenario">Tik herhaaldelik \'n enkele posisie met gespesifiseerde intervalle</string>
+    <string name="item_title_multi_mode_scenario">Meervoudige puntmodus</string>
+    <string name="item_desc_multi_mode_scenario">Stel \'n reeks tik-/veegaksies op verskillende plekkein</string>
+    <string name="how_to_enable">Hoe om te aktiveer</string>
+    <string name="tutorial_instructions">Tik op die "Gee toestemming"-knoppie en\n1. Soek "Diens
+installeer" in instellings\n2. Soek "Auto Clicker"\n3. Skakel die toestemming aan</string>
+    <string name="accessibility_is_unavailable"><u>Toeganklikheid is nie beskikbaar nie</u></string>
+    <string name="menu_item_title_troubleshooting">Probleemoplossing</string>
+    <string name="interval_setting">Interval instelling</string>
+    <string name="preferences">voorkeure</string>
+    <string name="battery_optimization">Battery-optimalisering</string>
+    <string name="permission_granted">Toestemming Gegee</string>
+    <string name="permission_missing">Toestemming Mis</string>
+    <string name="only_with_these_permissions">Net met hierdie toestemmings:</string>
+    <string name="permission_point_1">1. Jy hoef nie elke keer as jy die app oopmaak toegangstoestemming in te stel nie.</string>
+    <string name="permission_point_2">2. Ons app kan veilig op die agtergrond loop en stabiele diens lewer.</string>
+    <string name="import_files">Invoer</string>
+    <string name="add_script">Voeg Skrif By</string>
+    <string name="empty_script_message">Jou gespaarde skrifte \n sal hier vertoon word</string>
+    <string name="troubleshooting">Probleemoplossing</string>
+    <string name="allow_permission">Toestemming Toelaat</string>
+    <string name="troubleshoot_desc">Fundamentale toestemming vir outomatiese klik-app. Moet toestemming hê.</string>
+
+</resources>

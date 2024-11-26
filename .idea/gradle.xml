@@ -24,6 +24,18 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/build-logic" />
             <option value="$PROJECT_DIR$/build-logic/convention" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/common" />
+            <option value="$PROJECT_DIR$/core/common/base" />
+            <option value="$PROJECT_DIR$/core/common/display" />
+            <option value="$PROJECT_DIR$/core/common/overlays" />
+            <option value="$PROJECT_DIR$/core/common/permissions" />
+            <option value="$PROJECT_DIR$/core/common/ui" />
+            <option value="$PROJECT_DIR$/core/scenarios" />
+            <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/backup" />
+            <option value="$PROJECT_DIR$/feature/config" />
+            <option value="$PROJECT_DIR$/feature/notifications" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

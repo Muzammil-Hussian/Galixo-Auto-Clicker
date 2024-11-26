@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_16_dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Action"
+        android:textAppearance="@style/SubHeadingStyle" />
+
+    <include
+        android:id="@+id/interval"
+        layout="@layout/include_dialog_view" />
+
+    <include
+        android:id="@+id/swipe_duration"
+        layout="@layout/include_dialog_view" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_vertical_extra_large"
+        android:layout_marginBottom="@dimen/margin_vertical_default"
+        android:text="Stop after"
+        android:textAppearance="@style/DescriptionHeading" />
+
+    <include
+        android:id="@+id/stopAfter"
+        layout="@layout/include_input_field_dropdown" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/toggle_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_vertical_extra_large"
+        android:checked="true"
+        android:text="Anti detection"
+        android:textAppearance="@style/DescriptionHeading" />
+
+    <include
+        android:id="@+id/actionButtons"
+        layout="@layout/include_dialog_buttons" />
+
+</LinearLayout>

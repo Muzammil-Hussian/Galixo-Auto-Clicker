@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
+    <color name="primaryColor">#7159FF</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="border_stroke_color_black_alpha_12">#1F000000</color>
+    <!--secondary background color-->
+
+    <color name="darkerGrey">#D9D9D9</color>
+    <color name="softGrey">#F9F9F9</color>
+
+    <color name="headingTextColor">#1E1E1E</color>
+    <color name="normalTextColor">#4D4D4D</color>
+    <color name="paragraphTextColor">#333333</color>
+    <color name="textColor">#484A4D</color>
+    <color name="lightBlue">#1F7159FF</color>
+    <color name="lightGrey">#EBEBEB</color>
+
+    <color name="yellow_green">#80A6F8A6</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="primaryColorBackground">#1F7159FF</color>
+    <color name="windowBackgroundColor">#F9F9F9</color>
+    <color name="permission_grant_background_color">#142ABF4B</color>
+    <color name="permission_not_granted_background_color">#14FF3939</color>
+    <color name="permission_grant_text_color">#2ABF4B</color>
+    <color name="permission_not_granted_text_color">#FF3939</color>
+
 </resources>

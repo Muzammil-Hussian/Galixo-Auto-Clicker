@@ -34,6 +34,8 @@ airbnbLottie = "6.5.0"
 googleMaterial = "1.12.0"
 kotlinSerializationJson = "1.6.3"
 googleDaggerHilt = "2.51"
+timber = "5.0.1"
+
 
 # PlayStore only
 googleFirebaseBom = "33.6.0"
@@ -86,9 +88,10 @@ google-dagger-hilt = { group = "com.google.dagger", name = "hilt-android", versi
 
 google-firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "googleFirebaseBom" }
 google-firebase-crashlytics-ktx = { group = "com.google.firebase", name = "firebase-crashlytics-ktx", version.ref = "googleFirebaseCrashlytics" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+
+
 
 [plugins]
 # Plugins from external providers

@@ -1,6 +1,114 @@
 <resources>
-    <string name="app_name">Galixo Clicker</string>
+    <string name="app_name">Auto Clicker</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_script">Script</string>
+    <string name="title_setting">Setting</string>
+    <string name="activity_title">Scenarios</string>
+    <string name="accessibility_service_description">This application needs this service to inject the clicks you have
+        created into the other applications once the conditions have been detected.\n\nNo data will be collected from
+        this application.</string>
+
+
+    <string name="accessibility_permission">Accessibility permission</string>
+    <string name="accessibility_permission_desc">Please allow auto clicker to use the accessibility services for app features.</string>
+    <string name="simulating_click_point">• Simulating clicks on device screen</string>
+    <string name="simulating_swipe_point">• Simulating swipe on device screen</string>
+    <string name="why_permission_desc">Why we use this permission?</string>
+    <string name="permission_use_desc">Auto clicker uses the accessibility service API permission to enable the following core functionalities.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="single_mode">Single Mode</string>
+    <string name="multi_mode">Multi Mode</string>
+    <string name="single_mode_desc">Tap a single position repeatedly at specified intervals</string>
+    <string name="multi_mode_desc">Set a series of taps/swipes in different position</string>
+    <string name="how_to_use">How to use?</string>
+
+    <string name="dialog_title_permission_accessibility">Accessibility service</string>
+    <string name="dialog_title_permission_notification">Notification</string>
+    <string name="dialog_title_permission_mandatory_denied">Permission denied</string>
+    <string name="dialog_title_permission_overlay">Overlay</string>
+
+    <string name="message_permission_desc_overlay">The overlay permission is required in order to show AutoClicker
+        interface over the applications you want to automate, allowing you to configure your scenario without stopping
+        the other application.</string>
+    <string name="message_permission_desc_notification">Optional: Shows the notification while the application is running in order
+        to easily return to the scenario selection screen.</string>
+    <string name="message_permission_mandatory_denied">This permission is mandatory for AutoClicker to work properly.It won\'t be able to work correctly without it.</string>
+    <string name="splash_content_description">Click without hustle</string>
+    <string name="please_wait">Please wait</string>
+    <string name="select_language">Select Language</string>
+    <string name="continue_">Continue</string>
+    <string name="watch_tutorial">Watch Tutorial</string>
+    <string name="select_distinct_language">Select different language</string>
+    <string name="interval">Interval</string>
+    <string name="start_auto_clicker">Start auto clicker</string>
+    <string name="stop_auto_clicker">Stop auto clicker</string>
+    <string name="add_clicking_target">Add clicking target</string>
+    <string name="remove_clicking_target">Remove clicking target</string>
+    <string name="add_swiping_target">Add swiping target</string>
+    <string name="save_script">Save script</string>
+    <string name="edit_script_setting">Edit script setting</string>
+    <string name="drag_action">Drag the target action point to move it anywhere</string>
+    <string name="drag_n_swipe_action">Drag the start/end target action point to move it anywhere. Either set interval on both points.</string>
+    <string name="interval_desc">Interval is the time gap between two consecutive clicks.</string>
+    <string name="anti_detection">Anti-Detection</string>
+    <string name="anti_detection_desc">Generate a random amount of time and radius after each click to behave more like human.</string>
+    <string name="interval_before_the_next_action">Interval before the next action</string>
+    <string name="swipe_duration">Swipe duration</string>
+    <string name="repeat_mode">Repeat mode</string>
+    <string name="change_language">Change language</string>
+    <string name="english_default">English (default)</string>
+    <string name="rate_us">Rate us</string>
+    <string name="feedback">Feedback</string>
+    <string name="privacy_policy">Privacy policy</string>
+
+    <string name="play">Play</string>
+    <string name="add">Add</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="close">close</string>
+    <string name="save">Save</string>
+    <string name="drag">Drag</string>
+    <string name="remove">Delete</string>
+    <string name="swipe">Swipe</string>
+    <string name="pause">Pause</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_script_desc">Save your click speed, duration, and target apps to boost productivity!</string>
+    <string name="rename">Rename</string>
+    <string name="duplicate">Duplicate</string>
+    <string name="delete">Delete</string>
+    <string name="export">Export</string>
+    <string name="notification_message">Press to change the scenario</string>
+    <string name="notification_title">Scenario: %1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">Import Script from storage</string>
+    <string name="default_scenario_name">MyScript</string>
+    <string name="toast_denied_foreground_permission">User denied foreground service permission</string>
+    <string name="dialog_title_delete_scenario">Delete Scenario</string>
+    <string name="message_delete_scenario">This will delete %1$s. Are you sure ?</string>
+    <string name="hint_rename_scenario">Enter you new name…</string>
+    <string name="dialog_title_rename_scenario">Rename scenario</string>
+    <string name="error_empty_scenario_name">Field can\\\'t be empty</string>
+    <string name="item_title_single_mode_scenario">Single Point Mode</string>
+    <string name="item_desc_single_mode_scenario">Tap a single position repeatedly at specified intervals</string>
+    <string name="item_title_multi_mode_scenario">Multi-Point Mode</string>
+    <string name="item_desc_multi_mode_scenario">Set a series of  taps/swipes in different positions</string>
+    <string name="how_to_enable">How to enable</string>
+    <string name="tutorial_instructions">Tap the “Grant Permission” button and\n1. Find “Install service” in settings\n2. Find “Auto Clicker”\n3. Enable the permission</string>
+    <string name="accessibility_is_unavailable"><u>Accessibility is unavailable</u></string>
+    <string name="menu_item_title_troubleshooting">Troubleshooting</string>
+    <string name="interval_setting">Interval setting</string>
+    <string name="preferences">Preferences</string>
+    <string name="battery_optimization">Battery optimization</string>
+    <string name="permission_granted">Permission Granted</string>
+    <string name="permission_missing">Permission Missing</string>
+    <string name="only_with_these_permissions">Only with these permissions:</string>
+    <string name="permission_point_1">1. You don’t have to set accessibility permission every time you open the app.</string>
+    <string name="permission_point_2">2. Our app can safely run in the background and provide stable service.</string>
+    <string name="import_files">Import</string>
+    <string name="add_script">Create Script</string>
+    <string name="empty_script_message">Your saved scripts \nwill be shown here</string>
+    <string name="troubleshooting">Troubleshooting</string>
+    <string name="allow_permission">Allow Permission</string>
+    <string name="troubleshoot_desc">Fundamental permission for auto clicker app. Must have permission needed.</string>
 </resources>

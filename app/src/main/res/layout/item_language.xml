@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/padding_12_dp"
+    android:paddingTop="@dimen/padding_12_dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/languageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/ContainerHeading"
+        app:layout_constraintBottom_toTopOf="@+id/languageTranslatedName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/full_names" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/languageTranslatedName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/Description"
+        app:layout_constraintBottom_toTopOf="@+id/materialDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/languageName"
+        tools:text="@tools:sample/full_names" />
+
+    <com.google.android.material.radiobutton.MaterialRadioButton
+        android:id="@+id/rbSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/languageTranslatedName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/languageName" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_12_dp"
+        android:visibility="invisible"
+        app:dividerColor="#1F000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rbSelected"
+        app:layout_constraintStart_toStartOf="@+id/languageTranslatedName"
+        app:layout_constraintTop_toBottomOf="@+id/languageTranslatedName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

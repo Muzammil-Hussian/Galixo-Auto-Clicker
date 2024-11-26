@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">Главная</string>
+    <string name="title_script">Скрипт</string>
+    <string name="title_setting">Настройки</string>
+    <string name="activity_title">Сценарии</string>
+    <string name="accessibility_service_description">Это приложение требует эту службу для
+ввода созданных вами кликов в другие приложения после обнаружения
+условий.\n\nДанные из этого приложения не будут собираться.</string>
+    <string name="accessibility_permission">Разрешение на доступность</string>
+    <string name="accessibility_permission_desc">Разрешите Auto Clicker использовать службы
+доступности для функций приложения.</string>
+    <string name="simulating_click_point">• Симуляция кликов на экране устройства</string>
+    <string name="simulating_swipe_point">• Симуляция свайпов на экране устройства</string>
+    <string name="why_permission_desc">Почему мы используем это разрешение?</string>
+    <string name="permission_use_desc">Auto Clicker использует API служб доступности для
+активации следующих ключевых функций.</string>
+    <string name="grant_permission">Предоставить разрешение</string>
+    <string name="permission_required">Требуется разрешение</string>
+    <string name="single_mode">Одиночный режим</string>
+    <string name="multi_mode">Множественный режим</string>
+    <string name="single_mode_desc">Нажимайте на одну позицию повторно через заданные
+интервалы</string>
+    <string name="multi_mode_desc">Установите последовательность кликов/свайпов в
+разных точках</string>
+    <string name="how_to_use">Как использовать?</string>
+    <string name="dialog_title_permission_accessibility">Служба доступности</string>
+    <string name="dialog_title_permission_notification">Уведомление</string>
+    <string name="dialog_title_permission_mandatory_denied">Разрешение отклонено</string>
+    <string name="dialog_title_permission_overlay">Оверлей</string>
+    <string name="message_permission_desc_overlay">Для отображения интерфейса Auto
+Clicker поверх приложений, которые вы хотите автоматизировать, требуется разрешение
+на оверлей. Это позволяет настроить сценарий без остановки других
+приложений.</string>
+    <string name="message_permission_desc_notification">Опционально: Показывает
+уведомление во время работы приложения, чтобы вы могли легко вернуться к экрану
+выбора сценария.</string>
+    <string name="message_permission_mandatory_denied">Это разрешение обязательно для
+корректной работы Auto Clicker. Без него приложение не будет работать
+правильно.</string>
+    <string name="splash_content_description">Кликай без усилий</string>
+    <string name="please_wait">Пожалуйста, подождите</string>
+    <string name="select_language">Выберите язык</string>
+    <string name="continue_">Продолжить</string>
+    <string name="watch_tutorial">Посмотреть учебник</string>
+    <string name="select_distinct_language">Выбрать другой язык</string>
+    <string name="interval">Интервал</string>
+    <string name="start_auto_clicker">Запустить Auto Clicker</string>
+    <string name="stop_auto_clicker">Остановить Auto Clicker</string>
+    <string name="add_clicking_target">Добавить цель клика</string>
+    <string name="remove_clicking_target">Удалить цель клика</string>
+    <string name="add_swiping_target">Добавить цель свайпа</string>
+    <string name="save_script">Сохранить скрипт</string>
+    <string name="edit_script_setting">Редактировать настройки скрипта</string>
+    <string name="drag_action">Перетащите целевую точку действия в любое место</string>
+    <string name="drag_n_swipe_action">Перетащите начальную/конечную точку действия в
+любое место. Установите интервал на обеих точках.</string>
+    <string name="interval_desc">Интервал — это временной промежуток между двумя
+последовательными кликами.</string>
+    <string name="anti_detection">Антидетект</string>
+    <string name="anti_detection_desc">Генерируйте случайное время и радиус после каждого
+клика для имитации человеческого поведения.</string>
+    <string name="interval_before_the_next_action">Интервал перед следующим
+действием</string>
+    <string name="swipe_duration">Продолжительность свайпа</string>
+    <string name="repeat_mode">Режим повторения</string>
+    <string name="change_language">Изменить язык</string>
+    <string name="english_default">Английский (по умолчанию)</string>
+    <string name="rate_us">Оцените нас</string>
+    <string name="feedback">Обратная связь</string>
+    <string name="privacy_policy">Политика конфиденциальности</string>
+    <string name="play">Играть</string>
+    <string name="add">Добавить</string>
+    <string name="start">Старт</string>
+    <string name="stop">Стоп</string>
+    <string name="close">Закрыть</string>
+    <string name="save">Сохранить</string>
+    <string name="drag">Перетащить</string>
+    <string name="remove">Удалить</string>
+    <string name="swipe">Свайп</string>
+    <string name="pause">Пауза</string>
+    <string name="cancel">Отмена</string>
+    <string name="save_script_desc">Сохраните скорость кликов, длительность и целевые
+приложения, чтобы повысить продуктивность!</string>
+    <string name="rename">Переименовать</string>
+    <string name="duplicate">Дублировать</string>
+    <string name="delete">Удалить</string>
+    <string name="export">Экспорт</string>
+    <string name="notification_message">Нажмите, чтобы изменить сценарий</string>
+    <string name="notification_title">Сценарий: %1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">Импортировать скрипт из хранилища</string>
+    <string name="default_scenario_name">МойСкрипт</string>
+    <string name="toast_denied_foreground_permission">Пользователь отклонил разрешение
+на службу переднего плана</string>
+    <string name="dialog_title_delete_scenario">Удалить сценарий</string>
+    <string name="message_delete_scenario">Это удалит %1$s. Вы уверены?</string>
+    <string name="hint_rename_scenario">Введите новое имя...</string>
+    <string name="dialog_title_rename_scenario">Переименовать сценарий</string>
+    <string name="error_empty_scenario_name">Поле не может быть пустым</string>
+    <string name="item_title_single_mode_scenario">Одноточечный режим</string>
+    <string name="item_desc_single_mode_scenario">Повторяйте клики в одной точке через
+заданные интервалы</string>
+    <string name="item_title_multi_mode_scenario">Многоточечный режим</string>
+    <string name="item_desc_multi_mode_scenario">Настройте последовательность
+кликов/свайпов в разных местах</string>
+    <string name="how_to_enable">Как включить</string>
+    <string name="tutorial_instructions">Нажмите кнопку «Предоставить разрешение» и\n1.
+Найдите «Установить службу» в настройках\n2. Найдите «Auto Clicker»\n3. Включите
+разрешение</string>
+    <string name="accessibility_is_unavailable"><u>Доступность недоступна</u></string>
+    <string name="menu_item_title_troubleshooting">Устранение неполадок</string>
+    <string name="interval_setting">Установка интервала</string>
+    <string name="preferences">предпочтения</string>
+    <string name="battery_optimization">Оптимизация батареи</string>
+    <string name="permission_granted">Разрешение предоставлено</string>
+    <string name="permission_missing">Отсутствует разрешение</string>
+    <string name="only_with_these_permissions">Только с этими разрешениями:</string>
+    <string name="permission_point_1">1. Вам не нужно устанавливать разрешение на доступ каждый раз, когда вы открываете приложение.</string>
+    <string name="permission_point_2">2. Наше приложение может безопасно работать в фоновом режиме и предоставлять стабильную службу.</string>
+    <string name="import_files">Импортировать</string>
+    <string name="add_script">Добавить скрипт</string>
+    <string name="empty_script_message">Ваши сохраненные скрипты \nбудут отображаться здесь</string>
+    <string name="troubleshooting">Устранение неполадок</string>
+    <string name="allow_permission">Разрешить разрешение</string>
+    <string name="troubleshoot_desc">Основное разрешение для приложения автокликера. Необходимо наличие требуемого разрешения.</string>
+
+</resources>

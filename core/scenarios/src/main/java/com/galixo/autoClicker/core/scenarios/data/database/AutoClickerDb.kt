@@ -19,7 +19,7 @@ import javax.inject.Singleton
 @Singleton
 abstract class AutoClickerDb : RoomDatabase() {
 
-    /** The data access object for the dumb scenario in the database. */
+    /** The data access object for the scenario in the database. */
     abstract fun scenarioDao(): ScenarioDao
 }
 

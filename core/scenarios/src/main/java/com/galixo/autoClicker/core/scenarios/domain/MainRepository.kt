@@ -5,9 +5,12 @@ import com.galixo.autoClicker.core.scenarios.data.database.ScenarioWithActions
 import com.galixo.autoClicker.core.scenarios.domain.model.Action
 import com.galixo.autoClicker.core.scenarios.domain.model.Scenario
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class MainRepository(
-    private val scenarioDataSource:ScenarioDataSource
+@Singleton
+class MainRepository @Inject constructor(
+    private val scenarioDataSource: ScenarioDataSource
 ) : IMainRepository {
 
 

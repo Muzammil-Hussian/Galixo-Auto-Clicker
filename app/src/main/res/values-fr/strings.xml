@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">Accueil</string>
+    <string name="title_script">Script</string>
+    <string name="title_setting">Paramètres</string>
+    <string name="activity_title">Scénarios</string>
+    <string name="accessibility_service_description">Cette application a besoin de ce service pour 
+insérer les clics que vous avez créés dans d\'autres applications une fois les conditions 
+détectées.\n\nAucune donnée ne sera collectée à partir de cette application.</string>
+    <string name="accessibility_permission">Autorisation d\'accessibilité</string>
+    <string name="accessibility_permission_desc">Veuillez autoriser Auto Clicker à utiliser les 
+services d\'accessibilité pour les fonctionnalités de l\'application.</string>
+    <string name="simulating_click_point">• Simulation de clics sur l\'écran de l\'appareil</string>
+    <string name="simulating_swipe_point">• Simulation de balayages sur l\'écran de 
+l\'appareil</string>
+    <string name="why_permission_desc">Pourquoi utilisons-nous cette autorisation ?</string>
+    <string name="permission_use_desc">Auto Clicker utilise l\'API des services d\'accessibilité pour 
+activer les fonctionnalités principales suivantes.</string>
+    <string name="grant_permission">Accorder l\'autorisation</string>
+    <string name="permission_required">Autorisation requise</string>
+    <string name="single_mode">Mode unique</string>
+    <string name="multi_mode">Mode multiple</string>
+    <string name="single_mode_desc">Cliquez sur une seule position à des intervalles 
+spécifiés</string>
+    <string name="multi_mode_desc">Définir une série de clics/balayages à différentes 
+positions</string>
+    <string name="how_to_use">Comment utiliser ?</string>
+    <string name="dialog_title_permission_accessibility">Service d\'accessibilité</string>
+    <string name="dialog_title_permission_notification">Notification</string>
+    <string name="dialog_title_permission_mandatory_denied">Autorisation refusée</string>
+    <string name="dialog_title_permission_overlay">Superposition</string>
+    <string name="message_permission_desc_overlay">L\'autorisation de superposition est requise 
+pour afficher l\'interface AutoClicker au-dessus des applications que vous souhaitez automatiser, 
+vous permettant de configurer votre scénario sans arrêter l\'autre application.</string>
+    <string name="message_permission_desc_notification">Optionnel : Affiche une notification 
+pendant que l\'application est en cours d\'exécution, facilitant le retour à l\'écran de sélection des 
+scénarios.</string>
+    <string name="message_permission_mandatory_denied">Cette autorisation est obligatoire 
+pour le bon fonctionnement d\'AutoClicker. Sans elle, cela ne fonctionnera pas 
+correctement.</string>
+    <string name="splash_content_description">Cliquez sans effort</string>
+    <string name="please_wait">Veuillez patienter</string>
+    <string name="select_language">Sélectionnez la langue</string>
+    <string name="continue_">Continuer</string>
+    <string name="watch_tutorial">Regarder le tutoriel</string>
+    <string name="select_distinct_language">Sélectionnez une langue différente</string>
+    <string name="interval">Intervalle</string>
+    <string name="start_auto_clicker">Démarrer Auto Clicker</string>
+    <string name="stop_auto_clicker">Arrêter Auto Clicker</string>
+    <string name="add_clicking_target">Ajouter une cible de clic</string>
+    <string name="remove_clicking_target">Supprimer une cible de clic</string>
+    <string name="add_swiping_target">Ajouter une cible de balayage</string>
+    <string name="save_script">Enregistrer le script</string>
+    <string name="edit_script_setting">Modifier les paramètres du script</string>
+    <string name="drag_action">Faites glisser le point d\'action cible pour le déplacer n\'importe 
+où</string>
+    <string name="drag_n_swipe_action">Faites glisser le point d\'action de début/fin pour le 
+déplacer n\'importe où. Définissez un intervalle sur les deux points.</string>
+    <string name="interval_desc">L\'intervalle est l\'écart de temps entre deux clics 
+consécutifs.</string>
+    <string name="anti_detection">Anti-détection</string>
+    <string name="anti_detection_desc">Générez un temps et un rayon aléatoires après chaque 
+clic pour un comportement plus humain.</string>
+    <string name="interval_before_the_next_action">Intervalle avant l\'action suivante</string>
+    <string name="swipe_duration">Durée du balayage</string>
+    <string name="repeat_mode">Mode répétition</string>
+    <string name="change_language">Changer de langue</string>
+    <string name="english_default">Anglais (par défaut)</string>
+    <string name="rate_us">Évaluez-nous</string>
+    <string name="feedback">Retour</string>
+    <string name="privacy_policy">Politique de confidentialité</string>
+    <string name="play">Jouer</string>
+    <string name="add">Ajouter</string>
+    <string name="start">Démarrer</string>
+    <string name="stop">Arrêter</string>
+    <string name="close">Fermer</string>
+    <string name="save">Enregistrer</string>
+    <string name="drag">Faire glisser</string>
+    <string name="remove">Supprimer</string>
+    <string name="swipe">Balayer</string>
+    <string name="pause">Pause</string>
+    <string name="cancel">Annuler</string>
+    <string name="save_script_desc">Enregistrez votre vitesse de clic, votre durée et vos 
+applications cibles pour booster votre productivité !</string>
+    <string name="rename">Renommer</string>
+    <string name="duplicate">Dupliquer</string>
+    <string name="delete">Supprimer</string>
+    <string name="export">Exporter</string>
+    <string name="notification_message">Appuyez pour changer le scénario</string>
+    <string name="notification_title">Scénario : %1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">Importer le script depuis le stockage</string>
+    <string name="default_scenario_name">MonScript</string>
+    <string name="toast_denied_foreground_permission">L\'utilisateur a refusé l\'autorisation de 
+service d\'avant-plan</string>
+    <string name="dialog_title_delete_scenario">Supprimer le scénario</string>
+    <string name="message_delete_scenario">Cela supprimera %1$s. Êtes-vous sûr ?</string>
+    <string name="hint_rename_scenario">Entrez votre nouveau nom…</string>
+    <string name="dialog_title_rename_scenario">Renommer le scénario</string>
+    <string name="error_empty_scenario_name">Le champ ne peut pas être vide</string>
+    <string name="item_title_single_mode_scenario">Mode unique</string>
+    <string name="item_desc_single_mode_scenario">Cliquez de manière répétée sur une seule 
+position à des intervalles spécifiés</string>
+    <string name="item_title_multi_mode_scenario">Mode multiple</string>
+    <string name="item_desc_multi_mode_scenario">Définir une série de clics/balayages à 
+différentes positions</string>
+    <string name="how_to_enable">Comment activer</string>
+    <string name="tutorial_instructions">Appuyez sur le bouton “Accorder l\'autorisation” et\n1. 
+Trouvez “Installer le service” dans les paramètres\n2. Trouvez “Auto Clicker”\n3. Activez 
+l\'autorisation</string>
+    <string name="accessibility_is_unavailable"><u>L\'accessibilité est indisponible</u></string>
+    <string name="menu_item_title_troubleshooting">Dépannage</string>
+    <string name="interval_setting">Réglage de l\'intervalle</string>
+    <string name="preferences">préférences</string>
+    <string name="battery_optimization">Optimisation de la batterie</string>
+    <string name="permission_granted">Permission Accordée</string>
+    <string name="permission_missing">Permission Manquante</string>
+    <string name="only_with_these_permissions">Uniquement avec ces permissions :</string>
+    <string name="permission_point_1">1. Vous n\'avez pas besoin de configurer la permission d\'accessibilité chaque fois que vous ouvrez l\'application.</string>
+    <string name="permission_point_2">2. Notre application peut fonctionner en toute sécurité en arrière-plan et fournir un service stable.</string>
+    <string name="import_files">Importer</string>
+    <string name="add_script">Ajouter un Script</string>
+    <string name="empty_script_message">Vos scripts sauvegardés \nseront affichés ici</string>
+    <string name="troubleshooting">Dépannage</string>
+    <string name="allow_permission">Accorder la Permission</string>
+    <string name="troubleshoot_desc">Permission fondamentale pour l\'application de clic automatique. La permission requise doit être accordée.</string>
+
+</resources>

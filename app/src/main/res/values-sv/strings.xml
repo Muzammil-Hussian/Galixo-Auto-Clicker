@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">Hem</string>
+    <string name="title_script">Skript</string>
+    <string name="title_setting">Inställningar</string>
+    <string name="activity_title">Scenarier</string>
+    <string name="accessibility_service_description">Den här applikationen behöver denna tjänst
+för att kunna injicera de klick du skapat i andra applikationer när villkoren har
+upptäckts.\n\nIngen data kommer att samlas in från denna applikation.</string>
+    <string name="accessibility_permission">Tillgänglighetsbehörighet</string>
+    <string name="accessibility_permission_desc">Tillåt Auto Clicker att använda
+tillgänglighetstjänster för appens funktioner.</string>
+    <string name="simulating_click_point">• Simulera klick på enhetens skärm</string>
+    <string name="simulating_swipe_point">• Simulera svepningar på enhetens skärm</string>
+    <string name="why_permission_desc">Varför använder vi denna behörighet?</string>
+    <string name="permission_use_desc">Autoklicker använder åtkomsttjänstens API-behörighet för att aktivera följande kärnfunktioner.</string>
+    <string name="grant_permission">Ge behörighet</string>
+    <string name="permission_required">Behörighet krävs</string>
+    <string name="single_mode">Enkel läge</string>
+    <string name="multi_mode">Flera lägen</string>
+    <string name="single_mode_desc">Klicka upprepade gånger på en enda position vid
+specificerade intervaller</string>
+    <string name="multi_mode_desc">Ställ in en serie klick/svepningar på olika positioner</string>
+    <string name="how_to_use">Hur används det?</string>
+    <string name="dialog_title_permission_accessibility">Tillgänglighetstjänst</string>
+    <string name="dialog_title_permission_notification">Notifikation</string>
+    <string name="dialog_title_permission_mandatory_denied">Behörighet nekad</string>
+    <string name="dialog_title_permission_overlay">Överlappning</string>
+    <string name="message_permission_desc_overlay">Behörighet för överlappning krävs för att
+visa Auto Clicker-gränssnittet ovanpå de applikationer du vill automatisera, vilket gör det
+möjligt att konfigurera ditt scenario utan att stoppa andra applikationer.</string>
+    <string name="message_permission_desc_notification">Valfritt: Visar en notifikation medan
+applikationen körs, vilket gör det enkelt att återgå till scenarievalsskärmen.</string>
+    <string name="message_permission_mandatory_denied">Denna behörighet är obligatorisk för
+att Auto Clicker ska fungera korrekt. Utan den kommer det inte att fungera korrekt.</string>
+    <string name="splash_content_description">Klicka enkelt</string>
+    <string name="please_wait">Vänligen vänta</string>
+    <string name="select_language">Välj språk</string>
+    <string name="continue_">Fortsätt</string>
+    <string name="watch_tutorial">Titta på handledning</string>
+    <string name="select_distinct_language">Välj ett annat språk</string>
+    <string name="interval">Intervall</string>
+    <string name="start_auto_clicker">Starta Auto Clicker</string>
+    <string name="stop_auto_clicker">Stoppa Auto Clicker</string>
+    <string name="add_clicking_target">Lägg till klickmål</string>
+    <string name="remove_clicking_target">Ta bort klickmål</string>
+    <string name="add_swiping_target">Lägg till svepmål</string>
+    <string name="save_script">Spara skript</string>
+    <string name="edit_script_setting">Redigera skriptinställningar</string>
+    <string name="drag_action">Dra målhandlingspunkten för att flytta den någonstans</string>
+    <string name="drag_n_swipe_action">Dra start-/slutmålpunkten för att flytta den någonstans.
+Ställ in intervall på båda punkterna.</string>
+    <string name="interval_desc">Intervall är tidsavståndet mellan två på varandra följande
+klick.</string>
+    <string name="anti_detection">Anti-detektion</string>
+    <string name="anti_detection_desc">Generera en slumpmässig tid och radie efter varje klick
+för att se mer mänsklig ut.</string>
+    <string name="interval_before_the_next_action">Intervall innan nästa åtgärd</string>
+    <string name="swipe_duration">Sveplängd</string>
+    <string name="repeat_mode">Repetitionsläge</string>
+    <string name="change_language">Ändra språk</string>
+    <string name="english_default">Engelska (standard)</string>
+    <string name="rate_us">Betygsätt oss</string>
+    <string name="feedback">Feedback</string>
+    <string name="privacy_policy">Integritetspolicy</string>
+    <string name="play">Spela</string>
+    <string name="add">Lägg till</string>
+    <string name="start">Start</string>
+    <string name="stop">Stopp</string>
+    <string name="close">Stäng</string>
+    <string name="save">Spara</string>
+    <string name="drag">Dra</string>
+    <string name="remove">Ta bort</string>
+    <string name="swipe">Svep</string>
+    <string name="pause">Paus</string>
+    <string name="cancel">Avbryt</string>
+    <string name="save_script_desc">Spara din klickhastighet, varaktighet och målappar för att öka
+produktiviteten!</string>
+    <string name="rename">Byt namn</string>
+    <string name="duplicate">Duplicera</string>
+    <string name="delete">Ta bort</string>
+    <string name="export">Exportera</string>
+    <string name="notification_message">Tryck för att ändra scenario</string>
+    <string name="notification_title">Scenario: %1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">Importera skript från lagring</string>
+    <string name="default_scenario_name">MittSkript</string>
+    <string name="toast_denied_foreground_permission">Användaren nekade tillstånd för
+förgrundstjänst</string>
+    <string name="dialog_title_delete_scenario">Ta bort scenario</string>
+    <string name="message_delete_scenario">Detta tar bort %1$s. Är du säker?</string>
+    <string name="hint_rename_scenario">Ange ditt nya namn…</string>
+    <string name="dialog_title_rename_scenario">Byt namn på scenario</string>
+    <string name="error_empty_scenario_name">Fältet får inte vara tomt</string>
+    <string name="item_title_single_mode_scenario">Enpunktsläge</string>
+    <string name="item_desc_single_mode_scenario">Klicka upprepade gånger på en punkt vid
+specificerade intervall</string>
+    <string name="item_title_multi_mode_scenario">Flerpunktsläge</string>
+    <string name="item_desc_multi_mode_scenario">Ställ in en serie klick/svepningar på olika
+positioner</string>
+    <string name="how_to_enable">Hur man aktiverar</string>
+    <string name="tutorial_instructions">Tryck på “Ge behörighet”-knappen och\n1. Hitta
+“Installera tjänst” i inställningar\n2. Hitta “Auto Clicker”\n3. Aktivera tillståndet</string>
+    <string name="accessibility_is_unavailable"><u>Tillgänglighet är inte tillgänglig</u></string>
+    <string name="menu_item_title_troubleshooting">Felsökning</string>
+    <string name="interval_setting">Intervallinställning</string>
+    <string name="preferences">விருப்பங்கள்</string>
+    <string name="battery_optimization">Batterioptimering</string>
+    <string name="permission_granted">Behörighet beviljad</string>
+    <string name="permission_missing">Behörighet saknas</string>
+    <string name="only_with_these_permissions">Endast med dessa behörigheter:</string>
+    <string name="permission_point_1">1. Du behöver inte ställa in åtkomstbehörighet varje gång du öppnar appen.</string>
+    <string name="permission_point_2">2. Vår app kan säkert köras i bakgrunden och ge stabil service.</string>
+    <string name="import_files">Importera</string>
+    <string name="add_script">Lägg till Script</string>
+    <string name="empty_script_message">Dina sparade skript \nvisas här</string>
+    <string name="troubleshooting">Felsökning</string>
+    <string name="allow_permission">Tillåt Behörighet</string>
+    <string name="troubleshoot_desc">Grundläggande behörighet för automatisk klick-app. Du måste ha den nödvändiga behörigheten.</string>
+
+</resources>

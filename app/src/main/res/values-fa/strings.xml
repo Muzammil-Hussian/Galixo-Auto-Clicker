@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">خانھ</string>
+    <string name="title_script">اسکریپت</string>
+    <string name="title_setting">تنظیمات</string>
+    <string name="activity_title">سناریوھا</string>
+    <string name="accessibility_service_description">این اپلیکیشن برای تزریق کلیک های شما به این سرویس نیاز دارد
+ پس از شناسایی شرایط در سایر برنامه ها ایجاد می شود.\n\nهیچ داده ای از آن جمع آوری نمی شود
+ این نرم افزار</string>
+
+    <string name="accessibility_permission">مجوز دسترسی</string>
+    <string name="accessibility_permission_desc">لطفاً به کلیک خودکار اجازه دهید از خدمات دسترس‌پذیری برای ویژگی‌های برنامه استفاده کند.</string>
+    <string name="simulating_click_point">• شبیه سازی کلیک ها بر روی صفحه نمایش دستگاه</string>
+    <string name="simulating_swipe_point">• شبیه سازی کشیدن انگشت روی صفحه نمایش دستگاه</string>
+    <string name="why_permission_desc">چرا از این مجوز استفاده می کنیم؟</string>
+    <string name="permission_use_desc">کلیک‌کننده خودکار از مجوز API سرویس دسترسی برای فعال کردن عملکردهای اصلی زیر استفاده می‌کند.</string>
+
+    <string name="grant_permission">مجوز اعطای</string>
+    <string name="permission_required">است لازم مجوز</string>
+    <string name="single_mode">ای نقطھ تک حالت</string>
+    <string name="multi_mode">ای چندنقطھ حالت</string>
+
+    <string name="single_mode_desc">در فواصل زمانی مشخص، روی یک موقعیت تک ضربه بزنید</string>
+    <string name="multi_mode_desc">مجموعه‌ای از ضربه‌ها/ ضربه‌ها را در موقعیت‌های مختلف تنظیم کنید</string>
+
+    <string name="how_to_use">کنیم؟ استفاده چگونھ</string>
+    <string name="dialog_title_permission_accessibility">دسترسی خدمات</string>
+    <string name="dialog_title_permission_notification">اعلان</string>
+    <string name="dialog_title_permission_mandatory_denied">شد رد مجوز</string>
+    <string name="dialog_title_permission_overlay">پوشش</string>
+    <string name="message_permission_desc_overlay">برای نمایش AutoClicker، مجوز همپوشانی لازم است
+ رابط روی برنامه هایی که می خواهید خودکار کنید، به شما امکان می دهد سناریوی خود را بدون توقف پیکربندی کنید
+ برنامه دیگر</string>
+    <string name="message_permission_desc_notification">اختیاری: اعلان را در حالی که برنامه به ترتیب در حال اجرا است نشان می دهد
+ تا به راحتی به صفحه انتخاب سناریو برگردید.</string>
+    <string name="message_permission_mandatory_denied">این مجوز برای اینکه AutoClicker به درستی کار کند اجباری است. بدون آن نمی‌تواند به درستی کار کند.</string>
+    <string name="splash_content_description">بدون هیاهو کلیک کنید</string>
+    <string name="please_wait">کنید صبر ًلطفا</string>
+    <string name="select_language">زبان انتخاب</string>
+    <string name="continue_">ادامھ</string>
+    <string name="watch_tutorial">آموزش تماشای</string>
+    <string name="select_distinct_language">کنید انتخاب را دیگری زبان</string>
+    <string name="interval">فاصلھ</string>
+    <string name="start_auto_clicker">شروع Auto Clicker</string>
+    <string name="stop_auto_clicker">توقف Auto Clicker</string>
+    <string name="add_clicking_target">کلیک ھدف افزودن</string>
+    <string name="remove_clicking_target">کلیک ھدف حذف</string>
+    <string name="add_swiping_target">کشیدن ھدف افزودن</string>
+    <string name="save_script">اسکریپت ذخیره</string>
+    <string name="edit_script_setting">اسکریپت تنظیمات ویرایش</string>
+
+    <string name="drag_action">نقطه عمل هدف را بکشید تا به هر جایی منتقل شود</string>
+    <string name="drag_n_swipe_action">نقطه عمل شروع/پایان هدف را بکشید تا به هر جایی منتقل شود. در هر دو نقطه فاصله زمانی تعیین کنید.</string>
+    <string name="interval_desc">فاصله فاصله زمانی بین دو کلیک متوالی است.</string>
+    <string name="anti_detection">ضد تشخیص</string>
+    <string name="anti_detection_desc">پس از هر کلیک، زمان و شعاع تصادفی ایجاد کنید تا بیشتر شبیه انسان رفتار کنید.</string>
+
+    <string name="interval_before_the_next_action">بعدی اقدام از قبل فاصلھ</string>
+    <string name="swipe_duration">کشیدن مدت</string>
+    <string name="repeat_mode">تکرار حالت</string>
+    <string name="change_language">زبان تغییر</string>
+    <string name="english_default">(فرض پیش) انگلیسی</string>
+    <string name="rate_us">کنید ارزیابی را ما</string>
+    <string name="feedback">بازخورد</string>
+    <string name="privacy_policy">خصوصی حریم حفظ سیاست</string>
+    <string name="play">شروع</string>
+    <string name="add">افزودن</string>
+    <string name="start">شروع</string>
+    <string name="stop">توقف</string>
+    <string name="close">بستن</string>
+    <string name="save">ذخیره</string>
+    <string name="drag">کشیدن</string>
+    <string name="remove">حذف</string>
+    <string name="swipe">کشیدن</string>
+    <string name="pause">موقت توقف</string>
+    <string name="cancel">لغو</string>
+    <string name="save_script_desc">برای افزایش بهره وری، سرعت کلیک، مدت زمان و برنامه های هدف خود را ذخیره کنید!</string>
+    <string name="rename">نام تغییر</string>
+    <string name="duplicate">کردن کپی</string>
+    <string name="delete">حذف</string>
+    <string name="export">کردن صادر</string>
+    <string name="notification_message">برای تغییر سناریو فشار دهید</string>
+    <string name="notification_title">% :سناریو1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">کنید وارد حافظھ از را اسکریپت</string>
+    <string name="default_scenario_name">من اسکریپت</string>
+    <string name="toast_denied_foreground_permission">کاربر اجازه سرویس پیش زمینه را رد کرد</string>
+    <string name="dialog_title_delete_scenario">حذف سناریو</string>
+    <string name="message_delete_scenario">با این کار %1$s حذف می‌شود. مطمئنی؟</string>
+    <string name="hint_rename_scenario">نام جدید خود را وارد کنید …</string>
+    <string name="item_desc_single_mode_scenario">در فواصل زمانی مشخص، روی یک موقعیت تک ضربه بزنید</string>
+
+    <string name="dialog_title_rename_scenario">سناریو نام تغییر</string>
+    <string name="error_empty_scenario_name">باشد خالی تواند نمی فیلد</string>
+    <string name="item_title_single_mode_scenario">واحد ای نقطھ حالت</string>
+    <string name="item_title_multi_mode_scenario">متعدد نقاط حالت</string>
+    <string name="item_desc_multi_mode_scenario">مجموعه‌ای از ضربه‌ها/ ضربه‌ها را در موقعیت‌های مختلف تنظیم کنید</string>
+    <string name="how_to_enable">کنیم فعال چگونھ</string>
+    <string name="tutorial_instructions">روی دکمه «اعطای مجوز» ضربه بزنید و\n1. «نصب سرویس» را در تنظیمات پیدا کنید\n2. «کلیک کننده خودکار» را پیدا کنید\n3. مجوز را فعال کنید</string>
+    <string name="accessibility_is_unavailable"><u>نیست دسترس در دسترسی</u></string>
+    <string name="menu_item_title_troubleshooting">یابی عیب</string>
+   <string name="interval_setting">تنظیم فاصله</string>
+   <string name="preferences">ترجیحات</string>
+   <string name="battery_optimization">بهینه‌سازی باتری</string>
+   <string name="permission_granted">مجوز داده شد</string>
+   <string name="permission_missing">مجوز مفقود</string>
+   <string name="only_with_these_permissions">فقط با این مجوزها:</string>
+   <string name="permission_point_1">1. شما نیازی به تنظیم مجوز دسترسی هر بار که اپلیکیشن را باز می‌کنید ندارید.</string>
+   <string name="permission_point_2">2. اپلیکیشن ما می‌تواند به‌طور ایمن در پس‌زمینه اجرا شود و سرویس پایدار ارائه دهد.</string>
+   <string name="import_files">وارد کردن</string>
+   <string name="add_script">افزودن اسکریپت</string>
+   <string name="empty_script_message">اسکریپت‌های ذخیره‌شده شما \nدر اینجا نمایش داده می‌شود</string>
+   <string name="troubleshooting">عیب‌یابی</string>
+   <string name="allow_permission">اجازه دادن به مجوز</string>
+   <string name="troubleshoot_desc">مجوز اساسی برای اپلیکیشن کلیک خودکار. باید مجوز مورد نیاز را داشته باشید.</string>
+
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modules.script.presentation.ui.ScriptFragment">
+
+
+    <LinearLayout
+        android:id="@+id/layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/padding_16_dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/ContainerHeading"
+            app:srcCompat="@drawable/ic_script_un_available" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_4_dp"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:text="@string/empty_script_message"
+            android:textAppearance="@style/DescriptionHeading"
+            android:textColor="@color/normalTextColor" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_script"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8_dp"
+            android:text="@string/add_script"
+            android:textAppearance="@style/ContainerHeading"
+            app:icon="@drawable/ic_add" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/importScriptEmpty"
+            style="@style/AppTheme.Widget.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8_dp"
+            android:text="@string/import_files"
+            android:textAppearance="@style/ButtonHeading"
+            app:icon="@drawable/ic_import"
+            app:iconPadding="8dp" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/item_script"
+        tools:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/importScript"
+        style="@style/AppTheme.Widget.FabSecondary"
+        android:backgroundTint="@color/primaryColor"
+        android:contentDescription="@string/content_desc_add_script"
+        android:text="@string/import_files"
+        android:textAppearance="@style/ButtonHeading"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:cornerRadius="50dp"
+        app:icon="@drawable/ic_import"
+        app:iconPadding="@dimen/padding_8_dp"
+        app:iconTint="@color/white"
+        app:layout_anchor="@id/list"
+        app:layout_anchorGravity="bottom|right|end"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.RoundedImage50"
+        tools:visibility="gone" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">Strona główna</string>
+    <string name="title_script">Skrypt</string>
+    <string name="title_setting">Ustawienia</string>
+    <string name="activity_title">Scenariusze</string>
+    <string name="accessibility_service_description">Ta aplikacja potrzebuje tej usługi, aby
+wprowadzać kliknięcia, które stworzyłeś, do innych aplikacji po wykryciu warunków.\n\nŻadne
+dane nie będą zbierane z tej aplikacji.</string>
+    <string name="accessibility_permission">Uprawnienia Dostępności</string>
+    <string name="accessibility_permission_desc">Zezwól Auto Clicker na korzystanie z usług
+dostępności dla funkcji aplikacji.</string>
+    <string name="simulating_click_point">• Symulowanie kliknięć na ekranie urządzenia</string>
+    <string name="simulating_swipe_point">• Symulowanie przeciągnięć na ekranie
+urządzenia</string>
+    <string name="why_permission_desc">Dlaczego używamy tego uprawnienia?</string>
+    <string name="permission_use_desc">Auto Clicker wykorzystuje API usług dostępności, aby
+włączyć następujące podstawowe funkcje.</string>
+    <string name="grant_permission">Zezwól na uprawnienia</string>
+    <string name="permission_required">Uprawnienia wymagane</string>
+    <string name="single_mode">Tryb pojedynczy</string>
+    <string name="multi_mode">Tryb wielopunktowy</string>
+    <string name="single_mode_desc">Klikaj wielokrotnie w jednym miejscu w określonych
+odstępach czasu</string>
+    <string name="multi_mode_desc">Ustaw serię kliknięć/przeciągnięć w różnych
+miejscach</string>
+    <string name="how_to_use">Jak używać?</string>
+    <string name="dialog_title_permission_accessibility">Usługa dostępności</string>
+    <string name="dialog_title_permission_notification">Powiadomienie</string>
+    <string name="dialog_title_permission_mandatory_denied">Odmówiono uprawnień</string>
+    <string name="dialog_title_permission_overlay">Nakładka</string>
+    <string name="message_permission_desc_overlay">Uprawnienia nakładki są wymagane do
+wyświetlenia interfejsu Auto Clicker nad aplikacjami, które chcesz zautomatyzować,
+umożliwiając konfigurację scenariusza bez zatrzymywania innej aplikacji.</string>
+    <string name="message_permission_desc_notification">Opcjonalnie: Wyświetla
+powiadomienie podczas działania aplikacji, aby łatwo powrócić do ekranu wyboru
+scenariusza.</string>
+    <string name="message_permission_mandatory_denied">To uprawnienie jest obowiązkowe,
+aby Auto Clicker działał poprawnie. Bez niego nie będzie działać poprawnie.</string>
+    <string name="splash_content_description">Klikaj bez wysiłku</string>
+    <string name="please_wait">Proszę czekać</string>
+    <string name="select_language">Wybierz język</string>
+    <string name="continue_">Kontynuuj</string>
+    <string name="watch_tutorial">Obejrzyj samouczek</string>
+    <string name="select_distinct_language">Wybierz inny język</string>
+    <string name="interval">Interwał</string>
+    <string name="start_auto_clicker">Uruchom Auto Clicker</string>
+    <string name="stop_auto_clicker">Zatrzymaj Auto Clicker</string>
+    <string name="add_clicking_target">Dodaj cel kliknięcia</string>
+    <string name="remove_clicking_target">Usuń cel kliknięcia</string>
+    <string name="add_swiping_target">Dodaj cel przeciągnięcia</string>
+    <string name="save_script">Zapisz skrypt</string>
+    <string name="edit_script_setting">Edytuj ustawienia skryptu</string>
+    <string name="drag_action">Przeciągnij punkt działania, aby przenieść go w dowolne
+miejsce</string>
+    <string name="drag_n_swipe_action">Przeciągnij punkt początkowy/końcowy działania, aby
+przenieść go w dowolne miejsce. Ustaw interwał na obu punktach.</string>
+    <string name="interval_desc">Interwał to odstęp czasu między dwoma kolejnymi
+kliknięciami.</string>
+    <string name="anti_detection">Anty-wykrywanie</string>
+    <string name="anti_detection_desc">Generuj losowy czas i promień po każdym kliknięciu, aby
+wyglądać bardziej naturalnie.</string>
+    <string name="interval_before_the_next_action">Interwał przed kolejną akcją</string>
+    <string name="swipe_duration">Czas trwania przeciągnięcia</string>
+    <string name="repeat_mode">Tryb powtarzania</string>
+    <string name="change_language">Zmień język</string>
+    <string name="english_default">Angielski (domyślny)</string>
+    <string name="rate_us">Oceń nas</string>
+    <string name="feedback">Opinie</string>
+    <string name="privacy_policy">Polityka prywatności</string>
+    <string name="play">Odtwórz</string>
+    <string name="add">Dodaj</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="close">Zamknij</string>
+    <string name="save">Zapisz</string>
+    <string name="drag">Przeciągnij</string>
+    <string name="remove">Usuń</string>
+    <string name="swipe">Przeciągnij</string>
+    <string name="pause">Pauza</string>
+    <string name="cancel">Anuluj</string>
+    <string name="save_script_desc">Zapisz prędkość kliknięcia, czas trwania i aplikacje docelowe,
+aby zwiększyć produktywność!</string>
+    <string name="rename">Zmień nazwę</string>
+    <string name="duplicate">Duplikuj</string>
+    <string name="delete">Usuń</string>
+    <string name="export">Eksportuj</string>
+    <string name="notification_message">Kliknij, aby zmienić scenariusz</string>
+    <string name="notification_title">Scenariusz: %1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">Importuj skrypt z pamięci</string>
+    <string name="default_scenario_name">MójSkrypt</string>
+    <string name="toast_denied_foreground_permission">Użytkownik odrzucił uprawnienia usługi
+pierwszego planu</string>
+    <string name="dialog_title_delete_scenario">Usuń scenariusz</string>
+    <string name="message_delete_scenario">To usunie %1$s. Czy jesteś pewien?</string>
+    <string name="hint_rename_scenario">Wpisz nową nazwę…</string>
+    <string name="dialog_title_rename_scenario">Zmień nazwę scenariusza</string>
+    <string name="error_empty_scenario_name">Pole nie może być puste</string>
+    <string name="item_title_single_mode_scenario">Tryb jednopunktowy</string>
+    <string name="item_desc_single_mode_scenario">Klikaj wielokrotnie w jednym punkcie w
+określonych odstępach czasu</string>
+    <string name="item_title_multi_mode_scenario">Tryb wielopunktowy</string>
+    <string name="item_desc_multi_mode_scenario">Ustaw serię kliknięć/przeciągnięć w różnych
+miejscach</string>
+    <string name="how_to_enable">Jak włączyć</string>
+    <string name="tutorial_instructions">Kliknij przycisk „Zezwól na uprawnienia” i\n1. Znajdź
+„Zainstaluj usługę” w ustawieniach\n2. Znajdź „Auto Clicker”\n3. Włącz uprawnienia</string>
+    <string name="accessibility_is_unavailable"><u>Dostępność niedostępna</u></string>
+    <string name="menu_item_title_troubleshooting">Rozwiązywanie problemów</string>
+    <string name="interval_setting">Ustawienie interwału</string>
+    <string name="preferences">preferencje</string>
+    <string name="battery_optimization">Optymalizacja baterii</string>
+    <string name="permission_granted">Zezwolenie udzielone</string>
+    <string name="permission_missing">Brak zezwolenia</string>
+    <string name="only_with_these_permissions">Tylko z tymi uprawnieniami:</string>
+    <string name="permission_point_1">1. Nie musisz ustawiać uprawnienia dostępu za każdym razem, gdy otwierasz aplikację.</string>
+    <string name="permission_point_2">2. Nasza aplikacja może bezpiecznie działać w tle i zapewniać stabilną usługę.</string>
+    <string name="import_files">Importuj</string>
+    <string name="add_script">Dodaj skrypt</string>
+    <string name="empty_script_message">Twoje zapisane skrypty \nzostaną wyświetlone tutaj</string>
+    <string name="troubleshooting">Rozwiązywanie problemów</string>
+    <string name="allow_permission">Zezwól na zezwolenie</string>
+    <string name="troubleshoot_desc">Podstawowe uprawnienia dla aplikacji automatycznego klikania. Musisz mieć wymagane uprawnienie.</string>
+
+</resources>

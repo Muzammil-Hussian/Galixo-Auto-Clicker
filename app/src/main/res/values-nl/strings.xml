@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">Home</string>
+    <string name="title_script">Script</string>
+    <string name="title_setting">Instelling</string>
+    <string name="activity_title">Scenario\'s</string>
+    <string name="accessibility_service_description">Deze applicatie heeft deze service nodig om
+de klikken die u hebt gemaakt, in andere applicaties te injecteren zodra de voorwaarden zijn
+gedetecteerd.\n\nEr worden geen gegevens van deze applicatie verzameld.</string>
+    <string name="accessibility_permission">Toegankelijkheidsmachtiging</string>
+    <string name="accessibility_permission_desc">Sta Auto Clicker toe om
+toegankelijkheidsdiensten te gebruiken voor app-functies.</string>
+    <string name="simulating_click_point">• Klikken simuleren op het scherm van het
+apparaat</string>
+    <string name="simulating_swipe_point">• Veegacties simuleren op het scherm van het
+apparaat</string>
+    <string name="why_permission_desc">Waarom gebruiken we deze toestemming?</string>
+    <string name="permission_use_desc">Auto Clicker maakt gebruik van de API-machtiging voor toegankelijkheidsservices om de volgende kernfunctionaliteiten in te schakelen.</string>
+    <string name="grant_permission">Toestemming verlenen</string>
+    <string name="permission_required">Toestemming vereist</string>
+    <string name="single_mode">Enkelvoudige modus</string>
+    <string name="multi_mode">Meervoudige modus</string>
+    <string name="single_mode_desc">Klik herhaaldelijk op één positie met opgegeven
+intervallen</string>
+    <string name="multi_mode_desc">Stel een reeks klikken/veegbewegingen in op verschillende
+posities</string>
+    <string name="how_to_use">Hoe te gebruiken?</string>
+    <string name="dialog_title_permission_accessibility">Toegankelijkheidsdienst</string>
+    <string name="dialog_title_permission_notification">Melding</string>
+    <string name="dialog_title_permission_mandatory_denied">Toestemming geweigerd</string>
+    <string name="dialog_title_permission_overlay">Overlay</string>
+    <string name="message_permission_desc_overlay">De overlay-machtiging is vereist om de
+AutoClicker-interface over de applicaties weer te geven die u wilt automatiseren, zodat u uw
+scenario kunt configureren zonder de andere applicatie te stoppen.</string>
+    <string name="message_permission_desc_notification">Optioneel: Toont de melding terwijl de
+applicatie actief is, zodat u eenvoudig terug kunt keren naar het scherm voor
+scenarioselectie.</string>
+    <string name="message_permission_mandatory_denied">Deze toestemming is verplicht voor
+AutoClicker om correct te functioneren. Zonder deze toestemming werkt het niet
+correct.</string>
+    <string name="splash_content_description">Klik moeiteloos</string>
+    <string name="please_wait">Even geduld aub</string>
+    <string name="select_language">Selecteer taal</string>
+    <string name="continue_">Doorgaan</string>
+    <string name="watch_tutorial">Bekijk tutorial</string>
+    <string name="select_distinct_language">Selecteer een andere taal</string>
+    <string name="interval">Interval</string>
+    <string name="start_auto_clicker">Start Auto Clicker</string>
+    <string name="stop_auto_clicker">Stop Auto Clicker</string>
+    <string name="add_clicking_target">Klikdoel toevoegen</string>
+    <string name="remove_clicking_target">Klikdoel verwijderen</string>
+    <string name="add_swiping_target">Veegdoel toevoegen</string>
+    <string name="save_script">Script opslaan</string>
+    <string name="edit_script_setting">Scriptinstellingen bewerken</string>
+    <string name="drag_action">Sleep het doelactiepunt om het overal te verplaatsen</string>
+    <string name="drag_n_swipe_action">Sleep het begin-/eindactiepunt om het overal te
+verplaatsen. Stel een interval in op beide punten.</string>
+    <string name="interval_desc">Het interval is de tijd tussen twee opeenvolgende
+klikken.</string>
+    <string name="anti_detection">Anti-detectie</string>
+    <string name="anti_detection_desc">Genereer een willekeurige hoeveelheid tijd en straal na
+elke klik om meer mensachtig gedrag te simuleren.</string>
+    <string name="interval_before_the_next_action">Interval vóór de volgende actie</string>
+    <string name="swipe_duration">Veegduur</string>
+    <string name="repeat_mode">Herhaalmodus</string>
+    <string name="change_language">Taal wijzigen</string>
+    <string name="english_default">Engels (standaard)</string>
+    <string name="rate_us">Beoordeel ons</string>
+    <string name="feedback">Feedback</string>
+    <string name="privacy_policy">Privacybeleid</string>
+    <string name="play">Afspelen</string>
+    <string name="add">Toevoegen</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="close">Sluiten</string>
+    <string name="save">Opslaan</string>
+    <string name="drag">Slepen</string>
+    <string name="remove">Verwijderen</string>
+    <string name="swipe">Vegen</string>
+    <string name="pause">Pauzeren</string>
+    <string name="cancel">Annuleren</string>
+    <string name="save_script_desc">Sla uw klik snelheid, duur en doel-apps op om de
+productiviteit te verhogen!</string>
+    <string name="rename">Hernoemen</string>
+    <string name="duplicate">Dupliceren</string>
+    <string name="delete">Verwijderen</string>
+    <string name="export">Exporteren</string>
+    <string name="notification_message">Klik om het scenario te wijzigen</string>
+    <string name="notification_title">Scenario: %1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">Script importeren uit opslag</string>
+    <string name="default_scenario_name">MijnScript</string>
+    <string name="toast_denied_foreground_permission">Gebruiker heeft toestemming voor
+voorgrondservice geweigerd</string>
+    <string name="dialog_title_delete_scenario">Scenario verwijderen</string>
+    <string name="message_delete_scenario">Dit verwijdert %1$s. Weet u het zeker?</string>
+    <string name="hint_rename_scenario">Voer uw nieuwe naam in…</string>
+    <string name="dialog_title_rename_scenario">Scenario hernoemen</string>
+    <string name="error_empty_scenario_name">Veld mag niet leeg zijn</string>
+    <string name="item_title_single_mode_scenario">Eénpuntsmodus</string>
+    <string name="item_desc_single_mode_scenario">Klik herhaaldelijk op één positie met
+opgegeven intervallen</string>
+    <string name="item_title_multi_mode_scenario">Multipuntsmodus</string>
+    <string name="item_desc_multi_mode_scenario">Stel een reeks klikken/veegbewegingen in op
+verschillende posities</string>
+    <string name="how_to_enable">Hoe in te schakelen</string>
+    <string name="tutorial_instructions">Klik op de knop “Toestemming verlenen” en\n1. Zoek
+“Service installeren” in de instellingen\n2. Zoek “Auto Clicker”\n3. Schakel de toestemming
+in</string>
+    <string name="accessibility_is_unavailable"><u>Toegankelijkheid niet
+beschikbaar</u></string>
+    <string name="menu_item_title_troubleshooting">Probleemoplossing</string>
+    <string name="interval_setting">Intervalinstelling</string>
+    <string name="preferences">voorkeuren</string>
+
+    <string name="battery_optimization">Batterijoptimalisatie</string>
+    <string name="permission_granted">Toestemming Verleend</string>
+    <string name="permission_missing">Toestemming Ontbreekt</string>
+    <string name="only_with_these_permissions">Alleen met deze machtigingen:</string>
+    <string name="permission_point_1">1. Je hoeft geen toegangsrechten in te stellen elke keer wanneer je de app opent.</string>
+    <string name="permission_point_2">2. Onze app kan veilig op de achtergrond draaien en een stabiele service bieden.</string>
+    <string name="import_files">Importeren</string>
+    <string name="add_script">Script Toevoegen</string>
+    <string name="empty_script_message">Je opgeslagen scripts \nworden hier weergegeven</string>
+    <string name="troubleshooting">Probleemoplossing</string>
+    <string name="allow_permission">Sta Toestemming Toe</string>
+    <string name="troubleshoot_desc">Fundamentele toestemming voor automatische klik-app. Moet de vereiste toestemming hebben.</string>
+
+</resources>

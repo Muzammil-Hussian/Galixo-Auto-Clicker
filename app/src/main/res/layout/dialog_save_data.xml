@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_16_dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_script"
+        android:textAppearance="@style/SubHeadingStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/saveScriptDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_8_dp"
+        android:text="@string/save_script_desc"
+        android:textAppearance="@style/Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_8_dp"
+        android:paddingHorizontal="@dimen/padding_8_dp"
+        android:paddingVertical="@dimen/padding_8_dp"
+        android:text="@string/cancel"
+        android:textAppearance="@style/ButtonHeading"
+        android:textColor="@color/normalTextColor"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnSave"
+        app:layout_constraintEnd_toStartOf="@+id/btnSave" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_16_dp"
+        android:layout_marginEnd="@dimen/padding_16_dp"
+        android:paddingHorizontal="@dimen/padding_16_dp"
+        android:paddingVertical="@dimen/padding_8_dp"
+        android:text="@string/save"
+        android:textAppearance="@style/ButtonHeading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveScriptDes" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

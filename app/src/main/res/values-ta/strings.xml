@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ஆஃᾖῄ ஆ᾵ேடா கிளிᾰக᾽</string>
+    <string name="title_home">ᾙகᾺᾗ</string>
+    <string name="title_script">ῄகிாிᾺ᾵</string>
+    <string name="title_setting">அைமᾺᾗக῀</string>
+    <string name="activity_title">திைரᾰகைதக῀</string>
+    <string name="accessibility_service_description">நீᾱக῀ உᾞவாᾰகிய கிளிᾰᾁகைள பிற
+பயᾹபாᾌகளி᾿ இைணᾰக, இᾸத பயᾹபாᾌ இᾸத ேசைவைய ேதைவᾺபᾌᾷᾐகிறᾐ.
+நிபᾸதைனக῀ கᾶடறியᾺப᾵டᾫடᾹ ெசய᾿ பயᾹ ெபᾠΆ.\n\nஇᾸத
+பயᾹபா᾵ᾊᾢᾞᾸᾐ எᾸத தகவ᾿கᾦΆ ேசகாிᾰகᾺபடமா᾵டாᾐ.</string>
+    <string name="accessibility_permission">அᾎக᾿ அᾔமதி</string>
+    <string name="accessibility_permission_desc">பயᾹபா᾵ᾌ அΆசᾱகᾦᾰகாக ஆ᾵ேடா
+கிளிᾰகᾞᾰᾁ அᾎக᾿ ேசைவகைள பயᾹபᾌᾷத அᾔமதி வழᾱகᾫΆ.</string>
+    <string name="simulating_click_point">• சாதனᾷ திைரயி᾿ கிளிᾰᾁகைள
+மாιறியைமᾷத᾿</string>
+    <string name="simulating_swipe_point">• சாதனᾷ திைரயி᾿ ῄைவᾺ இயᾰகᾱகைள
+மாιறியைமᾷத᾿</string>
+    <string name="why_permission_desc">இᾸத அᾔமதிைய ஏᾹ
+பயᾹபᾌᾷᾐகிேறாΆ?</string>
+    <string name="permission_use_desc">ஆ᾵ேடா கிளிᾰக᾽ பிᾹவᾞΆ ᾙᾰகிய
+ெசய᾿பாᾌகைள ெசய᾿பᾌᾷத அᾎக᾿ ேசைவ API அᾔமதிைய
+பயᾹபᾌᾷᾐகிறᾐ.</string>
+    <string name="grant_permission">அᾔமதி வழᾱகᾫΆ</string>
+    <string name="permission_required">அᾔமதி ேதைவயானᾐ</string>
+    <string name="single_mode">ஒιைற ᾙைற</string>
+    <string name="multi_mode">பல ᾙைற</string>
+    <string name="single_mode_desc">ᾁறிᾺபி᾵ட இைடெவளியி᾿ ஒேர இடᾷதி᾿ மீᾶᾌΆ
+மீᾶᾌΆ கிளிᾰகᾫΆ</string>
+    <string name="multi_mode_desc">ெவῂேவᾠ இடᾱகளி᾿ கிளிᾰᾁக῀/ῄைவᾺᾗகளிᾹ
+ெதாடைரைய அைமᾰகᾫΆ</string>
+    <string name="how_to_use">எᾺபᾊ பயᾹபᾌᾷᾐவᾐ?</string>
+    <string name="dialog_title_permission_accessibility">அᾎக᾿ ேசைவ</string>
+    <string name="dialog_title_permission_notification">அறிவிᾺᾗ</string>
+    <string name="dialog_title_permission_mandatory_denied">அᾔமதி
+மᾠᾰகᾺப᾵டᾐ</string>
+    <string name="dialog_title_permission_overlay">ேம᾿ேதாᾹற᾿</string>
+    <string name="message_permission_desc_overlay">நீᾱக῀ தானியᾰகமாᾰக விᾞΆᾗΆ
+பயᾹபாᾌகᾦᾰᾁ ேமேல ஆ᾵ேடா கிளிᾰக᾽ இைடᾙகᾷைத கா᾵ட ேம᾿ேதாᾹற᾿
+அᾔமதி ேதைவᾺபᾌகிறᾐ, பிற பயᾹபா᾵ைட நிᾠᾷதாம᾿ உᾱக῀ திைரᾰகைத
+அைமᾰக அᾔமதிᾰகிறᾐ.</string>
+    <string name="message_permission_desc_notification">விᾞᾺபᾷேத᾽ᾫ: பயᾹபாᾌ
+இயᾱᾁΆ ேபாᾐ அறிவிᾺைப கா᾵ᾌகிறᾐ, திைரᾰகைத ேத᾽ᾫ திைரᾰᾁ எளிதாக
+திᾞΆபிᾲ ெச᾿ல அᾔமதிᾰகிறᾐ.</string>
+    <string name="message_permission_mandatory_denied">ஆ᾵ேடா கிளிᾰக᾽ சாியாக
+இயᾱக இᾸத அᾔமதி க᾵டாயமாக உ῀ளᾐ. இதிᾹறி, அᾐ சாியாக இயᾱகாᾐ.</string>
+    <string name="splash_content_description">எளிதாக கிளிᾰ ெசᾼயᾫΆ</string>
+    <string name="please_wait">தயᾫெசᾼᾐ காᾷதிᾞᾰகᾫΆ</string>
+    <string name="select_language">ெமாழிையᾷ ேத᾽ᾸெதᾌᾰகᾫΆ</string>
+    <string name="continue_">ெதாடரᾫΆ</string>
+    <string name="watch_tutorial">பயிιசி காᾶக</string>
+    <string name="select_distinct_language">மாιᾠ ெமாழிையᾷ ேத᾽ᾸெதᾌᾰகᾫΆ</string>
+    <string name="interval">இைடெவளி</string>
+    <string name="start_auto_clicker">ஆ᾵ேடா கிளிᾰகைர ெதாடᾱகᾫΆ</string>
+    <string name="stop_auto_clicker">ஆ᾵ேடா கிளிᾰகைர நிᾠᾷதᾫΆ</string>
+    <string name="add_clicking_target">கிளிᾰ இலᾰகᾷைதᾲ ேச᾽ᾰகᾫΆ</string>
+    <string name="remove_clicking_target">கிளிᾰ இலᾰகᾷைத அகιறᾫΆ</string>
+    <string name="add_swiping_target">ῄைவᾺ இலᾰகᾷைதᾲ ேச᾽ᾰகᾫΆ</string>
+    <string name="save_script">ῄகிாிᾺ᾵ ேசமிᾰகᾫΆ</string>
+    <string name="edit_script_setting">ῄகிாிᾺ᾵ அைமᾺᾗகைளᾷ திᾞᾷதᾫΆ</string>
+    <string name="drag_action">இலᾰᾁ ெசய᾿பா᾵ᾌ ᾗ῀ளிைய எᾱᾁ ேவᾶᾌமானாᾤΆ
+இᾨᾷᾐᾲ ெச᾿லᾫΆ</string>
+    <string name="drag_n_swipe_action">ெதாடᾰகΆ/ᾙᾊᾫ இலᾰᾁ ெசய᾿பா᾵ᾌ ᾗ῀ளிைய
+எᾱᾁ ேவᾶᾌமானாᾤΆ இᾨᾷᾐᾲ ெச᾿லᾫΆ. இரᾶᾌ ᾗ῀ளிகளிᾤΆ இைடெவளிைய
+அைமᾰகᾫΆ.</string>
+    <string name="interval_desc">இைடெவளி எᾹபᾐ இᾞ ெதாட᾽ᾲசியான கிளிᾰᾁகᾦᾰᾁ
+இைடயிலான ேநர இைடெவளியாᾁΆ.</string>
+    <string name="anti_detection">திᾞᾷத எதி᾽Ὰᾗ</string>
+    <string name="anti_detection_desc">ஒῂெவாᾞ கிளிᾰகிιᾁᾺ பிறᾁΆ ஒᾞ சீரιற ேநரΆ
+மιᾠΆ ஆைர உᾞவாᾰகி, மனித᾽ ேபால ேதாᾹᾠᾱக῀.</string>
+    <string name="interval_before_the_next_action">அᾌᾷத ெசயᾤᾰᾁ ᾙᾹ
+இைடெவளி</string>
+    <string name="swipe_duration">ῄைவᾺ கால அளᾫ</string>
+    <string name="repeat_mode">மீᾶᾌΆ ெசᾼᾜΆ ᾙைற</string>
+    <string name="change_language">ெமாழிைய மாιறᾫΆ</string>
+    <string name="english_default">ஆᾱகிலΆ (இய᾿ᾗநிைல)</string>
+    <string name="rate_us">எᾱகைள மதிᾺᾖᾌ ெசᾼயᾫΆ</string>
+    <string name="feedback">பிᾹᾕ᾵டΆ</string>
+    <string name="privacy_policy">தனிᾜாிைமᾰ ெகா῀ைக</string>
+    <string name="play">ஆ᾵டΆ ெதாடᾱகᾫΆ</string>
+    <string name="add">ேச᾽ᾰகᾫΆ</string>
+    <string name="start">ெதாடᾱகᾫΆ</string>
+    <string name="stop">நிᾠᾷதᾫΆ</string>
+    <string name="close">ᾚடᾫΆ</string>
+    <string name="save">ேசமிᾰகᾫΆ</string>
+    <string name="drag">இᾨᾰகᾫΆ</string>
+    <string name="remove">அகιறᾫΆ</string>
+    <string name="swipe">ῄைவᾺ ெசᾼயᾫΆ</string>
+    <string name="pause">இைடநிᾠᾷதΆ</string>
+    <string name="cancel">ரᾷᾐ ெசᾼயᾫΆ</string>
+    <string name="save_script_desc">உᾱக῀ கிளிᾰ ேவகΆ, கால அளᾫ மιᾠΆ இலᾰᾁ
+பயᾹபாᾌகைளᾲ ேசமிᾷᾐ உιபᾷதி திறைன அதிகாிᾰகᾫΆ!</string>
+    <string name="rename">ெபய᾽ மாιறᾫΆ</string>
+    <string name="duplicate">பதிேவιᾗ ெசᾼயᾫΆ</string>
+    <string name="delete">அழிᾰகᾫΆ</string>
+    <string name="export">ஏιᾠமதி ெசᾼயᾫΆ</string>
+    <string name="notification_message">திைரᾰகைதைய மாιற ெதா᾵ᾌ நடᾷதᾫΆ</string>
+    <string name="notification_title">திைரᾰகைத: %1$s</string>
+    <string name="notification_channel_name">ஆ᾵ேடா கிளிᾰக᾽</string>
+    <string name="content_desc_add_script">ேசமிᾺபிᾢᾞᾸᾐ ῄகிாிᾺ᾵ இறᾰᾁமதி
+ெசᾼயᾫΆ</string>
+    <string name="default_scenario_name">எனᾐ ῄகிாிᾺ᾵</string>
+    <string name="toast_denied_foreground_permission">பயன᾽ ᾙᾹனணி ேசைவ
+அᾔமதிைய மᾠᾷதா᾽</string>
+    <string name="dialog_title_delete_scenario">திைரᾰகைதைய நீᾰᾁ</string>
+    <string name="message_delete_scenario">இதᾹ ᾚலΆ %1$s நீᾰகᾺபᾌΆ. நீᾱக῀
+உᾠதியாக இᾞᾰகிறீ᾽களா?</string>
+    <string name="hint_rename_scenario">உᾱக῀ ᾗதிய ெபயைர உ῀ளிடᾫΆ…</string>
+    <string name="dialog_title_rename_scenario">திைரᾰகைதயிᾹ ெபயைர மாιறᾫΆ</string>
+    <string name="error_empty_scenario_name">ᾗலΆ காᾢயாக இᾞᾰக ᾙᾊயாᾐ</string>
+    <string name="item_title_single_mode_scenario">ஒιைற ᾗ῀ளி ᾙைற</string>
+    <string name="item_desc_single_mode_scenario">ᾁறிᾺபி᾵ட இைடெவளிகளி᾿ ஒேர
+ᾗ῀ளிைய மீᾶᾌΆ மீᾶᾌΆ கிளிᾰ ெசᾼயᾫΆ</string>
+    <string name="item_title_multi_mode_scenario">பல ᾗ῀ளி ᾙைற</string>
+    <string name="item_desc_multi_mode_scenario">ெவῂேவᾠ இடᾱகளி᾿ கிளிᾰ/ῄைவᾺ
+ெதாடைரைய அைமᾰகᾫΆ</string>
+    <string name="how_to_enable">எᾺபᾊᾲ ெசய᾿பᾌᾷᾐவᾐ</string>
+    <string name="tutorial_instructions">“அᾔமதி வழᾱகᾫΆ” ெபாᾷதாைனᾷ த᾵டᾫΆ
+மιᾠΆ\n1. அைமᾺᾗகளி᾿ “ேசைவைய நிᾠᾫ” எᾹபைதᾰ காᾶக\n2. “ஆ᾵ேடா
+கிளிᾰக᾽” எᾹபைதᾰ காᾶக\n3. அᾔமதிைய ெசய᾿பᾌᾷதᾫΆ</string>
+    <string name="accessibility_is_unavailable"><u>அᾎக᾿ இ᾿ைல</u></string>
+    <string name="menu_item_title_troubleshooting">சிᾰக᾿ தீ᾽ᾫ</string>
+    <string name="interval_setting">இடைவெளி அமைப்பு</string>
+    <string name="preferences">விருப்பங்கள்</string>
+    <string name="battery_optimization">பட்டரி மேம்பாடு</string>
+    <string name="permission_granted">அனுமதி வழங்கப்பட்டது</string>
+    <string name="permission_missing">அனுமதி காணவில்லை</string>
+    <string name="only_with_these_permissions">இந்த அனுமதிகள் மட்டுமே:</string>
+    <string name="permission_point_1">1. நீங்கள் ஒவ்வொரு முறையும் பயன்பாட்டை திறக்கும்போது அணுகல் அனுமதியை அமைக்க தேவையில்லை.</string>
+    <string name="permission_point_2">2. எங்கள் பயன்பாடு பின்னணி வகையில் பாதுகாப்பாக இயக்கப்படலாம் மற்றும் நிலையான சேவையை வழங்க முடியும்.</string>
+    <string name="import_files">இம்போர்ட்</string>
+    <string name="add_script">ஸ்கிரிப்ட் சேர்க்கவும்</string>
+    <string name="empty_script_message">உங்கள் சேமிக்கப்பட்ட ஸ்கிரிப்டுகள் \nஇங்கு காட்சிப்படுத்தப்படும்</string>
+    <string name="troubleshooting">பிரச்சினைகளை சரி செய்தல்</string>
+    <string name="allow_permission">அனுமதியை அனுமதிக்கவும்</string>
+    <string name="troubleshoot_desc">தன்னியக்க கிளிக்கர் பயன்பாட்டுக்கான அடிப்படை அனுமதி. தேவையான அனுமதியை பெற வேண்டும்.</string>
+
+</resources>

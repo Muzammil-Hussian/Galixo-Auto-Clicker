@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">Domů</string>
+    <string name="title_script">Skript</string>
+    <string name="title_setting">Nastavení</string>
+    <string name="activity_title">Scénáře</string>
+    <string name="accessibility_service_description">Tato aplikace potřebuje tuto službu, aby mohla
+vkládat kliknutí, která jste vytvořili, do jiných aplikací, jakmile budou podmínky detekovány.\n\nZ této
+aplikace nebudou shromažďována žádná data.</string>
+    <string name="accessibility_permission">Přístupová oprávnění</string>
+    <string name="accessibility_permission_desc">Povolte prosím aplikaci Auto Clicker používat přístupové
+služby pro funkce aplikace.</string>
+    <string name="simulating_click_point">• Simulace kliknutí na obrazovce zařízení</string>
+    <string name="simulating_swipe_point">• Simulace přejetí na obrazovce zařízení</string>
+    <string name="why_permission_desc">Proč používáme toto oprávnění?</string>
+    <string name="permission_use_desc">Auto Clicker používá přístupové oprávnění API ke zprovoznění
+následujících základních funkcí.</string>
+    <string name="grant_permission">Povolit oprávnění</string>
+    <string name="permission_required">Požadované oprávnění</string>
+    <string name="single_mode">Jednoduchý režim</string>
+    <string name="multi_mode">Vícebodový režim</string>
+    <string name="single_mode_desc">Klepejte opakovaně na jednu pozici v určených intervalech</string>
+    <string name="multi_mode_desc">Nastavte sérii klepnutí/přejetí na různých pozicích</string>
+    <string name="how_to_use">Jak používat?</string>
+    <string name="dialog_title_permission_accessibility">Služba přístupnosti</string>
+    <string name="dialog_title_permission_notification">Oznámení</string>
+    <string name="dialog_title_permission_mandatory_denied">Oprávnění zamítnuto</string>
+    <string name="dialog_title_permission_overlay">Překrytí</string>
+    <string name="message_permission_desc_overlay">Povolení překrytí je vyžadováno k zobrazení
+rozhraní AutoClicker nad aplikacemi, které chcete automatizovat, což vám umožní konfigurovat scénář,
+aniž byste museli zastavovat jiné aplikace.</string>
+    <string name="message_permission_desc_notification">Volitelné: Zobrazuje oznámení při spuštění
+aplikace, což usnadňuje návrat na obrazovku výběru scénáře.</string>
+    <string name="message_permission_mandatory_denied">Toto oprávnění je nezbytné pro správnou
+funkci AutoClicker. Bez něj nebude správně fungovat.</string>
+    <string name="splash_content_description">Klikání bez námahy</string>
+    <string name="please_wait">Prosím, čekejte</string>
+    <string name="select_language">Vyberte jazyk</string>
+    <string name="continue_">Pokračovat</string>
+    <string name="watch_tutorial">Sledujte tutoriál</string>
+    <string name="select_distinct_language">Vyberte jiný jazyk</string>
+    <string name="interval">Interval</string>
+    <string name="start_auto_clicker">Spustit Auto Clicker</string>
+    <string name="stop_auto_clicker">Zastavit Auto Clicker</string>
+    <string name="add_clicking_target">Přidat cíl klikání</string>
+    <string name="remove_clicking_target">Odebrat cíl klikání</string>
+    <string name="add_swiping_target">Přidat cíl přejetí</string>
+    <string name="save_script">Uložit skript</string>
+    <string name="edit_script_setting">Upravit nastavení skriptu</string>
+    <string name="drag_action">Přetáhněte cílový bod akce na libovolné místo</string>
+    <string name="drag_n_swipe_action">Přetáhněte počáteční/koncový cílový bod akce na libovolné
+místo. Nastavte interval na obou bodech.</string>
+    <string name="interval_desc">Interval je časový rozestup mezi dvěma po sobě jdoucími
+kliknutími.</string>
+    <string name="anti_detection">Ochrana proti detekci</string>
+    <string name="anti_detection_desc">Po každém kliknutí generujte náhodné časy a poloměry, aby to
+vypadalo přirozeněji.</string>
+    <string name="interval_before_the_next_action">Interval před dalším krokem</string>
+    <string name="swipe_duration">Doba přejetí</string>
+    <string name="repeat_mode">Režim opakování</string>
+    <string name="change_language">Změnit jazyk</string>
+    <string name="english_default">Angličtina (výchozí)</string>
+    <string name="rate_us">Ohodnoťte nás</string>
+    <string name="feedback">Zpětná vazba</string>
+    <string name="privacy_policy">Zásady ochrany osobních údajů</string>
+    <string name="play">Hrát</string>
+    <string name="add">Přidat</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="close">Zavřít</string>
+    <string name="save">Uložit</string>
+    <string name="drag">Přetáhnout</string>
+    <string name="remove">Odebrat</string>
+    <string name="swipe">Přejet</string>
+    <string name="pause">Pauza</string>
+    <string name="cancel">Zrušit</string>
+    <string name="save_script_desc">Uložte svou rychlost klikání, dobu trvání a cílové aplikace a zvyšte
+produktivitu!</string>
+    <string name="rename">Přejmenovat</string>
+    <string name="duplicate">Duplikovat</string>
+    <string name="delete">Odstranit</string>
+    <string name="export">Exportovat</string>
+    <string name="notification_message">Klepnutím změňte scénář</string>
+    <string name="notification_title">Scénář: %1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">Importujte skript ze souborů</string>
+    <string name="default_scenario_name">MůjSkript</string>
+    <string name="toast_denied_foreground_permission">Uživatel zamítl povolení ke službě na
+popředí</string>
+    <string name="dialog_title_delete_scenario">Odstranit scénář</string>
+    <string name="message_delete_scenario">Tím se odstraní %1$s. Jste si jisti?</string>
+    <string name="hint_rename_scenario">Zadejte nové jméno…</string>
+    <string name="dialog_title_rename_scenario">Přejmenovat scénář</string>
+    <string name="error_empty_scenario_name">Pole nesmí být prázdné</string>
+    <string name="item_title_single_mode_scenario">Jednoduchý režim</string>
+    <string name="item_desc_single_mode_scenario">Opakované klepnutí na jednu pozici v určených
+intervalech</string>
+    <string name="item_title_multi_mode_scenario">Vícebodový režim</string>
+    <string name="item_desc_multi_mode_scenario">Nastavte sérii klepnutí/přejetí na různých
+pozicích</string>
+    <string name="how_to_enable">Jak povolit</string>
+    <string name="tutorial_instructions">Klepněte na tlačítko „Povolit přístup“ a\n1. Najděte „Nainstalovat
+službu“ v nastavení\n2. Najděte „Auto Clicker“\n3. Povolit oprávnění</string>
+    <string name="accessibility_is_unavailable"><u>Přístupnost není k dispozici</u></string>
+    <string name="menu_item_title_troubleshooting">Řešení problémů</string>
+    <string name="interval_setting">Nastavení intervalu</string>
+    <string name="preferences">preference</string>
+    <string name="battery_optimization">Optimalizace baterie</string>
+    <string name="permission_granted">Povolení uděleno</string>
+    <string name="permission_missing">Chybějící povolení</string>
+    <string name="only_with_these_permissions">Pouze s těmito povoleními:</string>
+    <string name="permission_point_1">1. Nemusíte nastavovat povolení přístupu pokaždé, když otevřete aplikaci.</string>
+    <string name="permission_point_2">2. Naše aplikace může bezpečně běžet na pozadí a poskytovat stabilní službu.</string>
+    <string name="import_files">Import</string>
+    <string name="add_script">Přidat skript</string>
+    <string name="empty_script_message">Vaše uložené skripty \nse zde zobrazí</string>
+    <string name="troubleshooting">Odstraňování problémů</string>
+    <string name="allow_permission">Povolit povolení</string>
+    <string name="troubleshoot_desc">Základní povolení pro aplikaci automatického klikání. Musíte mít požadované povolení.</string>
+
+</resources>

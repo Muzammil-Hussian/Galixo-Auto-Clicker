@@ -39,6 +39,10 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
+    //Timber for logging info
+    implementation(libs.timber)
+
+
     // Library modules
     implementation(project(":core:common:base"))
     implementation(project(":core:common:display"))

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">Laman Utama</string>
+    <string name="title_script">Skrip</string>
+    <string name="title_setting">Tetapan</string>
+    <string name="activity_title">Senario</string>
+    <string name="accessibility_service_description">Aplikasi ini memerlukan perkhidmatan ini
+untuk menyuntikkan klik yang anda buat ke dalam aplikasi lain setelah keadaan
+dikesan.\n\nTiada data akan dikumpulkan daripada aplikasi ini.</string>
+    <string name="accessibility_permission">Kebenaran Kebolehcapaian</string>
+    <string name="accessibility_permission_desc">Benarkan Auto Clicker menggunakan
+perkhidmatan kebolehcapaian untuk ciri-ciri aplikasi.</string>
+    <string name="simulating_click_point">• Mensimulasikan klik pada skrin peranti</string>
+    <string name="simulating_swipe_point">• Mensimulasikan sapuan pada skrin peranti</string>
+    <string name="why_permission_desc">Mengapa kami menggunakan kebenaran ini?</string>
+    <string name="permission_use_desc">Auto Clicker menggunakan kebenaran API perkhidmatan
+kebolehcapaian untuk mengaktifkan fungsi teras berikut.</string>
+    <string name="grant_permission">Berikan Kebenaran</string>
+    <string name="permission_required">Kebenaran Diperlukan</string>
+    <string name="single_mode">Mod Tunggal</string>
+    <string name="multi_mode">Mod Pelbagai</string>
+    <string name="single_mode_desc">Klik berulang kali pada satu posisi pada selang masa
+tertentu</string>
+    <string name="multi_mode_desc">Tetapkan siri klik/sapuan pada posisi yang berbeza</string>
+    <string name="how_to_use">Bagaimana untuk digunakan?</string>
+    <string name="dialog_title_permission_accessibility">Perkhidmatan Kebolehcapaian</string>
+    <string name="dialog_title_permission_notification">Pemberitahuan</string>
+    <string name="dialog_title_permission_mandatory_denied">Kebenaran Ditolak</string>
+    <string name="dialog_title_permission_overlay">Tindanan</string>
+    <string name="message_permission_desc_overlay">Kebenaran tindanan diperlukan untuk
+memaparkan antara muka Auto Clicker pada aplikasi yang ingin anda automasikan,
+membolehkan anda mengkonfigurasi senario tanpa menghentikan aplikasi lain.</string>
+    <string name="message_permission_desc_notification">Pilihan: Menunjukkan pemberitahuan
+semasa aplikasi sedang berjalan, memudahkan anda kembali ke skrin pemilihan
+senario.</string>
+    <string name="message_permission_mandatory_denied">Kebenaran ini wajib untuk Auto
+Clicker berfungsi dengan betul. Tanpanya, ia tidak akan berfungsi dengan betul.</string>
+    <string name="splash_content_description">Klik dengan mudah</string>
+    <string name="please_wait">Sila tunggu</string>
+    <string name="select_language">Pilih Bahasa</string>
+    <string name="continue_">Teruskan</string>
+    <string name="watch_tutorial">Tonton Tutorial</string>
+    <string name="select_distinct_language">Pilih bahasa lain</string>
+    <string name="interval">Selang Masa</string>
+    <string name="start_auto_clicker">Mula Auto Clicker</string>
+    <string name="stop_auto_clicker">Henti Auto Clicker</string>
+    <string name="add_clicking_target">Tambah Sasaran Klik</string>
+    <string name="remove_clicking_target">Alihkan Sasaran Klik</string>
+    <string name="add_swiping_target">Tambah Sasaran Sapuan</string>
+    <string name="save_script">Simpan Skrip</string>
+    <string name="edit_script_setting">Edit Tetapan Skrip</string>
+    <string name="drag_action">Seret titik tindakan sasaran ke mana-mana</string>
+    <string name="drag_n_swipe_action">Seret titik tindakan mula/akhir ke mana-mana. Tetapkan
+selang masa pada kedua-dua titik.</string>
+    <string name="interval_desc">Selang ialah jurang masa antara dua klik berturut-turut.</string>
+
+    <string name="anti_detection">Anti-Pengesanan</string>
+    <string name="anti_detection_desc">Jana masa dan jejari rawak selepas setiap klik untuk
+kelihatan lebih semula jadi.</string>
+    <string name="interval_before_the_next_action">Selang masa sebelum tindakan
+seterusnya</string>
+    <string name="swipe_duration">Tempoh Sapuan</string>
+    <string name="repeat_mode">Mod Ulangan</string>
+    <string name="change_language">Tukar Bahasa</string>
+    <string name="english_default">Bahasa Inggeris (lalai)</string>
+    <string name="rate_us">Berikan Penilaian</string>
+    <string name="feedback">Maklum Balas</string>
+    <string name="privacy_policy">Polisi Privasi</string>
+    <string name="play">Mainkan</string>
+    <string name="add">Tambah</string>
+    <string name="start">Mula</string>
+    <string name="stop">Henti</string>
+    <string name="close">Tutup</string>
+    <string name="save">Simpan</string>
+    <string name="drag">Seret</string>
+    <string name="remove">Alihkan</string>
+    <string name="swipe">Sapuan</string>
+    <string name="pause">Jeda</string>
+    <string name="cancel">Batal</string>
+    <string name="save_script_desc">Simpan kelajuan klik, tempoh, dan aplikasi sasaran anda
+untuk meningkatkan produktiviti!</string>
+    <string name="rename">Namakan Semula</string>
+    <string name="duplicate">Duplikasi</string>
+    <string name="delete">Padam</string>
+    <string name="export">Eksport</string>
+    <string name="notification_message">Ketuk untuk menukar senario</string>
+    <string name="notification_title">Senario: %1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">Import skrip daripada storan</string>
+    <string name="default_scenario_name">SkripSaya</string>
+    <string name="toast_denied_foreground_permission">Pengguna menolak kebenaran
+perkhidmatan latar depan</string>
+    <string name="dialog_title_delete_scenario">Padamkan Senario</string>
+    <string name="message_delete_scenario">Ini akan memadamkan %1$s. Adakah anda
+pasti?</string>
+    <string name="hint_rename_scenario">Masukkan nama baharu anda…</string>
+    <string name="dialog_title_rename_scenario">Namakan Semula Senario</string>
+    <string name="error_empty_scenario_name">Medan tidak boleh kosong</string>
+    <string name="item_title_single_mode_scenario">Mod Titik Tunggal</string>
+    <string name="item_desc_single_mode_scenario">Klik berulang kali pada satu titik pada selang
+masa tertentu</string>
+    <string name="item_title_multi_mode_scenario">Mod Titik Pelbagai</string>
+    <string name="item_desc_multi_mode_scenario">Tetapkan siri klik/sapuan pada kedudukan
+yang berbeza</string>
+    <string name="how_to_enable">Cara Mengaktifkan</string>
+    <string name="tutorial_instructions">Ketuk butang “Berikan Kebenaran” dan\n1. Cari “Pasang
+Perkhidmatan” dalam tetapan\n2. Cari “Auto Clicker”\n3. Aktifkan kebenaran</string>
+    <string name="accessibility_is_unavailable"><u>Kebolehcapaian tidak tersedia</u></string>
+    <string name="menu_item_title_troubleshooting">Penyelesaian Masalah</string>
+    <string name="interval_setting">Tetapan selang</string>
+    <string name="preferences">keutamaan</string>
+    <string name="battery_optimization">Pengoptimuman Bateri</string>
+    <string name="permission_granted">Kebenaran Diberikan</string>
+    <string name="permission_missing">Kebenaran Hilang</string>
+    <string name="only_with_these_permissions">Hanya dengan kebenaran ini:</string>
+    <string name="permission_point_1">1. Anda tidak perlu menetapkan kebenaran aksesibiliti setiap kali membuka aplikasi.</string>
+    <string name="permission_point_2">2. Aplikasi kami boleh berjalan dengan selamat di latar belakang dan memberikan perkhidmatan yang stabil.</string>
+    <string name="import_files">Import</string>
+    <string name="add_script">Tambah Skrip</string>
+    <string name="empty_script_message">Skrip yang disimpan anda \nakan dipaparkan di sini</string>
+    <string name="troubleshooting">Penyelesaian Masalah</string>
+    <string name="allow_permission">Benarkan Kebenaran</string>
+    <string name="troubleshoot_desc">Kebenaran asas untuk aplikasi auto klik. Kebenaran yang diperlukan mesti ada.</string>
+
+</resources>

@@ -1,6 +1,9 @@
 package com.galixo.autoClicker.localService
 
-interface ILocalService {
-//    fun startScenario(scenario: Scenario)
+import com.galixo.autoClicker.core.scenarios.domain.model.Scenario
 
+interface ILocalService {
+    fun startScenario(scenario: Scenario)
+    fun stop()
+    fun release()
 }

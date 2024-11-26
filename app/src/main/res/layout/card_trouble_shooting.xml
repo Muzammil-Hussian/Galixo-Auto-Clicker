@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/AppTheme.Widget.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_horizontal_default"
+    android:layout_marginVertical="@dimen/margin_vertical_default">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_horizontal_default"
+        android:layout_marginTop="@dimen/padding_8_dp"
+        android:layout_marginBottom="@dimen/margin_vertical_extra_large"
+        android:orientation="vertical">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/permissionStatus"
+            style="@style/Widget.Material3.Chip.Suggestion.Elevated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="false"
+            android:text="@string/permission_granted"
+            android:textAppearance="@style/Tagline"
+            android:textColor="#2ABF4B"
+            app:chipBackgroundColor="@color/permission_grant_background_color"
+            app:chipCornerRadius="48dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8_dp"
+            android:text="@string/accessibility_permission"
+            android:textAppearance="@style/ContainerHeading" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8_dp"
+            android:text="@string/troubleshoot_desc"
+            android:textAppearance="@style/Description" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/allowPermission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_12_dp"
+            android:text="@string/allow_permission"
+            android:textAppearance="@style/ButtonHeading" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

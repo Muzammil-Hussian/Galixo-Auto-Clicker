@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">েহাম</string>
+    <string name="title_script">স্ক্িরপ্ট</string>
+    <string name="title_setting">েসিটংস</string>
+    <string name="activity_title">িসনািরও</string>
+    <string name="accessibility_service_description">এই অ্যাপ্িলেকশনিট অন্যান্য অ্যাপ্িলেকশেন ৈতির করা
+ক্িলকগুিল ইনেজক্ট করেত এই পিরেষবার প্রেয়াজন, যখন শর্তগুিল সনাক্ত করা হয়।\n\nএই অ্যাপ্িলেকশন
+েথেক েকােনা েডটা সংগ্রহ করা হেব না।</string>
+    <string name="accessibility_permission">অ্যাক্েসিসিবিলিট অনুমিত</string>
+    <string name="accessibility_permission_desc">অ্যােপর ৈবিশষ্ট্েযর জন্য অেটা ক্িলকােরর
+অ্যাক্েসিসিবিলিট পিরেষবাগুিল ব্যবহার করেত অনুমিত িদন।</string>
+    <string name="simulating_click_point">• িডভাইেসর স্ক্িরেন ক্িলেকর িসমুেলশন</string>
+    <string name="simulating_swipe_point">• িডভাইেসর স্ক্িরেন স্লাইেডর িসমুেলশন</string>
+    <string name="why_permission_desc">আমরা এই অনুমিত েকন ব্যবহার কির?</string>
+    <string name="permission_use_desc">অেটা ক্িলকার িনম্নিলিখত মূল কার্যকািরতা সক্ষম করেত
+অ্যাক্েসিসিবিলিট পিরেষবা API অনুমিত ব্যবহার কের।</string>
+    <string name="grant_permission">অনুমিত িদন</string>
+    <string name="permission_required">প্রেয়াজনীয় অনুমিত</string>
+    <string name="single_mode">একক েমাড</string>
+    <string name="multi_mode">বহুমুখী েমাড</string>
+    <string name="single_mode_desc">িনর্িদষ্ট সমেয়র ব্যবধােন একিট পিজশেন বারবার ট্যাপ করুন</string>
+    <string name="multi_mode_desc">িবিভন্ন অবস্থােন ট্যাপ/স্লাইেডর একিট িসিরজ েসট করুন</string>
+    <string name="how_to_use">িকভােব ব্যবহার করেবন?</string>
+    <string name="dialog_title_permission_accessibility">অ্যাক্েসিসিবিলিট পিরেষবা</string>
+    <string name="dialog_title_permission_notification">িবজ্ঞপ্িত</string>
+    <string name="dialog_title_permission_mandatory_denied">অনুমিত অস্বীকৃত</string>
+    <string name="dialog_title_permission_overlay">ওভারেল</string>
+    <string name="message_permission_desc_overlay">আপনার স্বয়ংক্িরয় করেত চান এমন
+অ্যাপ্িলেকশনগুিলর উপর অেটা ক্িলকােরর ইন্টারেফস েদখােনার জন্য ওভারেল অনুমিত প্রেয়াজন। এিট
+আপনােক অন্য অ্যাপিট বন্ধ না কের আপনার িসনািরও কনিফগার করেত েদয়।</string>
+    <string name="message_permission_desc_notification">ঐচ্িছক: অ্যাপ্িলেকশন চালােনার সময় িবজ্ঞপ্িত
+েদখায় যােত আপিন সহেজই িসনািরও িনর্বাচন স্ক্িরেন িফের েযেত পােরন।</string>
+    <string name="message_permission_mandatory_denied">এই অনুমিত অেটা ক্িলকােরর সিঠক
+কার্যকািরতার জন্য আবশ্যক। এিট ছাড়া এিট সিঠকভােব কাজ করেত পারেব না।</string>
+    <string name="splash_content_description">সহেজ ক্িলক করুন</string>
+    <string name="please_wait">অনুগ্রহ কের অেপক্ষা করুন</string>
+    <string name="select_language">ভাষা িনর্বাচন করুন</string>
+    <string name="continue_">অগ্রসর হন</string>
+    <string name="watch_tutorial">িটউেটািরয়াল েদখুন</string>
+    <string name="select_distinct_language">িভন্ন ভাষা িনর্বাচন করুন</string>
+    <string name="interval">িবরিত</string>
+    <string name="start_auto_clicker">অেটা ক্িলকার চালুকরুন</string>
+    <string name="stop_auto_clicker">অেটা ক্িলকার বন্ধ করুন</string>
+    <string name="add_clicking_target">ক্িলক টার্েগট েযাগ করুন</string>
+    <string name="remove_clicking_target">ক্িলক টার্েগট সরান</string>
+    <string name="add_swiping_target">স্লাইড টার্েগট েযাগ করুন</string>
+    <string name="save_script">স্ক্িরপ্ট সংরক্ষণ করুন</string>
+    <string name="edit_script_setting">স্ক্িরপ্ট েসিটংস সম্পাদনা করুন</string>
+    <string name="drag_action">টার্েগট পেয়ন্টিট েযেকােনা জায়গায় সরােত েটেন আনুন</string>
+    <string name="drag_n_swipe_action">প্রারম্ভ/েশষ টার্েগট পেয়ন্ট েযেকােনা জায়গায় সরােত েটেন আনুন।
+উভয় পেয়ন্েট িবরিত িনর্ধারণ করুন।</string>
+    <string name="interval_desc">িবরিত হল দুিট পরপর ক্িলেকর মধ্েয সমেয়র ব্যবধান।</string>
+    <string name="anti_detection">অ্যান্িট-িডেটকশন</string>
+    <string name="anti_detection_desc">মানবসদৃশ আচরেণর জন্য প্রিতিট ক্িলেকর পের একিট র্যান্ডম সময়
+এবং ব্যাসার্ধ ৈতির করুন।</string>
+    <string name="interval_before_the_next_action">পরবর্তী ক্িরয়ািটর আেগ িবরিত</string>
+    <string name="swipe_duration">স্লাইেডর সময়কাল</string>
+    <string name="repeat_mode">পুনরাবৃত্িত েমাড</string>
+    <string name="change_language">ভাষা পিরবর্তন করুন</string>
+    <string name="english_default">ইংেরিজ (িডফল্ট)</string>
+    <string name="rate_us">আমােদর েরট িদন</string>
+    <string name="feedback">প্রিতক্িরয়া</string>
+    <string name="privacy_policy">েগাপনীয়তা নীিত</string>
+    <string name="play">চালান</string>
+    <string name="add">েযাগ করুন</string>
+    <string name="start">শুরুকরুন</string>
+    <string name="stop">বন্ধ করুন</string>
+    <string name="close">বন্ধ করুন</string>
+    <string name="save">সংরক্ষণ করুন</string>
+    <string name="drag">েটেন আনুন</string>
+    <string name="remove">সরান</string>
+    <string name="swipe">স্লাইড করুন</string>
+    <string name="pause">িবরিত</string>
+    <string name="cancel">বািতল করুন</string>
+    <string name="save_script_desc">আপনার ক্িলেকর গিত, সময়কাল এবং টার্েগট অ্যাপ্িলেকশন সংরক্ষণ
+করুন কােজর উ পাদনশীলতা বাড়ােত!</string>
+    <string name="rename">নাম পিরবর্তন</string>
+    <string name="duplicate">নকল করুন</string>
+    <string name="delete">মুছুন</string>
+    <string name="export">রপ্তািন করুন</string>
+    <string name="notification_message">িসনািরও পিরবর্তেনর জন্য চাপুন</string>
+    <string name="notification_title">িসনািরও: %1$s</string>
+    <string name="notification_channel_name">অেটা ক্িলকার</string>
+    <string name="content_desc_add_script">সংগ্রহস্থল েথেক স্ক্িরপ্ট আমদািন করুন</string>
+    <string name="default_scenario_name">আমার স্ক্িরপ্ট</string>
+    <string name="toast_denied_foreground_permission">ব্যবহারকারী সামেনর পিরেষবার অনুমিত অস্বীকার
+কেরেছন</string>
+    <string name="dialog_title_delete_scenario">িসনািরও মুছুন</string>
+    <string name="message_delete_scenario">%1$s মুেছ েফলা হেব। আপিন িক িনশ্িচত?</string>
+    <string name="hint_rename_scenario">নতুন নাম িলখুন…</string>
+    <string name="dialog_title_rename_scenario">িসনািরওর নাম পিরবর্তন</string>
+    <string name="error_empty_scenario_name">ঘরিট খািল থাকেত পারেব না</string>
+    <string name="item_title_single_mode_scenario">একক িবন্দুেমাড</string>
+    <string name="item_desc_single_mode_scenario">িনর্িদষ্ট সমেয়র ব্যবধােন একক িবন্দুেত বারবার ট্যাপ
+করুন</string>
+    <string name="item_title_multi_mode_scenario">বহুিবন্দুেমাড</string>
+    <string name="item_desc_multi_mode_scenario">িবিভন্ন অবস্থােন ট্যাপ/স্লাইেডর একিট িসিরজ েসট
+করুন</string>
+    <string name="how_to_enable">িকভােব সক্িরয় করেবন</string>
+    <string name="tutorial_instructions">"অনুমিত িদন" েবাতাম িটপুন এবং\n1. েসিটংেস "েসবা ইনস্টল করুন"
+সন্ধান করুন\n2. "অেটা ক্িলকার" সন্ধান করুন\n3. অনুমিত সক্িরয় করুন</string>
+    <string name="accessibility_is_unavailable"><u>অ্যাক্েসিসিবিলিট অনুপলব্ধ</u></string>
+    <string name="menu_item_title_troubleshooting">সমস্যা সমাধান</string>
+    <string name="interval_setting">ব্যবধান সেটিং</string>
+    <string name="preferences">পছন্দসমূহ</string>
+    <string name="battery_optimization">ব্যাটারি অপ্টিমাইজেশন</string>
+    <string name="permission_granted">অনুমতি প্রদান করা হয়েছে</string>
+    <string name="permission_missing">অনুমতি অনুপস্থিত</string>
+    <string name="only_with_these_permissions">এটি কেবল এই অনুমতিগুলির সাথে:</string>
+    <string name="permission_point_1">1. আপনি অ্যাপটি খুললে প্রতিবার অ্যাক্সেসিবিলিটি অনুমতি সেট করতে হবে না।</string>
+    <string name="permission_point_2">2. আমাদের অ্যাপটি নিরাপদে ব্যাকগ্রাউন্ডে চলতে পারে এবং স্থিতিশীল সেবা প্রদান করতে পারে।</string>
+    <string name="import_files">ইমপোর্ট</string>
+    <string name="add_script">স্ক্রিপ্ট যোগ করুন</string>
+    <string name="empty_script_message">আপনার সংরক্ষিত স্ক্রিপ্ট \nএখানে দেখানো হবে</string>
+    <string name="troubleshooting">সমস্যা সমাধান</string>
+    <string name="allow_permission">অনুমতি দিন</string>
+    <string name="troubleshoot_desc">অটোমেটিক ক্লিকারের অ্যাপের জন্য মৌলিক অনুমতি। প্রয়োজনীয় অনুমতি থাকতে হবে।</string>
+
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/margin_vertical_default">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                style="@style/AppTheme.Widget.Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:navigationIcon="@drawable/ic_back_press"
+                app:title="@string/troubleshooting" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <include
+            android:id="@+id/accessibility_card"
+            layout="@layout/card_trouble_shooting" />
+
+        <include
+            android:id="@+id/battery_optimization_card"
+            layout="@layout/card_trouble_shooting" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_horizontal_default"
+            android:layout_marginTop="@dimen/margin_vertical_default"
+            android:text="@string/only_with_these_permissions"
+            android:textAppearance="@style/DescriptionHeading" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_horizontal_default"
+            android:layout_marginTop="@dimen/margin_vertical_default"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/permission_point_1"
+            android:textAppearance="@style/Tagline" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_horizontal_default"
+            android:layout_marginTop="@dimen/margin_vertical_default"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/permission_point_2"
+            android:textAppearance="@style/Tagline" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_horizontal_default"
+            android:layout_marginTop="@dimen/margin_vertical_default"
+            android:text="@string/accessibility_is_unavailable"
+            android:textAppearance="@style/Tagline"
+            android:textColor="@color/headingTextColor"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

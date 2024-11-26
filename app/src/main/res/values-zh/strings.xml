@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">首页</string>
+    <string name="title_script">脚本</string>
+    <string name="title_setting">设置</string>
+    <string name="activity_title">场景</string>
+    <string name="accessibility_service_description">此应用需要此服务以在检测到条件时将您创建的点
+击注入到其他应用程序中。\n\n不会从此应用程序收集任何数据。</string>
+    <string name="accessibility_permission">辅助功能权限</string>
+    <string name="accessibility_permission_desc">请允许自动点击器使用辅助功能服务以实现应用功能
+。</string>
+    <string name="simulating_click_point">• 模拟设备屏幕上的点击</string>
+    <string name="simulating_swipe_point">• 模拟设备屏幕上的滑动</string>
+    <string name="why_permission_desc">为什么我们使用此权限？</string>
+    <string name="permission_use_desc">自动点击器使用辅助功能服务 API 权限来启用以下核心功能
+。</string>
+    <string name="grant_permission">授予权限</string>
+    <string name="permission_required">需要权限</string>
+    <string name="single_mode">单点模式</string>
+    <string name="multi_mode">多点模式</string>
+    <string name="single_mode_desc">在指定的间隔内重复点击单个位置</string>
+    <string name="multi_mode_desc">在不同位置设置一系列点击/滑动</string>
+    <string name="how_to_use">如何使用？</string>
+    <string name="dialog_title_permission_accessibility">辅助功能服务</string>
+    <string name="dialog_title_permission_notification">通知</string>
+    <string name="dialog_title_permission_mandatory_denied">权限被拒绝</string>
+    <string name="dialog_title_permission_overlay">悬浮窗</string>
+    <string name="message_permission_desc_overlay">需要悬浮窗权限才能在您想要自动化的应用程序
+上显示自动点击器界面，允许您在不停止其他应用程序的情况下配置场景。</string>
+    <string name="message_permission_desc_notification">可选：在应用程序运行时显示通知，以便轻
+松返回场景选择界面。</string>
+    <string name="message_permission_mandatory_denied">此权限对于自动点击器的正常工作是必需
+的。没有它，功能将无法正常运行。</string>
+    <string name="splash_content_description">轻松点击</string>
+    <string name="please_wait">请稍候</string>
+    <string name="select_language">选择语言</string>
+    <string name="continue_">继续</string>
+    <string name="watch_tutorial">观看教程</string>
+    <string name="select_distinct_language">选择其他语言</string>
+    <string name="interval">间隔</string>
+    <string name="start_auto_clicker">启动自动点击器</string>
+    <string name="stop_auto_clicker">停止自动点击器</string>
+    <string name="add_clicking_target">添加点击目标</string>
+    <string name="remove_clicking_target">移除点击目标</string>
+    <string name="add_swiping_target">添加滑动目标</string>
+    <string name="save_script">保存脚本</string>
+    <string name="edit_script_setting">编辑脚本设置</string>
+    <string name="drag_action">拖动目标操作点将其移动到任何位置</string>
+    <string name="drag_n_swipe_action">拖动开始/结束目标操作点将其移动到任何位置。在两点间设
+置间隔。</string>
+    <string name="interval_desc">间隔是两次连续点击之间的时间间隔。</string>
+    <string name="anti_detection">防检测</string>
+    <string name="anti_detection_desc">在每次点击后生成随机时间和半径，以表现得更像人类
+。</string>
+    <string name="interval_before_the_next_action">下一次操作前的间隔</string>
+    <string name="swipe_duration">滑动持续时间</string>
+    <string name="repeat_mode">重复模式</string>
+    <string name="change_language">更改语言</string>
+    <string name="english_default">英语 (默认)</string>
+    <string name="rate_us">评价我们</string>
+    <string name="feedback">反馈</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="play">播放</string>
+    <string name="add">添加</string>
+    <string name="start">开始</string>
+    <string name="stop">停止</string>
+    <string name="close">关闭</string>
+    <string name="save">保存</string>
+    <string name="drag">拖动</string>
+    <string name="remove">删除</string>
+    <string name="swipe">滑动</string>
+    <string name="pause">暂停</string>
+    <string name="cancel">取消</string>
+    <string name="save_script_desc">保存您的点击速度、持续时间和目标应用以提高生产力 ！</string>
+    <string name="rename">重命名</string>
+    <string name="duplicate">复制</string>
+    <string name="delete">删除</string>
+    <string name="export">导出</string>
+    <string name="notification_message">点击更改场景</string>
+    <string name="notification_title">场景：%1$s</string>
+    <string name="notification_channel_name">自动点击器</string>
+    <string name="content_desc_add_script">从存储中导入脚本</string>
+    <string name="default_scenario_name">我的脚本</string>
+    <string name="toast_denied_foreground_permission">用户拒绝了前台服务权限</string>
+    <string name="dialog_title_delete_scenario">删除场景</string>
+    <string name="message_delete_scenario">这将删除 %1$s。确定吗？</string>
+    <string name="hint_rename_scenario">输入新名称…</string>
+    <string name="dialog_title_rename_scenario">重命名场景</string>
+    <string name="error_empty_scenario_name">字段不能为空</string>
+    <string name="item_title_single_mode_scenario">单点模式</string>
+    <string name="item_desc_single_mode_scenario">在指定间隔内重复点击单个点</string>
+    <string name="item_title_multi_mode_scenario">多点模式</string>
+    <string name="item_desc_multi_mode_scenario">设置多个位置的点击/滑动序列</string>
+    <string name="how_to_enable">如何启用</string>
+    <string name="tutorial_instructions">点击“授予权限”按钮并\n1. 在设置中找到“安装服务”\n2. 找到“ 自动点击器”\n3. 启用权限</string>
+    <string name="accessibility_is_unavailable"><u>辅助功能不可用</u></string>
+    <string name="menu_item_title_troubleshooting">故障排</string>
+    <string name="interval_setting">间隔设置</string>
+    <string name="preferences">偏好</string>
+    <string name="battery_optimization">电池优化</string>
+    <string name="permission_granted">已授予权限</string>
+    <string name="permission_missing">缺少权限</string>
+    <string name="only_with_these_permissions">仅在具有以下权限的情况下：</string>
+    <string name="permission_point_1">1. 每次打开应用程序时，您无需设置访问权限。</string>
+    <string name="permission_point_2">2. 我们的应用程序可以安全地在后台运行，并提供稳定的服务。</string>
+    <string name="import_files">导入</string>
+    <string name="add_script">添加脚本</string>
+    <string name="empty_script_message">您的保存脚本将显示在这里</string>
+    <string name="troubleshooting">故障排除</string>
+    <string name="allow_permission">允许权限</string>
+    <string name="troubleshoot_desc">自动点击器应用程序的基本权限。必须拥有所需的权限。</string>
+
+</resources>

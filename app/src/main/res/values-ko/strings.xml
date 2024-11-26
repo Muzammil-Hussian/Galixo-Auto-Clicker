@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">홈</string>
+    <string name="title_script">스크립트</string>
+    <string name="title_setting">설정</string>
+    <string name="activity_title">시나리오</string>
+    <string name="accessibility_service_description">이 애플리케이션은 조건이 감지되었을 때
+사용자가 만든 클릭을 다른 애플리케이션에 삽입하기 위해 이 서비스를 필요로
+합니다.\n\n이 애플리케이션에서는 데이터를 수집하지 않습니다.</string>
+    <string name="accessibility_permission">접근성 권한</string>
+    <string name="accessibility_permission_desc">앱 기능을 위해 Auto Clicker가 접근성
+서비스를 사용할 수 있도록 허용하세요.</string>
+    <string name="simulating_click_point">• 기기 화면에서 클릭 시뮬레이션</string>
+    <string name="simulating_swipe_point">• 기기 화면에서 스와이프 시뮬레이션</string>
+    <string name="why_permission_desc">이 권한을 왜 사용하는가?</string>
+    <string name="permission_use_desc">Auto Clicker는 다음의 핵심 기능을 활성화하기 위해
+접근성 서비스 API 권한을 사용합니다.</string>
+    <string name="grant_permission">권한 부여</string>
+    <string name="permission_required">권한 필요</string>
+    <string name="single_mode">단일 모드</string>
+    <string name="multi_mode">다중 모드</string>
+    <string name="single_mode_desc">지정된 간격으로 하나의 위치를 반복적으로 탭</string>
+    <string name="multi_mode_desc">다양한 위치에 탭/스와이프 동작을 설정</string>
+    <string name="how_to_use">사용 방법</string>
+    <string name="dialog_title_permission_accessibility">접근성 서비스</string>
+    <string name="dialog_title_permission_notification">알림</string>
+    <string name="dialog_title_permission_mandatory_denied">권한 거부됨</string>
+    <string name="dialog_title_permission_overlay">오버레이</string>
+    <string name="message_permission_desc_overlay">자동 클릭 인터페이스를 자동화하려는
+애플리케이션 위에 표시하려면 오버레이 권한이 필요합니다. 이 권한을 사용하면 다른
+애플리케이션을 중단하지 않고 시나리오를 구성할 수 있습니다.</string>
+    <string name="message_permission_desc_notification">선택사항: 앱 실행 중 알림을
+표시하여 시나리오 선택 화면으로 쉽게 돌아갈 수 있습니다.</string>
+    <string name="message_permission_mandatory_denied">이 권한은 Auto Clicker가 제대로
+작동하기 위해 필수적입니다. 없으면 올바르게 작동하지 않습니다.</string>
+    <string name="splash_content_description">쉽게 클릭</string>
+    <string name="please_wait">잠시 기다려 주세요</string>
+    <string name="select_language">언어 선택</string>
+    <string name="continue_">계속</string>
+    <string name="watch_tutorial">튜토리얼 보기</string>
+    <string name="select_distinct_language">다른 언어 선택</string>
+    <string name="interval">간격</string>
+    <string name="start_auto_clicker">자동 클릭 시작</string>
+    <string name="stop_auto_clicker">자동 클릭 중지</string>
+    <string name="add_clicking_target">클릭 대상 추가</string>
+    <string name="remove_clicking_target">클릭 대상 제거</string>
+    <string name="add_swiping_target">스와이프 대상 추가</string>
+    <string name="save_script">스크립트 저장</string>
+    <string name="edit_script_setting">스크립트 설정 수정</string>
+    <string name="drag_action">대상 작업 포인트를 끌어 어디든 이동</string>
+    <string name="drag_n_swipe_action">시작/끝 작업 포인트를 끌어 이동하세요. 두
+포인트에서 간격을 설정하세요.</string>
+    <string name="interval_desc">간격은 연속 클릭 간의 시간 간격입니다.</string>
+    <string name="anti_detection">감지 방지</string>
+    <string name="anti_detection_desc">각 클릭 후 무작위 시간 및 반경을 생성하여 더
+인간적인 동작을 재현합니다.</string>
+    <string name="interval_before_the_next_action">다음 작업 전 간격</string>
+    <string name="swipe_duration">스와이프 지속 시간</string>
+    <string name="repeat_mode">반복 모드</string>
+    <string name="change_language">언어 변경</string>
+    <string name="english_default">영어 (기본값)</string>
+    <string name="rate_us">평가하기</string>
+    <string name="feedback">피드백</string>
+    <string name="privacy_policy">개인정보처리방침</string>
+    <string name="play">재생</string>
+    <string name="add">추가</string>
+    <string name="start">시작</string>
+    <string name="stop">중지</string>
+    <string name="close">닫기</string>
+    <string name="save">저장</string>
+    <string name="drag">드래그</string>
+    <string name="remove">제거</string>
+    <string name="swipe">스와이프</string>
+    <string name="pause">일시 중지</string>
+    <string name="cancel">취소</string>
+    <string name="save_script_desc">클릭 속도, 지속 시간, 대상 앱을 저장하여 생산성을
+높이세요!</string>
+    <string name="rename">이름 변경</string>
+    <string name="duplicate">복제</string>
+    <string name="delete">삭제</string>
+    <string name="export">내보내기</string>
+    <string name="notification_message">시나리오를 변경하려면 누르세요</string>
+    <string name="notification_title">시나리오: %1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">저장소에서 스크립트 가져오기</string>
+    <string name="default_scenario_name">내스크립트</string>
+    <string name="toast_denied_foreground_permission">사용자가 전경 서비스 권한을
+거부했습니다</string>
+    <string name="dialog_title_delete_scenario">시나리오 삭제</string>
+    <string name="message_delete_scenario">%1$s을(를) 삭제합니다. 확실합니까?</string>
+    <string name="hint_rename_scenario">새 이름을 입력하세요…</string>
+    <string name="dialog_title_rename_scenario">시나리오 이름 변경</string>
+    <string name="error_empty_scenario_name">필드는 비워둘 수 없습니다</string>
+    <string name="item_title_single_mode_scenario">단일 지점 모드</string>
+    <string name="item_desc_single_mode_scenario">지정된 간격으로 단일 지점을 반복적으로
+탭</string>
+    <string name="item_title_multi_mode_scenario">다중 지점 모드</string>
+    <string name="item_desc_multi_mode_scenario">다양한 위치에 대한 탭/스와이프 시퀀스
+설정</string>
+    <string name="how_to_enable">활성화 방법</string>
+    <string name="tutorial_instructions">“권한 부여” 버튼을 누르고\n1. 설정에서 “서비스
+설치”를 찾으세요\n2. “Auto Clicker”를 찾으세요\n3. 권한을 활성화하세요</string>
+    <string name="accessibility_is_unavailable"><u>접근성이 사용 불가합니다</u></string>
+    <string name="menu_item_title_troubleshooting">문제 해결</string>
+    <string name="interval_setting">간격 설정</string>
+    <string name="preferences">선호사항</string>
+    <string name="battery_optimization">배터리 최적화</string>
+    <string name="permission_granted">권한 부여됨</string>
+    <string name="permission_missing">권한 없음</string>
+    <string name="only_with_these_permissions">이 권한이 있을 때만:</string>
+    <string name="permission_point_1">1. 앱을 열 때마다 접근성 권한을 설정할 필요가 없습니다.</string>
+    <string name="permission_point_2">2. 저희 앱은 안전하게 백그라운드에서 실행되며 안정적인 서비스를 제공합니다.</string>
+    <string name="import_files">가져오기</string>
+    <string name="add_script">스크립트 추가</string>
+    <string name="empty_script_message">저장된 스크립트는 \n여기에 표시됩니다</string>
+    <string name="troubleshooting">문제 해결</string>
+    <string name="allow_permission">권한 허용</string>
+    <string name="troubleshoot_desc">자동 클릭기 앱을 위한 기본 권한. 필요한 권한이 있어야 합니다.</string>
+
+</resources>

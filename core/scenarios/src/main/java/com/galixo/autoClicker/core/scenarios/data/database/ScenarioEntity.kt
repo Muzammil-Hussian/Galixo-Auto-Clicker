@@ -10,10 +10,10 @@ import com.galixo.autoClicker.core.scenarios.domain.model.ScenarioMode
 import kotlinx.serialization.Serializable
 
 /**
- * Entity defining a dumb scenario.
+ * Entity defining a scenario.
  *
- * A scenario has a relation "one to many" with [DumbActionEntity], which is represented
- * by [DumbScenarioWithActions].
+ * A scenario has a relation "one to many" with [ActionEntity], which is represented
+ * by [ScenarioWithActions].
  *
  * @param id the unique identifier for a scenario.
  * @param name the name of the scenario.
@@ -36,13 +36,13 @@ data class ScenarioEntity(
 ) : EntityWithId
 
 /**
- * Entity embedding a dumb scenario and its dumb actions.
+ * Entity embedding a scenario and its actions.
  *
  * Automatically do the junction between scenario_table and action_table, and provide
- * this representation of the one to many relation between dumb scenario and dumb action entity.
+ * this representation of the one to many relation between scenario and action entity.
  *
- * @param scenario the dumb scenario entity.
- * @param actions the list of dumb actions entity for this scenario.
+ * @param scenario the scenario entity.
+ * @param actions the list of actions entity for this scenario.
  */
 @Serializable
 data class ScenarioWithActions(

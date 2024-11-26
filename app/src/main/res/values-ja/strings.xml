@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">ホーム</string>
+    <string name="title_script">スクリプト</string>
+    <string name="title_setting">設定</string>
+    <string name="activity_title">シナリオ</string>
+    <string name="accessibility_service_description">このアプリは、条件が検出された際に作
+成したクリックを他のアプリケーションに挿入するために、このサービスを必要としま
+す。\n\nこのアプリからデータが収集されることはありません。</string>
+    <string name="accessibility_permission">アクセシビリティの権限</string>
+    <string name="accessibility_permission_desc">アプリの機能を利用するために、オートク
+リックがアクセシビリティサービスを使用できるようにしてください。</string>
+    <string name="simulating_click_point">• デバイス画面でのクリックをシミュレート
+</string>
+    <string name="simulating_swipe_point">• デバイス画面でのスワイプをシミュレート
+</string>
+    <string name="why_permission_desc">なぜこの権限が必要ですか？</string>
+    <string name="permission_use_desc">オートクリックは、以下の主要な機能を有効にする
+ためにアクセシビリティサービス API 権限を使用します。</string>
+    <string name="grant_permission">権限を付与</string>
+    <string name="permission_required">権限が必要です</string>
+    <string name="single_mode">シングルモード</string>
+    <string name="multi_mode">マルチモード</string>
+    <string name="single_mode_desc">指定された間隔で単一の位置を繰り返しタップ
+</string>
+    <string name="multi_mode_desc">異なる位置でのタップ/スワイプの一連の動作を設定
+</string>
+    <string name="how_to_use">使用方法</string>
+    <string name="dialog_title_permission_accessibility">アクセシビリティサービス</string>
+    <string name="dialog_title_permission_notification">通知</string>
+    <string name="dialog_title_permission_mandatory_denied">権限が拒否されました</string>
+    <string name="dialog_title_permission_overlay">オーバーレイ</string>
+    <string name="message_permission_desc_overlay">オートクリックのインターフェースを
+自動化したいアプリの上に表示するには、オーバーレイの権限が必要です。この権限に
+より、他のアプリを停止することなくシナリオを設定できます。</string>
+    <string name="message_permission_desc_notification">任意：アプリが実行中に通知を表
+示し、シナリオ選択画面に簡単に戻ることができます。</string>
+    <string name="message_permission_mandatory_denied">この権限はオートクリックが正し
+く動作するために必須です。これがないと正常に動作しません。</string>
+    <string name="splash_content_description">簡単にクリック</string>
+    <string name="please_wait">お待ちください</string>
+    <string name="select_language">言語を選択</string>
+    <string name="continue_">続ける</string>
+    <string name="watch_tutorial">チュートリアルを見る</string>
+    <string name="select_distinct_language">別の言語を選択</string>
+    <string name="interval">間隔</string>
+    <string name="start_auto_clicker">オートクリックを開始</string>
+    <string name="stop_auto_clicker">オートクリックを停止</string>
+    <string name="add_clicking_target">クリック対象を追加</string>
+    <string name="remove_clicking_target">クリック対象を削除</string>
+    <string name="add_swiping_target">スワイプ対象を追加</string>
+    <string name="save_script">スクリプトを保存</string>
+    <string name="edit_script_setting">スクリプト設定を編集</string>
+    <string name="drag_action">ターゲットアクションポイントをドラッグして任意の場所に
+移動</string>
+    <string name="drag_n_swipe_action">開始/終了ターゲットアクションポイントをドラッ
+グして任意の場所に移動。両ポイントに間隔を設定。</string>
+    <string name="interval_desc">間隔は、連続する2回のクリックの間の時間です。</string>
+    <string name="anti_detection">検出防止</string>
+    <string name="anti_detection_desc">各クリック後にランダムな時間と半径を生成して、
+人間らしい動作を再現。</string>
+    <string name="interval_before_the_next_action">次のアクションまでの間隔</string>
+    <string name="swipe_duration">スワイプの期間</string>
+    <string name="repeat_mode">リピートモード</string>
+    <string name="change_language">言語を変更</string>
+    <string name="english_default">英語（デフォルト）</string>
+    <string name="rate_us">評価する</string>
+    <string name="feedback">フィードバック</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="play">再生</string>
+    <string name="add">追加</string>
+    <string name="start">開始</string>
+    <string name="stop">停止</string>
+    <string name="close">閉じる</string>
+    <string name="save">保存</string>
+    <string name="drag">ドラッグ</string>
+    <string name="remove">削除</string>
+    <string name="swipe">スワイプ</string>
+    <string name="pause">一時停止</string>
+    <string name="cancel">キャンセル</string>
+    <string name="save_script_desc">クリック速度、持続時間、ターゲットアプリを保存し
+て生産性を向上！</string>
+    <string name="rename">名前を変更</string>
+    <string name="duplicate">複製</string>
+    <string name="delete">削除</string>
+    <string name="export">エクスポート</string>
+    <string name="notification_message">シナリオを変更するにはタップ</string>
+    <string name="notification_title">シナリオ: %1$s</string>
+    <string name="notification_channel_name">オートクリック</string>
+    <string name="content_desc_add_script">ストレージからスクリプトをインポート
+</string>
+    <string name="default_scenario_name">マイスクリプト</string>
+    <string name="toast_denied_foreground_permission">ユーザーがフォアグラウンドサービ
+スの許可を拒否しました</string>
+    <string name="dialog_title_delete_scenario">シナリオを削除</string>
+    <string name="message_delete_scenario">これにより %1$s が削除されます。本当によろ
+しいですか？</string>
+    <string name="hint_rename_scenario">新しい名前を入力…</string>
+    <string name="dialog_title_rename_scenario">シナリオの名前を変更</string>
+    <string name="error_empty_scenario_name">フィールドを空にすることはできません
+</string>
+    <string name="item_title_single_mode_scenario">単一ポイントモード</string>
+    <string name="item_desc_single_mode_scenario">指定された間隔で単一ポイントを繰り返
+しタップ</string>
+    <string name="item_title_multi_mode_scenario">マルチポイントモード</string>
+    <string name="item_desc_multi_mode_scenario">異なる位置でタップ/スワイプのシーケ
+ンスを設定</string>
+    <string name="how_to_enable">有効にする方法</string>
+    <string name="tutorial_instructions">「権限を付与」ボタンをタップして、\n1. 設定で「
+サービスをインストール」を探します\n2. 「オートクリック」を探します\n3. 権限を有
+効にします</string>
+    <string name="accessibility_is_unavailable"><u>アクセシビリティが利用できません
+</u></string>
+    <string name="menu_item_title_troubleshooting">トラブルシューティング</string>
+    <string name="interval_setting">間隔設定</string>
+    <string name="preferences">好み</string>
+    <string name="battery_optimization">バッテリー最適化</string>
+    <string name="permission_granted">権限が付与されました</string>
+    <string name="permission_missing">権限がありません</string>
+    <string name="only_with_these_permissions">これらの権限が必要です：</string>
+    <string name="permission_point_1">1. アプリを開くたびにアクセシビリティ権限を設定する必要はありません。</string>
+    <string name="permission_point_2">2. 当社のアプリはバックグラウンドで安全に動作し、安定したサービスを提供できます。</string>
+    <string name="import_files">インポート</string>
+    <string name="add_script">スクリプトを追加</string>
+    <string name="empty_script_message">保存されたスクリプトがここに表示されます</string>
+    <string name="troubleshooting">トラブルシューティング</string>
+    <string name="allow_permission">権限を許可</string>
+    <string name="troubleshoot_desc">自動クリックアプリの基本的な権限。必要な権限が必要です。</string>
+
+</resources>

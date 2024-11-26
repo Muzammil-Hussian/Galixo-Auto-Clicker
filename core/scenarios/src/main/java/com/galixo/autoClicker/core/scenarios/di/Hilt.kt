@@ -35,5 +35,5 @@ interface MainModule {
 
     @Binds
     @Singleton
-    fun providesMainRepository(dumbRepository: MainRepository): IMainRepository
+    fun providesMainRepository(mainRepository: MainRepository): IMainRepository
 }

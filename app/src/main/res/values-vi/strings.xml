@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">Trang chủ</string>
+    <string name="title_script">Kịch bản</string>
+    <string name="title_setting">Cài đặt</string>
+    <string name="activity_title">Kịch bản</string>
+    <string name="accessibility_service_description">Ứng dụng này cần dịch vụ này để chèn các lần
+nhấp bạn đã tạo vào các ứng dụng khác sau khi phát hiện điều kiện.\n\nKhông có dữ liệu nào sẽ
+được thu thập từ ứng dụng này.</string>
+    <string name="accessibility_permission">Quyền truy cập</string>
+    <string name="accessibility_permission_desc">Vui lòng cho phép Auto Clicker sử dụng dịch vụ
+truy cập để các tính năng của ứng dụng hoạt động.</string>
+    <string name="simulating_click_point">• Mô phỏng các lần nhấp trên màn hình thiết
+bị</string>
+    <string name="simulating_swipe_point">• Mô phỏng thao tác vuốt trên màn hình thiết
+bị</string>
+    <string name="why_permission_desc">Tại sao chúng tôi cần quyền này?</string>
+    <string name="permission_use_desc">Auto Clicker sử dụng quyền API dịch vụ truy cập để kích
+hoạt các chức năng chính sau đây.</string>
+    <string name="grant_permission">Cấp quyền</string>
+    <string name="permission_required">Quyền bắt buộc</string>
+    <string name="single_mode">Chế độ đơn</string>
+    <string name="multi_mode">Chế độ đa</string>
+    <string name="single_mode_desc">Nhấp vào một vị trí duy nhất liên tục với khoảng cách nhất
+định</string>
+    <string name="multi_mode_desc">Thiết lập một chuỗi các lần nhấp/vuốt tại các vị trí khác
+nhau</string>
+    <string name="how_to_use">Cách sử dụng?</string>
+    <string name="dialog_title_permission_accessibility">Dịch vụ truy cập</string>
+    <string name="dialog_title_permission_notification">Thông báo</string>
+    <string name="dialog_title_permission_mandatory_denied">Quyền bị từ chối</string>
+    <string name="dialog_title_permission_overlay">Quyền phủ</string>
+    <string name="message_permission_desc_overlay">Quyền phủ là cần thiết để hiển thị giao
+diện Auto Clicker trên các ứng dụng bạn muốn tự động hóa, cho phép bạn cấu hình kịch bản mà
+không cần dừng ứng dụng khác.</string>
+    <string name="message_permission_desc_notification">Tùy chọn: Hiển thị thông báo khi ứng
+dụng đang chạy, giúp bạn dễ dàng quay lại màn hình chọn kịch bản.</string>
+    <string name="message_permission_mandatory_denied">Quyền này bắt buộc để Auto Clicker
+hoạt động đúng. Nếu không, ứng dụng sẽ không hoạt động đúng.</string>
+    <string name="splash_content_description">Nhấp dễ dàng</string>
+    <string name="please_wait">Vui lòng chờ</string>
+    <string name="select_language">Chọn ngôn ngữ</string>
+    <string name="continue_">Tiếp tục</string>
+    <string name="watch_tutorial">Xem hướng dẫn</string>
+    <string name="select_distinct_language">Chọn ngôn ngữ khác</string>
+    <string name="interval">Khoảng cách</string>
+    <string name="start_auto_clicker">Bắt đầu Auto Clicker</string>
+    <string name="stop_auto_clicker">Dừng Auto Clicker</string>
+    <string name="add_clicking_target">Thêm mục tiêu nhấp</string>
+    <string name="remove_clicking_target">Xóa mục tiêu nhấp</string>
+    <string name="add_swiping_target">Thêm mục tiêu vuốt</string>
+    <string name="save_script">Lưu kịch bản</string>
+    <string name="edit_script_setting">Chỉnh sửa cài đặt kịch bản</string>
+    <string name="drag_action">Kéo điểm hành động đến bất kỳ vị trí nào</string>
+    <string name="drag_n_swipe_action">Kéo điểm hành động bắt đầu/kết thúc đến bất kỳ vị trí
+nào. Đặt khoảng cách ở cả hai điểm.</string>
+    <string name="interval_desc">Khoảng cách là thời gian giữa hai lần nhấp liên tiếp.</string>
+    <string name="anti_detection">Chống phát hiện</string>
+    <string name="anti_detection_desc">Tạo thời gian và bán kính ngẫu nhiên sau mỗi lần nhấp để
+trông giống con người hơn.</string>
+    <string name="interval_before_the_next_action">Khoảng cách trước hành động tiếp
+theo</string>
+    <string name="swipe_duration">Thời gian vuốt</string>
+    <string name="repeat_mode">Chế độ lặp</string>
+    <string name="change_language">Thay đổi ngôn ngữ</string>
+    <string name="english_default">Tiếng Anh (mặc định)</string>
+    <string name="rate_us">Đánh giá chúng tôi</string>
+    <string name="feedback">Phản hồi</string>
+    <string name="privacy_policy">Chính sách bảo mật</string>
+    <string name="play">Phát</string>
+    <string name="add">Thêm</string>
+    <string name="start">Bắt đầu</string>
+    <string name="stop">Dừng</string>
+    <string name="close">Đóng</string>
+    <string name="save">Lưu</string>
+    <string name="drag">Kéo</string>
+    <string name="remove">Xóa</string>
+    <string name="swipe">Vuốt</string>
+    <string name="pause">Tạm dừng</string>
+    <string name="cancel">Hủy</string>
+    <string name="save_script_desc">Lưu tốc độ nhấp, thời gian và các ứng dụng mục tiêu của bạn
+để tăng năng suất!</string>
+    <string name="rename">Đổi tên</string>
+    <string name="duplicate">Nhân bản</string>
+    <string name="delete">Xóa</string>
+    <string name="export">Xuất</string>
+    <string name="notification_message">Chạm để thay đổi kịch bản</string>
+    <string name="notification_title">Kịch bản: %1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">Nhập kịch bản từ bộ nhớ</string>
+    <string name="default_scenario_name">KịchBảnCủaTôi</string>
+    <string name="toast_denied_foreground_permission">Người dùng đã từ chối quyền dịch vụ
+nền</string>
+    <string name="dialog_title_delete_scenario">Xóa kịch bản</string>
+    <string name="message_delete_scenario">Điều này sẽ xóa %1$s. Bạn có chắc chắn
+không?</string>
+    <string name="hint_rename_scenario">Nhập tên mới của bạn…</string>
+    <string name="dialog_title_rename_scenario">Đổi tên kịch bản</string>
+    <string name="error_empty_scenario_name">Trường không được để trống</string>
+    <string name="item_title_single_mode_scenario">Chế độ một điểm</string>
+    <string name="item_desc_single_mode_scenario">Nhấp liên tục vào một điểm duy nhất với
+khoảng cách xác định</string>
+    <string name="item_title_multi_mode_scenario">Chế độ đa điểm</string>
+    <string name="item_desc_multi_mode_scenario">Thiết lập một chuỗi các lần nhấp/vuốt tại các
+vị trí khác nhau</string>
+    <string name="how_to_enable">Cách kích hoạt</string>
+    <string name="tutorial_instructions">Nhấn vào nút “Cấp quyền” và\n1. Tìm “Cài đặt dịch vụ”
+trong cài đặt\n2. Tìm “Auto Clicker”\n3. Kích hoạt quyền</string>
+    <string name="accessibility_is_unavailable"><u>Truy cập không khả dụng</u></string>
+    <string name="menu_item_title_troubleshooting">Khắc phục sự cố</string>
+    <string name="interval_setting">Thiết lập khoảng thời gian</string>
+    <string name="preferences">sở thích</string>
+    <string name="battery_optimization">Tối ưu hóa pin</string>
+    <string name="permission_granted">Đã cấp quyền</string>
+    <string name="permission_missing">Thiếu quyền</string>
+    <string name="only_with_these_permissions">Chỉ với những quyền này:</string>
+    <string name="permission_point_1">1. Bạn không cần thiết lập quyền truy cập mỗi khi mở ứng dụng.</string>
+    <string name="permission_point_2">2. Ứng dụng của chúng tôi có thể hoạt động an toàn trong nền và cung cấp dịch vụ ổn định.</string>
+    <string name="import_files">Nhập khẩu</string>
+    <string name="add_script">Thêm kịch bản</string>
+    <string name="empty_script_message">Các kịch bản đã lưu của bạn \nsẽ được hiển thị ở đây</string>
+    <string name="troubleshooting">Khắc phục sự cố</string>
+    <string name="allow_permission">Cho phép quyền</string>
+    <string name="troubleshoot_desc">Quyền cơ bản cho ứng dụng tự động click. Cần có quyền yêu cầu.</string>
+
+</resources>

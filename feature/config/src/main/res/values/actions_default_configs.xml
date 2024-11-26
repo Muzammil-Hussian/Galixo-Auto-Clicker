@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_click_name" translatable="false">Click</string>
+    <integer name="default_click_press_duration">100</integer>
+
+    <string name="default_swipe_name" translatable="false">Swipe</string>
+    <integer name="default_swipe_duration">350</integer>
+
+    <integer name="default_repeat_count_interval" translatable="false">100</integer>
+
+
+    <string name="default_pause_name" translatable="false">Wait</string>
+    <integer name="default_pause_duration">50</integer>
+</resources>

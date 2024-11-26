@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ऑᳰफसऑटोि᭍लकर</string>
+    <string name="title_home">होम</string>
+    <string name="title_script">ि᭭ᮓ᭡ट</string>
+    <string name="title_setting">सेᳳटग</string>
+    <string name="activity_title">पᳯरदृ᭫य</string>
+    <string name="accessibility_service_description">इस एि᭡लकेशन को आपके᳇ारा बनाई गई ि᭍लक को
+अ᭠य एि᭡लकेशन मᱶडालनेकेिलए इस सेवा कᳱ आव᭫यकता है, जब ि᭭थितयाँपता लगाई जाती हᱹ।\n\nइस
+एि᭡लकेशन सेकोई डेटा एकᮢ नहᱭ ᳰकया जाएगा।</string>
+    <string name="accessibility_permission">ए᭍सेिसिबिलटी अनुमित</string>
+    <string name="accessibility_permission_desc">एि᭡लकेशन कᳱ सुिवधाᲐ केिलए ऑटो ि᭍लकर को
+ए᭍सेिसिबिलटी सेवाᲐ का उपयोग करनेकᳱ अनुमित दᱶ।</string>
+    <string name="simulating_click_point">• िडवाइस ᭭ᮓᳱन पर ि᭍लक कᳱ नकल करना</string>
+    <string name="simulating_swipe_point">• िडवाइस ᭭ᮓᳱन पर ᭭वाइप कᳱ नकल करना</string>
+    <string name="why_permission_desc">हम इस अनुमित का उपयोग ᭍यᲂ करतेहᱹ?</string>
+    <string name="permission_use_desc">ऑटो ि᭍लकर िन᳜िलिखत मु᭎य कायᭅᭃमताᲐ को सᭃम करनेके
+िलए ए᭍सेिसिबिलटी सेवा API अनुमित का उपयोग करता है।</string>
+    <string name="grant_permission">अनुमित दᱶ</string>
+    <string name="permission_required">आव᭫यक अनुमित</string>
+    <string name="single_mode">ᳲसगल मोड</string>
+    <string name="multi_mode">म᭨टी मोड</string>
+    <string name="single_mode_desc">िन᳸द᳥ अंतराल पर एक ही ᭭थान पर बार-बार ि᭍लक करᱶ</string>
+    <string name="multi_mode_desc">िविभ᳖ ᭭थानᲂ पर ि᭍लक/᭭वाइप कᳱ एक ᮰ृंखला सेट करᱶ</string>
+    <string name="how_to_use">कैसेउपयोग करᱶ?</string>
+    <string name="dialog_title_permission_accessibility">ए᭍सेिसिबिलटी सेवा</string>
+    <string name="dialog_title_permission_notification">सूचना</string>
+    <string name="dialog_title_permission_mandatory_denied">अनुमित अ᭭वीकृत</string>
+    <string name="dialog_title_permission_overlay">ओवरले</string>
+    <string name="message_permission_desc_overlay">आपके᳇ारा ᭭वचािलत ᳰकए जानेवालेएि᭡लकेशन
+केऊपर ऑटो ि᭍लकर इंटरफ़ेस ᳰदखानेकेिलए ओवरलेअनुमित कᳱ आव᭫यकता है, िजससेआप दूसरेएि᭡लकेशन
+को रोकेिबना अपनेपᳯरदृ᭫य को कॉि᭠फ़गर कर सकतेहᱹ।</string>
+    <string name="message_permission_desc_notification">वैकि᭨पक: एि᭡लकेशन केचलनेकेदौरान
+सूचना ᳰदखाता हैताᳰक आप आसानी सेपᳯरदृ᭫य चयन ᭭ᮓᳱन पर लौट सकᱶ।</string>
+    <string name="message_permission_mandatory_denied">यह अनुमित ऑटो ि᭍लकर केसही ढंग से
+काम करनेकेिलए अिनवायᭅहै। इसकेिबना यह सही ढंग सेकाम नहᱭ करेगा।</string>
+    <string name="splash_content_description">आसानी सेि᭍लक करᱶ</string>
+    <string name="please_wait">कृपया ᮧतीᭃा करᱶ</string>
+    <string name="select_language">भाषा चुनᱶ</string>
+    <string name="continue_">जारी रखᱶ</string>
+    <string name="watch_tutorial">Ჷूटोᳯरयल देखᱶ</string>
+    <string name="select_distinct_language">अलग भाषा चुनᱶ</string>
+    <string name="interval">अंतराल</string>
+    <string name="start_auto_clicker">ऑटो ि᭍लकर शुᱨ करᱶ</string>
+    <string name="stop_auto_clicker">ऑटो ि᭍लकर रोकᱶ</string>
+    <string name="add_clicking_target">ि᭍लक ल᭯य जोड़ᱶ</string>
+    <string name="remove_clicking_target">ि᭍लक ल᭯य हटाएं</string>
+    <string name="add_swiping_target">᭭वाइप ल᭯य जोड़ᱶ</string>
+    <string name="save_script">ि᭭ᮓ᭡ट सहेजᱶ</string>
+    <string name="edit_script_setting">ि᭭ᮓ᭡ट सेᳳटग संपाᳰदत करᱶ</string>
+    <string name="drag_action">ल᭯य ᳰᮓया ᳲबदुको कहᱭ भी खᱭचᱶ</string>
+    <string name="drag_n_swipe_action">ᮧारंभ/समाि᳙ ल᭯य ᳰᮓया ᳲबदुको कहᱭ भी खᱭचᱶ। दोनᲂ ᳲबदुᲐ पर
+अंतराल सेट करᱶ।</string>
+    <string name="interval_desc">अंतराल दो लगातार ि᭍लक केबीच का समय है।</string>
+    <string name="anti_detection">एंटी-िडटे᭍शन</string>
+    <string name="anti_detection_desc">ᮧ᭜येक ि᭍लक केबाद एक यादृि᭒छक समय और िᮢ᭔या उ᭜प᳖ करᱶ
+ताᳰक यह अिधक मानव-सदृश ᳰदखे।</string>
+    <string name="interval_before_the_next_action">अगली ᳰᮓया सेपहलेअंतराल</string>
+    <string name="swipe_duration">᭭वाइप अविध</string>
+    <string name="repeat_mode">पुनरावृिᱫ मोड</string>
+    <string name="change_language">भाषा बदलᱶ</string>
+    <string name="english_default">अंᮕेज़ी (िडफ़ॉ᭨ट)</string>
+    <string name="rate_us">हमᱶरेट करᱶ</string>
+    <string name="feedback">ᮧितᳰᮓया</string>
+    <string name="privacy_policy">गोपनीयता नीित</string>
+    <string name="play">चालूकरᱶ</string>
+    <string name="add">जोड़ᱶ</string>
+    <string name="start">शुᱨ करᱶ</string>
+    <string name="stop">रोकᱶ</string>
+    <string name="close">बंद करᱶ</string>
+    <string name="save">सहेजᱶ</string>
+    <string name="drag">खᱭचᱶ</string>
+    <string name="remove">हटाएं</string>
+    <string name="swipe">᭭वाइप करᱶ</string>
+    <string name="pause">रोकᱶ</string>
+    <string name="cancel">र᳎ करᱶ</string>
+    <string name="save_script_desc">अपनी ि᭍लक गित, अविध और ल᭯य ऐ᭡स सहेजᱶऔर उ᭜पादकता
+बढ़ाएं!</string>
+    <string name="rename">नाम बदलᱶ</string>
+    <string name="duplicate">कॉपी करᱶ</string>
+    <string name="delete">हटाएं</string>
+    <string name="export">िनयाᭅत करᱶ</string>
+    <string name="notification_message">पᳯरदृ᭫य बदलनेकेिलए टैप करᱶ</string>
+    <string name="notification_title">पᳯरदृ᭫य: %1$s</string>
+    <string name="notification_channel_name">ऑटो ि᭍लकर</string>
+    <string name="content_desc_add_script">भंडारण सेि᭭ᮓ᭡ट आयात करᱶ</string>
+    <string name="default_scenario_name">माईि᭭ᮓ᭡ट</string>
+    <string name="toast_denied_foreground_permission">उपयोगकताᭅनेअᮕभूिम सेवा अनुमित
+अ᭭वीकार कर दी</string>
+    <string name="dialog_title_delete_scenario">पᳯरदृ᭫य हटाएं</string>
+    <string name="message_delete_scenario">यह %1$s को हटा देगा। ᭍या आप सुिनि᳟त हᱹ?</string>
+    <string name="hint_rename_scenario">अपना नया नाम दजᭅकरᱶ…</string>
+    <string name="dialog_title_rename_scenario">पᳯरदृ᭫य का नाम बदलᱶ</string>
+    <string name="error_empty_scenario_name">फ़ᳱ᭨ड खाली नहᱭ हो सकता</string>
+    <string name="item_title_single_mode_scenario">ᳲसगल पॉइंट मोड</string>
+    <string name="item_desc_single_mode_scenario">िन᳸द᳥ अंतराल पर एकल ᳲबदुपर बार-बार ि᭍लक
+करᱶ</string>
+    <string name="item_title_multi_mode_scenario">म᭨टी पॉइंट मोड</string>
+    <string name="item_desc_multi_mode_scenario">िविभ᳖ ᭭थानᲂ पर ि᭍लक/᭭वाइप कᳱ एक ᮰ृंखला
+सेट करᱶ</string>
+    <string name="how_to_enable">कैसेसᳰᮓय करᱶ</string>
+    <string name="tutorial_instructions">“अनुमित दᱶ” बटन पर टैप करᱶऔर\n1. सेᳳट᭏स मᱶ “सेवा ᭭थािपत
+करᱶ” ढूंढᱶ\n2. “ऑटो ि᭍लकर” ढूंढᱶ\n3. अनुमित सᳰᮓय करᱶ</string>
+    <string name="accessibility_is_unavailable"><u>पᱟंच असमथᭅहै</u></string>
+    <string name="menu_item_title_troubleshooting">सम᭭या िनवारण</string>
+    <string name="interval_setting">अंतराल सेटिंग</string>
+    <string name="preferences">प्राथमिकताएं</string>
+    <string name="battery_optimization">बैटरी ऑप्टिमाइजेशन</string>
+    <string name="permission_granted">अनुमति दी गई</string>
+    <string name="permission_missing">अनुमति गायब</string>
+    <string name="only_with_these_permissions">केवल इन अनुमतियों के साथ:</string>
+    <string name="permission_point_1">1. आपको हर बार ऐप खोलने पर एक्सेसिबिलिटी अनुमति सेट करने की आवश्यकता नहीं है।</string>
+    <string name="permission_point_2">2. हमारा ऐप पृष्ठभूमि में सुरक्षित रूप से चल सकता है और स्थिर सेवा प्रदान कर सकता है।</string>
+    <string name="import_files">आयात करें</string>
+    <string name="add_script">स्क्रिप्ट जोड़ें</string>
+    <string name="empty_script_message">आपकी सेव की गई स्क्रिप्ट्स \nयहां दिखाई देंगी</string>
+    <string name="troubleshooting">समस्या निवारण</string>
+    <string name="allow_permission">अनुमति अनुमति दें</string>
+    <string name="troubleshoot_desc">स्वचालित क्लिकर ऐप के लिए मूल अनुमति। आवश्यक अनुमति होनी चाहिए।</string>
+
+</resources>

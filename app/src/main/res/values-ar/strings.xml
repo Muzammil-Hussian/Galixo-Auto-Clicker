@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">الرئیسیة</string>
+    <string name="title_script">السكریبت</string>
+    <string name="title_setting">الإعدادات</string>
+    <string name="activity_title">السیناریوھات</string>
+    <string name="accessibility_service_description">يحتاج هذا التطبيق إلى هذه الخدمة لحقن النقرات التي قمت بإنشائها في التطبيقات الأخرى بمجرد اكتشاف الشروط.\n\nلن يتم جمع أي بيانات من
+هذا التطبيق.</string>
+
+    <string name="accessibility_permission">الوصول إمكانیة إذن</string>
+    <string name="accessibility_permission_desc">يرجى السماح للنقر التلقائي باستخدام خدمات إمكانية الوصول لميزات التطبيق.</string>
+
+    <string name="simulating_click_point">• الجھاز شاشة على النقرات محاكاة</string>
+    <string name="simulating_swipe_point">• الجھاز شاشة على السحب محاكاة</string>
+    <string name="why_permission_desc">الإذن؟ ھذا نستخدم لماذا</string>
+    <string name="permission_use_desc">يستخدم النقر التلقائي إذن واجهة برمجة تطبيقات خدمة إمكانية الوصول لتمكين الوظائف الأساسية التالية.</string>
+
+    <string name="grant_permission">الإذن منح</string>
+    <string name="permission_required">مطلوب الإذن</string>
+    <string name="single_mode">فردي وضع</string>
+    <string name="multi_mode">متعدد وضع</string>
+    <string name="single_mode_desc">اضغط على موضع واحد بشكل متكرر على فترات زمنية محددة</string>
+    <string name="multi_mode_desc">تعيين سلسلة من النقرات/التمريرات في مواضع مختلفة</string>
+
+    <string name="how_to_use">الاستخدام؟ كیفیة</string>
+    <string name="dialog_title_permission_accessibility">الوصول إمكانیة خدمة</string>
+    <string name="dialog_title_permission_notification">الإشعارات</string>
+    <string name="dialog_title_permission_mandatory_denied">الإذن رفض تم</string>
+    <string name="dialog_title_permission_overlay">العلویة الطبقة</string>
+    <string name="message_permission_desc_overlay">مطلوب إذن التراكب لإظهار واجهة AutoClicker على التطبيقات التي تريد أتمتتها، مما يسمح لك بتكوين السيناريو الخاص بك دون إيقاف التطبيق الآخر.</string>
+    <string name="message_permission_desc_notification">اختياري: يعرض الإشعار أثناء تشغيل التطبيق من أجل العودة بسهولة إلى شاشة اختيار السيناريو.</string>
+    <string name="message_permission_mandatory_denied">يعد هذا الإذن إلزاميًا لكي يعمل AutoClicker بشكل صحيح. ولن يتمكن من العمل بشكل صحيح بدونه.</string>
+    <string name="splash_content_description">بسھولة انقر</string>
+    <string name="please_wait">الانتظار یرجى</string>
+    <string name="select_language">اللغة اختر</string>
+    <string name="continue_">استمر</string>
+    <string name="watch_tutorial">الدلیل شاھد</string>
+    <string name="select_distinct_language">مختلفة لغة اختر</string>
+    <string name="interval">الزمني الفاصل</string>
+    <string name="start_auto_clicker">التلقائي النقر ابدأ</string>
+    <string name="stop_auto_clicker">التلقائي النقر أوقف</string>
+    <string name="add_clicking_target">النقر ھدف أضف</string>
+    <string name="remove_clicking_target">النقر ھدف أزل</string>
+    <string name="add_swiping_target">السحب ھدف أضف</string>
+    <string name="save_script">السكریبت احفظ</string>
+    <string name="edit_script_setting">السكریبت إعدادات عدل</string>
+    <string name="drag_action">اسحب نقطة العمل المستهدفة لتحريكها إلى أي مكان</string>
+    <string name="drag_n_swipe_action">اسحب نقطة بداية/نهاية الهدف لتحريكها إلى أي مكان. قم بتعيين الفاصل الزمني على كلتا النقطتين.</string>
+    <string name="interval_desc">الفاصل الزمني هو الفجوة الزمنية بين نقرتين متتاليتين.</string>
+    <string name="anti_detection">مكافحة الكشف</string>
+    <string name="anti_detection_desc">إنشاء مقدار عشوائي من الوقت ونصف القطر بعد كل نقرة للتصرف بشكل أكثر شبهاً بالإنسان.</string>
+    <string name="interval_before_the_next_action">التالي الإجراء قبل الزمني الفاصل</string>
+    <string name="swipe_duration">السحب مدة</string>
+    <string name="repeat_mode">التكرار وضع</string>
+    <string name="change_language">اللغة تغییر</string>
+    <string name="english_default">(الافتراضیة) الإنجلیزیة</string>
+    <string name="rate_us">مناّقی</string>
+    <string name="feedback">الراجعة التغذیة</string>
+    <string name="privacy_policy">الخصوصیة سیاسة</string>
+    <string name="play">تشغیل</string>
+    <string name="add">أضف</string>
+    <string name="start">ابدأ</string>
+    <string name="stop">توقف</string>
+    <string name="close">أغلق</string>
+    <string name="save">احفظ</string>
+    <string name="drag">اسحب</string>
+    <string name="remove">احذف</string>
+    <string name="swipe">اسحب</string>
+    <string name="pause">مؤقت إیقاف</string>
+    <string name="cancel">إلغاء</string>
+    <string name="save_script_desc">احفظ سرعة النقر ومدته والتطبيقات المستهدفة لتعزيز الإنتاجية!</string>
+    <string name="rename">تسمیة إعادة</string>
+    <string name="duplicate">نسخ</string>
+    <string name="delete">حذف</string>
+    <string name="export">تصدیر</string>
+    <string name="notification_message">السیناریو لتغییر اضغط</string>
+    <string name="notification_title">% :السیناریو1$s</string>
+    <string name="notification_channel_name">التلقائي النقر</string>
+    <string name="content_desc_add_script">التخزین من السكریبت استیراد</string>
+    <string name="default_scenario_name">بي الخاص سكریبت</string>
+    <string name="toast_denied_foreground_permission">المقدمة في الخدمة إذن المستخدم رفض</string>
+    <string name="dialog_title_delete_scenario">السیناریو حذف</string>
+    <string name="message_delete_scenario">حذف إلى ھذا سیؤدي %1$s. متأكد؟ أنت ھل</string>
+    <string name="hint_rename_scenario">الجدید الاسم أدخل…</string>
+    <string name="dialog_title_rename_scenario">السیناریو تسمیة إعادة</string>
+    <string name="error_empty_scenario_name">لا يمكن أن يكون الحقل فارغا</string>
+    <string name="item_title_single_mode_scenario">وضع النقطة الواحدة</string>
+    <string name="item_desc_single_mode_scenario">اضغط على موضع واحد بشكل متكرر على فترات زمنية محددة</string>
+    <string name="item_title_multi_mode_scenario">وضع النقاط المتعددة</string>
+    <string name="item_desc_multi_mode_scenario">قم بتعيين سلسلة من النقرات/التمريرات في مواضع مختلفة</string>
+    <string name="how_to_enable">كيفية التمكين</string>
+    <string name="tutorial_instructions">انقر على زر "منح الإذن" و\n1. ابحث عن "تثبيت الخدمة" في الإعدادات\n2. ابحث عن "النقر التلقائي"\n3. قم بتمكين الإذن</string>
+    <string name="accessibility_is_unavailable"><u>متوفرة غیر الوصول إمكانیة</u></string>
+    <string name="menu_item_title_troubleshooting">الأخطاء استكشاف</string>
+    <string name="interval_setting">ضبط الفاصل الزمني</string>
+    <string name="preferences">التفضيلات</string>
+
+    <string name="battery_optimization">تحسين البطارية</string>
+    <string name="permission_granted">تم منح الإذن</string>
+    <string name="permission_missing">الإذن مفقود</string>
+    <string name="only_with_these_permissions">فقط مع هذه الأذونات:</string>
+    <string name="permission_point_1">1. لا داعي لضبط إذن الوصول في كل مرة تفتح فيها التطبيق.</string>
+    <string name="permission_point_2">2. يمكن لتطبيقنا العمل بأمان في الخلفية وتوفير خدمة مستقرة.</string>
+    <string name="import_files">استيراد</string>
+    <string name="add_script">إضافة نص</string>
+    <string name="empty_script_message">سيتم عرض نصوصك المحفوظة \nهنا</string>
+    <string name="troubleshooting">استكشاف الأخطاء وإصلاحها</string>
+    <string name="allow_permission">السماح بالإذن</string>
+    <string name="troubleshoot_desc">إذن أساسي لتطبيق النقر التلقائي. يجب أن يكون لديك الإذن المطلوب.</string>
+
+</resources>

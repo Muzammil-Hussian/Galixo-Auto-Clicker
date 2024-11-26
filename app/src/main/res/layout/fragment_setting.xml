@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_16_dp"
+    tools:context=".modules.settings.SettingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_vertical_large"
+            android:text="@string/interval_setting"
+            android:textAppearance="@style/Tagline" />
+
+        <include
+            android:id="@+id/interval"
+            layout="@layout/include_dialog_view" />
+
+        <include
+            android:id="@+id/swipe_duration"
+            layout="@layout/include_dialog_view" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_vertical_extra_large"
+            android:layout_marginBottom="@dimen/margin_vertical_default"
+            android:text="@string/repeat_mode"
+            android:textAppearance="@style/DescriptionHeading" />
+
+        <include
+            android:id="@+id/repeatMode"
+            layout="@layout/include_input_field_dropdown" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_vertical_extra_large"
+            android:layout_marginBottom="@dimen/margin_vertical_default"
+            android:gravity="center_vertical"
+            android:text="@string/preferences"
+            android:textAppearance="@style/Tagline" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/languageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_round_16_dp"
+            android:padding="@dimen/padding_16_dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iconLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_change_language" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lblChangeLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/change_language"
+                android:textAppearance="@style/DescriptionHeading"
+                app:layout_constraintBottom_toTopOf="@+id/selectedLanguage"
+                app:layout_constraintStart_toEndOf="@+id/iconLanguage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/selectedLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_4_dp"
+                android:text="@string/english_default"
+                android:textAppearance="@style/Tagline"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lblChangeLanguage"
+                app:layout_constraintTop_toBottomOf="@+id/lblChangeLanguage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/arrowIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_forward" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/rateUs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/bg_round_16_dp"
+            app:drawableStartCompat="@drawable/ic_rate_us"
+            app:drawableEndCompat="@drawable/ic_forward"
+            android:drawablePadding="8dp"
+            android:padding="@dimen/padding_16_dp"
+            android:text="@string/rate_us"
+
+            android:textAppearance="@style/DescriptionHeading" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/bg_round_16_dp"
+            android:drawableStart="@drawable/ic_feedback"
+            android:drawableEnd="@drawable/ic_forward"
+            android:drawablePadding="8dp"
+            android:padding="@dimen/padding_16_dp"
+            android:text="@string/feedback"
+            android:textAppearance="@style/DescriptionHeading" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/privacyPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/bg_round_16_dp"
+            android:drawableStart="@drawable/ic_privacy_policy"
+            android:drawableEnd="@drawable/ic_forward"
+            android:drawablePadding="8dp"
+            android:padding="@dimen/padding_16_dp"
+            android:text="@string/privacy_policy"
+            android:textAppearance="@style/DescriptionHeading" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">Startseite</string>
+    <string name="title_script">Skript</string>
+    <string name="title_setting">Einstellungen</string>
+    <string name="activity_title">Szenarien</string>
+    <string name="accessibility_service_description">Diese App benötigt diesen Dienst, um die von
+Ihnen erstellten Klicks in andere Anwendungen einzufügen, sobald die Bedingungen erkannt
+wurden.\n\nEs werden keine Daten von dieser Anwendung gesammelt.</string>
+    <string name="accessibility_permission">Zugänglichkeitsberechtigung</string>
+    <string name="accessibility_permission_desc">Erlauben Sie Auto Clicker, die
+Zugänglichkeitsdienste für App-Funktionen zu verwenden.</string>
+    <string name="simulating_click_point">• Simulieren von Klicks auf dem Gerätescreen</string>
+    <string name="simulating_swipe_point">• Simulieren von Wischbewegungen auf dem
+Gerätescreen</string>
+    <string name="why_permission_desc">Warum verwenden wir diese Berechtigung?</string>
+    <string name="permission_use_desc">Auto Clicker verwendet die API-Berechtigung des
+Zugänglichkeitsdienstes, um folgende Kernfunktionen zu aktivieren.</string>
+    <string name="grant_permission">Berechtigung erteilen</string>
+    <string name="permission_required">Berechtigung erforderlich</string>
+    <string name="single_mode">Einzelmodus</string>
+    <string name="multi_mode">Mehrfachmodus</string>
+    <string name="single_mode_desc">Klicken Sie wiederholt auf eine einzelne Position in
+angegebenen Intervallen</string>
+    <string name="multi_mode_desc">Legen Sie eine Reihe von Klicks/Wischbewegungen an
+verschiedenen Positionen fest</string>
+    <string name="how_to_use">Wie benutzt man?</string>
+    <string name="dialog_title_permission_accessibility">Zugänglichkeitsdienst</string>
+    <string name="dialog_title_permission_notification">Benachrichtigung</string>
+    <string name="dialog_title_permission_mandatory_denied">Berechtigung verweigert</string>
+    <string name="dialog_title_permission_overlay">Überlagerung</string>
+    <string name="message_permission_desc_overlay">Die Überlagerungsberechtigung ist
+erforderlich, um die AutoClicker-Oberfläche über den Anwendungen anzuzeigen, die Sie
+automatisieren möchten, sodass Sie Ihr Szenario konfigurieren können, ohne die andere
+Anwendung zu stoppen.</string>
+    <string name="message_permission_desc_notification">Optional: Zeigt eine Benachrichtigung
+an, während die Anwendung läuft, um einfach zum Szenarienauswahlbildschirm
+zurückzukehren.</string>
+    <string name="message_permission_mandatory_denied">Diese Berechtigung ist erforderlich,
+damit AutoClicker ordnungsgemäß funktioniert. Ohne sie wird es nicht korrekt
+funktionieren.</string>
+    <string name="splash_content_description">Klicken ohne Aufwand</string>
+    <string name="please_wait">Bitte warten</string>
+    <string name="select_language">Sprache auswählen</string>
+    <string name="continue_">Weiter</string>
+    <string name="watch_tutorial">Tutorial ansehen</string>
+    <string name="select_distinct_language">Andere Sprache auswählen</string>
+    <string name="interval">Intervall</string>
+    <string name="start_auto_clicker">Auto Clicker starten</string>
+    <string name="stop_auto_clicker">Auto Clicker stoppen</string>
+    <string name="add_clicking_target">Klickziel hinzufügen</string>
+    <string name="remove_clicking_target">Klickziel entfernen</string>
+    <string name="add_swiping_target">Wischziel hinzufügen</string>
+    <string name="save_script">Skript speichern</string>
+    <string name="edit_script_setting">Skripteinstellungen bearbeiten</string>
+    <string name="drag_action">Ziehen Sie den Zielaktionspunkt, um ihn zu verschieben</string>
+    <string name="drag_n_swipe_action">Ziehen Sie den Start-/Endzielaktionspunkt, um ihn zu
+verschieben. Legen Sie Intervalle an beiden Punkten fest.</string>
+    <string name="interval_desc">Das Intervall ist der Zeitabstand zwischen zwei
+aufeinanderfolgenden Klicks.</string>
+    <string name="anti_detection">Anti-Erkennung</string>
+    <string name="anti_detection_desc">Generieren Sie nach jedem Klick eine zufällige Zeit und
+einen Radius, um menschlicher zu wirken.</string>
+    <string name="interval_before_the_next_action">Intervall vor der nächsten Aktion</string>
+    <string name="swipe_duration">Wischdauer</string>
+    <string name="repeat_mode">Wiederholungsmodus</string>
+    <string name="change_language">Sprache ändern</string>
+    <string name="english_default">Englisch (Standard)</string>
+    <string name="rate_us">Bewerten Sie uns</string>
+    <string name="feedback">Feedback</string>
+    <string name="privacy_policy">Datenschutzrichtlinie</string>
+    <string name="play">Abspielen</string>
+    <string name="add">Hinzufügen</string>
+    <string name="start">Start</string>
+    <string name="stop">Stopp</string>
+    <string name="close">Schließen</string>
+    <string name="save">Speichern</string>
+    <string name="drag">Ziehen</string>
+    <string name="remove">Entfernen</string>
+    <string name="swipe">Wischen</string>
+    <string name="pause">Pause</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="save_script_desc">Speichern Sie Ihre Klickgeschwindigkeit, Dauer und Ziel-Apps,
+um die Produktivität zu steigern!</string>
+    <string name="rename">Umbenennen</string>
+    <string name="duplicate">Duplizieren</string>
+    <string name="delete">Löschen</string>
+    <string name="export">Exportieren</string>
+    <string name="notification_message">Tippen Sie, um das Szenario zu ändern</string>
+    <string name="notification_title">Szenario: %1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">Skript aus dem Speicher importieren</string>
+    <string name="default_scenario_name">MeinSkript</string>
+    <string name="toast_denied_foreground_permission">Benutzer hat die Berechtigung für den
+Vordergrunddienst verweigert</string>
+    <string name="dialog_title_delete_scenario">Szenario löschen</string>
+    <string name="message_delete_scenario">Dies wird %1$s löschen. Sind Sie sicher?</string>
+    <string name="hint_rename_scenario">Geben Sie Ihren neuen Namen ein…</string>
+    <string name="dialog_title_rename_scenario">Szenario umbenennen</string>
+    <string name="error_empty_scenario_name">Feld darf nicht leer sein</string>
+    <string name="item_title_single_mode_scenario">Einpunktmodus</string>
+    <string name="item_desc_single_mode_scenario">Klicken Sie wiederholt auf eine einzige
+Position mit festgelegten Intervallen</string>
+    <string name="item_title_multi_mode_scenario">Mehrpunktmodus</string>
+    <string name="item_desc_multi_mode_scenario">Legen Sie eine Reihe von
+Klicks/Wischbewegungen an verschiedenen Positionen fest</string>
+    <string name="how_to_enable">Wie aktivieren</string>
+    <string name="tutorial_instructions">Tippen Sie auf die Schaltfläche „Berechtigung erteilen“
+und\n1. Suchen Sie „Dienst installieren“ in den Einstellungen\n2. Suchen Sie „Auto Clicker“\n3.
+Aktivieren Sie die Berechtigung</string>
+    <string name="accessibility_is_unavailable"><u>Zugänglichkeit nicht verfügbar</u></string>
+    <string name="menu_item_title_troubleshooting">Fehlerbehebung</string>
+    <string name="interval_setting">Intervalleinstellung</string>
+    <string name="preferences">Präferenzen</string>
+    <string name="battery_optimization">Batterieoptimierung</string>
+    <string name="permission_granted">Berechtigung Erteilt</string>
+    <string name="permission_missing">Berechtigung Fehlt</string>
+    <string name="only_with_these_permissions">Nur mit diesen Berechtigungen:</string>
+    <string name="permission_point_1">1. Du musst die Zugriffsberechtigung nicht jedes Mal einstellen, wenn du die App öffnest.</string>
+    <string name="permission_point_2">2. Unsere App kann sicher im Hintergrund laufen und einen stabilen Service bieten.</string>
+    <string name="import_files">Importieren</string>
+    <string name="add_script">Skript Hinzufügen</string>
+    <string name="empty_script_message">Deine gespeicherten Skripte \nwerden hier angezeigt</string>
+    <string name="troubleshooting">Fehlerbehebung</string>
+    <string name="allow_permission">Berechtigung Erlauben</string>
+    <string name="troubleshoot_desc">Grundlegende Berechtigung für die automatische Klick-App. Die erforderliche Berechtigung muss vorhanden sein.</string>
+
+</resources>

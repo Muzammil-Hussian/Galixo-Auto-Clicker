@@ -28,25 +28,25 @@ internal class ActionExecutor(private val androidExecutor: AndroidExecutor) {
         }
     }
 
-    private suspend fun executeClick(dumbClick: Action.Click) {
+    private suspend fun executeClick(click: Action.Click) {
         val clickGesture = GestureDescription.Builder().buildSingleStroke(
-            path = Path().apply { moveTo(dumbClick.position.x + 50, dumbClick.position.y + 50) },
-            durationMs = dumbClick.pressDurationMs.randomizeDurationIfNeeded(),
+            path = Path().apply { moveTo(click.position.x + 50, click.position.y + 50) },
+            durationMs = click.pressDurationMs.randomizeDurationIfNeeded(),
         )
 
-        executeRepeatableGesture(clickGesture, dumbClick)
+        executeRepeatableGesture(clickGesture, click)
     }
 
-    private suspend fun executeSwipe(dumbSwipe: Action.Swipe) {
+    private suspend fun executeSwipe(swipe: Action.Swipe) {
         val swipeGesture = GestureDescription.Builder().buildSingleStroke(
             path = Path().apply {
-                moveTo(dumbSwipe.fromPosition.x, dumbSwipe.fromPosition.y + 130)
-                lineTo(dumbSwipe.toPosition.x, dumbSwipe.toPosition.y + 130)
+                moveTo(swipe.fromPosition.x, swipe.fromPosition.y + 130)
+                lineTo(swipe.toPosition.x, swipe.toPosition.y + 130)
             },
-            durationMs = dumbSwipe.swipeDurationMs.randomizeDurationIfNeeded(),
+            durationMs = swipe.swipeDurationMs.randomizeDurationIfNeeded(),
         )
 
-        executeRepeatableGesture(swipeGesture, dumbSwipe)
+        executeRepeatableGesture(swipeGesture, swipe)
     }
 
 

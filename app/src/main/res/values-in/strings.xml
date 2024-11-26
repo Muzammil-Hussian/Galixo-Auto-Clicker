@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_script">Skrip</string>
+    <string name="title_setting">Pengaturan</string>
+    <string name="activity_title">Skenario</string>
+    <string name="accessibility_service_description">Aplikasi ini membutuhkan layanan ini untuk
+menyuntikkan klik yang Anda buat ke aplikasi lain setelah kondisi terdeteksi.\n\nTidak ada data
+yang akan dikumpulkan dari aplikasi ini.</string>
+    <string name="accessibility_permission">Izin Aksesibilitas</string>
+    <string name="accessibility_permission_desc">Izinkan Auto Clicker menggunakan layanan
+aksesibilitas untuk fitur aplikasi.</string>
+    <string name="simulating_click_point">• Mensimulasikan klik pada layar perangkat</string>
+    <string name="simulating_swipe_point">• Mensimulasikan gesekan pada layar
+perangkat</string>
+    <string name="why_permission_desc">Mengapa kami menggunakan izin ini?</string>
+    <string name="permission_use_desc">Auto Clicker menggunakan izin API layanan aksesibilitas
+untuk mengaktifkan fungsionalitas inti berikut.</string>
+    <string name="grant_permission">Berikan Izin</string>
+    <string name="permission_required">Izin Diperlukan</string>
+    <string name="single_mode">Mode Tunggal</string>
+    <string name="multi_mode">Mode Multi</string>
+    <string name="single_mode_desc">Klik berulang kali pada satu posisi dalam interval
+tertentu</string>
+    <string name="multi_mode_desc">Tetapkan serangkaian klik/gesekan di berbagai
+posisi</string>
+    <string name="how_to_use">Bagaimana cara menggunakan?</string>
+    <string name="dialog_title_permission_accessibility">Layanan Aksesibilitas</string>
+    <string name="dialog_title_permission_notification">Notifikasi</string>
+    <string name="dialog_title_permission_mandatory_denied">Izin Ditolak</string>
+    <string name="dialog_title_permission_overlay">Tampilan Overlay</string>
+    <string name="message_permission_desc_overlay">Izin overlay diperlukan untuk menampilkan
+antarmuka Auto Clicker di atas aplikasi yang ingin Anda otomatisasi, memungkinkan Anda
+untuk mengatur skenario tanpa menghentikan aplikasi lainnya.</string>
+    <string name="message_permission_desc_notification">Opsional: Menampilkan notifikasi saat
+aplikasi berjalan, memudahkan Anda untuk kembali ke layar pemilihan skenario.</string>
+    <string name="message_permission_mandatory_denied">Izin ini wajib untuk Auto Clicker agar
+berfungsi dengan benar. Tanpa itu, aplikasi tidak akan bekerja dengan baik.</string>
+    <string name="splash_content_description">Klik dengan mudah</string>
+    <string name="please_wait">Harap tunggu</string>
+    <string name="select_language">Pilih Bahasa</string>
+    <string name="continue_">Lanjutkan</string>
+    <string name="watch_tutorial">Tonton Tutorial</string>
+    <string name="select_distinct_language">Pilih bahasa lain</string>
+    <string name="interval">Interval</string>
+    <string name="start_auto_clicker">Mulai Auto Clicker</string>
+    <string name="stop_auto_clicker">Hentikan Auto Clicker</string>
+    <string name="add_clicking_target">Tambahkan target klik</string>
+    <string name="remove_clicking_target">Hapus target klik</string>
+    <string name="add_swiping_target">Tambahkan target geser</string>
+    <string name="save_script">Simpan Skrip</string>
+    <string name="edit_script_setting">Edit Pengaturan Skrip</string>
+    <string name="drag_action">Seret titik aksi target untuk memindahkannya ke mana
+saja</string>
+    <string name="drag_n_swipe_action">Seret titik awal/akhir aksi target untuk memindahkannya
+ke mana saja. Atur interval di kedua titik.</string>
+    <string name="interval_desc">Interval adalah jarak waktu antara dua klik berurutan.</string>
+    <string name="anti_detection">Anti-Deteksi</string>
+    <string name="anti_detection_desc">Hasilkan waktu dan radius acak setelah setiap klik untuk
+lebih menyerupai perilaku manusia.</string>
+    <string name="interval_before_the_next_action">Interval sebelum tindakan
+berikutnya</string>
+    <string name="swipe_duration">Durasi Geser</string>
+    <string name="repeat_mode">Mode Ulangi</string>
+    <string name="change_language">Ubah Bahasa</string>
+    <string name="english_default">Bahasa Inggris (default)</string>
+    <string name="rate_us">Beri kami rating</string>
+    <string name="feedback">Umpan Balik</string>
+    <string name="privacy_policy">Kebijakan Privasi</string>
+    <string name="play">Mainkan</string>
+    <string name="add">Tambahkan</string>
+    <string name="start">Mulai</string>
+    <string name="stop">Hentikan</string>
+    <string name="close">Tutup</string>
+    <string name="save">Simpan</string>
+    <string name="drag">Seret</string>
+    <string name="remove">Hapus</string>
+    <string name="swipe">Geser</string>
+    <string name="pause">Jeda</string>
+    <string name="cancel">Batalkan</string>
+    <string name="save_script_desc">Simpan kecepatan klik, durasi, dan aplikasi target Anda untuk
+meningkatkan produktivitas!</string>
+    <string name="rename">Ubah Nama</string>
+    <string name="duplicate">Duplikat</string>
+    <string name="delete">Hapus</string>
+    <string name="export">Ekspor</string>
+    <string name="notification_message">Ketuk untuk mengubah skenario</string>
+    <string name="notification_title">Skenario: %1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">Impor skrip dari penyimpanan</string>
+    <string name="default_scenario_name">SkripSaya</string>
+    <string name="toast_denied_foreground_permission">Pengguna menolak izin layanan latar
+depan</string>
+    <string name="dialog_title_delete_scenario">Hapus Skenario</string>
+    <string name="message_delete_scenario">Ini akan menghapus %1$s. Anda yakin?</string>
+    <string name="hint_rename_scenario">Masukkan nama baru Anda…</string>
+    <string name="dialog_title_rename_scenario">Ubah Nama Skenario</string>
+    <string name="error_empty_scenario_name">Kolom tidak boleh kosong</string>
+    <string name="item_title_single_mode_scenario">Mode Titik Tunggal</string>
+    <string name="item_desc_single_mode_scenario">Klik berulang kali pada satu posisi dalam
+interval tertentu</string>
+    <string name="item_title_multi_mode_scenario">Mode Multi Titik</string>
+    <string name="item_desc_multi_mode_scenario">Tetapkan serangkaian klik/gesekan di
+berbagai posisi</string>
+    <string name="how_to_enable">Cara Mengaktifkan</string>
+    <string name="tutorial_instructions">Ketuk tombol “Berikan Izin” dan\n1. Temukan “Instal
+Layanan” di pengaturan\n2. Temukan “Auto Clicker”\n3. Aktifkan izinnya</string>
+    <string name="accessibility_is_unavailable"><u>Aksesibilitas tidak tersedia</u></string>
+    <string name="menu_item_title_troubleshooting">Pemecahan Masalah</string>
+    <string name="interval_setting">Pengaturan interval</string>
+    <string name="preferences">preferensi</string>
+    <string name="battery_optimization">Optimasi Baterai</string>
+    <string name="permission_granted">Izin Diberikan</string>
+    <string name="permission_missing">Izin Hilang</string>
+    <string name="only_with_these_permissions">Hanya dengan izin ini:</string>
+    <string name="permission_point_1">1. Anda tidak perlu mengatur izin aksesibilitas setiap kali membuka aplikasi.</string>
+    <string name="permission_point_2">2. Aplikasi kami dapat berjalan dengan aman di latar belakang dan menyediakan layanan yang stabil.</string>
+    <string name="import_files">Impor</string>
+    <string name="add_script">Tambah Skrip</string>
+    <string name="empty_script_message">Skrip yang Anda simpan \nakan ditampilkan di sini</string>
+    <string name="troubleshooting">Pemecahan Masalah</string>
+    <string name="allow_permission">Izinkan Izin</string>
+    <string name="troubleshoot_desc">Izin dasar untuk aplikasi auto clicker. Harus memiliki izin yang diperlukan.</string>
+
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_16_dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/lottieAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkerGrey"
+        android:minHeight="240dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialAlertDialog.Rounded" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/labelTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_8_dp"
+        android:text="@string/how_to_enable"
+        android:textAppearance="@style/SubHeadingStyle" />
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:lineSpacingExtra="10dp"
+        android:text="@string/tutorial_instructions"
+        android:textAppearance="@style/Description" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_16_dp">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_16_dp"
+            android:text="@string/cancel"
+            android:textAppearance="@style/ButtonHeading"
+            android:textColor="@color/normalTextColor" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/grantPermission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grant_permission"
+            android:textAppearance="@style/ButtonHeading" />
+
+    </LinearLayout>
+
+</LinearLayout>

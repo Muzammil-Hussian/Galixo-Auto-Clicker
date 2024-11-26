@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OfficeAutoClicker</string>
+    <string name="title_home">Hjem</string>
+    <string name="title_script">Script</string>
+    <string name="title_setting">Indstillinger</string>
+    <string name="activity_title">Scenarier</string>
+    <string name="accessibility_service_description">Denne applikation har brug for denne
+tjeneste for at indsætte de klik, du har oprettet, i andre applikationer, når betingelserne er
+opfyldt.\n\nIngen data vil blive indsamlet fra denne applikation.</string>
+    <string name="accessibility_permission">Tilgængeligheds-tilladelse</string>
+    <string name="accessibility_permission_desc">Tillad venligst Auto Clicker at bruge
+tilgængelighedstjenester til appens funktioner.</string>
+    <string name="simulating_click_point">• Simulerer klik på enhedens skærm</string>
+    <string name="simulating_swipe_point">• Simulerer swipe på enhedens skærm</string>
+    <string name="why_permission_desc">Hvorfor bruger vi denne tilladelse?</string>
+    <string name="permission_use_desc">Auto Clicker bruger API-tilladelsen til
+tilgængelighedstjenester til at muliggøre følgende kernefunktioner.</string>
+    <string name="grant_permission">Giv tilladelse</string>
+    <string name="permission_required">Tilladelse krævet</string>
+    <string name="single_mode">Enkelt tilstand</string>
+    <string name="multi_mode">Flere tilstande</string>
+    <string name="single_mode_desc">Klik gentagne gange på en enkelt position med angivne
+intervaller</string>
+    <string name="multi_mode_desc">Angiv en række klik/swipes på forskellige
+positioner</string>
+    <string name="how_to_use">Sådan bruges?</string>
+    <string name="dialog_title_permission_accessibility">Tilgængeligheds-tjeneste</string>
+    <string name="dialog_title_permission_notification">Notifikation</string>
+    <string name="dialog_title_permission_mandatory_denied">Tilladelse nægtet</string>
+    <string name="dialog_title_permission_overlay">Overlay</string>
+    <string name="message_permission_desc_overlay">Overlay-tilladelsen er påkrævet for at vise
+AutoClicker-grænsefladen over de applikationer, du vil automatisere, så du kan konfigurere dit
+scenarie uden at stoppe de andre applikationer.</string>
+    <string name="message_permission_desc_notification">Valgfrit: Viser en notifikation, mens
+applikationen kører, så du nemt kan vende tilbage til scenarievalgsskærmen.</string>
+    <string name="message_permission_mandatory_denied">Denne tilladelse er obligatorisk for
+AutoClicker for at fungere korrekt. Uden den vil funktionerne ikke fungere korrekt.</string>
+    <string name="splash_content_description">Klik uden besvær</string>
+    <string name="please_wait">Vent venligst</string>
+    <string name="select_language">Vælg sprog</string>
+    <string name="continue_">Fortsæt</string>
+    <string name="watch_tutorial">Se vejledning</string>
+    <string name="select_distinct_language">Vælg et andet sprog</string>
+    <string name="interval">Interval</string>
+    <string name="start_auto_clicker">Start Auto Clicker</string>
+    <string name="stop_auto_clicker">Stop Auto Clicker</string>
+    <string name="add_clicking_target">Tilføj klikmål</string>
+    <string name="remove_clicking_target">Fjern klikmål</string>
+    <string name="add_swiping_target">Tilføj swipe-mål</string>
+    <string name="save_script">Gem script</string>
+    <string name="edit_script_setting">Rediger script-indstillinger</string>
+    <string name="drag_action">Træk målpunktet for handlingen for at flytte det hvor som
+helst</string>
+    <string name="drag_n_swipe_action">Træk start/slut-målpunktet for handlingen for at flytte
+det hvor som helst. Angiv intervaller for begge punkter.</string>
+    <string name="interval_desc">Intervallet er tidsforskellen mellem to på hinanden følgende
+klik.</string>
+    <string name="anti_detection">Anti-detektionsfunktion</string>
+    <string name="anti_detection_desc">Generer en tilfældig mængde tid og radius efter hvert klik
+for at opføre sig mere menneskeligt.</string>
+    <string name="interval_before_the_next_action">Interval før næste handling</string>
+    <string name="swipe_duration">Swipe-varighed</string>
+    <string name="repeat_mode">Gentagelsestilstand</string>
+    <string name="change_language">Skift sprog</string>
+    <string name="english_default">Engelsk (standard)</string>
+    <string name="rate_us">Bedøm os</string>
+    <string name="feedback">Feedback</string>
+    <string name="privacy_policy">Privatlivspolitik</string>
+    <string name="play">Afspil</string>
+    <string name="add">Tilføj</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="close">Luk</string>
+    <string name="save">Gem</string>
+    <string name="drag">Træk</string>
+    <string name="remove">Fjern</string>
+    <string name="swipe">Swipe</string>
+    <string name="pause">Pause</string>
+    <string name="cancel">Annuller</string>
+    <string name="save_script_desc">Gem din klik-hastighed, varighed og mål-apps for at forbedre
+produktiviteten!</string>
+    <string name="rename">Omdøb</string>
+    <string name="duplicate">Dupliker</string>
+    <string name="delete">Slet</string>
+    <string name="export">Eksporter</string>
+    <string name="notification_message">Tryk for at ændre scenariet</string>
+    <string name="notification_title">Scenarie: %1$s</string>
+    <string name="notification_channel_name">Auto Clicker</string>
+    <string name="content_desc_add_script">Importer script fra lager</string>
+    <string name="default_scenario_name">MitScript</string>
+    <string name="toast_denied_foreground_permission">Bruger nægtede tilladelse til
+forgrundsservice</string>
+    <string name="dialog_title_delete_scenario">Slet Scenarie</string>
+    <string name="message_delete_scenario">Dette vil slette %1$s. Er du sikker?</string>
+    <string name="hint_rename_scenario">Indtast dit nye navn…</string>
+    <string name="dialog_title_rename_scenario">Omdøb scenarie</string>
+    <string name="error_empty_scenario_name">Feltet kan ikke være tomt</string>
+    <string name="item_title_single_mode_scenario">Enkeltpunkts-tilstand</string>
+    <string name="item_desc_single_mode_scenario">Klik gentagne gange på et enkelt punkt med
+angivne intervaller</string>
+    <string name="item_title_multi_mode_scenario">Multipunkts-tilstand</string>
+    <string name="item_desc_multi_mode_scenario">Angiv en række klik/swipes på forskellige
+positioner</string>
+    <string name="how_to_enable">Sådan aktiveres</string>
+    <string name="tutorial_instructions">Tryk på “Giv tilladelse” knappen og\n1. Find “Installer
+tjeneste” i indstillinger\n2. Find “Auto Clicker”\n3. Aktivér tilladelsen</string>
+    <string name="accessibility_is_unavailable"><u>Tilgængelighed er ikke
+tilgængelig</u></string>
+    <string name="menu_item_title_troubleshooting">Fejlfinding</string>
+    <string name="interval_setting">Interval indstilling</string>
+    <string name="preferences">præferencer</string>
+    <string name="battery_optimization">Batterioptimering</string>
+    <string name="permission_granted">Tilladelse Givet</string>
+    <string name="permission_missing">Tilladelse Mangler</string>
+    <string name="only_with_these_permissions">Kun med disse tilladelser:</string>
+    <string name="permission_point_1">1. Du behøver ikke at indstille adgangstilladelse hver gang du åbner appen.</string>
+    <string name="permission_point_2">2. Vores app kan sikkert køre i baggrunden og levere stabil service.</string>
+    <string name="import_files">Importér</string>
+    <string name="add_script">Tilføj Script</string>
+    <string name="empty_script_message">Dine gemte scripts \nvises her</string>
+    <string name="troubleshooting">Fejlfinding</string>
+    <string name="allow_permission">Tillad Tilladelse</string>
+    <string name="troubleshoot_desc">Grundlæggende tilladelse for automatisk klikker-app. Skal have den nødvendige tilladelse.</string>
+
+</resources>
