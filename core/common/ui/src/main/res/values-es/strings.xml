@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">milisegundos</string>
+    <string name="dropdown_label_time_unit_s">segundos</string>
+    <string name="dropdown_label_time_unit_min">minutos</string>
+    <string name="dropdown_label_time_unit_h">horas</string>
+    <string name="dropdown_label_time_unit">Unidad de tiempo</string>
+    <string name="cancel">Cancelar</string>
+    <string name="done">Hecho</string>
+    <string name="interval_label">Intervalo</string>
+    <string name="swipe_duration">Duración del deslizamiento</string>
+    <string name="interval_description">Intervalo antes de la siguiente acción</string>
+    <string name="interval_desc_2"><![CDATA[Recomendado: > %1$s (Para evitar que su teléfono
+se bloquee de forma anormal)]]></string>
+    <string name="swipe_duration_interval">Consejos: La duración debe ser mayor que
+%1$s</string>
+    <string name="repeat_mode">Modo repetición</string>
+    <string name="content_desc_copy_button">El botón para crear una copia de un elemento
+existente</string>
+    <string name="content_desc_play_pause_scenario">Reproducir o pausar el escenario</string>
+    <string name="content_desc_add_button">El botón para crear un elemento</string>
+    <string name="content_desc_stop_clicker">Detener el Auto Clicker</string>
+    <string name="input_field_label_anti_detection">Anti-detección</string>
+    <string name="input_field_label_click_press_duration">Duración de la presión (ms)</string>
+    <string name="input_field_label_name">Nombre</string>
+    <string name="input_field_label_pause_duration">Duración de la pausa</string>
+    <string name="input_field_label_scenario_name">Nombre del escenario</string>
+    <string name="input_field_label_swipe_duration">Duración del deslizamiento (ms)</string>
+    <string name="input_field_error_required">Requerido</string></resources>

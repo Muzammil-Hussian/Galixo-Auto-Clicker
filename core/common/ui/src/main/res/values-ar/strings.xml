@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">ثانیة میلي</string>
+    <string name="dropdown_label_time_unit_s">ٍثوان</string>
+    <string name="dropdown_label_time_unit_min">دقائق</string>
+    <string name="dropdown_label_time_unit_h">ساعات</string>
+    <string name="dropdown_label_time_unit">الوقت وحدة</string>
+    <string name="cancel">إلغاء</string>
+    <string name="done">تم</string>
+    <string name="interval_label">الزمني الفاصل</string>
+    <string name="swipe_duration">السحب مدة</string>
+    <string name="interval_description">الفترة قبل الإجراء التالي</string>
+    <string name="interval_desc_2"><![CDATA[موصى به: > %1$s(لمنع حظر هاتفك بشكل غير طبيعي)]]></string>
+    <string name="swipe_duration_interval">% من أطول المدة تكون أن یجب :نصائح1$s</string>
+    <string name="repeat_mode">التكرار وضع</string>
+    <string name="content_desc_copy_button">موجود عنصر من نسخة لإنشاء زر</string>
+    <string name="content_desc_play_pause_scenario">اًمؤقت السیناریو إیقاف أو تشغیل</string>
+    <string name="content_desc_add_button">عنصر لإنشاء زر</string>
+    <string name="content_desc_stop_clicker">التلقائي النقر إیقاف</string>
+    <string name="input_field_label_anti_detection">الكشف مكافحة</string>
+    <string name="input_field_label_click_press_duration">(ثانیة مللي) الضغط مدة</string>
+    <string name="input_field_label_name">الاسم</string>
+    <string name="input_field_label_pause_duration">المؤقت الإیقاف مدة</string>
+    <string name="input_field_label_scenario_name">السیناریو اسم</string>
+    <string name="input_field_label_swipe_duration">(ثانیة مللي) السحب مدة</string>
+    <string name="input_field_error_required">مطلوب</string>
+</resources>

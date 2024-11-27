@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_horizontal_default">
+
+    <!-- Title -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_4_dp"
+        android:text="@string/repeat_mode"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+    <!-- Repeat Mode Options -->
+    <RadioGroup
+        android:id="@+id/repeat_mode_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Infinite Repeat -->
+        <RadioButton
+            android:id="@+id/radio_infinite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/never_stop" />
+
+        <!-- Stop After Duration -->
+        <RadioButton
+            android:id="@+id/radio_stop_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop After Duration" />
+
+        <!-- Stop After Cycle Count -->
+        <RadioButton
+            android:id="@+id/radio_stop_after_cycles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop after cycle count" />
+    </RadioGroup>
+
+    <include
+        android:id="@+id/actionButtons"
+        layout="@layout/include_dialog_buttons" />
+
+</LinearLayout>
+
+
+    <!--
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margin_horizontal_default"
+        android:paddingVertical="@dimen/margin_vertical_default">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/repeat_mode"
+            android:textAppearance="@style/SubHeadingStyle" />
+
+        <RadioGroup
+            android:id="@+id/repeatModeRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_vertical_small"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_infinite"
+                style="@style/AppTheme.Widget.RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/padding_4_dp"
+                android:checked="true"
+                android:text="@string/never_stop"
+                android:textAppearance="@style/Description" />
+
+            <RadioButton
+                android:id="@+id/radio_stop_duration"
+                style="@style/AppTheme.Widget.RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/padding_4_dp"
+                android:text="00:00:30"
+                android:textAppearance="@style/Description" />
+
+            <RadioButton
+                android:id="@+id/radio_stop_after_cycles"
+                style="@style/AppTheme.Widget.RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/padding_4_dp"
+                android:text="10 reps"
+                android:textAppearance="@style/Description" />
+
+        </RadioGroup>
+
+        <include
+            android:id="@+id/actionButtons"
+            layout="@layout/include_dialog_buttons" />
+    </LinearLayout>-->

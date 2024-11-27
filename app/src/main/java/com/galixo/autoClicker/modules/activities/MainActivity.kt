@@ -1,6 +1,7 @@
 package com.galixo.autoClicker.modules.activities
 
 import android.content.Intent
+import android.util.Log
 import android.view.Menu
 import androidx.activity.viewModels
 import androidx.navigation.fragment.NavHostFragment
@@ -16,7 +17,6 @@ import com.galixo.autoClicker.modules.script.presentation.viewModel.ScenarioView
 import com.galixo.autoClicker.modules.troubleShoot.ui.TroubleShootingActivity
 import com.galixo.autoClicker.utils.extensions.showToast
 import dagger.hilt.android.AndroidEntryPoint
-import timber.log.Timber
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate), Listener {
@@ -32,7 +32,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
         scenarioViewModel.stopScenario()
         binding.toolbar.apply {
             setOnMenuItemClickListener { menuItem ->
-                Timber.i("menu item clicked: $menuItem")
+                Log.i(TAG, "menu item clicked: $menuItem")
                 when (menuItem.itemId) {
                     R.id.action_troubleshooting -> {
                         startActivity(
@@ -83,7 +83,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
     }
 
     private fun onMandatoryPermissionsGranted() {
-        Timber.i("onMandatoryPermissionsGranted: ")
+        Log.i(TAG, "onMandatoryPermissionsGranted: ")
         requestedItem?.let { startScenarioResult(it) }
     }
 
@@ -96,7 +96,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
     private fun handleScenarioStartResult(result: Boolean) {
         if (result) {
-            Timber.i("All permissions are granted you can do some operations here.")
+            Log.i(TAG, "All permissions are granted you can do some operations here.")
         } else showToast(R.string.toast_denied_foreground_permission)
     }
 }
+
+private const val TAG = "MainActivity"

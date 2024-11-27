@@ -1,5 +1,6 @@
 package com.galixo.autoClicker.modules.script.presentation.viewModel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.galixo.autoClicker.core.common.base.identifier.DATABASE_ID_INSERTION
@@ -13,7 +14,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
@@ -27,7 +27,7 @@ class ScenarioListViewModel @Inject constructor(
 
     fun onDuplicationScenario(scenario: Scenario) = viewModelScope.launch(Dispatchers.IO) {
 
-        Timber.i("actions: ${scenario.actions.size}")
+        Log.i(TAG, "actions: ${scenario.actions.size}")
         val newScenario = Scenario(
             id = Identifier(databaseId = DATABASE_ID_INSERTION, tempId = 0L),
             name = scenario.name,
@@ -92,3 +92,5 @@ class ScenarioListViewModel @Inject constructor(
         }
     }
 }
+
+private const val TAG = "ScenarioListViewModel"

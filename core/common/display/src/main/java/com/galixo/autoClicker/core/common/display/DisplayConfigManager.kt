@@ -124,6 +124,7 @@ class DisplayConfigManager @Inject constructor(
         else -> Configuration.ORIENTATION_UNDEFINED
     }
 
+    @Suppress("DEPRECATION")
     private fun getCurrentDisplaySize(): Point =
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             windowManager.currentWindowMetrics.bounds.let { windowBound ->

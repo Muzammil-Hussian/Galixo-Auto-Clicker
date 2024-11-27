@@ -2,24 +2,14 @@ package com.galixo.autoClicker
 
 import android.app.Application
 import com.galixo.autoClicker.utils.PreferenceUtils
-import com.google.android.material.color.DynamicColors
 import dagger.hilt.android.HiltAndroidApp
-import timber.log.Timber
 
 @HiltAndroidApp
 class AutoClickerApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        DynamicColors.applyToActivitiesIfAvailable(this)
-
-        initTimberForLogging()
+//        DynamicColors.applyToActivitiesIfAvailable(this)
         PreferenceUtils.init(this)
     }
-
-    private fun initTimberForLogging() {
-        Timber.plant(Timber.DebugTree())
-        Timber.d("MainApplication onCreate")
-    }
-
 }

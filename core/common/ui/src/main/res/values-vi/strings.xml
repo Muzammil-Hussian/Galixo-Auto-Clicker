@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">mili giây</string>
+    <string name="dropdown_label_time_unit_s">giây</string>
+    <string name="dropdown_label_time_unit_min">phút</string>
+    <string name="dropdown_label_time_unit_h">giờ</string>
+    <string name="dropdown_label_time_unit">Đơn vị thời gian</string>
+    <string name="cancel">Hủy</string>
+    <string name="done">Hoàn tất</string>
+    <string name="interval_label">Khoảng thời gian</string>
+    <string name="swipe_duration">Thời lượng vuốt</string>
+    <string name="interval_description">Khoảng thời gian trước khi hành động tiếp theo</string>
+    <string name="interval_desc_2"><![CDATA[Đề xuất: > %1$s (Để tránh điện thoại của bạn bị
+chặn bất thường)]]></string>
+    <string name="swipe_duration_interval">Mẹo: Thời lượng phải lớn hơn %1$s</string>
+    <string name="repeat_mode">Chế độ lặp lại</string>
+    <string name="content_desc_copy_button">Nút tạo bản sao từ một phần tử hiện có</string>
+    <string name="content_desc_play_pause_scenario">Phát hoặc tạm dừng kịch bản</string>
+    <string name="content_desc_add_button">Nút để tạo phần tử</string>
+    <string name="content_desc_stop_clicker">Dừng tự động nhấp</string>
+    <string name="input_field_label_anti_detection">Chống phát hiện</string>
+    <string name="input_field_label_click_press_duration">Thời gian nhấn (ms)</string>
+    <string name="input_field_label_name">Tên</string>
+    <string name="input_field_label_pause_duration">Thời gian tạm dừng</string>
+    <string name="input_field_label_scenario_name">Tên kịch bản</string>
+    <string name="input_field_label_swipe_duration">Thời gian vuốt (ms)</string>
+    <string name="input_field_error_required">Bắt buộc</string>
+</resources>

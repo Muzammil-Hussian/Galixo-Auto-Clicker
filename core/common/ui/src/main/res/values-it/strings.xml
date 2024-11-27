@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">millisecondi</string>
+    <string name="dropdown_label_time_unit_s">secondi</string>
+    <string name="dropdown_label_time_unit_min">minuti</string>
+    <string name="dropdown_label_time_unit_h">ore</string>
+    <string name="dropdown_label_time_unit">Unità di tempo</string>
+    <string name="cancel">Annulla</string>
+    <string name="done">Fatto</string>
+    <string name="interval_label">Intervallo</string>
+    <string name="swipe_duration">Durata dello swipe</string>
+    <string name="interval_description">Intervallo prima della prossima azione</string>
+    <string name="interval_desc_2"><![CDATA[Consigliato: > %1$s (Per evitare che il telefono
+venga bloccato in modo anomalo)]]></string>
+    <string name="swipe_duration_interval">Suggerimenti: La durata deve essere superiore a
+%1$s</string>
+    <string name="repeat_mode">Modalità ripetizione</string>
+    <string name="content_desc_copy_button">Pulsante per creare una copia da un elemento
+esistente</string>
+    <string name="content_desc_play_pause_scenario">Riproduci o metti in pausa lo
+scenario</string>
+    <string name="content_desc_add_button">Pulsante per creare un elemento</string>
+    <string name="content_desc_stop_clicker">Ferma l’Auto Clicker</string>
+    <string name="input_field_label_anti_detection">Anti-rilevamento</string>
+    <string name="input_field_label_click_press_duration">Durata della pressione (ms)</string>
+    <string name="input_field_label_name">Nome</string>
+    <string name="input_field_label_pause_duration">Durata della pausa</string>
+    <string name="input_field_label_scenario_name">Nome dello scenario</string>
+    <string name="input_field_label_swipe_duration">Durata dello swipe (ms)</string>
+    <string name="input_field_error_required">Obbligatorio</string></resources>

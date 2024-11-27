@@ -1,6 +1,7 @@
 package com.galixo.autoClicker.modules.settings
 
 import android.text.InputFilter
+import android.util.Log
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -25,7 +26,6 @@ import com.galixo.autoClicker.utils.extensions.openWebUrl
 import com.google.android.material.textview.MaterialTextView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import timber.log.Timber
 
 @AndroidEntryPoint
 class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBinding::inflate) {
@@ -42,12 +42,46 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 launch { viewModel.intervalValue.collect { binding.interval.fieldText.setText(it) } }
-                launch { viewModel.intervalTimeUnit.collect { binding.interval.timeUnitField.setSelectedItem(it) } }
-                launch { viewModel.intervalError.collect { updateHelperText(binding.interval.helperText, it, viewModel.intervalTimeUnit.value) } }
+                launch {
+                    viewModel.intervalTimeUnit.collect {
+                        binding.interval.timeUnitField.setSelectedItem(
+                            it
+                        )
+                    }
+                }
+                launch {
+                    viewModel.intervalError.collect {
+                        updateHelperText(
+                            binding.interval.helperText,
+                            it,
+                            viewModel.intervalTimeUnit.value
+                        )
+                    }
+                }
 
-                launch { viewModel.swipeDurationValue.collect { binding.swipeDuration.fieldText.setText(it) } }
-                launch { viewModel.swipeDurationTimeUnit.collect { binding.swipeDuration.timeUnitField.setSelectedItem(it) } }
-                launch { viewModel.swipeDurationError.collect { updateHelperText(binding.swipeDuration.helperText, it, viewModel.swipeDurationTimeUnit.value) } }
+                launch {
+                    viewModel.swipeDurationValue.collect {
+                        binding.swipeDuration.fieldText.setText(
+                            it
+                        )
+                    }
+                }
+                launch {
+                    viewModel.swipeDurationTimeUnit.collect {
+                        binding.swipeDuration.timeUnitField.setSelectedItem(
+                            it
+                        )
+                    }
+                }
+                launch {
+                    viewModel.swipeDurationError.collect {
+                        updateHelperText(
+                            binding.swipeDuration.helperText,
+                            it,
+                            viewModel.swipeDurationTimeUnit.value
+                        )
+                    }
+                }
             }
         }
     }
@@ -55,9 +89,24 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
 
     private fun setupCardViews() {
         binding.selectedLanguage.text = PreferenceUtils.selectedLanguage
-        setupField(binding.interval, R.string.interval_label, viewModel::setIntervalValue, viewModel::setIntervalTimeUnit)
-        setupField(binding.swipeDuration, R.string.swipe_duration, viewModel::setSwipeDurationValue, viewModel::setSwipeDurationTimeUnit)
-        binding.repeatMode.textField.setText(R.string.never_stop)
+        setupField(
+            binding.interval,
+            R.string.interval_label,
+            viewModel::setIntervalValue,
+            viewModel::setIntervalTimeUnit
+        )
+        setupField(
+            binding.swipeDuration,
+            R.string.swipe_duration,
+            viewModel::setSwipeDurationValue,
+            viewModel::setSwipeDurationTimeUnit
+        )
+        binding.repeatMode.apply {
+            root.setOnClickListener {
+
+            }
+            textField.setText(R.string.never_stop)
+        }
     }
 
     private fun setupField(
@@ -71,7 +120,7 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
             fieldText.apply {
                 textField.filters = arrayOf<InputFilter>(InputFilter.LengthFilter(MAX_LENGTH))
                 onEditorActionListener {
-                    Timber.i("onEditorActionListener: ${it.toLong()}")
+                    Log.i(TAG, "onEditorActionListener: ${it.toLong()}")
                     setValue.invoke(it.toLong())
                 }
                 /*  setOnTextChangedListener { text ->
@@ -86,7 +135,11 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
         }
     }
 
-    private fun updateHelperText(helperText: MaterialTextView, isValid: Boolean, unit: TimeUnitDropDownItem) {
+    private fun updateHelperText(
+        helperText: MaterialTextView,
+        isValid: Boolean,
+        unit: TimeUnitDropDownItem
+    ) {
         helperText.text = when (unit) {
             TimeUnitDropDownItem.Milliseconds -> getString(R.string.interval_desc_2, "40ms")
             TimeUnitDropDownItem.Seconds -> getString(R.string.interval_desc_2, "1s")
@@ -98,7 +151,12 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
 
     private fun onClickListener() {
         binding.apply {
-            languageButton.setOnClickListener { LanguageDialogFragment().show(childFragmentManager, LanguageDialogFragment.LANGUAGE_DIALOG) }
+            languageButton.setOnClickListener {
+                LanguageDialogFragment().show(
+                    childFragmentManager,
+                    LanguageDialogFragment.LANGUAGE_DIALOG
+                )
+            }
             rateUs.setOnClickListener { context?.openPlayStoreApp() }
             feedback.setOnClickListener { context?.openEmailApp(R.string.galixo_ai_email) }
             privacyPolicy.setOnClickListener { requireContext().openWebUrl("https://galixo.ai/gallery/privacy-policy") }
@@ -106,3 +164,4 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
     }
 }
 
+private const val TAG = "SettingFragment"

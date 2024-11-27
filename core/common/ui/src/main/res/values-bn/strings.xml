@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">িমিলেসেকন্ড</string>
+    <string name="dropdown_label_time_unit_s">েসেকন্ড</string>
+    <string name="dropdown_label_time_unit_min">িমিনট</string>
+    <string name="dropdown_label_time_unit_h">ঘণ্টা</string>
+    <string name="dropdown_label_time_unit">সমেয়র একক</string>
+    <string name="cancel">বািতল</string>
+    <string name="done">সম্পন্ন</string>
+    <string name="interval_label">ইন্টারভাল</string>
+    <string name="swipe_duration">সুইপ সময়কাল</string>
+    <string name="interval_description">পরবর্তী ক্িরয়াকলােপর আেগ ইন্টারভাল</string>
+    <string name="interval_desc_2"><![CDATA[প্রস্তািবত: > %1$s (আপনার েফান অস্বাভািবকভােব
+ব্লক হওয়া এড়ােত)]]></string>
+    <string name="swipe_duration_interval">পরামর্শ: সময়কাল অবশ্যই %1$s এর েবিশ হওয়া
+উিচত</string>
+    <string name="repeat_mode">পুনরাবৃত্িত েমাড</string>
+    <string name="content_desc_copy_button">িবদ্যমান উপাদান েথেক একিট কিপ ৈতিরর
+েবাতাম</string>
+    <string name="content_desc_play_pause_scenario">িসনািরও চালান বা িবরিত িদন</string>
+    <string name="content_desc_add_button">উপাদান ৈতিরর েবাতাম</string>
+    <string name="content_desc_stop_clicker">অেটা ক্িলকার বন্ধ করুন</string>
+    <string name="input_field_label_anti_detection">অ্যান্িট-িডেটকশন</string>
+    <string name="input_field_label_click_press_duration">প্েরস সময়কাল (িমিলেসেকন্ড)</string>
+    <string name="input_field_label_name">নাম</string>
+    <string name="input_field_label_pause_duration">িবরিতর সময়কাল</string>
+    <string name="input_field_label_scenario_name">িসনািরওর নাম</string>
+    <string name="input_field_label_swipe_duration">সুইপ সময়কাল (িমিলেসেকন্ড)</string>
+    <string name="input_field_error_required">প্রেয়াজন</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">ثانیھ میلی</string>
+    <string name="dropdown_label_time_unit_s">ثانیھ</string>
+    <string name="dropdown_label_time_unit_min">دقیقھ</string>
+    <string name="dropdown_label_time_unit_h">ساعت</string>
+    <string name="dropdown_label_time_unit">زمان واحد</string>
+    <string name="cancel">لغو</string>
+    <string name="done">شد انجام</string>
+    <string name="interval_label">فاصلھ</string>
+    <string name="swipe_duration">کشیدن زمان مدت</string>
+    <string name="interval_description">فاصله قبل از اقدام بعدی</string>
+    <string name="interval_desc_2"><![CDATA[توصیه شده: > %1$s (برای جلوگیری از مسدود شدن غیرعادی تلفن شما)]]></string>
+    <string name="swipe_duration_interval">نکات: مدت زمان باید بیشتر از %1$s باشد</string>
+    <string name="repeat_mode">حالت تکرار</string>
+    <string name="content_desc_copy_button">دکمه ایجاد یک کپی از یک عنصر موجود</string>
+    <string name="content_desc_play_pause_scenario">سناریو کردن متوقف یا پخش</string>
+    <string name="content_desc_add_button">عنصر یک ایجاد برای ای دکمھ</string>
+    <string name="content_desc_stop_clicker">خودکار کلیک توقف</string>
+    <string name="input_field_label_anti_detection">شناسایی ضد</string>
+    <string name="input_field_label_click_press_duration">(ثانیھ میلی) فشار زمان مدت</string>
+    <string name="input_field_label_name">نام</string>
+    <string name="input_field_label_pause_duration">مکث زمان مدت</string>
+    <string name="input_field_label_scenario_name">سناریو نام</string>
+    <string name="input_field_label_swipe_duration">(ثانیھ میلی) کشیدن زمان مدت</string>
+    <string name="input_field_error_required">الزامی</string>
+</resources>

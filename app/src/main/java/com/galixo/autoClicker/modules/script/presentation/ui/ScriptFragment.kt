@@ -2,6 +2,7 @@ package com.galixo.autoClicker.modules.script.presentation.ui
 
 import android.content.DialogInterface
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
@@ -28,7 +29,6 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import timber.log.Timber
 
 @AndroidEntryPoint
 class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding::inflate) {
@@ -84,7 +84,10 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
     }
 
     private fun onCreateScenarioClicked() {
-        CreateScenarioDialog().show(requireActivity().supportFragmentManager, CreateScenarioDialog.TAG)
+        CreateScenarioDialog().show(
+            requireActivity().supportFragmentManager,
+            CreateScenarioDialog.TAG
+        )
     }
 
 
@@ -112,12 +115,14 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
      */
     private fun showDialog(newDialog: AlertDialog) {
         dialog.let {
-            Timber.w("Requesting show dialog while another one is one screen.")
+            Log.w(TAG, "Requesting show dialog while another one is one screen.")
             it?.dismiss()
         }
 
+
         dialog = newDialog
         newDialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
+//        newDialog.window?.setBackgroundDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.bg_round_16_dp))
         newDialog.setOnDismissListener { dialog = null }
         newDialog.show()
     }
@@ -153,7 +158,10 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
                         // Optionally show a toast or error if input is empty
                         requireContext().showToast(getString(R.string.error_empty_scenario_name))
                     }
-                }.setNegativeButton(android.R.string.cancel, null) // Cancel button dismisses the dialog
+                }.setNegativeButton(
+                    android.R.string.cancel,
+                    null
+                ) // Cancel button dismisses the dialog
                 .create()
         )
     }
@@ -164,7 +172,8 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
         ScenariosToBackup: Collection<Long>? = null,
     ) {
         activity?.let {
-            BackupDialogFragment.newInstance(isImport, ScenariosToBackup).show(it.supportFragmentManager, FRAGMENT_TAG_BACKUP_DIALOG)
+            BackupDialogFragment.newInstance(isImport, ScenariosToBackup)
+                .show(it.supportFragmentManager, FRAGMENT_TAG_BACKUP_DIALOG)
         }
     }
 
@@ -178,9 +187,15 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
         showDialog(
             MaterialAlertDialogBuilder(requireContext()).setTitle(R.string.dialog_title_delete_scenario)
                 .setMessage(resources.getString(R.string.message_delete_scenario, item.name))
-                .setPositiveButton(android.R.string.ok) { _: DialogInterface, _: Int -> scenarioListViewModel.deleteScenario(item) }
+                .setPositiveButton(android.R.string.ok) { _: DialogInterface, _: Int ->
+                    scenarioListViewModel.deleteScenario(
+                        item
+                    )
+                }
                 .setNegativeButton(android.R.string.cancel, null)
                 .create()
         )
     }
 }
+
+private const val TAG = "ScriptFragment"

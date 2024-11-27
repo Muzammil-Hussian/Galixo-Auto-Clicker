@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">milisekundy</string>
+    <string name="dropdown_label_time_unit_s">sekundy</string>
+    <string name="dropdown_label_time_unit_min">minuty</string>
+    <string name="dropdown_label_time_unit_h">hodiny</string>
+    <string name="dropdown_label_time_unit">Časová jednotka</string>
+    <string name="cancel">Zrušit</string>
+    <string name="done">Hotovo</string>
+    <string name="interval_label">Interval</string>
+    <string name="swipe_duration">Doba přejetí</string>
+    <string name="interval_description">Interval před dalším úkonem</string>
+    <string name="interval_desc_2"><![CDATA[Doporučeno: > %1$s (Aby se zabránilo
+neobvyklému blokování telefonu)]]></string>
+    <string name="swipe_duration_interval">Tip: Doba trvání musí být větší než %1$s</string>
+    <string name="repeat_mode">Režim opakování</string>
+    <string name="content_desc_copy_button">Tlačítko pro vytvoření kopie z existujícího
+prvku</string>
+    <string name="content_desc_play_pause_scenario">Spustit nebo pozastavit scénář</string>
+    <string name="content_desc_add_button">Tlačítko pro vytvoření prvku</string>
+    <string name="content_desc_stop_clicker">Zastavit automatické klikání</string>
+    <string name="input_field_label_anti_detection">Ochrana proti detekci</string>
+    <string name="input_field_label_click_press_duration">Doba stisknutí (ms)</string>
+    <string name="input_field_label_name">Název</string>
+    <string name="input_field_label_pause_duration">Doba pauzy</string>
+    <string name="input_field_label_scenario_name">Název scénáře</string>
+    <string name="input_field_label_swipe_duration">Doba přejetí (ms)</string>
+    <string name="input_field_error_required">Povinné</string>
+</resources>

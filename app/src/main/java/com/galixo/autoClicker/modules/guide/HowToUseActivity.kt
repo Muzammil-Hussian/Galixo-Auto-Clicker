@@ -1,6 +1,7 @@
 package com.galixo.autoClicker.modules.guide
 
 import android.content.Intent
+import android.util.Log
 import android.view.MotionEvent
 import com.galixo.autoClicker.R
 import com.galixo.autoClicker.databinding.ActivityGuideBinding
@@ -8,7 +9,6 @@ import com.galixo.autoClicker.modules.activities.MainActivity
 import com.galixo.autoClicker.modules.base.activity.BaseActivity
 import com.galixo.autoClicker.utils.FROM_PERMISSION_SCREEN
 import com.galixo.autoClicker.utils.extensions.onBackPressedDispatcher
-import timber.log.Timber
 
 class HowToUseActivity : BaseActivity<ActivityGuideBinding>(ActivityGuideBinding::inflate) {
 
@@ -20,7 +20,7 @@ class HowToUseActivity : BaseActivity<ActivityGuideBinding>(ActivityGuideBinding
     }
 
     override fun onCreated() {
-        Timber.d("fromPermissionActivity: $fromPermissionActivity")
+        Log.d(TAG, "fromPermissionActivity: $fromPermissionActivity")
 
         with(binding) {
             intervalHelperText.text = getString(R.string.interval_desc_2, "40ms")
@@ -58,3 +58,5 @@ class HowToUseActivity : BaseActivity<ActivityGuideBinding>(ActivityGuideBinding
         finish()
     }
 }
+
+private const val TAG = "HowToUseActivity"

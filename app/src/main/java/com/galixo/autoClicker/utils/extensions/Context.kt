@@ -9,13 +9,13 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.net.Uri
+import android.util.Log
 import android.widget.Toast
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
 import com.galixo.autoClicker.R
 import com.google.android.material.snackbar.Snackbar
-import timber.log.Timber
 
 
 /* ---------------------------------------------- Resources ---------------------------------------------- */
@@ -61,7 +61,7 @@ fun Context?.openWebUrl(url: String) {
             val uri = Uri.parse(url)
             it.startActivity(Intent(Intent.ACTION_VIEW, uri))
         } catch (ex: Exception) {
-            Timber.e(ex, "openPlayStoreApp: ")
+            Log.e(TAG, "openWebUrl: $ex")
         }
     }
 }
@@ -87,7 +87,7 @@ fun Context?.openEmailApp(emailAddress: String) {
         try {
             it.startActivity(Intent.createChooser(emailIntent, "Send mail..."))
         } catch (ex: ActivityNotFoundException) {
-            Timber.e(ex, "openEmailApp: ")
+            Log.e(TAG, "openEmailApp: $ex")
         }
     }
 }
@@ -109,7 +109,7 @@ fun Context?.shareApp() {
             sendIntent.type = "text/plain"
             it.startActivity(sendIntent)
         } catch (ex: Exception) {
-            Timber.e(ex, "shareApp: ")
+            Log.e(TAG, "shareApp: $ex")
         }
     }
 }
@@ -117,10 +117,11 @@ fun Context?.shareApp() {
 fun Context?.openSubscriptions() {
     this?.let {
         try {
-            val playStoreUrl = "https://play.google.com/store/account/subscriptions?package=$packageName"
+            val playStoreUrl =
+                "https://play.google.com/store/account/subscriptions?package=$packageName"
             startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(playStoreUrl)));
         } catch (ex: ActivityNotFoundException) {
-            Timber.e(ex, "openSubscriptions: ")
+            Log.e(TAG, "openSubscriptions: $ex")
         }
     }
 }
@@ -132,7 +133,7 @@ fun Context?.copyClipboardData(text: String) {
             val clip: ClipData = ClipData.newPlainText("simple text", text)
             clipboard.setPrimaryClip(clip)
         } catch (ex: Exception) {
-            Timber.e(ex, "copyClipboardData: ")
+            Log.e(TAG, "copyClipboardData: $ex")
         }
     }
 }
@@ -146,7 +147,7 @@ fun Context?.shareTextData(data: String) {
             intentTextData.putExtra(Intent.EXTRA_TEXT, data)
             it.startActivity(Intent.createChooser(intentTextData, "Choose to share"))
         } catch (ex: Exception) {
-            Timber.e(ex, "shareTextData: ")
+            Log.i(TAG, "shareTextData: $ex")
         }
     }
 }
@@ -158,7 +159,7 @@ fun Context?.searchData(text: String) {
             intentSearch.putExtra(SearchManager.QUERY, text)
             it.startActivity(intentSearch)
         } catch (ex: Exception) {
-            Timber.e(ex, "searchData: ")
+            Log.e(TAG, "searchData: $ex")
         }
     }
 }
@@ -166,12 +167,15 @@ fun Context?.searchData(text: String) {
 fun Activity?.translateDate(data: String) {
     this?.let {
         try {
-            val url = "https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$data"
+            val url =
+                "https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$data"
             val intentTranslate = Intent(Intent.ACTION_VIEW)
             intentTranslate.data = Uri.parse(url)
             it.startActivity(intentTranslate)
         } catch (ex: Exception) {
-            Timber.e(ex, "translateDate: ")
+            Log.e(TAG, ex.toString())
         }
     }
 }
+
+private const val TAG = "ContextLogs"

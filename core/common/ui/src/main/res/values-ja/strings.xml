@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">ミリ秒</string>
+    <string name="dropdown_label_time_unit_s">秒</string>
+    <string name="dropdown_label_time_unit_min">分</string>
+    <string name="dropdown_label_time_unit_h">時間</string>
+    <string name="dropdown_label_time_unit">時間単位</string>
+    <string name="cancel">キャンセル</string>
+    <string name="done">完了</string>
+    <string name="interval_label">間隔</string>
+    <string name="swipe_duration">スワイプの持続時間</string>
+    <string name="interval_description">次のアクションまでの間隔</string>
+    <string name="interval_desc_2"><![CDATA[推奨: > %1$s（スマホが異常にブロックされる
+のを防ぐため）]]></string>
+    <string name="swipe_duration_interval">ヒント: 持続時間は%1$sを超える必要があります
+</string>
+    <string name="repeat_mode">繰り返しモード</string>
+    <string name="content_desc_copy_button">既存の要素からコピーを作成するボタン
+</string>
+    <string name="content_desc_play_pause_scenario">シナリオを再生または一時停止
+</string>
+    <string name="content_desc_add_button">要素を作成するボタン</string>
+    <string name="content_desc_stop_clicker">オートクリックを停止</string>
+    <string name="input_field_label_anti_detection">検出防止</string>
+    <string name="input_field_label_click_press_duration">押下時間 (ミリ秒)</string>
+    <string name="input_field_label_name">名前</string>
+    <string name="input_field_label_pause_duration">一時停止の持続時間</string>
+    <string name="input_field_label_scenario_name">シナリオ名</string>
+    <string name="input_field_label_swipe_duration">スワイプ時間 (ミリ秒)</string>
+    <string name="input_field_error_required">必須</string></resources>

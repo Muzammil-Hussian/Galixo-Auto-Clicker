@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">மி᾿ᾢெசகᾶᾌக῀</string>
+    <string name="dropdown_label_time_unit_s">வினாᾊக῀</string>
+    <string name="dropdown_label_time_unit_min">நிமிடᾱக῀</string>
+    <string name="dropdown_label_time_unit_h">மணிேநரΆ</string>
+    <string name="dropdown_label_time_unit">ேநர அலᾁ</string>
+    <string name="cancel">ரᾷᾐ ெசᾼயᾫΆ</string>
+    <string name="done">ᾙᾊᾸதᾐ</string>
+    <string name="interval_label">இைடேவைள</string>
+    <string name="swipe_duration">ᾐைடᾺபிᾹ காலΆ</string>
+    <string name="interval_description">அᾌᾷத ெசயᾤᾰᾁ ᾙᾹ இைடேவைள</string>
+    <string name="interval_desc_2"><![CDATA[பாிᾸᾐைர: > %1$s (உᾱக῀ ெதாைலேபசி
+தவறான ᾙைறயி᾿ ᾙடᾰகᾺபᾌவைத தவி᾽ᾰக)]]></string>
+    <string name="swipe_duration_interval">ᾁறிᾺᾗக῀: காலΆ %1$s ஐ விட அதிகமாக இᾞᾰக
+ேவᾶᾌΆ</string>
+    <string name="repeat_mode">மீᾶᾌΆ ெசᾼᾜΆ ᾙைற</string>
+    <string name="content_desc_copy_button">நடᾺᾗ῀ள உᾞᾺபᾊயிᾢᾞᾸᾐ ஒᾞ நகைல
+உᾞவாᾰக ெபாᾷதாᾹ</string>
+    <string name="content_desc_play_pause_scenario">திைரᾺபடᾷைத இயᾰகᾫΆ அ᾿லᾐ
+இைடநிᾠᾷதᾫΆ</string>
+    <string name="content_desc_add_button">ஒᾞ உᾞᾺபᾊைய உᾞவாᾰக
+ெபாᾷதாᾹ</string>
+    <string name="content_desc_stop_clicker">தானியᾱகி கிளிᾰகைர நிᾠᾷதᾫΆ</string>
+    <string name="input_field_label_anti_detection">மைற கᾶடறித᾿</string>
+    <string name="input_field_label_click_press_duration">அᾨᾷᾐΆ ேநரΆ
+(மி᾿ᾢெசகᾶᾌக῀)</string>
+    <string name="input_field_label_name">ெபய᾽</string>
+    <string name="input_field_label_pause_duration">இைடநிᾠᾷத ேநரΆ</string>
+    <string name="input_field_label_scenario_name">திைரᾺபடᾷதிᾹ ெபய᾽</string>
+    <string name="input_field_label_swipe_duration">ᾐைடᾺபிᾹ ேநரΆ
+(மி᾿ᾢெசகᾶᾌக῀)</string>
+    <string name="input_field_error_required">ேதைவ</string></resources>

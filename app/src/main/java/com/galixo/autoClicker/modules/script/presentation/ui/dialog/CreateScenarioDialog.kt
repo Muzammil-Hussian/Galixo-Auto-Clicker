@@ -21,7 +21,6 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import timber.log.Timber
 
 
 @AndroidEntryPoint
@@ -57,20 +56,21 @@ class CreateScenarioDialog : DialogFragment() {
     }
 
 
-    private fun createDialog(root: View): BottomSheetDialog = BottomSheetDialog(requireContext()).apply {
-        setContentView(root)
-        setCancelable(false)
-        setCanceledOnTouchOutside(true)
-        setOnKeyListener { _, keyCode, event ->
-            if (keyCode == KeyEvent.KEYCODE_BACK && event.action == KeyEvent.ACTION_UP) {
-                this@CreateScenarioDialog.dismiss()
-                true
-            } else false
-        }
+    private fun createDialog(root: View): BottomSheetDialog =
+        BottomSheetDialog(requireContext()).apply {
+            setContentView(root)
+            setCancelable(false)
+            setCanceledOnTouchOutside(true)
+            setOnKeyListener { _, keyCode, event ->
+                if (keyCode == KeyEvent.KEYCODE_BACK && event.action == KeyEvent.ACTION_UP) {
+                    this@CreateScenarioDialog.dismiss()
+                    true
+                } else false
+            }
 
-        create()
-        behavior.state = BottomSheetBehavior.STATE_EXPANDED
-    }
+            create()
+            behavior.state = BottomSheetBehavior.STATE_EXPANDED
+        }
 
 
     private fun DialogCreateScenarioBinding.onClickListeners() {
@@ -84,7 +84,6 @@ class CreateScenarioDialog : DialogFragment() {
     }
 
     private fun IncludeModeTypeBinding.initScenarioModeCard(mode: ScenarioMode) {
-        Timber.tag(TAG).i("initScenarioModeCard: mode: $mode")
         when (mode) {
             ScenarioMode.SINGLE_MODE -> {
                 title.setText(R.string.item_title_single_mode_scenario)
@@ -107,13 +106,21 @@ class CreateScenarioDialog : DialogFragment() {
 
     private fun updateTypeSelection(state: ScenarioModeSelectionState) {
         viewBinding.apply {
-            scenarioSingleMode.setState(state.singleModel, state.selectedItem, ScenarioMode.SINGLE_MODE)
+            scenarioSingleMode.setState(
+                state.singleModel,
+                state.selectedItem,
+                ScenarioMode.SINGLE_MODE
+            )
             scenarioMultiMode.setState(state.multiMode, state.selectedItem, ScenarioMode.MULTI_MODE)
         }
     }
 
 
-    private fun IncludeModeTypeBinding.setState(item: ScenarioModeItem, selectedMode: ScenarioMode, modeType: ScenarioMode) {
+    private fun IncludeModeTypeBinding.setState(
+        item: ScenarioModeItem,
+        selectedMode: ScenarioMode,
+        modeType: ScenarioMode
+    ) {
         this.selectedMode.isChecked = selectedMode == modeType
         title.setText(item.titleRes)
         description.setText(item.descriptionText)

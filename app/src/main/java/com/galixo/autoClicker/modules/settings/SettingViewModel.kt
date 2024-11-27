@@ -1,6 +1,7 @@
 package com.galixo.autoClicker.modules.settings
 
 import android.content.Context
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.galixo.autoClicker.core.common.ui.bindings.dropdown.TimeUnitDropDownItem
 import com.galixo.autoClicker.core.common.ui.bindings.dropdown.findAppropriateTimeUnit
@@ -10,14 +11,12 @@ import com.galixo.autoClicker.feature.config.data.putSwipeDurationConfig
 import com.galixo.autoClicker.feature.config.data.putSwipeRepeatDelayConfig
 import com.galixo.autoClicker.feature.config.domain.getDefaultSwipeDurationMs
 import com.galixo.autoClicker.feature.config.domain.getDefaultSwipeRepeatDelay
-
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
-import timber.log.Timber
 import javax.inject.Inject
 import kotlin.time.Duration.Companion.hours
 import kotlin.time.Duration.Companion.minutes
@@ -82,7 +81,7 @@ class SettingViewModel @Inject constructor(
     }
 
     private fun saveIntervalValue(value: Long) {
-        Timber.i("SaveIntervalValue: $value")
+        Log.i(TAG, "saveIntervalValue: $value")
         context.getConfigPreferences().edit().putSwipeRepeatDelayConfig(value).apply()
     }
 
@@ -90,3 +89,5 @@ class SettingViewModel @Inject constructor(
         context.getConfigPreferences().edit().putSwipeDurationConfig(value).apply()
     }
 }
+
+private const val TAG = "SettingViewModel"

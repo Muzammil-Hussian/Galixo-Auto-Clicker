@@ -20,6 +20,8 @@ import com.galixo.autoClicker.feature.config.databinding.DialogScenarioConfigBin
 import com.galixo.autoClicker.feature.config.di.ConfigViewModelsEntryPoint
 import com.galixo.autoClicker.feature.config.domain.getDefaultClickRepeatDelay
 import com.galixo.autoClicker.feature.config.domain.getDefaultSwipeDurationMs
+import com.galixo.autoClicker.feature.config.ui.actions.repeatMode.RepeatModeDialog
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 class ScenarioConfigDialog(
@@ -38,6 +40,7 @@ class ScenarioConfigDialog(
     override fun onCreateView(): ViewGroup {
         viewBinding = DialogScenarioConfigBinding.inflate(LayoutInflater.from(context)).apply {
 
+
             setupActionButtons()
             with(interval) {
                 label.setText(R.string.interval_label)
@@ -55,7 +58,16 @@ class ScenarioConfigDialog(
                 }
             }
 
-            stopAfter.textField.setText(context.resources.getString(R.string.never_stop))
+            stopAfter.textField.setDebouncedOnClickListener {
+                overlayManager.navigateTo(
+                    context = context,
+                    newOverlay = RepeatModeDialog(
+                        onConfigDiscarded = {},
+                        onConfigSaved = {}
+                    ),
+                    hideCurrent = false
+                )
+            }
 
             toggleSwitch.setOnClickListener {
                 dialogViewModel.toggleRandomization()
@@ -70,6 +82,11 @@ class ScenarioConfigDialog(
                 launch { dialogViewModel.canBeSaved.collect(::updateSaveButtonState) }
                 launch { dialogViewModel.repeatInfiniteState.collect(true::equals) }
                 launch { dialogViewModel.randomization.collect(::updateFieldRandomization) }
+                launch {
+                    dialogViewModel.repeatMode.collectLatest {
+                        viewBinding.stopAfter.textField.setText(it)
+                    }
+                }
             }
         }
     }
@@ -104,11 +121,23 @@ class ScenarioConfigDialog(
 
             ButtonAction.DONE -> {
                 onConfigSaved.invoke()
-                Log.i(TAG, "handleButtonAction: interval: ${viewBinding.interval.fieldText.textField.text}")
-                Log.i(TAG, "handleButtonAction: swipeDuration: ${viewBinding.swipeDuration.fieldText.textField.text}")
-                context.getConfigPreferences().edit().putSwipeDurationConfig(viewBinding.swipeDuration.fieldText.textField.text.toString().toLong())
-                    .putClickRepeatDelayConfig(viewBinding.interval.fieldText.textField.text.toString().toLong())
-                    .putSwipeRepeatDelayConfig(viewBinding.interval.fieldText.textField.text.toString().toLong())
+                Log.i(
+                    TAG,
+                    "handleButtonAction: interval: ${viewBinding.interval.fieldText.textField.text}"
+                )
+                Log.i(
+                    TAG,
+                    "handleButtonAction: swipeDuration: ${viewBinding.swipeDuration.fieldText.textField.text}"
+                )
+                context.getConfigPreferences().edit().putSwipeDurationConfig(
+                    viewBinding.swipeDuration.fieldText.textField.text.toString().toLong()
+                )
+                    .putClickRepeatDelayConfig(
+                        viewBinding.interval.fieldText.textField.text.toString().toLong()
+                    )
+                    .putSwipeRepeatDelayConfig(
+                        viewBinding.interval.fieldText.textField.text.toString().toLong()
+                    )
                     .apply()
 
 
@@ -123,5 +152,6 @@ class ScenarioConfigDialog(
         const val MAX_LENGTH = 6
     }
 
-    private enum class ButtonAction { CANCEL, DONE }
 }
+
+enum class ButtonAction { CANCEL, DONE }

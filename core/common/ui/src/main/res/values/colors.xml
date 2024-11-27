@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-
-    <color name="default_inner_color">#FFFFFFFF</color> <!-- White -->
-    <color name="default_background_color">#00000000</color> <!-- Transparent -->
-    <color name="default_outline_primary_color">#FFFF0000</color> <!-- Red -->
-    <color name="default_outline_secondary_color">#FF00FF00</color> <!-- Green -->
-
-    <color name="primary">#4CAF50</color>
-    <color name="accent">#448AFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 
     <color name="textTitle">#FFFFFF</color>
     <color name="textHint">#88FFFFFF</color>
     <color name="listBackground">#EAEAEA</color>
 
-    <color name="overlayMenuBackground">#000000</color>
     <color name="overlayMenuButtons">#FFFFFF</color>
     <color name="overlayViewPrimary">#7159FF</color>
     <color name="overlayViewPrimaryBackground">#1F7159FF</color>
-    <color name="overlayViewAccentPrimary">@color/primary</color>
-    <color name="overlayViewAccentSecondary">@color/accent</color>
-    <color name="overlayClickSelectorBackground">#77000000</color>
-    <color name="overlayActionsBriefBackground">#99000000</color>
     <color name="overlayGestureRecorder">#FFF00006</color>
 
     <color name="iconColor">@color/md_theme_light_onPrimaryContainer</color>
 
     <!-- Material 3 Theme colors -->
-    <color name="seed">#006688</color>
+    <color name="seed">#7159FF</color>
     <color name="md_theme_light_primary">#7159FF</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>
     <color name="md_theme_light_primaryContainer">#C2E8FF</color>
@@ -54,7 +44,7 @@
     <color name="md_theme_light_inverseSurface">#2E3133</color>
     <color name="md_theme_light_inversePrimary">#75D1FF</color>
     <color name="md_theme_light_shadow">#000000</color>
-    <color name="md_theme_light_surfaceTint">#006688</color>
+    <color name="md_theme_light_surfaceTint">#7159FF</color>
     <color name="md_theme_light_outlineVariant">#C0C7CD</color>
     <color name="md_theme_light_scrim">#000000</color>
     <color name="md_theme_dark_primary">#75D1FF</color>
@@ -82,29 +72,15 @@
     <color name="md_theme_dark_outline">#8A9297</color>
     <color name="md_theme_dark_inverseOnSurface">#191C1E</color>
     <color name="md_theme_dark_inverseSurface">#E1E2E5</color>
-    <color name="md_theme_dark_inversePrimary">#006688</color>
+    <color name="md_theme_dark_inversePrimary">#7159FF</color>
     <color name="md_theme_dark_shadow">#000000</color>
     <color name="md_theme_dark_surfaceTint">#75D1FF</color>
     <color name="md_theme_dark_outlineVariant">#40484D</color>
     <color name="md_theme_dark_scrim">#000000</color>
 
-
     <color name="disabledColor">#80818181</color>
-
-    <!--Latest app colors-->
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="primaryColor">#7159FF</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-
-    <!--secondary background color-->
-
     <color name="darkerGrey">#D9D9D9</color>
     <color name="softGrey">#F9F9F9</color>
-
 
     <color name="headingTextColor">#1E1E1E</color>
     <color name="normalTextColor">#4D4D4D</color>
@@ -118,4 +94,6 @@
 
     <color name="primaryColorBackground">#1F7159FF</color>
     <color name="windowBackgroundColor">#F9F9F9</color>
+
+    <color name="edit_text_box_background">#0A7159FF</color>
 </resources>

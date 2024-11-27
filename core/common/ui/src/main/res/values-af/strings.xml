@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">millisekondes</string>
+    <string name="dropdown_label_time_unit_s">sekondes</string>
+    <string name="dropdown_label_time_unit_min">minute</string>
+    <string name="dropdown_label_time_unit_h">ure</string>
+    <string name="dropdown_label_time_unit">Tydseenheid</string>
+    <string name="cancel">Kanselleer</string>
+    <string name="done">Klaar</string>
+    <string name="interval_label">Interval</string>
+    <string name="swipe_duration">Veegduur</string>
+    <string name="interval_description">Interval voor die volgende aksie</string>
+    <string name="interval_desc_2"><![CDATA[Aanbeveel: > %1$s (Om te voorkom dat jou foon abnormaal geblokkeer word)]]></string>
+    <string name="swipe_duration_interval">Wenke: Die duur moet langer wees as %1$s</string>
+    <string name="repeat_mode">Herhaalmodus</string>
+    <string name="content_desc_copy_button">Die knoppie om \'n kopie van \'n bestaande element teskep</string>
+    <string name="content_desc_play_pause_scenario">Speel of onderbreek die scenario</string>
+    <string name="content_desc_add_button">Die knoppie om \'n element te skep</string>
+    <string name="content_desc_stop_clicker">Stop Outomatiese Klikker</string>
+    <string name="input_field_label_anti_detection">Anti-opsporing</string>
+    <string name="input_field_label_click_press_duration">Drukduur (ms)</string>
+    <string name="input_field_label_name">Naam</string>
+    <string name="input_field_label_pause_duration">Pouseduur</string>
+    <string name="input_field_label_scenario_name">Scenario Naam</string>
+    <string name="input_field_label_swipe_duration">Veegduur (ms)</string>
+    <string name="input_field_error_required">Vereis</string>
+</resources>

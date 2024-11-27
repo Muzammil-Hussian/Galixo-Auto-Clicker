@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">millisekunder</string>
+    <string name="dropdown_label_time_unit_s">sekunder</string>
+    <string name="dropdown_label_time_unit_min">minutter</string>
+    <string name="dropdown_label_time_unit_h">timer</string>
+    <string name="dropdown_label_time_unit">Tidsenhed</string>
+    <string name="cancel">Annuller</string>
+    <string name="done">Udført</string>
+    <string name="interval_label">Interval</string>
+    <string name="swipe_duration">Stryg varighed</string>
+    <string name="interval_description">Interval før næste handling</string>
+    <string name="interval_desc_2"><![CDATA[Anbefalet: > %1$s (For at undgå unormal blokering
+af din telefon)]]></string>
+    <string name="swipe_duration_interval">Tips: Varigheden skal være længere end
+%1$s</string>
+    <string name="repeat_mode">Gentagelsesmodus</string>
+    <string name="content_desc_copy_button">Knappen til at oprette en kopi fra et eksisterende
+element</string>
+    <string name="content_desc_play_pause_scenario">Afspil eller pause scenariet</string>
+    <string name="content_desc_add_button">Knappen til at oprette et element</string>
+    <string name="content_desc_stop_clicker">Stop Auto Klikker</string>
+    <string name="input_field_label_anti_detection">Anti-detektion</string>
+    <string name="input_field_label_click_press_duration">Trykvarighed (ms)</string>
+    <string name="input_field_label_name">Navn</string>
+    <string name="input_field_label_pause_duration">Pausevarighed</string>
+    <string name="input_field_label_scenario_name">Scenarionavn</string>
+    <string name="input_field_label_swipe_duration">Stryg varighed (ms)</string>
+    <string name="input_field_error_required">Påkrævet</string></resources>

@@ -1,12 +1,16 @@
 package com.galixo.autoClicker.feature.config.ui.actions.scenarioConfig
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.galixo.autoClicker.core.scenarios.domain.model.Scenario
 import com.galixo.autoClicker.feature.config.domain.EditionRepository
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.take
 import javax.inject.Inject
 
@@ -21,15 +25,6 @@ class ScenarioConfigViewModel @Inject constructor(
         scenario?.isValid() == true
     }
 
-    /** The event name value currently edited by the user. */
-    val scenarioName: Flow<String> = userModifications
-        .filterNotNull()
-        .map { it.name }
-        .take(1)
-
-    /** Tells if the scenario name is valid or not. */
-    val scenarioNameError: Flow<Boolean> = userModifications
-        .map { it?.name?.isEmpty() == true }
 
     /** The number of times to repeat the scenario. */
     val repeatCount: Flow<String> = userModifications
@@ -63,43 +58,58 @@ class ScenarioConfigViewModel @Inject constructor(
     val randomization: Flow<Boolean> = userModifications
         .map { it?.randomize == true }
 
-    fun setScenarioName(name: String) {
-        userModifications.value?.copy(name = name)?.let {
-            editionRepository.updateScenario(it)
-        }
-    }
-
-    fun setRepeatCount(repeatCount: Int) {
-        userModifications.value?.copy(repeatCount = repeatCount)?.let {
-            editionRepository.updateScenario(it)
-        }
-    }
-
-    fun toggleInfiniteRepeat() {
-        val currentValue = userModifications.value?.isRepeatInfinite ?: return
-        userModifications.value?.copy(isRepeatInfinite = !currentValue)?.let {
-            editionRepository.updateScenario(it)
-        }
-    }
-
-    fun setMaxDurationMinutes(durationMinutes: Int) {
-        userModifications.value?.copy(maxDurationMin = durationMinutes)?.let {
-            editionRepository.updateScenario(it)
-        }
-    }
-
-    fun toggleInfiniteMaxDuration() {
-        val currentValue = userModifications.value?.isDurationInfinite ?: return
-        userModifications.value?.copy(isDurationInfinite = !currentValue)?.let {
-            editionRepository.updateScenario(it)
-        }
-    }
-
     fun toggleRandomization() {
         userModifications.value?.let { scenario ->
             editionRepository.updateScenario(scenario.copy(randomize = !scenario.randomize))
         }
     }
+
+
+    val repeatMode: Flow<String> =
+        combine(repeatInfiniteState, maxDurationMin, repeatCount) { isInfinite, duration, count ->
+            when {
+                isInfinite -> "Infinite"
+                duration.isNotEmpty() -> "Stop after $duration minutes"
+                count.isNotEmpty() -> "Stop after $count cycles"
+                else -> "Not Set"
+            }
+        }.stateIn(viewModelScope, SharingStarted.Eagerly, "Not Set")
+
+    fun setMaxDurationMinutes(durationMinutes: Int) {
+        userModifications.value?.let { scenario ->
+            editionRepository.updateScenario(
+                scenario.copy(
+                    maxDurationMin = durationMinutes,
+                    isDurationInfinite = false
+                )
+            )
+        }
+    }
+
+    fun setRepeatCount(repeatCount: Int) {
+        userModifications.value?.let { scenario ->
+            editionRepository.updateScenario(
+                scenario.copy(
+                    repeatCount = repeatCount,
+                    isRepeatInfinite = false // Ensure it's not infinite when cycle count is set
+                )
+            )
+        }
+    }
+
+    fun toggleInfiniteRepeat() {
+        userModifications.value?.let { scenario ->
+            editionRepository.updateScenario(scenario.copy(isRepeatInfinite = !scenario.isRepeatInfinite))
+        }
+    }
+
+    fun toggleInfiniteMaxDuration() {
+        userModifications.value?.let { scenario ->
+            editionRepository.updateScenario(scenario.copy(isDurationInfinite = !scenario.isDurationInfinite))
+        }
+    }
+
 }
+
 
 private const val TAG = "ScenarioConfigViewModelLogs"

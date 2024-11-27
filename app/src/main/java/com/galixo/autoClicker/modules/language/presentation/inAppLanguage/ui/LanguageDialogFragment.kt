@@ -8,14 +8,13 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.galixo.autoClicker.R
 import com.galixo.autoClicker.databinding.DialogLanguageScreenSettingsBinding
 import com.galixo.autoClicker.modules.language.presentation.inAppLanguage.adapter.AdapterInAppLanguage
 import com.galixo.autoClicker.modules.language.presentation.inAppLanguage.viewmodels.InAppLanguageViewModel
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import timber.log.Timber
 
 @AndroidEntryPoint
 class LanguageDialogFragment : DialogFragment() {
@@ -36,7 +35,6 @@ class LanguageDialogFragment : DialogFragment() {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 launch {
                     viewModel.uiState.collect { state ->
-                        Timber.i("list: ${state.languages.map { it.languageName }}")
                         adapter.submitList(state.languages)
                     }
                 }

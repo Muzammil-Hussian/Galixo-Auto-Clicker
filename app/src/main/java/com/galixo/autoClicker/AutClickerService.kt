@@ -4,6 +4,7 @@ import android.accessibilityservice.AccessibilityService
 import android.accessibilityservice.GestureDescription
 import android.app.Service
 import android.content.Intent
+import android.util.Log
 import android.view.KeyEvent
 import android.view.accessibility.AccessibilityEvent
 import com.galixo.autoClicker.AutoClickerService.Companion.LOCAL_SERVICE_INSTANCE
@@ -17,7 +18,6 @@ import com.galixo.autoClicker.core.scenarios.engine.ScenarioEngine
 import com.galixo.autoClicker.localService.ILocalService
 import com.galixo.autoClicker.localService.LocalService
 import dagger.hilt.android.AndroidEntryPoint
-import timber.log.Timber
 import java.io.FileDescriptor
 import java.io.PrintWriter
 import javax.inject.Inject
@@ -76,7 +76,6 @@ class AutoClickerService : AccessibilityService(), AndroidExecutor {
         get() = LOCAL_SERVICE_INSTANCE as? LocalService
 
 
-
     @Inject
     lateinit var overlayManager: OverlayManager
 
@@ -109,12 +108,12 @@ class AutoClickerService : AccessibilityService(), AndroidExecutor {
                 requestFilterKeyEvents(false)
                 stopForeground(Service.STOP_FOREGROUND_REMOVE)
             },
-            onStateChanged = { isRunning, isMenuHidden -> }
+            onStateChanged = { _, _ -> }
         )
     }
 
     override fun onUnbind(intent: Intent?): Boolean {
-        Timber.i("onUnbind")
+        Log.i(TAG, "onUnbind")
         LOCAL_SERVICE_INSTANCE?.stop()
         LOCAL_SERVICE_INSTANCE?.release()
         LOCAL_SERVICE_INSTANCE = null
@@ -135,16 +134,16 @@ class AutoClickerService : AccessibilityService(), AndroidExecutor {
                             continuation.resume(null)
 
                         override fun onCancelled(gestureDescription: GestureDescription?) {
-                            Timber.w("Gesture cancelled: $gestureDescription")
+                            Log.w(TAG, "Gesture cancelled: $gestureDescription")
                             continuation.resume(null)
                         }
                     },
                     null,
                 )
             } catch (rEx: RuntimeException) {
-                Timber.w(
-                    rEx,
-                    "System is not responsive, the user might be spamming gesture too quickly"
+                Log.w(
+                    TAG,
+                    "$rEx: System is not responsive, the user might be spamming gesture too quickly"
                 )
                 continuation.resume(null)
             }
@@ -169,3 +168,5 @@ class AutoClickerService : AccessibilityService(), AndroidExecutor {
 
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {}
 }
+
+private const val TAG = "AutClickerService"

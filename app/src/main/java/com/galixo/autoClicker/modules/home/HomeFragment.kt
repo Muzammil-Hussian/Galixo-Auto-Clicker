@@ -1,6 +1,7 @@
 package com.galixo.autoClicker.modules.home
 
 import android.content.Intent
+import android.util.Log
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -18,7 +19,6 @@ import com.galixo.autoClicker.modules.script.presentation.viewModel.ScenarioMode
 import com.galixo.autoClicker.utils.extensions.updateStrokeColor
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import timber.log.Timber
 
 @AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
@@ -50,7 +50,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             singleMode.initScenarioModeCard(ScenarioMode.SINGLE_MODE)
             multiMode.initScenarioModeCard(ScenarioMode.MULTI_MODE)
 
-            howToUse.setOnClickListener { context?.let { startActivity(Intent(it, HowToUseActivity::class.java)) } }
+            howToUse.setOnClickListener {
+                context?.let {
+                    startActivity(
+                        Intent(
+                            it,
+                            HowToUseActivity::class.java
+                        )
+                    )
+                }
+            }
             startStopActionBarOverlay.setOnClickListener {
                 viewModel.createScenario {
                     (requireActivity() as? Listener)?.startScenario(it)
@@ -60,7 +69,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     }
 
     private fun IncludeScenarioTypeViewBinding.initScenarioModeCard(mode: ScenarioMode) {
-        Timber.tag(TAG).i("initScenarioModeCard: mode: $mode")
+        Log.i(TAG, "initScenarioModeCard: mode: $mode")
         when (mode) {
             ScenarioMode.SINGLE_MODE -> {
                 image.setImageResource(R.drawable.ic_single_mode)

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">millisecondes</string>
+    <string name="dropdown_label_time_unit_s">secondes</string>
+    <string name="dropdown_label_time_unit_min">minutes</string>
+    <string name="dropdown_label_time_unit_h">heures</string>
+    <string name="dropdown_label_time_unit">Unité de temps</string>
+    <string name="cancel">Annuler</string>
+    <string name="done">Terminé</string>
+    <string name="interval_label">Intervalle</string>
+    <string name="swipe_duration">Durée du balayage</string>
+    <string name="interval_description">Intervalle avant la prochaine action</string>
+    <string name="interval_desc_2"><![CDATA[Recommandé : > %1$s (Pour éviter le blocage
+anormal de votre téléphone)]]></string>
+    <string name="swipe_duration_interval">Conseils : La durée doit être supérieure à
+%1$s</string>
+    <string name="repeat_mode">Mode répétition</string>
+    <string name="content_desc_copy_button">Le bouton pour créer une copie d’un élément
+existant</string>
+    <string name="content_desc_play_pause_scenario">Lire ou mettre en pause le
+scénario</string>
+    <string name="content_desc_add_button">Le bouton pour créer un élément</string>
+    <string name="content_desc_stop_clicker">Arrêter le clic automatique</string>
+    <string name="input_field_label_anti_detection">Anti-détection</string>
+    <string name="input_field_label_click_press_duration">Durée d’appui (ms)</string>
+    <string name="input_field_label_name">Nom</string>
+    <string name="input_field_label_pause_duration">Durée de pause</string>
+    <string name="input_field_label_scenario_name">Nom du scénario</string>
+    <string name="input_field_label_swipe_duration">Durée du balayage (ms)</string>
+    <string name="input_field_error_required">Obligatoire</string></resources>

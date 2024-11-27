@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">毫秒</string>
+    <string name="dropdown_label_time_unit_s">秒</string>
+    <string name="dropdown_label_time_unit_min">分钟</string>
+    <string name="dropdown_label_time_unit_h">小时</string>
+    <string name="dropdown_label_time_unit">时间单位</string>
+    <string name="cancel">取消</string>
+    <string name="done">完成</string>
+    <string name="interval_label">间隔</string>
+    <string name="swipe_duration">滑动持续时间</string>
+    <string name="interval_description">下一次动作前的间隔</string>
+    <string name="interval_desc_2"><![CDATA[推荐: > %1$s (防止手机异常被锁定)]]></string>
+    <string name="swipe_duration_interval">提示: 持续时间应大于 %1$s</string>
+    <string name="repeat_mode">重复模式</string>
+    <string name="content_desc_copy_button">创建现有元素副本的按钮</string>
+    <string name="content_desc_play_pause_scenario">播放或暂停场景</string>
+    <string name="content_desc_add_button">创建元素的按钮</string>
+    <string name="content_desc_stop_clicker">停止自动点击器</string>
+    <string name="input_field_label_anti_detection">防检测</string>
+    <string name="input_field_label_click_press_duration">按压时长 (毫秒)</string>
+    <string name="input_field_label_name">名称</string>
+    <string name="input_field_label_pause_duration">暂停时长</string>
+    <string name="input_field_label_scenario_name">场景名称</string>
+    <string name="input_field_label_swipe_duration">滑动时长 (毫秒)</string>
+    <string name="input_field_error_required">必填</string>
+</resources>

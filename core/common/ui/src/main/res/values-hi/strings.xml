@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">िमलीसेकंड</string>
+    <string name="dropdown_label_time_unit_s">सेकंड</string>
+    <string name="dropdown_label_time_unit_min">िमनट</string>
+    <string name="dropdown_label_time_unit_h">घंटे</string>
+    <string name="dropdown_label_time_unit">समय इकाई</string>
+    <string name="cancel">र᳎ करᱶ</string>
+    <string name="done">पूणᭅ</string>
+    <string name="interval_label">अंतराल</string>
+    <string name="swipe_duration">᭭वाइप अविध</string>
+    <string name="interval_description">अगली ᳰᮓया सेपहलेका अंतराल</string>
+    <string name="interval_desc_2"><![CDATA[िसफाᳯरश: > %1$s (अपनेफ़ोन को असामा᭠य ᱨप से᭣लॉक
+होनेसेरोकनेकेिलए)]]></string>
+    <string name="swipe_duration_interval">ᳯट᭡स: अविध %1$s सेअिधक होनी चािहए</string>
+    <string name="repeat_mode">पुनरावृिᱫ मोड</string>
+    <string name="content_desc_copy_button">मौजूदा त᭜व सेएक ᮧित बनानेकेिलए बटन</string>
+    <string name="content_desc_play_pause_scenario">पᳯरदृ᭫य चलाएंया रोकᱶ</string>
+    <string name="content_desc_add_button">त᭜व बनानेकेिलए बटन</string>
+    <string name="content_desc_stop_clicker">ऑटो ि᭍लकर रोकᱶ</string>
+    <string name="input_field_label_anti_detection">एंटी-िडटे᭍शन</string>
+    <string name="input_field_label_click_press_duration">दबाव अविध (िमलीसेकंड)</string>
+    <string name="input_field_label_name">नाम</string>
+    <string name="input_field_label_pause_duration">िवराम अविध</string>
+    <string name="input_field_label_scenario_name">पᳯरदृ᭫य का नाम</string>
+    <string name="input_field_label_swipe_duration">᭭वाइप अविध (िमलीसेकंड)</string>
+    <string name="input_field_error_required">आव᭫यक</string></resources>

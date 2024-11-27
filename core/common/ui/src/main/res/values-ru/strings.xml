@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dropdown_label_time_unit_ms">миллисекунды</string>
+    <string name="dropdown_label_time_unit_s">секунды</string>
+    <string name="dropdown_label_time_unit_min">минуты</string>
+    <string name="dropdown_label_time_unit_h">часы</string>
+    <string name="dropdown_label_time_unit">Единица времени</string>
+    <string name="cancel">Отмена</string>
+    <string name="done">Готово</string>
+    <string name="interval_label">Интервал</string>
+    <string name="swipe_duration">Длительность свайпа</string>
+    <string name="interval_description">Интервал перед следующим действием</string>
+    <string name="interval_desc_2"><![CDATA[Рекомендуется: > %1$s (Чтобы избежать
+ненормальной блокировки телефона)]]></string>
+    <string name="swipe_duration_interval">Подсказка: Длительность должна быть больше
+%1$s</string>
+    <string name="repeat_mode">Режим повторения</string>
+    <string name="content_desc_copy_button">Кнопка для создания копии существующего
+элемента</string>
+    <string name="content_desc_play_pause_scenario">Запустить или приостановить
+сценарий</string>
+    <string name="content_desc_add_button">Кнопка для создания элемента</string>
+    <string name="content_desc_stop_clicker">Остановить авто-кликер</string>
+    <string name="input_field_label_anti_detection">Анти-детекция</string>
+    <string name="input_field_label_click_press_duration">Длительность нажатия (мс)</string>
+    <string name="input_field_label_name">Имя</string>
+    <string name="input_field_label_pause_duration">Длительность паузы</string>
+    <string name="input_field_label_scenario_name">Название сценария</string>
+    <string name="input_field_label_swipe_duration">Длительность свайпа (мс)</string>
+    <string name="input_field_error_required">Обязательно</string></resources>

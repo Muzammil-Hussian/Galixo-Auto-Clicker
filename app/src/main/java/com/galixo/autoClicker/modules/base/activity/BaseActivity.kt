@@ -1,14 +1,14 @@
 package com.galixo.autoClicker.modules.base.activity
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.viewbinding.ViewBinding
-import com.google.android.material.color.DynamicColors
-import timber.log.Timber
 
+private const val TAG = "BaseActivity"
 abstract class BaseActivity<T : ViewBinding>(private val bindingFactory: (LayoutInflater) -> T) : AppCompatActivity() {
 
     protected val binding by lazy { bindingFactory(layoutInflater) }
@@ -21,11 +21,6 @@ abstract class BaseActivity<T : ViewBinding>(private val bindingFactory: (Layout
         onCreated()
     }
 
-    protected open fun enableMaterialDynamicTheme() {
-        Timber.d("enableMaterialDynamicTheme: enabling")
-        DynamicColors.applyToActivityIfAvailable(this)
-    }
-
     /**
      * @param type
      *     0: Show SystemBars
@@ -35,7 +30,7 @@ abstract class BaseActivity<T : ViewBinding>(private val bindingFactory: (Layout
      */
 
     protected open fun hideStatusBar(type: Int) {
-        Timber.d("hideStatusBar: Showing/Hiding: Type: $type")
+        Log.d(TAG, "hideStatusBar: Showing/Hiding: Type: $type")
         WindowInsetsControllerCompat(window, window.decorView).apply {
             systemBarsBehavior = when (type) {
                 0 -> WindowInsetsControllerCompat.BEHAVIOR_DEFAULT

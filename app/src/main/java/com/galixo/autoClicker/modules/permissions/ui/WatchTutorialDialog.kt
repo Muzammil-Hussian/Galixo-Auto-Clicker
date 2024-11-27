@@ -2,11 +2,11 @@ package com.galixo.autoClicker.modules.permissions.ui
 
 import android.app.Dialog
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.DialogFragment
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.galixo.autoClicker.databinding.DialogWatchTutorialBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
-import timber.log.Timber
 
 
 @AndroidEntryPoint
@@ -22,11 +22,11 @@ class WatchTutorialDialog : DialogFragment() {
 
         viewBinding = DialogWatchTutorialBinding.inflate(layoutInflater).apply {
             cancel.setOnClickListener {
-                Timber.i("Cancel button clicked")
+                Log.i(TAG, "Cancel button clicked")
                 dismiss()
             }
             grantPermission.setOnClickListener {
-                Timber.i("Grant Permission button clicked")
+                Log.i(TAG, "Grant Permission button clicked")
                 dismiss()
             }
         }
@@ -36,7 +36,7 @@ class WatchTutorialDialog : DialogFragment() {
             .create()
 
         dialog.setOnShowListener {
-            Timber.i("dialog is shown")
+            Log.i(TAG, "dialog is shown")
         }
 
         return dialog
@@ -44,3 +44,5 @@ class WatchTutorialDialog : DialogFragment() {
 
 
 }
+
+private const val TAG = "WatchTutorialDialog"
