@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_vertical_mini"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="@dimen/margin_horizontal_large"
+        android:textAppearance="@style/SubHeadingStyle"
+        android:visibility="gone"
+        tools:text="Field title"
+        tools:visibility="visible" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_vertical_mini"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="@dimen/margin_horizontal_default"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/Description"
+        android:visibility="gone"
+        tools:text="Field Subtext for the selector with a long text just to check if wrapping is OK."
+        tools:visibility="visible" />
+
+</LinearLayout>

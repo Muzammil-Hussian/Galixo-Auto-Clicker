@@ -96,4 +96,5 @@
     <color name="windowBackgroundColor">#F9F9F9</color>
 
     <color name="edit_text_box_background">#0A7159FF</color>
+    <color name="field_border_color">#BFBFC3</color>
 </resources>

@@ -2,10 +2,18 @@
 <com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/AppTheme.Widget.InputText"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:boxBackgroundColor="@color/edit_text_box_background"
+    app:boxCornerRadiusBottomEnd="@dimen/padding_12_dp"
+    app:boxCornerRadiusBottomStart="@dimen/padding_12_dp"
+    app:boxCornerRadiusTopEnd="@dimen/padding_12_dp"
+    app:boxCornerRadiusTopStart="@dimen/padding_12_dp"
+    app:boxStrokeColor="@color/field_border_color"
+    app:boxStrokeWidth="0dp"
+    app:boxStrokeWidthFocused="1px"
     app:endIconMode="clear_text"
+    app:hintEnabled="false"
     tools:hint="Label">
 
     <com.google.android.material.textfield.TextInputEditText

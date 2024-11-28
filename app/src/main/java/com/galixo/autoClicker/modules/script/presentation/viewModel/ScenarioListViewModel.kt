@@ -7,13 +7,11 @@ import com.galixo.autoClicker.core.common.base.identifier.DATABASE_ID_INSERTION
 import com.galixo.autoClicker.core.common.base.identifier.Identifier
 import com.galixo.autoClicker.core.scenarios.domain.IMainRepository
 import com.galixo.autoClicker.core.scenarios.domain.model.Scenario
-import com.galixo.autoClicker.core.scenarios.domain.model.ScenarioMode
 import com.galixo.autoClicker.feature.config.domain.EditionRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
@@ -40,32 +38,6 @@ class ScenarioListViewModel @Inject constructor(
             scenarioMode = scenario.scenarioMode
         )
         mainRepository.addScenario(newScenario)
-    }
-
-    fun addScenario(
-        name: String,
-        scenarioMode: ScenarioMode,
-        onCreationComplete: (Scenario) -> Unit
-    ) = viewModelScope.launch(Dispatchers.IO) {
-        val scenario =
-            Scenario(
-                id = Identifier(databaseId = DATABASE_ID_INSERTION, tempId = 0L),
-                name = name,
-                actions = emptyList(),
-                repeatCount = 1,
-                isRepeatInfinite = false,
-                maxDurationMin = 1,
-                isDurationInfinite = true,
-                randomize = false,
-                scenarioMode = scenarioMode
-            )
-
-        mainRepository.addScenario(scenario).also {
-            // Invoke the callback with the new scenario's database ID
-            withContext(Dispatchers.Main) {
-                onCreationComplete.invoke(scenario)
-            }
-        }
     }
 
     /**

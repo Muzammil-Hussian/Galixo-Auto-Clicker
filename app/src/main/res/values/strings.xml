@@ -111,4 +111,5 @@
     <string name="troubleshooting">Troubleshooting</string>
     <string name="allow_permission">Allow Permission</string>
     <string name="troubleshoot_desc">Fundamental permission for auto clicker app. Must have permission needed.</string>
+    <string name="script_name">Script name</string>
 </resources>

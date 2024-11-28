@@ -18,15 +18,13 @@ import com.galixo.autoClicker.core.common.base.extensions.beVisibleIf
 import com.galixo.autoClicker.core.scenarios.domain.model.Scenario
 import com.galixo.autoClicker.databinding.FragmentScriptBinding
 import com.galixo.autoClicker.modules.base.fragment.BaseFragment
+import com.galixo.autoClicker.modules.dialog.rename.RenameScenarioDialog
 import com.galixo.autoClicker.modules.script.presentation.adapter.ScriptAdapter
 import com.galixo.autoClicker.modules.script.presentation.adapter.ScriptItemCallback
 import com.galixo.autoClicker.modules.script.presentation.ui.dialog.CreateScenarioDialog
 import com.galixo.autoClicker.modules.script.presentation.ui.listener.Listener
 import com.galixo.autoClicker.modules.script.presentation.viewModel.ScenarioListViewModel
-import com.galixo.autoClicker.utils.extensions.showToast
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -37,7 +35,6 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
     private lateinit var adapter: ScriptAdapter
 
     private val scenarioListViewModel: ScenarioListViewModel by viewModels()
-
 
     /** The current dialog being displayed. Null if not displayed. */
     private var dialog: AlertDialog? = null
@@ -119,10 +116,8 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
             it?.dismiss()
         }
 
-
         dialog = newDialog
         newDialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
-//        newDialog.window?.setBackgroundDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.bg_round_16_dp))
         newDialog.setOnDismissListener { dialog = null }
         newDialog.show()
     }
@@ -134,8 +129,12 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
      * @param item the scenario to rename.
      * */
     private fun onRenameClicked(item: Scenario) {
-
-        val inputLayout = TextInputLayout(requireContext()).apply {
+        Log.i(TAG, "onRenameClicked: $item")
+        RenameScenarioDialog(item).show(
+            requireActivity().supportFragmentManager,
+            RenameScenarioDialog.TAG
+        )
+        /*     val inputLayout = TextInputLayout(requireContext()).apply {
             hint = getString(R.string.hint_rename_scenario)
         }
 
@@ -163,16 +162,16 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
                     null
                 ) // Cancel button dismisses the dialog
                 .create()
-        )
+        )*/
     }
 
 
     private fun showBackupDialog(
         isImport: Boolean,
-        ScenariosToBackup: Collection<Long>? = null,
+        scenariosToBackup: Collection<Long>? = null,
     ) {
         activity?.let {
-            BackupDialogFragment.newInstance(isImport, ScenariosToBackup)
+            BackupDialogFragment.newInstance(isImport, scenariosToBackup)
                 .show(it.supportFragmentManager, FRAGMENT_TAG_BACKUP_DIALOG)
         }
     }
@@ -188,9 +187,7 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
             MaterialAlertDialogBuilder(requireContext()).setTitle(R.string.dialog_title_delete_scenario)
                 .setMessage(resources.getString(R.string.message_delete_scenario, item.name))
                 .setPositiveButton(android.R.string.ok) { _: DialogInterface, _: Int ->
-                    scenarioListViewModel.deleteScenario(
-                        item
-                    )
+                    scenarioListViewModel.deleteScenario(item)
                 }
                 .setNegativeButton(android.R.string.cancel, null)
                 .create()

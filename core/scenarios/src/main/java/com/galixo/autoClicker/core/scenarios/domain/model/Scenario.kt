@@ -5,7 +5,7 @@ import com.galixo.autoClicker.core.common.base.interfaces.Identifiable
 
 data class Scenario(
     override val id: Identifier,
-    val name: String,
+    var name: String,
     val actions: List<Action> = emptyList(),
     override val repeatCount: Int,
     override val isRepeatInfinite: Boolean,
