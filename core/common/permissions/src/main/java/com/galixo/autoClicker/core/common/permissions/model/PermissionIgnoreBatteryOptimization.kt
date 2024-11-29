@@ -13,7 +13,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 
 @SuppressLint("BatteryLife")
-data object PermissionIgnoreBatteryOptimization : Permission.Dangerous(), Permission.Optional {
+data object PermissionIgnoreBatteryOptimization : Permission.Dangerous() {
 
     private var batteryOptimizationLauncher: ActivityResultLauncher<Intent>? = null
 

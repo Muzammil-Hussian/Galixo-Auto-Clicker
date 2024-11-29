@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout_scenario_type"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="@dimen/margin_horizontal_default">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mode_selection"
+        android:textAppearance="@style/ContainerHeading" />
 
     <include
         android:id="@+id/scenario_single_mode"
         layout="@layout/include_mode_type"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margin_horizontal_default"
         android:layout_marginTop="@dimen/margin_vertical_extra_large"
         android:layout_marginBottom="@dimen/margin_vertical_large" />
 
@@ -19,14 +24,15 @@
         android:id="@+id/scenario_multi_mode"
         layout="@layout/include_mode_type"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margin_horizontal_default" />
+        android:layout_height="wrap_content" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_horizontal_default"
-        android:text="@string/start" />
+        android:layout_marginTop="@dimen/margin_horizontal_default"
+        android:minHeight="56dp"
+        android:text="@string/start"
+        android:textAppearance="@style/ButtonHeading" />
 </LinearLayout>
 

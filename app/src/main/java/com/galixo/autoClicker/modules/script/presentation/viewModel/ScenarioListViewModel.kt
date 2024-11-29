@@ -1,6 +1,5 @@
 package com.galixo.autoClicker.modules.script.presentation.viewModel
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.galixo.autoClicker.core.common.base.identifier.DATABASE_ID_INSERTION
@@ -24,12 +23,10 @@ class ScenarioListViewModel @Inject constructor(
     val allScenarios: Flow<List<Scenario>> = mainRepository.scenarios
 
     fun onDuplicationScenario(scenario: Scenario) = viewModelScope.launch(Dispatchers.IO) {
-
-        Log.i(TAG, "actions: ${scenario.actions.size}")
         val newScenario = Scenario(
             id = Identifier(databaseId = DATABASE_ID_INSERTION, tempId = 0L),
             name = scenario.name,
-            actions = scenario.actions.toList(),
+            actions = scenario.actions,
             repeatCount = scenario.repeatCount,
             isRepeatInfinite = scenario.isRepeatInfinite,
             maxDurationMin = scenario.maxDurationMin,

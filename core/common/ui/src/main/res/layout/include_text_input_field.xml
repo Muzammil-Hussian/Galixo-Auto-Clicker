@@ -11,7 +11,7 @@
     app:boxCornerRadiusTopStart="@dimen/padding_12_dp"
     app:boxStrokeColor="@color/field_border_color"
     app:boxStrokeWidth="0dp"
-    app:boxStrokeWidthFocused="1px"
+    app:boxStrokeWidthFocused="1dp"
     app:endIconMode="clear_text"
     app:hintEnabled="false"
     tools:hint="Label">

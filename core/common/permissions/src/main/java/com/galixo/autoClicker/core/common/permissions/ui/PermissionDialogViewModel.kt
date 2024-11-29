@@ -89,14 +89,14 @@ private fun Permission.toPermissionDialogUiState(): PermissionDialogUiState =
             permission = this,
             titleRes = R.string.dialog_title_permission_battery,
             descriptionRes = R.string.message_permission_desc_battery,
-            animationRes =R.raw.animation_battery_optimization,
+            animationRes = null,
         )
 
         is PermissionAccessibilityService -> PermissionDialogUiState(
             permission = this,
             titleRes = R.string.dialog_title_permission_accessibility,
             descriptionRes = R.string.message_permission_desc_accessibility,
-            animationRes =R.raw.animation_accessibility_service
+            animationRes = R.raw.animation_accessibility_service
         )
 
     }

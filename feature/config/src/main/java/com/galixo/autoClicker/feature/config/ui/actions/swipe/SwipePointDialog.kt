@@ -25,6 +25,7 @@ import com.galixo.autoClicker.core.scenarios.domain.model.REPEAT_DELAY_MIN_MS
 import com.galixo.autoClicker.feature.config.R
 import com.galixo.autoClicker.feature.config.databinding.DialogConfigSwipeActionBinding
 import com.galixo.autoClicker.feature.config.di.ConfigViewModelsEntryPoint
+import com.google.android.material.textview.MaterialTextView
 import kotlinx.coroutines.launch
 import kotlin.time.Duration.Companion.hours
 import kotlin.time.Duration.Companion.minutes
@@ -45,6 +46,7 @@ class SwipePointDialog(
 
     override fun onCreateView(): ViewGroup {
         viewModel.setEditedSwipe(swipeAction)
+
         viewBinding = DialogConfigSwipeActionBinding.inflate(LayoutInflater.from(context)).apply {
 
             with(interval) {
@@ -55,18 +57,18 @@ class SwipePointDialog(
 
                     setOnTextChangedListener {
                         val enteredValue = it.toString().toLongOrNull()
-                        val convertedValue = enteredValue?.toDurationMs(viewModel.getTimeUnit()) ?: 0L
+                        val convertedValue = enteredValue?.toDurationMs(viewModel.getIntervalUnit()) ?: 0L
                         viewModel.setRepeatDelay(convertedValue)
 
-                        val isValid = validateInput(convertedValue, viewModel.getTimeUnit())
-                        updateIntervalHelperText(isValid, viewModel.getTimeUnit())
+                        val isValid = validateInput(convertedValue, viewModel.getIntervalUnit())
+                        updateHelperText(helperText, isValid, viewModel.getIntervalUnit())
                         updateSaveAction(isValid)
                     }
 
                     timeUnitField.setItems(items = timeUnitDropdownItems, onItemSelected = { selectedUnit ->
-                        viewModel.setTimeUnit(selectedUnit)
+                        viewModel.setIntervalUnit(selectedUnit)
                         val isValid = validateInput(viewModel.getRepeatDelayMs(), selectedUnit)
-                        updateIntervalHelperText(isValid, selectedUnit)
+                        updateHelperText(helperText, isValid, selectedUnit)
                         updateSaveAction(isValid)
                     })
                 }
@@ -76,7 +78,23 @@ class SwipePointDialog(
                 label.setText(R.string.swipe_duration)
                 fieldText.apply {
                     textField.filters = arrayOf(MinMaxInputFilter(1, GESTURE_DURATION_MAX_VALUE.toInt()))
-                    setOnTextChangedListener { viewModel.setPressDurationMs(if (it.isNotEmpty()) it.toString().toLong() else 0) }
+
+                    setOnTextChangedListener {
+                        val enteredValue = it.toString().toLongOrNull()
+                        val convertedValue = enteredValue?.toDurationMs(viewModel.getSwipeDurationUnit()) ?: 0L
+                        viewModel.setPressDurationMs(convertedValue)
+
+                        val isValid = validateInput(convertedValue, viewModel.getSwipeDurationUnit())
+                        updateHelperText(helperText, isValid, viewModel.getSwipeDurationUnit())
+                        updateSaveAction(isValid)
+                    }
+
+                    timeUnitField.setItems(items = timeUnitDropdownItems, onItemSelected = { selectedUnit ->
+                        viewModel.setSwipeDurationUnit(selectedUnit)
+                        val isValid = validateInput(viewModel.getPressDurationMs(), selectedUnit)
+                        updateHelperText(helperText, isValid, selectedUnit)
+                        updateSaveAction(isValid)
+                    })
                 }
             }
 
@@ -93,10 +111,11 @@ class SwipePointDialog(
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 launch { viewModel.repeatDelay.collect(::updateRepeatInterval) }
-                launch { viewModel.selectedUnitItem.collect(viewBinding.interval.timeUnitField::setSelectedItem) }
-
                 launch { viewModel.swipeDuration.collect(::updateSwipePressDuration) }
-//                launch { viewModel.swipeDurationError.collect(viewBinding.swipeDuration.fieldText::setError) }
+
+                launch { viewModel.intervalUnit.collect(viewBinding.interval.timeUnitField::setSelectedItem) }
+                launch { viewModel.swipeDurationUnit.collect(viewBinding.swipeDuration.timeUnitField::setSelectedItem) }
+
             }
         }
     }
@@ -111,8 +130,9 @@ class SwipePointDialog(
         }
     }
 
-    private fun updateIntervalHelperText(isValid: Boolean, unit: TimeUnitDropDownItem) {
-        viewBinding.interval.helperText.apply {
+    private fun updateHelperText(view: MaterialTextView, isValid: Boolean, unit: TimeUnitDropDownItem) {
+
+        view.apply {
             text = when (unit) {
                 TimeUnitDropDownItem.Milliseconds -> context.getString(R.string.interval_desc_2, "40ms")
                 TimeUnitDropDownItem.Seconds -> context.getString(R.string.interval_desc_2, "1sec")
@@ -139,14 +159,7 @@ class SwipePointDialog(
         back()
     }
 
+    private fun updateRepeatInterval(delay: String) = viewBinding.interval.fieldText.setText(delay, InputType.TYPE_CLASS_NUMBER)
 
-    private fun updateSwipePressDuration(duration: String) {
-        viewBinding.swipeDuration.fieldText.setText(duration, InputType.TYPE_CLASS_NUMBER)
-    }
-
-    private fun updateRepeatInterval(delay: String) {
-        viewBinding.interval.fieldText.setText(delay, InputType.TYPE_CLASS_NUMBER)
-    }
+    private fun updateSwipePressDuration(duration: String) = viewBinding.swipeDuration.fieldText.setText(duration, InputType.TYPE_CLASS_NUMBER)
 }
-
-private const val TAG = "SwipePointDialog"

@@ -12,8 +12,7 @@ import com.galixo.autoClicker.databinding.FragmentHomeBinding
 import com.galixo.autoClicker.databinding.IncludeScenarioTypeViewBinding
 import com.galixo.autoClicker.modules.base.fragment.BaseFragment
 import com.galixo.autoClicker.modules.guide.HowToUseActivity
-import com.galixo.autoClicker.modules.script.presentation.ui.dialog.CreateScenarioDialog.Companion.TAG
-import com.galixo.autoClicker.modules.script.presentation.ui.listener.Listener
+import com.galixo.autoClicker.modules.script.presentation.ui.dialog.ScenarioCreationDialog.Companion.TAG
 import com.galixo.autoClicker.modules.script.presentation.viewModel.ScenarioCreationViewModel
 import com.galixo.autoClicker.modules.script.presentation.viewModel.ScenarioModeSelectionState
 import com.galixo.autoClicker.utils.extensions.updateStrokeColor
@@ -62,7 +61,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             }
             startStopActionBarOverlay.setOnClickListener {
                 viewModel.createScenario {
-                    (requireActivity() as? Listener)?.startScenario(it)
+
                 }
             }
         }

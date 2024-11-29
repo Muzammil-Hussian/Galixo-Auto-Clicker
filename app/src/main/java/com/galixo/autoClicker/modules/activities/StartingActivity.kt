@@ -3,6 +3,7 @@ package com.galixo.autoClicker.modules.activities
 import android.content.Intent
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import com.galixo.autoClicker.databinding.ActivityStartingBinding
 import com.galixo.autoClicker.modules.base.activity.BaseActivity
 import com.galixo.autoClicker.modules.language.presentation.inAppLanguage.ui.LanguageActivity
@@ -10,7 +11,7 @@ import com.galixo.autoClicker.utils.PreferenceUtils
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class  StartingActivity : BaseActivity<ActivityStartingBinding>(ActivityStartingBinding::inflate) {
+class StartingActivity : BaseActivity<ActivityStartingBinding>(ActivityStartingBinding::inflate) {
 
     override fun onCreated() {}
 
@@ -23,11 +24,11 @@ class  StartingActivity : BaseActivity<ActivityStartingBinding>(ActivityStarting
             if (progressStatus < 100) {
                 try {
                     progressStatus++
-                    binding.progressBar.progress = progressStatus
                     handler.postDelayed(this, updateInterval)
                 } catch (_: Exception) {
                 }
             } else {
+                Log.i(TAG, "run: firstTime: ${PreferenceUtils.runningAppScreenFirstTime}")
                 if (PreferenceUtils.runningAppScreenFirstTime) navigateToLanguageActivity()
                 else navigateToMain()
             }
@@ -63,3 +64,5 @@ class  StartingActivity : BaseActivity<ActivityStartingBinding>(ActivityStarting
         progressStatus = 0
     }
 }
+
+private const val TAG = "StartingActivity"

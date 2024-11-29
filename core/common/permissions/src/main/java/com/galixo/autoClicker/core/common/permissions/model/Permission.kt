@@ -13,8 +13,7 @@ sealed class Permission {
     /** Tells if the [Permission] is mandatory or not. */
     internal fun isOptional(): Boolean = this is Optional
 
-    internal fun hasBeenRequestedBefore(context: Context): Boolean =
-        context.getPermissionSharedPrefs().getBoolean(javaClass.simpleName, false)
+    internal fun hasBeenRequestedBefore(context: Context): Boolean = context.getPermissionSharedPrefs().getBoolean(javaClass.simpleName, false)
 
     /** Tells if the [Permission] is granted. */
     fun checkIfGranted(context: Context): Boolean {

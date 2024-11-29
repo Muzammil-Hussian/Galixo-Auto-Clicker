@@ -9,11 +9,15 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.net.Uri
+import android.provider.Settings
+import android.provider.Settings.SettingNotFoundException
+import android.text.TextUtils
 import android.util.Log
 import android.widget.Toast
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
+import com.galixo.autoClicker.AutoClickerService
 import com.galixo.autoClicker.R
 import com.google.android.material.snackbar.Snackbar
 
@@ -176,6 +180,33 @@ fun Activity?.translateDate(data: String) {
             Log.e(TAG, ex.toString())
         }
     }
+}
+
+ fun Context.isAccessibilitySettingsOn(): Boolean {
+    var accessibilityEnabled = 0
+    val service = packageName + "/" + AutoClickerService::class.java.canonicalName
+    try {
+        accessibilityEnabled = Settings.Secure.getInt(applicationContext.contentResolver, Settings.Secure.ACCESSIBILITY_ENABLED)
+    } catch (e: SettingNotFoundException) {
+        e.printStackTrace()
+    }
+    val mStringColonSplitter = TextUtils.SimpleStringSplitter(':')
+    if (accessibilityEnabled == 1) {
+        val settingValue = Settings.Secure.getString(
+            applicationContext.contentResolver,
+            Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES
+        )
+        if (settingValue != null) {
+            mStringColonSplitter.setString(settingValue)
+            while (mStringColonSplitter.hasNext()) {
+                val accessibilityService = mStringColonSplitter.next()
+                if (accessibilityService.equals(service, ignoreCase = true)) {
+                    return true
+                }
+            }
+        }
+    }
+    return false
 }
 
 private const val TAG = "ContextLogs"

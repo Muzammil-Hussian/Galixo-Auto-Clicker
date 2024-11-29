@@ -17,6 +17,7 @@
 
     <!-- Material 3 Theme colors -->
     <color name="seed">#7159FF</color>
+    <color name="primaryColor">#7159FF</color>
     <color name="md_theme_light_primary">#7159FF</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>
     <color name="md_theme_light_primaryContainer">#C2E8FF</color>
@@ -33,7 +34,7 @@
     <color name="md_theme_light_errorContainer">#FFDAD6</color>
     <color name="md_theme_light_onError">#FFFFFF</color>
     <color name="md_theme_light_onErrorContainer">#410002</color>
-    <color name="md_theme_light_background">#FBFCFE</color>
+    <color name="md_theme_light_background">#F9F9F9</color>
     <color name="md_theme_light_onBackground">#191C1E</color>
     <color name="md_theme_light_surface">#FBFCFE</color>
     <color name="md_theme_light_onSurface">#191C1E</color>
@@ -86,7 +87,7 @@
     <color name="normalTextColor">#4D4D4D</color>
     <color name="paragraphTextColor">#333333</color>
     <color name="textColor">#484A4D</color>
-    <color name="lightBlue">#1F7159FF</color>
+    <color name="primaryLight">#1F7159FF</color>
     <color name="lightGrey">#EBEBEB</color>
 
     <color name="yellow_green">#80A6F8A6</color>

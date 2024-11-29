@@ -4,7 +4,6 @@ import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.setFragmentResult
@@ -12,6 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.galixo.autoClicker.core.common.base.extensions.beGone
 import com.galixo.autoClicker.core.common.permissions.EXTRA_RESULT_KEY_PERMISSION_STATE
 import com.galixo.autoClicker.core.common.permissions.FRAGMENT_RESULT_KEY_PERMISSION_STATE
 import com.galixo.autoClicker.core.common.permissions.databinding.DialogPermissionBinding
@@ -78,9 +78,9 @@ internal class PermissionDialogFragment : DialogFragment() {
         state ?: return
 
         viewBinding.apply {
-            state.animationRes?.let { emptyLottieView.setAnimation(it) } ?: { emptyLottieView.visibility = View.GONE }
             titlePermission.setText(state.titleRes)
             descPermission.setText(state.descriptionRes)
+            state.animationRes?.let { emptyLottieView.setAnimation(it) } ?: emptyLottieView.beGone()
         }
     }
 }

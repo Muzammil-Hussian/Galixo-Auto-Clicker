@@ -81,6 +81,7 @@ open class MainMenu(
         setMenuItemVisibility(viewBinding.lineBottom, isMultiMode)
 
         if (isMultiMode.not() && scenario.actions.isEmpty()) {
+            viewModel.startTemporaryEdition(scenario)
             onCreateClickAction()
         }
     }
@@ -236,7 +237,7 @@ open class MainMenu(
 
     override fun onMenuItemClicked(viewId: Int) {
         when (viewId) {
-           R.id.btn_play -> onPlayPauseClicked()
+            R.id.btn_play -> onPlayPauseClicked()
             R.id.btn_add_click_action -> onCreateClickAction()
             R.id.btn_add_swipe_action -> onCreateSwipeAction()
             R.id.btn_remove_last_added_action -> onRemoveLastAction()
@@ -272,11 +273,10 @@ open class MainMenu(
                 displayConfigManager.displayConfig.sizePx.x / 2,
                 displayConfigManager.displayConfig.sizePx.y / 2
             )
-            val fromPoint = Point(centerPoint.x - 250, centerPoint.y + 200)
-            val toPoint = Point(centerPoint.x + 250, centerPoint.y + 200)
+            val fromPoint = Point(centerPoint.x - 250, centerPoint.y - 200)
+            val toPoint = Point(centerPoint.x + 250, centerPoint.y - 200)
 
-            val swipe =
-                viewModel.createNewSwipe(context = context, from = fromPoint, to = toPoint)
+            val swipe = viewModel.createNewSwipe(context = context, from = fromPoint, to = toPoint)
 
             viewModel.addNewAction(swipe)
         }

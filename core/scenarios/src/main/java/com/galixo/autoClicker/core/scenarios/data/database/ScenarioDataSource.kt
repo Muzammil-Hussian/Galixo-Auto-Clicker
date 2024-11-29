@@ -81,6 +81,12 @@ class ScenarioDataSource @Inject constructor(
         updateScenarioActions(scenarioEntity.id, scenario.actions)
     }
 
+    suspend fun updateScenarioName(scenario: Scenario) {
+        val scenarioEntity = scenario.toEntity()
+        scenarioDao.updateScenarioName(scenarioEntity.id, scenarioEntity.name)
+    }
+
+
     private suspend fun updateScenarioActions(scenarioDbId: Long, actions: List<Action>) {
         val updater = DatabaseListUpdater<Action, ActionEntity>()
         updater.refreshUpdateValues(

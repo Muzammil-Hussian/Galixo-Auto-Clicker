@@ -33,9 +33,9 @@ class MainRepository @Inject constructor(
     override suspend fun addScenarioCopy(scenario: ScenarioWithActions): Long? =
         scenarioDataSource.addScenarioCopy(scenario)
 
-    override suspend fun updateScenario(scenario: Scenario) {
-        scenarioDataSource.updateScenario(scenario)
-    }
+    override suspend fun updateScenario(scenario: Scenario) = scenarioDataSource.updateScenario(scenario)
+
+    override suspend fun updateScenarioName(scenario: Scenario) = scenarioDataSource.updateScenarioName(scenario)
 
     override suspend fun deleteScenario(scenario: Scenario) {
         scenarioDataSource.deleteScenario(scenario)

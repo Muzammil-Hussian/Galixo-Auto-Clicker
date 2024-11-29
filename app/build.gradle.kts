@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.galixo.androidApplication)
+    alias(libs.plugins.androidxNavigationSafeArgs)
     alias(libs.plugins.galixo.hilt)
 }
 

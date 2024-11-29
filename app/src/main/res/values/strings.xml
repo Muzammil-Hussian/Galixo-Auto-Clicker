@@ -112,4 +112,8 @@
     <string name="allow_permission">Allow Permission</string>
     <string name="troubleshoot_desc">Fundamental permission for auto clicker app. Must have permission needed.</string>
     <string name="script_name">Script name</string>
+    <string name="mode_selection">Mode Selection</string>
+    <string name="fix_it_now">Fix it Now</string>
+    <string name="permission_needed">Permission Needed!</string>
+    <string name="permission_needed_desc">To keep Auto Clicker working, please turn the accessibility permission back on</string>
 </resources>

@@ -15,11 +15,10 @@ import javax.inject.Inject
 @ActivityRetainedScoped
 class PermissionsController @Inject constructor() {
 
-    private val permissionsRequestedLeft: MutableSet<Permission> =
-        mutableSetOf()
+    private val permissionsRequestedLeft: MutableSet<Permission> = mutableSetOf()
 
-    private val _currentRequestedPermission: MutableStateFlow<Permission?> =
-        MutableStateFlow(null)
+    private val _currentRequestedPermission: MutableStateFlow<Permission?> = MutableStateFlow(null)
+
     val currentRequestedPermission: StateFlow<Permission?> = _currentRequestedPermission
 
     private var allGrantedCallback: (() -> Unit)? = null

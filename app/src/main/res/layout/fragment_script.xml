@@ -1,89 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="@dimen/margin_vertical_extra_large"
     tools:context=".modules.script.presentation.ui.ScriptFragment">
 
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/permissionReGrantNeeded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_horizontal_default"
+        android:backgroundTint="#14FFD747"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_vertical_large">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iconWarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_warning"
+                app:layout_constraintBottom_toBottomOf="@id/titleAndDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/titleAndDescription" />
+
+            <include
+                android:id="@+id/titleAndDescription"
+                layout="@layout/include_title_and_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_8_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iconWarning" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fixItNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_vertical_default"
+                android:backgroundTint="@color/primaryLight"
+                android:text="@string/fix_it_now"
+                android:textColor="@color/primaryColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleAndDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
     <LinearLayout
         android:id="@+id/layout_empty"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:gravity="center"
         android:orientation="vertical"
         android:visibility="gone"
-        tools:visibility="visible">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/permissionReGrantNeeded"
+        tools:visibility="gone">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawablePadding="@dimen/padding_16_dp"
-            android:textAlignment="center"
-            android:textAppearance="@style/ContainerHeading"
+            android:alpha="0.64"
             app:srcCompat="@drawable/ic_script_un_available" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_4_dp"
-            android:gravity="center"
-            android:lineSpacingExtra="6dp"
-            android:text="@string/empty_script_message"
-            android:textAppearance="@style/DescriptionHeading"
-            android:textColor="@color/normalTextColor" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/add_script"
-            android:layout_width="wrap_content"
+            android:id="@+id/create_Script"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_8_dp"
+            android:layout_marginTop="@dimen/margin_horizontal_default"
+            android:minHeight="56dp"
             android:text="@string/add_script"
-            android:textAppearance="@style/ContainerHeading"
-            app:icon="@drawable/ic_add" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/importScriptEmpty"
-            style="@style/AppTheme.Widget.IconButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_8_dp"
-            android:text="@string/import_files"
             android:textAppearance="@style/ButtonHeading"
-            app:icon="@drawable/ic_import"
-            app:iconPadding="8dp" />
-
+            app:icon="@drawable/ic_add"
+            app:iconGravity="textStart" />
     </LinearLayout>
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/margin_horizontal_small"
+        android:layout_marginBottom="@dimen/margin_vertical_default"
         android:scrollbars="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/permissionReGrantNeeded"
+        tools:itemCount="8"
         tools:listitem="@layout/item_script"
-        tools:visibility="gone" />
+        tools:visibility="visible" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/importScript"
+        android:id="@+id/create_Script_fab"
         style="@style/AppTheme.Widget.FabSecondary"
-        android:backgroundTint="@color/primaryColor"
         android:contentDescription="@string/content_desc_add_script"
-        android:text="@string/import_files"
-        android:textAppearance="@style/ButtonHeading"
-        android:textColor="@color/white"
+        android:text="@string/add_script"
         android:visibility="visible"
-        app:cornerRadius="50dp"
-        app:icon="@drawable/ic_import"
+        app:icon="@drawable/ic_add"
         app:iconPadding="@dimen/padding_8_dp"
         app:iconTint="@color/white"
         app:layout_anchor="@id/list"
         app:layout_anchorGravity="bottom|right|end"
         app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        app:layout_constraintBottom_toBottomOf="@+id/list"
+        app:layout_constraintEnd_toEndOf="@+id/list"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.RoundedImage50"
-        tools:visibility="gone" />
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

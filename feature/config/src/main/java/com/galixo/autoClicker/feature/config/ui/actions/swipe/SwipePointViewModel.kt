@@ -21,31 +21,37 @@ class SwipePointViewModel @Inject constructor() : ViewModel() {
     private val _editedSwipe: MutableStateFlow<Action.Swipe?> = MutableStateFlow(null)
     private val editedSwipe: Flow<Action.Swipe> = _editedSwipe.filterNotNull()
 
-    private val _selectedUnitItem: MutableStateFlow<TimeUnitDropDownItem> = MutableStateFlow(TimeUnitDropDownItem.Milliseconds)
-    val selectedUnitItem: Flow<TimeUnitDropDownItem> = _selectedUnitItem
 
+    // Separate time unit state for interval and swipe duration
+    private val _intervalUnit: MutableStateFlow<TimeUnitDropDownItem> = MutableStateFlow(TimeUnitDropDownItem.Milliseconds)
+    val intervalUnit: Flow<TimeUnitDropDownItem> = _intervalUnit
 
-    /** The duration between the press and release of the swipe in milliseconds. */
-    val swipeDuration: Flow<String> = editedSwipe
-        .map { it.swipeDurationMs.toString() }
-        .take(1)
-
-    /** Tells if the press duration value is valid or not. */
-    val swipeDurationError: Flow<Boolean> = editedSwipe
-        .map { it.swipeDurationMs <= 0 }
+    private val _swipeDurationUnit: MutableStateFlow<TimeUnitDropDownItem> = MutableStateFlow(TimeUnitDropDownItem.Milliseconds)
+    val swipeDurationUnit: Flow<TimeUnitDropDownItem> = _swipeDurationUnit
 
 
     @OptIn(ExperimentalCoroutinesApi::class)
-    val repeatDelay: Flow<String> = selectedUnitItem
+    val repeatDelay: Flow<String> = intervalUnit
         .flatMapLatest { unitItem ->
             editedSwipe
                 .map { unitItem.formatDuration(it.repeatDelayMs) }
                 .take(1)
         }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
+    val swipeDuration: Flow<String> = swipeDurationUnit
+        .flatMapLatest { unitItem ->
+            editedSwipe
+                .map { unitItem.formatDuration(it.swipeDurationMs) }
+                .take(1)
+        }
 
     fun setEditedSwipe(swipe: Action.Swipe) {
-        _selectedUnitItem.value = swipe.repeatDelayMs.findAppropriateTimeUnit()
+
+        _intervalUnit.value = swipe.repeatDelayMs.findAppropriateTimeUnit()
+        _swipeDurationUnit.value = swipe.swipeDurationMs.findAppropriateTimeUnit()
+        _editedSwipe.value = swipe.copy()
+
         _editedSwipe.value = swipe.copy()
     }
 
@@ -56,9 +62,12 @@ class SwipePointViewModel @Inject constructor() : ViewModel() {
         _editedSwipe.value = _editedSwipe.value?.copy(swipeDurationMs = durationMs)
     }
 
+    fun getPressDurationMs() = _editedSwipe.value?.swipeDurationMs ?: 0L
+
+
     fun setRepeatDelay(delayMs: Long) {
         _editedSwipe.value = _editedSwipe.value?.let { oldValue ->
-            val newDelayMs = delayMs.toDurationMs(_selectedUnitItem.value)
+            val newDelayMs = delayMs.toDurationMs(_intervalUnit.value)
             if (oldValue.repeatDelayMs == newDelayMs) return
             oldValue.copy(repeatDelayMs = delayMs)
         }
@@ -66,7 +75,18 @@ class SwipePointViewModel @Inject constructor() : ViewModel() {
 
     fun getRepeatDelayMs() = _editedSwipe.value?.repeatDelayMs ?: 0L
 
-    fun setTimeUnit(unit: TimeUnitDropDownItem) { _selectedUnitItem.value = unit }
 
-    fun getTimeUnit(): TimeUnitDropDownItem = _selectedUnitItem.value
+    fun setIntervalUnit(unit: TimeUnitDropDownItem) {
+        _intervalUnit.value = unit
+    }
+
+    fun getIntervalUnit(): TimeUnitDropDownItem = _intervalUnit.value
+
+
+    fun setSwipeDurationUnit(unit: TimeUnitDropDownItem) {
+        _swipeDurationUnit.value = unit
+    }
+
+    fun getSwipeDurationUnit(): TimeUnitDropDownItem = _swipeDurationUnit.value
+
 }

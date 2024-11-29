@@ -15,11 +15,13 @@ interface IMainRepository {
 
     fun getAllActionsFlowExcept(scenarioDbId: Long): Flow<List<Action>>
 
-    suspend fun addScenario(scenario: Scenario):Long
+    suspend fun addScenario(scenario: Scenario): Long
 
     suspend fun addScenarioCopy(scenario: ScenarioWithActions): Long?
 
     suspend fun updateScenario(scenario: Scenario)
+
+    suspend fun updateScenarioName(scenario: Scenario)
 
     suspend fun deleteScenario(scenario: Scenario)
 }

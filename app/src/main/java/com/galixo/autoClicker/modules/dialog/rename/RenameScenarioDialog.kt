@@ -3,7 +3,6 @@ package com.galixo.autoClicker.modules.dialog.rename
 import android.app.Dialog
 import android.os.Bundle
 import android.text.InputFilter
-import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
@@ -65,6 +64,7 @@ class RenameScenarioDialog(
 
             cancel.setOnClickListener { dismiss() }
             rename.setOnClickListener {
+                viewModel.renameScenario()
                 dismiss()
             }
         }
@@ -74,11 +74,11 @@ class RenameScenarioDialog(
             .create()
     }
 
-    override fun onStart() {
+/*    override fun onStart() {
         super.onStart()
         viewBinding.renameField.textField.requestFocus()
         dialog?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
-    }
+    }*/
 
     private fun updateRenameAction(isValid: Boolean) {
         viewBinding.rename.isEnabled = isValid

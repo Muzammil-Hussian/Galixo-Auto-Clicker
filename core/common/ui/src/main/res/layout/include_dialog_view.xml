@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialogViewRoot"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingVertical="@dimen/margin_vertical_default">
@@ -33,7 +34,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@id/field_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/field_text" />
+        app:layout_constraintStart_toEndOf="@id/field_text"
+        app:layout_constraintTop_toTopOf="@id/field_text" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/helperText"
@@ -42,7 +44,7 @@
         android:layout_marginTop="@dimen/margin_vertical_default"
         android:text="@string/interval_desc_2"
         android:textAppearance="@style/Tagline"
-        android:textColor="@color/primaryColor"
+        android:textColor="@color/md_theme_light_primary"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

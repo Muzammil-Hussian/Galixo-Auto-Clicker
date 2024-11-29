@@ -2,6 +2,9 @@ package com.galixo.autoClicker.modules.settings
 
 import android.text.InputFilter
 import android.util.Log
+import android.widget.LinearLayout
+import androidx.core.content.ContextCompat
+import androidx.core.view.setPadding
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -42,46 +45,11 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 launch { viewModel.intervalValue.collect { binding.interval.fieldText.setText(it) } }
-                launch {
-                    viewModel.intervalTimeUnit.collect {
-                        binding.interval.timeUnitField.setSelectedItem(
-                            it
-                        )
-                    }
-                }
-                launch {
-                    viewModel.intervalError.collect {
-                        updateHelperText(
-                            binding.interval.helperText,
-                            it,
-                            viewModel.intervalTimeUnit.value
-                        )
-                    }
-                }
-
-                launch {
-                    viewModel.swipeDurationValue.collect {
-                        binding.swipeDuration.fieldText.setText(
-                            it
-                        )
-                    }
-                }
-                launch {
-                    viewModel.swipeDurationTimeUnit.collect {
-                        binding.swipeDuration.timeUnitField.setSelectedItem(
-                            it
-                        )
-                    }
-                }
-                launch {
-                    viewModel.swipeDurationError.collect {
-                        updateHelperText(
-                            binding.swipeDuration.helperText,
-                            it,
-                            viewModel.swipeDurationTimeUnit.value
-                        )
-                    }
-                }
+                launch { viewModel.intervalTimeUnit.collect { binding.interval.timeUnitField.setSelectedItem(it) } }
+                launch { viewModel.intervalError.collect { updateHelperText(binding.interval.helperText, it, viewModel.intervalTimeUnit.value) } }
+                launch { viewModel.swipeDurationValue.collect { binding.swipeDuration.fieldText.setText(it) } }
+                launch { viewModel.swipeDurationTimeUnit.collect { binding.swipeDuration.timeUnitField.setSelectedItem(it) } }
+                launch { viewModel.swipeDurationError.collect { updateHelperText(binding.swipeDuration.helperText, it, viewModel.swipeDurationTimeUnit.value) } }
             }
         }
     }
@@ -116,6 +84,19 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
         setUnit: (TimeUnitDropDownItem) -> Unit
     ) {
         fieldBinding.apply {
+            dialogViewRoot.background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_round_16_dp)
+
+            val topBottomMargin = (12 * resources.displayMetrics.density).toInt()
+            val horizontalPadding = (16 * resources.displayMetrics.density).toInt()
+            val elevation = (1 * resources.displayMetrics.density)
+
+            val layoutParams = dialogViewRoot.layoutParams as LinearLayout.LayoutParams
+            layoutParams.setMargins(0, topBottomMargin, 0, topBottomMargin)
+            dialogViewRoot.setPadding(horizontalPadding)
+            dialogViewRoot.layoutParams = layoutParams
+            dialogViewRoot.elevation = elevation
+
+
             label.setText(titleResId)
             fieldText.apply {
                 textField.filters = arrayOf<InputFilter>(InputFilter.LengthFilter(MAX_LENGTH))
@@ -123,10 +104,7 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
                     Log.i(TAG, "onEditorActionListener: ${it.toLong()}")
                     setValue.invoke(it.toLong())
                 }
-                /*  setOnTextChangedListener { text ->
-                      val valueMs = text.toString().toLongOrNull()?.toDurationMs(fieldBinding.timeUnitField.getSelectedItem())
-                      if (valueMs != null) setValue(valueMs)
-                  }*/
+
             }
             timeUnitField.setItems(
                 items = timeUnitDropdownItems,

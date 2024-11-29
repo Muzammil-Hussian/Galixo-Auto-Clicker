@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        style="?materialCardViewElevatedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/createNew"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/margin_horizontal_default"
+                android:paddingEnd="@dimen/margin_horizontal_extra_large"
+                android:text="@string/create_new"
+                android:textAppearance="@style/Description"
+                android:textColor="@color/paragraphTextColor"
+                app:icon="@drawable/ic_add"
+                app:iconPadding="@dimen/padding_8_dp"
+                app:iconTint="@color/paragraphTextColor" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/importScript"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/margin_horizontal_default"
+                android:paddingEnd="@dimen/margin_horizontal_extra_large"
+                android:text="@string/import_script"
+                android:textAppearance="@style/Description"
+                android:textColor="@color/paragraphTextColor"
+                app:icon="@drawable/ic_import"
+                app:iconPadding="@dimen/padding_8_dp"
+                app:iconTint="@color/paragraphTextColor" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/closeDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/padding_8_dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_close_rounded_background" />
+</LinearLayout>

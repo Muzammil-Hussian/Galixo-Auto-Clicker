@@ -56,6 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/white"
+        app:cardElevation="0.5dp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/emptyView">
@@ -95,7 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_12_dp"
         android:backgroundTint="@color/white"
-        app:cardElevation="1dp"
+        app:cardElevation="0.5dp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
@@ -142,19 +143,30 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textDataCollect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_vertical_large"
+        android:text="Do we collect data? No."
+        android:textAppearance="@style/DescriptionHeading"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/whyNeedsPermission" />
+
     <com.google.android.material.chip.Chip
         android:id="@+id/watchTutorial"
         style="@style/Widget.Material3.Chip.Assist.Elevated"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_16_dp"
+        android:layout_marginTop="19dp"
         android:text="@string/watch_tutorial"
         app:chipBackgroundColor="@color/overlayViewPrimaryBackground"
         app:chipCornerRadius="20dp"
         app:chipStrokeColor="@color/border_stroke_color_black_alpha_12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/whyNeedsPermission" />
+        app:layout_constraintTop_toBottomOf="@+id/textDataCollect" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/grantPermission"

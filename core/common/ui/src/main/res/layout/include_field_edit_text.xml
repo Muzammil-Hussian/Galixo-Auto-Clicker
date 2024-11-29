@@ -3,13 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    app:boxBackgroundColor="@color/edit_text_box_background"
+    app:boxBackgroundMode="filled"
+    app:boxCornerRadiusBottomEnd="@dimen/padding_12_dp"
+    app:boxCornerRadiusBottomStart="@dimen/padding_12_dp"
+    app:boxCornerRadiusTopEnd="@dimen/padding_12_dp"
+    app:boxCornerRadiusTopStart="@dimen/padding_12_dp"
+    app:boxStrokeColor="@color/primaryColor"
+    app:boxStrokeWidth="0dp"
+    app:boxStrokeWidthFocused="1dp"
+    app:hintEnabled="false">
+
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/text_field"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_text_input_layout"
+        android:layout_height="50dp"
         android:gravity="center"
+        android:inputType="none"
+        android:lines="1"
+        android:textAppearance="@style/Description"
         tools:text="100" />
 </com.google.android.material.textfield.TextInputLayout>

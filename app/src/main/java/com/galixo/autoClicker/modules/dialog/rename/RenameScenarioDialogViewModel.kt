@@ -22,12 +22,16 @@ class RenameScenarioDialogViewModel @Inject constructor(
     private val _renameScenario: MutableStateFlow<Scenario?> = MutableStateFlow(null)
     private val renameScenario: Flow<Scenario> = _renameScenario.filterNotNull()
 
-    val name: Flow<String> = renameScenario.map { it.name }.take(1)
+    val name: Flow<String> = renameScenario
+        .filterNotNull()
+        .map { it.name }
+        .take(1)
 
-    val nameError: Flow<Boolean> = renameScenario.map { it.name.isEmpty() }
+    val nameError: Flow<Boolean> = renameScenario
+        .filterNotNull()
+        .map { it.name.isEmpty() }
 
     val isValidToRename: Flow<Boolean> = _renameScenario.map {
-        println("newName: ${it?.name}")
         it?.name?.isNotEmpty() == true
     }
 
@@ -35,14 +39,12 @@ class RenameScenarioDialogViewModel @Inject constructor(
         _renameScenario.value = scenario.copy()
     }
 
-    fun getRenameScenario() = _renameScenario.value
-
     fun setNewName(newName: String) {
         _renameScenario.value = _renameScenario.value?.copy(name = newName)
     }
 
-
-    fun renameScenario(scenario: Scenario) = viewModelScope.launch(Dispatchers.IO) {
-        repository.updateScenario(scenario.copy(name = scenario.name))
+    fun renameScenario() = viewModelScope.launch(Dispatchers.IO) {
+        _renameScenario.value?.let { updatedScenario -> repository.updateScenarioName(updatedScenario) }
     }
 }
+

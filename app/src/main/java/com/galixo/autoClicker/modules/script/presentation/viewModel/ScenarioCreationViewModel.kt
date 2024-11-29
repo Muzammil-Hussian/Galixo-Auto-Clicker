@@ -50,7 +50,6 @@ class ScenarioCreationViewModel @Inject constructor(
 
             createScenario(scenarioMode).also {
                 withContext(Dispatchers.Main) { callback.invoke(it) }
-
             }
         }
     }

@@ -43,7 +43,9 @@ class ViewPagerAdapter(private val viewModel: SaveLoadViewModel, private val lif
     private fun createSaveFragmentView(container: ViewGroup): View {
 
         val view = FragmentSaveBinding.inflate(LayoutInflater.from(container.context), container, false).apply {
-            fieldName.setText("MyScript")
+            fieldName.apply {
+                setText("MyScript")
+            }
         }
 
         return view.root
@@ -57,13 +59,9 @@ class ViewPagerAdapter(private val viewModel: SaveLoadViewModel, private val lif
                 viewModel.allScenarios.collectLatest {
 
                     val adapter = LoadListAdapter(object : ScriptItemCallback {
-                        override fun onItemMenuClick(menuItem: MenuItem, item: Scenario) {
+                        override fun onItemMenuClick(menuItem: MenuItem, item: Scenario) {}
 
-                        }
-
-                        override fun onStartScenario(item: Scenario) {
-
-                        }
+                        override fun onStartScenario(item: Scenario) {}
                     })
 
                     list.adapter = adapter

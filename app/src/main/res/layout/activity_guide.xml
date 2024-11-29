@@ -19,6 +19,7 @@
             android:layout_height="?actionBarSize"
             android:background="@color/white"
             android:drawableEnd="@drawable/ic_close"
+            android:elevation="1dp"
             android:gravity="fill_vertical"
             android:paddingHorizontal="@dimen/padding_16_dp"
             android:text="@string/how_to_use"
@@ -29,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16_dp"
             android:background="@drawable/bg_round_16_dp"
+            android:elevation="1dp"
             android:orientation="vertical"
             android:padding="@dimen/padding_8_dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -133,6 +135,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/padding_16_dp"
             android:background="@drawable/bg_round_16_dp"
+            android:elevation="1dp"
             android:orientation="vertical"
             android:padding="@dimen/padding_16_dp">
 
@@ -165,6 +168,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16_dp"
             android:background="@drawable/bg_round_16_dp"
+            android:elevation="1dp"
             android:orientation="vertical"
             android:padding="@dimen/padding_16_dp">
 

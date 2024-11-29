@@ -1,29 +1,41 @@
 package com.galixo.autoClicker.modules.script.presentation.ui
 
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import com.galixo.autClicker.feature.backup.ui.BackupDialogFragment
 import com.galixo.autClicker.feature.backup.ui.BackupDialogFragment.Companion.FRAGMENT_TAG_BACKUP_DIALOG
 import com.galixo.autoClicker.R
 import com.galixo.autoClicker.core.common.base.extensions.beGoneIf
 import com.galixo.autoClicker.core.common.base.extensions.beVisibleIf
+import com.galixo.autoClicker.core.common.ui.bindings.others.setDescription
+import com.galixo.autoClicker.core.common.ui.bindings.others.setTitle
 import com.galixo.autoClicker.core.scenarios.domain.model.Scenario
 import com.galixo.autoClicker.databinding.FragmentScriptBinding
 import com.galixo.autoClicker.modules.base.fragment.BaseFragment
 import com.galixo.autoClicker.modules.dialog.rename.RenameScenarioDialog
 import com.galixo.autoClicker.modules.script.presentation.adapter.ScriptAdapter
 import com.galixo.autoClicker.modules.script.presentation.adapter.ScriptItemCallback
-import com.galixo.autoClicker.modules.script.presentation.ui.dialog.CreateScenarioDialog
+import com.galixo.autoClicker.modules.script.presentation.ui.dialog.ScenarioCreationDialog
+import com.galixo.autoClicker.modules.script.presentation.ui.dialog.ScriptCreationFABDialog
 import com.galixo.autoClicker.modules.script.presentation.ui.listener.Listener
 import com.galixo.autoClicker.modules.script.presentation.viewModel.ScenarioListViewModel
+import com.galixo.autoClicker.modules.troubleShoot.ui.TroubleShootingActivity
+import com.galixo.autoClicker.utils.extensions.isAccessibilitySettingsOn
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -31,17 +43,87 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding::inflate) {
 
-    /** Adapter displaying the click scenarios as a list. */
-    private lateinit var adapter: ScriptAdapter
-
-    private val scenarioListViewModel: ScenarioListViewModel by viewModels()
-
-    /** The current dialog being displayed. Null if not displayed. */
     private var dialog: AlertDialog? = null
+    private lateinit var adapter: ScriptAdapter
+    private val scenarioListViewModel: ScenarioListViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setupAdapter()
+    }
 
+    override fun onViewCreated() {
+        setupToolbarMenuItems()
+        initViews()
+        onClickListener()
+
+        lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                launch { scenarioListViewModel.allScenarios.collect(collector = ::updateScenarioList) }
+            }
+        }
+    }
+
+    private fun initViews() {
+        binding.apply {
+            titleAndDescription.apply {
+                setTitle(R.string.permission_needed)
+                setDescription(R.string.permission_needed_desc)
+            }
+            Log.i(TAG, "initViews: isAccessibilitySettingsOn: ${requireContext().isAccessibilitySettingsOn()} and canDrawOverlay: ${canShowDrawOverlays()}")
+            list.adapter = this@ScriptFragment.adapter
+        }
+    }
+
+    private fun canShowDrawOverlays(): Boolean {
+        return Settings.canDrawOverlays(context)
+    }
+
+
+    private fun onClickListener() {
+        binding.apply {
+            createScript.setOnClickListener { onCreateScenarioClicked() }
+            createScriptFab.setOnClickListener {
+                ScriptCreationFABDialog.showDialog(
+                    parentFragmentManager,
+                    it,
+                    onCreateNew = { onCreateScenarioClicked() },
+                    onImportScript = { showBackupDialog(true) }
+                )
+            }
+            fixItNow.setOnClickListener {
+                startActivity(Intent(requireContext(), TroubleShootingActivity::class.java))
+            }
+        }
+    }
+
+    private fun setupToolbarMenuItems() {
+        val menuHost: MenuHost = requireActivity()
+        menuHost.addMenuProvider(object : MenuProvider {
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                menuInflater.inflate(R.menu.menu_main, menu)
+            }
+
+            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                return when (menuItem.itemId) {
+                    R.id.action_troubleshooting -> {
+                        startActivity(Intent(requireContext(), TroubleShootingActivity::class.java))
+                        true
+                    }
+
+                    R.id.action_settings -> {
+                        findNavController().navigate(ScriptFragmentDirections.actionNavigationScriptToNavigationSetting())
+                        true
+                    }
+
+                    else -> false
+                }
+            }
+
+        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
+    }
+
+    private fun setupAdapter() {
         adapter = ScriptAdapter(object : ScriptItemCallback {
             override fun onItemMenuClick(menuItem: MenuItem, item: Scenario) {
                 when (menuItem.itemId) {
@@ -62,28 +144,10 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
         scenarioListViewModel.onDuplicationScenario(item)
     }
 
-    override fun onViewCreated() {
-
-        binding.apply {
-            list.adapter = this@ScriptFragment.adapter
-
-            addScript.setOnClickListener { onCreateScenarioClicked() }
-
-            importScriptEmpty.setOnClickListener { showBackupDialog(true) }
-            importScript.setOnClickListener { showBackupDialog(true) }
-        }
-
-        lifecycleScope.launch {
-            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                launch { scenarioListViewModel.allScenarios.collect(collector = ::updateScenarioList) }
-            }
-        }
-    }
-
     private fun onCreateScenarioClicked() {
-        CreateScenarioDialog().show(
+        ScenarioCreationDialog().show(
             requireActivity().supportFragmentManager,
-            CreateScenarioDialog.TAG
+            ScenarioCreationDialog.TAG
         )
     }
 
@@ -93,78 +157,16 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
      * Will update the list/empty view according to the current click scenarios
      */
     private fun updateScenarioList(listContent: List<Scenario>) {
-
         val isEmpty = listContent.isEmpty()
-
         binding.apply {
             list.beGoneIf(isEmpty)
-            importScript.beGoneIf(isEmpty)
+            createScriptFab.beGoneIf(isEmpty)
             layoutEmpty.beVisibleIf(isEmpty)
         }
         adapter.submitList(listContent)
     }
 
-    /**
-     * Show an AlertDialog from this fragment.
-     * This method will ensure that only one dialog is shown at the same time.
-     *
-     * @param newDialog the new dialog to be shown.
-     */
-    private fun showDialog(newDialog: AlertDialog) {
-        dialog.let {
-            Log.w(TAG, "Requesting show dialog while another one is one screen.")
-            it?.dismiss()
-        }
-
-        dialog = newDialog
-        newDialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
-        newDialog.setOnDismissListener { dialog = null }
-        newDialog.show()
-    }
-
-    /**
-     * Called when the user clicks on the rename button of a scenario.
-     * Create and show the [dialog]. upon Ok press, rename the scenario.
-     *
-     * @param item the scenario to rename.
-     * */
-    private fun onRenameClicked(item: Scenario) {
-        Log.i(TAG, "onRenameClicked: $item")
-        RenameScenarioDialog(item).show(
-            requireActivity().supportFragmentManager,
-            RenameScenarioDialog.TAG
-        )
-        /*     val inputLayout = TextInputLayout(requireContext()).apply {
-            hint = getString(R.string.hint_rename_scenario)
-        }
-
-
-        val inputEditText = TextInputEditText(requireContext()).apply {
-            setText(item.name)
-            inputLayout.addView(this)
-        }
-
-        // Create the MaterialAlertDialog
-        showDialog(
-            MaterialAlertDialogBuilder(requireContext()).setTitle(R.string.dialog_title_rename_scenario)
-                .setView(inputLayout) // Set the TextInputLayout as the view for the dialog
-                .setPositiveButton(R.string.rename) { _, _ ->
-                    val newName = inputEditText.text.toString().trim()
-                    if (newName.isNotEmpty()) {
-                        // Call ViewModel to handle renaming
-                        scenarioListViewModel.renameScenario(item, newName)
-                    } else {
-                        // Optionally show a toast or error if input is empty
-                        requireContext().showToast(getString(R.string.error_empty_scenario_name))
-                    }
-                }.setNegativeButton(
-                    android.R.string.cancel,
-                    null
-                ) // Cancel button dismisses the dialog
-                .create()
-        )*/
-    }
-
+    private fun onRenameClicked(item: Scenario) = RenameScenarioDialog(item).show(requireActivity().supportFragmentManager, RenameScenarioDialog.TAG)
 
     private fun showBackupDialog(
         isImport: Boolean,
@@ -192,6 +194,28 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
                 .setNegativeButton(android.R.string.cancel, null)
                 .create()
         )
+    }
+
+    /**
+     * Show an AlertDialog from this fragment.
+     * This method will ensure that only one dialog is shown at the same time.
+     *
+     * @param newDialog the new dialog to be shown.
+     */
+    private fun showDialog(newDialog: AlertDialog) {
+        dialog.let {
+            Log.w(TAG, "Requesting show dialog while another one is one screen.")
+            it?.dismiss()
+        }
+
+        dialog = newDialog
+        newDialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
+        newDialog.setOnShowListener {
+
+        }
+        newDialog.setOnDismissListener { dialog = null }
+
+        newDialog.show()
     }
 }
 

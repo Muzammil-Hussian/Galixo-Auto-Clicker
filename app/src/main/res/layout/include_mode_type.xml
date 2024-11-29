@@ -3,12 +3,14 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/AppTheme.Widget.CardFilled"
+    style="@style/AppTheme.Widget.CardOutlined"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:backgroundTint="@color/transparent"
+    android:checkable="true"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    app:strokeColor="@color/border_stroke_color_black_alpha_12"
+    app:strokeWidth="1dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -45,6 +47,7 @@
             android:id="@+id/image_scenario_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_horizontal_small"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,13 +59,14 @@
             android:id="@+id/selectedMode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:checked="true"
+            android:layout_marginEnd="@dimen/margin_horizontal_small"
             android:clickable="false"
             android:minWidth="0dp"
             android:minHeight="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:checked="true" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

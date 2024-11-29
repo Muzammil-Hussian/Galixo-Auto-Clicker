@@ -5,5 +5,11 @@
         android:id="@+id/action_troubleshooting"
         android:icon="@drawable/ic_trouble_shooting"
         android:title="@string/menu_item_title_troubleshooting"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_setting"
+        android:title="@string/menu_item_title_troubleshooting"
         app:showAsAction="always" />
 </menu>

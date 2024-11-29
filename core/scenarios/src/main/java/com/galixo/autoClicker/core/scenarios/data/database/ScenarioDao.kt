@@ -64,6 +64,9 @@ interface ScenarioDao {
     @Update
     suspend fun updateScenario(scenario: ScenarioEntity)
 
+    @Query("UPDATE scenario_table SET name = :newName WHERE id = :scenarioId")
+    suspend fun updateScenarioName(scenarioId: Long, newName: String)
+
     /**
      * Delete the provided click scenario from the database.
      *
