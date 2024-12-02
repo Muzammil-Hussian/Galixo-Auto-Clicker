@@ -22,7 +22,7 @@ import com.galixo.autoClicker.feature.config.databinding.OverlayMainMenuBinding
 import com.galixo.autoClicker.feature.config.di.ConfigViewModelsEntryPoint
 import com.galixo.autoClicker.feature.config.ui.actions.click.ClickPointDialog
 import com.galixo.autoClicker.feature.config.ui.actions.save.SaveDialog
-import com.galixo.autoClicker.feature.config.ui.actions.saveOrLoad.SaveLoadDialog
+import com.galixo.autoClicker.feature.config.ui.actions.savingLoading.ScenarioSaveLoadDialog
 import com.galixo.autoClicker.feature.config.ui.actions.scenarioConfig.ScenarioConfigDialog
 import com.galixo.autoClicker.feature.config.ui.actions.swipe.SwipePointDialog
 import com.galixo.autoClicker.feature.config.ui.view.ClickPointView
@@ -68,7 +68,6 @@ open class MainMenu(
         viewBinding = OverlayMainMenuBinding.inflate(layoutInflater).apply {
             root.setOnTouchListener { _: View, event: MotionEvent -> onMoveTouched(event) }
         }
-
         addPointIfSingleModeCreated()
         return viewBinding.root
     }
@@ -79,11 +78,6 @@ open class MainMenu(
         setMenuItemVisibility(viewBinding.btnAddSwipeAction, isMultiMode)
         setMenuItemVisibility(viewBinding.btnRemoveLastAddedAction, isMultiMode)
         setMenuItemVisibility(viewBinding.lineBottom, isMultiMode)
-
-        if (isMultiMode.not() && scenario.actions.isEmpty()) {
-            viewModel.startTemporaryEdition(scenario)
-            onCreateClickAction()
-        }
     }
 
     override fun onDestroy() {
@@ -223,7 +217,6 @@ open class MainMenu(
         setMenuItemViewEnabled(viewBinding.btnPlay, canStartDetection)
     }
 
-
     private fun updateMenuPlayingState(isPlaying: Boolean) {
         Log.i(TAG, "updateMenuPlayingState: isPlaying: $isPlaying")
         clickViews.forEach { it.toggleTouch(!isPlaying) }
@@ -264,7 +257,6 @@ open class MainMenu(
             )
             viewModel.addNewAction(click)
         }
-
     }
 
     private fun onCreateSwipeAction() {
@@ -287,12 +279,17 @@ open class MainMenu(
     }
 
     private fun onSaveActions() {
-        Log.i(
-            TAG,
-            "onSaveActions: onSaveAction dialog will be shown here and on save all action will be saved in database."
+        Log.i(TAG, "onSaveActions: onSaveAction dialog will be shown here and on save all action will be saved in database.")
+        overlayManager.navigateTo(
+            context = context,
+            newOverlay = ScenarioSaveLoadDialog(
+                onConfigSaved = {
+                    viewModel.saveEditions()
+                },
+                onConfigDiscarded = {}
+            ),
+            hideCurrent = false
         )
-
-        overlayManager.navigateTo(context, SaveLoadDialog(), hideCurrent = false)
     }
 
     private fun onCloseClicked() {

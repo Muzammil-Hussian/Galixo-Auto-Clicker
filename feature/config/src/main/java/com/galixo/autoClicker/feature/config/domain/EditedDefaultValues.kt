@@ -12,12 +12,12 @@ import com.galixo.autoClicker.feature.config.data.getSwipeRepeatDelayConfig
 
 fun Context.getDefaultClickName(): String = getString(R.string.default_click_name)
 
-internal fun Context.getDefaultClickDurationMs(): Long =
+fun Context.getDefaultClickDurationMs(): Long =
     getConfigPreferences().getClickPressDurationConfig(
         resources.getInteger(R.integer.default_click_press_duration).toLong()
     )
 
-internal fun Context.getDefaultClickRepeatCount(): Int =
+fun Context.getDefaultClickRepeatCount(): Int =
     getConfigPreferences().getClickRepeatCountConfig(1)
 
 fun Context.getDefaultClickRepeatDelay(): Long =

@@ -14,6 +14,7 @@ import com.galixo.autoClicker.feature.config.databinding.FragmentLoadBinding
 import com.galixo.autoClicker.feature.config.databinding.FragmentSaveBinding
 import com.galixo.autoClicker.feature.config.ui.actions.saveOrLoad.SaveLoadViewModel
 import com.galixo.autoClicker.feature.config.ui.actions.saveOrLoad.callback.ScriptItemCallback
+import com.galixo.autoClicker.feature.config.ui.actions.savingLoading.adapter.LoadListAdapter
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -45,6 +46,7 @@ class ViewPagerAdapter(private val viewModel: SaveLoadViewModel, private val lif
         val view = FragmentSaveBinding.inflate(LayoutInflater.from(container.context), container, false).apply {
             fieldName.apply {
                 setText("MyScript")
+                textField.requestFocus()
             }
         }
 

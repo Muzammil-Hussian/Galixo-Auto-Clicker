@@ -1,9 +1,9 @@
 package com.galixo.autoClicker.feature.config.ui.actions.saveOrLoad
 
-import android.app.Dialog
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import com.galixo.autoClicker.core.common.overlays.base.viewModels
 import com.galixo.autoClicker.core.common.overlays.dialog.OverlayDialog
@@ -48,7 +48,7 @@ class SaveLoadDialog : OverlayDialog(R.style.AppTheme) {
         }
     }
 
-    override fun onDialogCreated(dialog: Dialog) {
+    override fun onDialogCreated(dialog: AlertDialog) {
         Log.i(TAG, "onDialogCreated: $viewModel")
         setupViewPagerAndTabs()
     }

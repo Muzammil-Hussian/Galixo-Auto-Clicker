@@ -1,6 +1,5 @@
 package com.galixo.autoClicker.core.common.overlays.dialog
 
-import android.app.Dialog
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
@@ -9,6 +8,7 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import androidx.annotation.CallSuper
 import androidx.annotation.StyleRes
+import androidx.appcompat.app.AlertDialog
 import com.galixo.autoClicker.core.common.base.addDumpTabulationLvl
 import com.galixo.autoClicker.core.common.base.extensions.WindowManagerCompat
 import com.galixo.autoClicker.core.common.overlays.R
@@ -41,13 +41,16 @@ abstract class OverlayDialog(@StyleRes theme: Int? = null) :
      * The dialog currently displayed by this controller.
      * Null until [onDialogCreated] is called, or if it has been dismissed.
      */
-    protected var dialog: Dialog? = null
+    protected var dialog: AlertDialog? = null
         private set
+
 
     /**
      * Creates the dialog shown by this controller.
+     * Note that the cancelable value and the dismiss listener will be overridden with internal values once, so any
+     * values for them defined here will not be kept.
      *
-     * @return the builder for the dialog to be created.
+     * @return the view for the dialog to be created.
      */
     protected abstract fun onCreateView(): ViewGroup
 
@@ -57,7 +60,7 @@ abstract class OverlayDialog(@StyleRes theme: Int? = null) :
      *
      * @param dialog the newly created dialog.
      */
-    protected abstract fun onDialogCreated(dialog: Dialog)
+    protected abstract fun onDialogCreated(dialog: AlertDialog)
 
     final override fun onCreate() {
         inputMethodManager = context.getSystemService(InputMethodManager::class.java)

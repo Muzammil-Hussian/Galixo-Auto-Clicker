@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/page_save"
+        android:enabled="true"
+        android:icon="@drawable/ic_save_filled"
+        android:title="Save" />
+    <item
+        android:id="@+id/page_load"
+        android:enabled="true"
+        android:icon="@drawable/ic_import"
+        android:title="Load" />
+</menu>

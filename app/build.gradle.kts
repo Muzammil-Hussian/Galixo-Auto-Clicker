@@ -13,6 +13,8 @@ android {
 
         versionCode = 1
         versionName = "1.0"
+
+        setProperty("archivesBaseName", "Auto Click VC_${versionCode}_VN_${versionName}")
     }
 }
 
@@ -39,7 +41,6 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
-
 
 
     // Library modules

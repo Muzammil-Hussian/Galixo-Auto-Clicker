@@ -86,7 +86,7 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
         fieldBinding.apply {
             dialogViewRoot.background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_round_16_dp)
 
-            val topBottomMargin = (12 * resources.displayMetrics.density).toInt()
+            val topBottomMargin = (8 * resources.displayMetrics.density).toInt()
             val horizontalPadding = (16 * resources.displayMetrics.density).toInt()
             val elevation = (1 * resources.displayMetrics.density)
 

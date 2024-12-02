@@ -1,9 +1,9 @@
 package com.galixo.autoClicker.feature.config.ui.actions.repeatMode
 
-import android.app.Dialog
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -38,7 +38,7 @@ class RepeatModeDialog(
         return viewBinding.root
     }
 
-    override fun onDialogCreated(dialog: Dialog) {
+    override fun onDialogCreated(dialog: AlertDialog) {
         Log.i(TAG, "onDialogCreated: $viewModel")
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {

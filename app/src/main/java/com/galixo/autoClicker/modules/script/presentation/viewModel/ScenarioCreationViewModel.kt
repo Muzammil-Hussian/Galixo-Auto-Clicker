@@ -1,13 +1,19 @@
 package com.galixo.autoClicker.modules.script.presentation.viewModel
 
 import android.content.Context
+import android.graphics.Point
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.galixo.autoClicker.R
 import com.galixo.autoClicker.core.common.base.identifier.DATABASE_ID_INSERTION
 import com.galixo.autoClicker.core.common.base.identifier.Identifier
+import com.galixo.autoClicker.core.scenarios.domain.model.Action
 import com.galixo.autoClicker.core.scenarios.domain.model.Scenario
 import com.galixo.autoClicker.core.scenarios.domain.model.ScenarioMode
+import com.galixo.autoClicker.feature.config.domain.getDefaultClickDurationMs
+import com.galixo.autoClicker.feature.config.domain.getDefaultClickName
+import com.galixo.autoClicker.feature.config.domain.getDefaultClickRepeatCount
+import com.galixo.autoClicker.feature.config.domain.getDefaultClickRepeatDelay
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -55,10 +61,25 @@ class ScenarioCreationViewModel @Inject constructor(
     }
 
     private fun createScenario(scenarioMode: ScenarioMode): Scenario {
+        val id = Identifier(databaseId = DATABASE_ID_INSERTION, tempId = 0L)
+
         val scenario = Scenario(
-            id = Identifier(databaseId = DATABASE_ID_INSERTION, tempId = 0L),
+            id = id,
             name = context.getString(R.string.default_scenario_name),
-            actions = emptyList(),
+            actions = if (scenarioMode == ScenarioMode.SINGLE_MODE) {
+                listOf(
+                    Action.Click(
+                        id = id,
+                        scenarioId = id,
+                        name = context.getDefaultClickName(),
+                        position = Point(300, 500),
+                        pressDurationMs = context.getDefaultClickDurationMs(),
+                        repeatCount = context.getDefaultClickRepeatCount(),
+                        isRepeatInfinite = false,
+                        repeatDelayMs = context.getDefaultClickRepeatDelay(),
+                    ),
+                )
+            } else emptyList(),
             repeatCount = 1,
             isRepeatInfinite = true,
             maxDurationMin = 1,

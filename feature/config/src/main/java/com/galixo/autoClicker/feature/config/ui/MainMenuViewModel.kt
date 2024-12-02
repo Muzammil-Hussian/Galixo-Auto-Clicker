@@ -45,12 +45,10 @@ class MainMenuViewModel @Inject constructor(
     fun saveEditions() {
         val editedScenario = editionRepository.editedScenario.value ?: return
         viewModelScope.launch(Dispatchers.IO) {
-            if (editedScenario.id.databaseId == DATABASE_ID_INSERTION) {
-                editionRepository.mainRepository.addScenario(editedScenario)
-            } else {
-                editionRepository.mainRepository.updateScenario(editedScenario)
+            when (editedScenario.id.databaseId) {
+                DATABASE_ID_INSERTION -> editionRepository.mainRepository.addScenario(editedScenario)
+                else -> editionRepository.mainRepository.updateScenario(editedScenario)
             }
-            //   stopEdition()
         }
     }
 

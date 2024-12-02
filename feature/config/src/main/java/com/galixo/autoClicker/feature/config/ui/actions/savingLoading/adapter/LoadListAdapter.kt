@@ -1,4 +1,4 @@
-package com.galixo.autoClicker.feature.config.ui.actions.saveOrLoad.adapter
+package com.galixo.autoClicker.feature.config.ui.actions.savingLoading.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

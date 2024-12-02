@@ -1,10 +1,10 @@
 package com.galixo.autoClicker.feature.config.ui.actions.scenarioConfig
 
-import android.app.Dialog
 import android.text.InputFilter
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -76,7 +76,7 @@ class ScenarioConfigDialog(
         return viewBinding.root
     }
 
-    override fun onDialogCreated(dialog: Dialog) {
+    override fun onDialogCreated(dialog: AlertDialog) {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 launch { dialogViewModel.canBeSaved.collect(::updateSaveButtonState) }

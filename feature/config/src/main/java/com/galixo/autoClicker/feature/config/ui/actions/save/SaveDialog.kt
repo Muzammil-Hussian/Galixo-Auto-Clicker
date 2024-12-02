@@ -1,8 +1,8 @@
 package com.galixo.autoClicker.feature.config.ui.actions.save
 
-import android.app.Dialog
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import com.galixo.autoClicker.core.common.overlays.dialog.OverlayDialog
 import com.galixo.autoClicker.feature.config.R
 import com.galixo.autoClicker.feature.config.databinding.DialogSaveBinding
@@ -30,8 +30,7 @@ class SaveDialog(
     }
 
 
-    override fun onDialogCreated(dialog: Dialog) {
-    }
+    override fun onDialogCreated(dialog: AlertDialog) {}
 
 
     private fun onDiscardButtonClicked() {
