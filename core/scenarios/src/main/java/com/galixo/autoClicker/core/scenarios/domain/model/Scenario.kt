@@ -12,6 +12,7 @@ data class Scenario(
     val maxDurationMin: Int,
     val isDurationInfinite: Boolean,
     val randomize: Boolean,
+
     val scenarioMode: ScenarioMode
 ) : Identifiable, Repeatable {
 

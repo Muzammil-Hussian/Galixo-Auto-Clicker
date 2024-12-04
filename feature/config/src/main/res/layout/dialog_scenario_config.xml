@@ -28,14 +28,15 @@
         android:textAppearance="@style/DescriptionHeading" />
 
     <include
-        android:id="@+id/stopAfter"
+        android:id="@+id/repeatMode"
         layout="@layout/include_input_field_dropdown" />
 
     <com.google.android.material.materialswitch.MaterialSwitch
-        android:id="@+id/toggle_switch"
+        android:id="@+id/switchAntiDetection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_vertical_extra_large"
+        android:buttonTint="@color/primaryColor"
         android:checked="true"
         android:text="Anti detection"
         android:textAppearance="@style/DescriptionHeading" />

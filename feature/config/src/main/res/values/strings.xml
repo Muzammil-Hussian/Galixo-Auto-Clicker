@@ -15,4 +15,6 @@
     <string name="action_point">Action Point</string>
     <string name="create_new">Create new</string>
     <string name="import_script">Import script</string>
+    <string name="page_load">Load</string>
+    <string name="page_save">Save</string>
 </resources>

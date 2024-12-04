@@ -19,6 +19,8 @@ import com.galixo.autoClicker.core.scenarios.domain.model.Action
 import com.galixo.autoClicker.feature.config.R
 import com.galixo.autoClicker.feature.config.databinding.ClickPointViewBinding
 import com.galixo.autoClicker.feature.config.ui.view.touchListener.ViewTouchEventHandler
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import kotlin.math.atan2
 import kotlin.math.cos
 import kotlin.math.pow
@@ -57,7 +59,7 @@ class CreateSwipeView(
         addSwipeTarget()
     }
 
-    fun remove() {
+    suspend fun remove() = withContext(Dispatchers.Main) {
         windowManager.removeView(fromViewBinding.root)
         windowManager.removeView(toViewBinding.root)
         windowManager.removeView(drawingView)

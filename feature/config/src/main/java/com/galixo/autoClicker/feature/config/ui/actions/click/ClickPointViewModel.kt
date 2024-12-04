@@ -20,8 +20,7 @@ class ClickPointViewModel @Inject constructor() : ViewModel() {
     private val _editedClick: MutableStateFlow<Action.Click?> = MutableStateFlow(null)
     private val editedClick: Flow<Action.Click> = _editedClick.filterNotNull()
 
-    private val _selectedUnitItem: MutableStateFlow<TimeUnitDropDownItem> = MutableStateFlow(
-        TimeUnitDropDownItem.Milliseconds)
+    private val _selectedUnitItem: MutableStateFlow<TimeUnitDropDownItem> = MutableStateFlow(TimeUnitDropDownItem.Milliseconds)
     val selectedUnitItem: Flow<TimeUnitDropDownItem> = _selectedUnitItem
 
     @OptIn(ExperimentalCoroutinesApi::class)

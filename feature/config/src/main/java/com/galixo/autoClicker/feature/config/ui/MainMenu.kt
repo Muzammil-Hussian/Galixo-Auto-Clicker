@@ -27,6 +27,7 @@ import com.galixo.autoClicker.feature.config.ui.actions.scenarioConfig.ScenarioC
 import com.galixo.autoClicker.feature.config.ui.actions.swipe.SwipePointDialog
 import com.galixo.autoClicker.feature.config.ui.view.ClickPointView
 import com.galixo.autoClicker.feature.config.ui.view.CreateSwipeView
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -81,17 +82,20 @@ open class MainMenu(
     }
 
     override fun onDestroy() {
-        super.onDestroy()
         removeViews()
         viewModel.stopEdition()
+        super.onDestroy()
     }
 
     private fun removeViews() {
-        lifecycleScope.launch(Dispatchers.IO) {
+        CoroutineScope(Dispatchers.IO).launch {
             clickViews.forEach { it.remove() }
             swipeViews.forEach { it.remove() }
-            clickViews.clear()
-            swipeViews.clear()
+
+            withContext(Dispatchers.Main) {
+                clickViews.clear()
+                swipeViews.clear()
+            }
         }
     }
 
@@ -295,15 +299,16 @@ open class MainMenu(
     private fun onCloseClicked() {
         overlayManager.navigateTo(
             context = context,
-            newOverlay = SaveDialog(onDiscard = {
-                removeViews()
-                viewModel.stopEdition()
-                onStopClicked.invoke()
-            }, onSave = {
-                viewModel.saveEditions()
-                removeViews()
-                onStopClicked.invoke()
-            }), hideCurrent = false
+            newOverlay = SaveDialog(
+                onDiscard = {
+                    removeViews()
+                    viewModel.stopEdition()
+                    onStopClicked.invoke()
+                }, onSave = {
+                    viewModel.saveEditions()
+                    removeViews()
+                    onStopClicked.invoke()
+                }), hideCurrent = false
         )
     }
 
@@ -311,8 +316,8 @@ open class MainMenu(
         overlayManager.navigateTo(
             context = context,
             newOverlay = ScenarioConfigDialog(
-                onConfigSaved = { },
-                onConfigDiscarded = viewModel::stopEdition,
+                onConfigSaved = {},
+                onConfigDiscarded = {},
             ),
             hideCurrent = false,
         )

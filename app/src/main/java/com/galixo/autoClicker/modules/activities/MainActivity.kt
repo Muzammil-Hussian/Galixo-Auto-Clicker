@@ -11,6 +11,7 @@ import com.galixo.autoClicker.databinding.ActivityMainBinding
 import com.galixo.autoClicker.modules.base.activity.BaseActivity
 import com.galixo.autoClicker.modules.script.presentation.ui.listener.Listener
 import com.galixo.autoClicker.modules.script.presentation.viewModel.ScenarioViewModel
+import com.galixo.autoClicker.modules.settings.SettingFragment
 import com.galixo.autoClicker.utils.extensions.showToast
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -23,7 +24,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
     /** Scenario clicked by the user. */
     private var requestedItem: Scenario? = null
 
-    private val navController by lazy { (supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment).navController }
+    private val navHostFragment by lazy { supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment }
+    private val navController by lazy { navHostFragment.navController }
 
     override fun onCreated() {
 
@@ -44,21 +46,31 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
         }
 
         binding.toolbar.setNavigationOnClickListener {
-            onSupportNavigateUp()
+            onBackPress()
         }
     }
 
+    private fun onBackPress() {
+        val currentDestination = navController.currentDestination
+        if (currentDestination?.id == R.id.navigation_setting) {
+            navHostFragment.childFragmentManager.fragments.firstOrNull()?.let {
+                if (it is SettingFragment) {
+                    it.handleBackPress()
+                    return
+                }
+            }
+        }
+
+        onSupportNavigateUp()
+    }
+
     override fun onSupportNavigateUp(): Boolean = navController.navigateUp() || super.onSupportNavigateUp()
-
-
-
 
     override fun startScenario(item: Scenario) {
         requestedItem = item
 
         scenarioViewModel.startPermissionFlowIfNeeded(
-            activity = this@MainActivity,
-            onAllGranted = ::onMandatoryPermissionsGranted
+            activity = this@MainActivity, onAllGranted = ::onMandatoryPermissionsGranted
         )
     }
 

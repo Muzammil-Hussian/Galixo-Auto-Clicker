@@ -24,10 +24,10 @@
         android:orientation="horizontal">
 
         <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/neverStopRadioButton"
             style="@style/AppTheme.Widget.RadioButton"
             android:checked="true"
             android:clickable="false" />
-
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="0dp"
@@ -50,29 +50,31 @@
         android:orientation="horizontal">
 
         <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/stopAfterDurationRadioButton"
             style="@style/AppTheme.Widget.RadioButton"
             android:clickable="false" />
 
-        <include
-            layout="@layout/include_time_input"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:text="Hours" />
 
         <include
+            android:id="@+id/hours"
             layout="@layout/include_time_input"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:text="Minutes" />
+            android:layout_weight="1" />
 
         <include
+            android:id="@+id/minutes"
             layout="@layout/include_time_input"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:text="Seconds" />
+            android:layout_weight="1" />
+
+        <include
+            android:id="@+id/seconds"
+            layout="@layout/include_time_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
     </LinearLayout>
 
     <!-- Stop After Repeats -->
@@ -84,19 +86,18 @@
         android:orientation="horizontal">
 
         <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/stopAfterRepeatsRadioButton"
             style="@style/AppTheme.Widget.RadioButton"
-            android:clickable="false"
-            tools:checked="true" />
+            android:layout_gravity="center_vertical"
+            android:clickable="false" />
 
-        <com.google.android.material.textview.MaterialTextView
+        <include
+            android:id="@+id/repeatCycles"
+            layout="@layout/include_time_input"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_horizontal_mini"
-            android:layout_weight="1"
-            android:background="@drawable/bg_text_4_dp"
-            android:gravity="center"
-            android:paddingStart="@dimen/margin_horizontal_small"
-            android:text="10" />
+            android:layout_weight="1" />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"

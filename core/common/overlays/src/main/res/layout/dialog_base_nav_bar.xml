@@ -6,12 +6,12 @@
     android:minHeight="@dimen/bottom_sheet_min_height"
     android:orientation="vertical">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navBarView"
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:translationZ="100dp"
-        tools:layout_height="80dp" />
+        android:background="@color/transparent" />
 
     <FrameLayout
         android:id="@+id/dialog_content"

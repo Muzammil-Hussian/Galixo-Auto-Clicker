@@ -1,115 +1,101 @@
 package com.galixo.autoClicker.feature.config.ui.actions.scenarioConfig
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.galixo.autoClicker.core.scenarios.domain.model.Scenario
+import com.galixo.autoClicker.core.common.ui.bindings.dropdown.TimeUnitDropDownItem
+import com.galixo.autoClicker.core.common.ui.bindings.dropdown.findAppropriateTimeUnit
+import com.galixo.autoClicker.core.common.ui.bindings.dropdown.formatDuration
+import com.galixo.autoClicker.feature.config.data.getConfigPreferences
+import com.galixo.autoClicker.feature.config.data.putClickRepeatDelayConfig
+import com.galixo.autoClicker.feature.config.data.putRandomization
+import com.galixo.autoClicker.feature.config.data.putSwipeDurationConfig
 import com.galixo.autoClicker.feature.config.domain.EditionRepository
+import com.galixo.autoClicker.feature.config.domain.getDefaultClickRepeatDelay
+import com.galixo.autoClicker.feature.config.domain.getDefaultRandomize
+import com.galixo.autoClicker.feature.config.domain.getDefaultSwipeDurationMs
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.take
 import javax.inject.Inject
+import kotlin.time.Duration.Companion.hours
+import kotlin.time.Duration.Companion.minutes
+import kotlin.time.Duration.Companion.seconds
 
 class ScenarioConfigViewModel @Inject constructor(
+    @ApplicationContext private val context: Context,
     private val editionRepository: EditionRepository
 ) : ViewModel() {
 
-    private val userModifications: StateFlow<Scenario?> =
-        editionRepository.editedScenario
 
-    val canBeSaved: Flow<Boolean> = userModifications.map { scenario ->
-        scenario?.isValid() == true
+    private val _intervalValueMs = MutableStateFlow(context.getDefaultClickRepeatDelay())
+    val intervalValue get() = _intervalValueMs
+
+    private val _selectedIntervalTimeUnit = MutableStateFlow(_intervalValueMs.value.findAppropriateTimeUnit())
+    val selectedIntervalTimeUnit = _selectedIntervalTimeUnit
+
+    @OptIn(ExperimentalCoroutinesApi::class)
+    val intervalDuration: Flow<String> = selectedIntervalTimeUnit
+        .flatMapLatest { timeUnit ->
+            intervalValue
+                .map { timeUnit.formatDuration(it) }
+                .take(1)
+        }
+
+    fun setIntervalValue(value: Long) {
+        _intervalValueMs.value = value
     }
 
+    fun setSelectedIntervalTimeUnit(unit: TimeUnitDropDownItem) {
+        _selectedIntervalTimeUnit.value = unit
+    }
 
-    /** The number of times to repeat the scenario. */
-    val repeatCount: Flow<String> = userModifications
-        .filterNotNull()
-        .map { it.repeatCount.toString() }
-        .take(1)
+    fun getSelectedIntervalUnitTime(): TimeUnitDropDownItem = _selectedIntervalTimeUnit.value
 
-    /** Tells if the repeat count value is valid or not. */
-    val repeatCountError: Flow<Boolean> = userModifications
-        .map { it == null || it.repeatCount <= 0 }
+    fun saveIntervalValue(value: Long) = context.getConfigPreferences().edit().putClickRepeatDelayConfig(value).apply()
 
-    /** Tells if the scenario should be repeated infinitely. */
-    val repeatInfiniteState: Flow<Boolean> = userModifications
-        .map { it == null || it.isRepeatInfinite }
+    private val _swipeDurationValueMs = MutableStateFlow(context.getDefaultSwipeDurationMs())
+    val swipeDurationValue get() = _swipeDurationValueMs
 
-    /** The maximum duration of the execution in minutes. */
-    val maxDurationMin: Flow<String> = userModifications
-        .filterNotNull()
-        .map { it.maxDurationMin.toString() }
-        .take(1)
+    private val _selectedSwipeDurationTimeUnit = MutableStateFlow(_swipeDurationValueMs.value.findAppropriateTimeUnit())
+    val selectedSwipeDurationTimeUnit get() = _selectedSwipeDurationTimeUnit
 
-    /** Tells if the repeat count value is valid or not. */
-    val maxDurationMinError: Flow<Boolean> = userModifications
-        .map { it == null || it.maxDurationMin <= 0 }
+    val isValid = combine(intervalValue, swipeDurationValue) { interval, duration -> interval >= 100 && duration >= 350 }
 
-    /** Tells if there is no maximum duration. */
-    val maxDurationMinInfiniteState: Flow<Boolean> = userModifications
-        .map { it == null || it.isDurationInfinite }
+    @OptIn(ExperimentalCoroutinesApi::class)
+    val swipeDuration: Flow<String> = selectedSwipeDurationTimeUnit
+        .flatMapLatest { timeUnit ->
+            swipeDurationValue
+                .map { timeUnit.formatDuration(it) }
+                .take(1)
+        }
 
-    /** The randomization value for the scenario. */
-    val randomization: Flow<Boolean> = userModifications
-        .map { it?.randomize == true }
 
-    fun toggleRandomization() {
-        userModifications.value?.let { scenario ->
-            editionRepository.updateScenario(scenario.copy(randomize = !scenario.randomize))
+    fun setSwipeDurationValue(value: Long) {
+        _swipeDurationValueMs.value = value
+    }
+
+    fun setSwipeDurationTimeUnit(unit: TimeUnitDropDownItem) {
+        _selectedSwipeDurationTimeUnit.value = unit
+    }
+
+    fun getSelectedSwipeDurationTimeUnit() = _selectedSwipeDurationTimeUnit.value
+
+    internal fun saveSwipeDurationValue(value: Long) = context.getConfigPreferences().edit().putSwipeDurationConfig(value).apply()
+
+    internal fun validateInput(isSwipeDuration: Boolean, valueMs: Long, unit: TimeUnitDropDownItem): Boolean {
+        return when (unit) {
+            TimeUnitDropDownItem.Milliseconds -> valueMs >= if (isSwipeDuration) 350 else 40
+            TimeUnitDropDownItem.Seconds -> valueMs >= 1.seconds.inWholeMilliseconds
+            TimeUnitDropDownItem.Minutes -> valueMs >= 1.minutes.inWholeMilliseconds
+            TimeUnitDropDownItem.Hours -> valueMs >= 1.hours.inWholeMilliseconds
         }
     }
 
-
-    val repeatMode: Flow<String> =
-        combine(repeatInfiniteState, maxDurationMin, repeatCount) { isInfinite, duration, count ->
-            when {
-                isInfinite -> "Infinite"
-                duration.isNotEmpty() -> "Stop after $duration minutes"
-                count.isNotEmpty() -> "Stop after $count cycles"
-                else -> "Not Set"
-            }
-        }.stateIn(viewModelScope, SharingStarted.Eagerly, "Not Set")
-
-    fun setMaxDurationMinutes(durationMinutes: Int) {
-        userModifications.value?.let { scenario ->
-            editionRepository.updateScenario(
-                scenario.copy(
-                    maxDurationMin = durationMinutes,
-                    isDurationInfinite = false
-                )
-            )
-        }
-    }
-
-    fun setRepeatCount(repeatCount: Int) {
-        userModifications.value?.let { scenario ->
-            editionRepository.updateScenario(
-                scenario.copy(
-                    repeatCount = repeatCount,
-                    isRepeatInfinite = false // Ensure it's not infinite when cycle count is set
-                )
-            )
-        }
-    }
-
-    fun toggleInfiniteRepeat() {
-        userModifications.value?.let { scenario ->
-            editionRepository.updateScenario(scenario.copy(isRepeatInfinite = !scenario.isRepeatInfinite))
-        }
-    }
-
-    fun toggleInfiniteMaxDuration() {
-        userModifications.value?.let { scenario ->
-            editionRepository.updateScenario(scenario.copy(isDurationInfinite = !scenario.isDurationInfinite))
-        }
-    }
-
+    fun setRandomization(randomize: Boolean) = context.getConfigPreferences().edit().putRandomization(randomize).apply()
+    fun getRandomization() = context.getDefaultRandomize()
 }
-
-
-private const val TAG = "ScenarioConfigViewModelLogs"

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
@@ -21,18 +22,20 @@
         app:boxStrokeWidthFocused="0dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:inputType="number"
-            android:text="0"
-            android:textAppearance="@style/Description" />
+            android:textAppearance="@style/Description"
+            tools:text="0" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        android:id="@+id/helper_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Hours"
-        android:textAppearance="@style/Tagline" />
+        android:textAppearance="@style/Tagline"
+        tools:text="Hours" />
 </LinearLayout>

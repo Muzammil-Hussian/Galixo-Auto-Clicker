@@ -9,8 +9,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.galixo.autoClicker.core.common.overlays.base.viewModels
 import com.galixo.autoClicker.core.common.overlays.dialog.OverlayDialog
+import com.galixo.autoClicker.core.common.ui.databinding.DialogNeverStopBinding
 import com.galixo.autoClicker.feature.config.R
-import com.galixo.autoClicker.feature.config.databinding.DialogNeverStopBinding
 import com.galixo.autoClicker.feature.config.di.ConfigViewModelsEntryPoint
 import com.galixo.autoClicker.feature.config.ui.actions.scenarioConfig.ButtonAction
 import com.galixo.autoClicker.feature.config.ui.actions.scenarioConfig.ScenarioConfigViewModel

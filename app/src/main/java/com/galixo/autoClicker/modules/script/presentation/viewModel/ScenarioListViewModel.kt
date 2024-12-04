@@ -6,7 +6,6 @@ import com.galixo.autoClicker.core.common.base.identifier.DATABASE_ID_INSERTION
 import com.galixo.autoClicker.core.common.base.identifier.Identifier
 import com.galixo.autoClicker.core.scenarios.domain.IMainRepository
 import com.galixo.autoClicker.core.scenarios.domain.model.Scenario
-import com.galixo.autoClicker.feature.config.domain.EditionRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -14,11 +13,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class ScenarioListViewModel @Inject constructor(
-    private val mainRepository: IMainRepository,
-    private val editionRepository: EditionRepository
-) : ViewModel() {
-
+class ScenarioListViewModel @Inject constructor(private val mainRepository: IMainRepository) : ViewModel() {
     /** Only scenario */
     val allScenarios: Flow<List<Scenario>> = mainRepository.scenarios
 
@@ -36,18 +31,6 @@ class ScenarioListViewModel @Inject constructor(
         )
         mainRepository.addScenario(newScenario)
     }
-
-    /**
-     * Rename a click scenario.
-     *
-     * @param item the scenario to be renamed.
-     */
-    fun renameScenario(item: Scenario, newName: String) {
-        viewModelScope.launch(Dispatchers.IO) {
-            editionRepository.updateScenario(item.copy(name = newName))
-        }
-    }
-
     /**
      * Delete a click scenario.
      *
@@ -61,5 +44,3 @@ class ScenarioListViewModel @Inject constructor(
         }
     }
 }
-
-private const val TAG = "ScenarioListViewModel"

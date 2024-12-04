@@ -6,13 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:boxBackgroundColor="@color/edit_text_box_background"
+    app:boxBackgroundMode="filled"
     app:boxCornerRadiusBottomEnd="@dimen/padding_12_dp"
     app:boxCornerRadiusBottomStart="@dimen/padding_12_dp"
     app:boxCornerRadiusTopEnd="@dimen/padding_12_dp"
     app:boxCornerRadiusTopStart="@dimen/padding_12_dp"
-    app:boxStrokeColor="@color/field_border_color"
+    app:boxStrokeColor="@color/primaryColor"
     app:boxStrokeWidth="0dp"
-    app:boxStrokeWidthFocused="0dp">
+    app:boxStrokeWidthFocused="1dp"
+    app:hintEnabled="false">
 
     <com.google.android.material.textfield.MaterialAutoCompleteTextView
         android:id="@+id/text_field"

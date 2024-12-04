@@ -71,7 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/permissionReGrantNeeded"
-        tools:visibility="visible">
+        tools:visibility="gone">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="match_parent"
@@ -107,7 +107,7 @@
         app:layout_constraintTop_toBottomOf="@id/permissionReGrantNeeded"
         tools:itemCount="8"
         tools:listitem="@layout/item_script"
-        tools:visibility="gone" />
+        tools:visibility="visible" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/create_Script_fab"
@@ -124,5 +124,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/list"
         app:layout_constraintEnd_toEndOf="@+id/list"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.RoundedImage50"
-        tools:visibility="gone" />
+        tools:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,8 +22,6 @@ class ScenarioSavingLoadingViewModel @Inject constructor(
         /** Only scenario */
         val allScenarios: Flow<List<Scenario>> = mainRepository.scenarios
 
-
-
         fun onDuplicationScenario(scenario: Scenario) = viewModelScope.launch(Dispatchers.IO) {
 
             val newScenario = Scenario(

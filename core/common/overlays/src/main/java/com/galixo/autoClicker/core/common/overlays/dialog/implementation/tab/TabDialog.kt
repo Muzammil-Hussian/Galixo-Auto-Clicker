@@ -1,64 +1,74 @@
-package com.galixo.autoClicker.core.common.overlays.dialog.implementation.navBar
+package com.galixo.autoClicker.core.common.overlays.dialog.implementation.tab
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.CallSuper
 import androidx.annotation.StyleRes
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Lifecycle
 import com.galixo.autoClicker.core.common.overlays.databinding.DialogBaseNavBarBinding
 import com.galixo.autoClicker.core.common.overlays.dialog.OverlayDialog
+import com.galixo.autoClicker.core.common.overlays.dialog.implementation.navBar.NavBarDialogContent
 import com.galixo.autoClicker.core.common.ui.bindings.dialogs.DialogNavigationButton
-import com.google.android.material.navigation.NavigationBarView
+import com.google.android.material.tabs.TabLayout
 
-abstract class NavBarDialog(@StyleRes theme: Int) : OverlayDialog(theme) {
+abstract class TabDialog(@StyleRes theme: Int) : OverlayDialog(theme) {
 
-    /** Map of navigation bar item id to their content view.*/
+    /** Map of tab item id to their content view. */
     private val contentMap: MutableMap<Int, NavBarDialogContent> = mutableMapOf()
 
     private lateinit var baseViewBinding: DialogBaseNavBarBinding
+    private lateinit var tabLayout: TabLayout
 
-    abstract fun inflateMenu(navBarView: NavigationBarView)
+    abstract fun inflateMenu(tabLayout: TabLayout)
 
-    abstract fun onCreateContent(navItemId: Int): NavBarDialogContent
+    abstract fun onCreateContent(tabItemId: Int): NavBarDialogContent
 
     abstract fun onDialogButtonPressed(buttonType: DialogNavigationButton)
 
-    open fun onContentViewChanged(navItemId: Int) = Unit
+    open fun onContentViewChanged(tabItemId: Int) = Unit
 
     override fun onCreateView(): ViewGroup {
         baseViewBinding = DialogBaseNavBarBinding.inflate(LayoutInflater.from(context)).apply {
-
             buttonDismiss.setDebouncedOnClickListener { handleButtonClick(DialogNavigationButton.DISMISS) }
             buttonSave.setDebouncedOnClickListener { handleButtonClick(DialogNavigationButton.SAVE) }
+        }
 
-            navBarView.apply {
-                inflateMenu(this)
-                setOnItemSelectedListener { item ->
-                    updateContentView(item.itemId)
-                    true
+        tabLayout = baseViewBinding.tabLayout
+
+        // Generic setup of the tabs
+        tabLayout.apply {
+            inflateMenu(this)
+            addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+                override fun onTabSelected(tab: TabLayout.Tab?) {
+                    tab?.let {
+                        updateContentView(it.position)
+                    }
                 }
-            }
+
+                override fun onTabUnselected(tab: TabLayout.Tab?) {}
+
+                override fun onTabReselected(tab: TabLayout.Tab?) {}
+            })
         }
 
         return baseViewBinding.root
     }
 
-    @CallSuper
-    override fun onDialogCreated(dialog: androidx.appcompat.app.AlertDialog) {
+    override fun onDialogCreated(dialog: AlertDialog) {
         updateContentView(
-            itemId = baseViewBinding.navBarView.selectedItemId,
-            forceUpdate = true,
+            tabId = tabLayout.selectedTabPosition,
         )
+
     }
 
     override fun onStart() {
         super.onStart()
-        contentMap[baseViewBinding.navBarView.selectedItemId]?.resume()
+        contentMap[tabLayout.selectedTabPosition]?.resume()
     }
 
     override fun onStop() {
         super.onStop()
-        contentMap[baseViewBinding.navBarView.selectedItemId]?.pause()
+        contentMap[tabLayout.selectedTabPosition]?.pause()
     }
 
     override fun onDestroy() {
@@ -69,30 +79,27 @@ abstract class NavBarDialog(@StyleRes theme: Int) : OverlayDialog(theme) {
         super.onDestroy()
     }
 
-
-    private fun createContentView(itemId: Int): NavBarDialogContent =
-        onCreateContent(itemId).apply {
-            create(this@NavBarDialog, baseViewBinding.dialogContent, itemId)
+    private fun createContentView(tabId: Int): NavBarDialogContent =
+        onCreateContent(tabId).apply {
+            create(this@TabDialog, baseViewBinding.dialogContent, tabId)
         }
 
-    private fun updateContentView(itemId: Int, forceUpdate: Boolean = false) {
-        if (!forceUpdate && baseViewBinding.navBarView.selectedItemId == itemId) return
-
-        // Get the current content and stop it, if any.
-        contentMap[baseViewBinding.navBarView.selectedItemId]?.apply {
+    private fun updateContentView(tabId: Int) {
+        contentMap[tabId]?.apply {
             pause()
             stop()
         }
 
         // Get new content. If it does not exist yet, create it.
-        var content = contentMap[itemId]
+        var content = contentMap[tabId]
         if (content == null) {
-            content = createContentView(itemId)
-            contentMap[itemId] = content
+            content = createContentView(tabId)
+            contentMap[tabId] = content
         }
 
         content.start()
-        onContentViewChanged(itemId)
+        onContentViewChanged(tabId)
+
 
         if (lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED)) content.resume()
     }
@@ -112,3 +119,4 @@ abstract class NavBarDialog(@StyleRes theme: Int) : OverlayDialog(theme) {
     }
 }
 
+private const val TAG = "TabDialogLogs"

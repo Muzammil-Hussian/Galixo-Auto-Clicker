@@ -8,10 +8,9 @@ import com.galixo.autoClicker.core.common.overlays.dialog.implementation.navBar.
 import com.galixo.autoClicker.core.common.ui.bindings.dialogs.DialogNavigationButton
 import com.galixo.autoClicker.core.common.ui.bindings.fields.setText
 import com.galixo.autoClicker.feature.config.databinding.FragmentSaveBinding
-import com.galixo.autoClicker.feature.config.ui.actions.savingLoading.ScenarioSavingLoadingViewModel
 
 
-class SaveActionContent(appContext: Context, viewModel: ScenarioSavingLoadingViewModel) : NavBarDialogContent(appContext) {
+class SaveActionContent(appContext: Context) : NavBarDialogContent(appContext) {
     /** View binding for all views in this content. */
     private lateinit var viewBinding: FragmentSaveBinding
 

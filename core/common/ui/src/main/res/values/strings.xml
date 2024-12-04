@@ -28,4 +28,5 @@
     <string name="input_field_label_scenario_name">Scenario name</string>
     <string name="input_field_label_swipe_duration">Swipe duration (ms)</string>
     <string name="input_field_error_required">Required</string>
+    <string name="never_stop">Never stop</string>
 </resources>

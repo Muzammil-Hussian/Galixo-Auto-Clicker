@@ -14,6 +14,7 @@ import com.galixo.autoClicker.feature.config.domain.getDefaultClickDurationMs
 import com.galixo.autoClicker.feature.config.domain.getDefaultClickName
 import com.galixo.autoClicker.feature.config.domain.getDefaultClickRepeatCount
 import com.galixo.autoClicker.feature.config.domain.getDefaultClickRepeatDelay
+import com.galixo.autoClicker.feature.config.domain.getDefaultRandomize
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -84,7 +85,7 @@ class ScenarioCreationViewModel @Inject constructor(
             isRepeatInfinite = true,
             maxDurationMin = 1,
             isDurationInfinite = true,
-            randomize = false,
+            randomize = context.getDefaultRandomize(),
             scenarioMode = scenarioMode
         )
         return scenario

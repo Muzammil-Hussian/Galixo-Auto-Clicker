@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelStoreOwner
 import com.galixo.autoClicker.core.common.overlays.di.OverlayComponent
 import com.galixo.autoClicker.core.common.overlays.di.OverlayComponentBuilderEntryPoint
 import com.galixo.autoClicker.core.common.overlays.di.createHiltViewModelFactory
+import com.galixo.autoClicker.core.common.overlays.dialog.implementation.tab.TabDialog
 import com.galixo.autoClicker.core.common.ui.bindings.dialogs.DialogNavigationButton
 import dagger.hilt.EntryPoints
 
@@ -45,14 +46,17 @@ abstract class NavBarDialogContent(
 
     /** The container for the dialog content. */
     private lateinit var rootContainer: ViewGroup
+
     /** The root view of the content. Provided by the implementation via [onCreateView]. */
     private lateinit var root: ViewGroup
 
     /** The owner of the dialog. */
-    lateinit var dialogController: NavBarDialog
+    lateinit var dialogController: TabDialog
+
     /** The identifier of this content in the navigation bar. */
     protected var navBarId: Int = -1
         private set
+
     /** The Android context. */
     protected val context: Context
         get() = rootContainer.context
@@ -65,7 +69,7 @@ abstract class NavBarDialogContent(
      * @param container the container view for this content.
      * @param identifier the identifier of this content in the parent navigation bar.
      */
-    fun create(controller: NavBarDialog, container: ViewGroup, identifier: Int) {
+    fun create(controller: TabDialog, container: ViewGroup, identifier: Int) {
         if (lifecycleRegistry.currentState != Lifecycle.State.INITIALIZED) return
 
         navBarId = identifier
