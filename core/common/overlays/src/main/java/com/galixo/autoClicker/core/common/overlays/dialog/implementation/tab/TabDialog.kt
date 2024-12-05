@@ -29,8 +29,10 @@ abstract class TabDialog(@StyleRes theme: Int) : OverlayDialog(theme) {
 
     override fun onCreateView(): ViewGroup {
         baseViewBinding = DialogBaseNavBarBinding.inflate(LayoutInflater.from(context)).apply {
-            buttonDismiss.setDebouncedOnClickListener { handleButtonClick(DialogNavigationButton.DISMISS) }
-            buttonSave.setDebouncedOnClickListener { handleButtonClick(DialogNavigationButton.SAVE) }
+            with(actionButtons) {
+                actionCancel.setDebouncedOnClickListener { handleButtonClick(DialogNavigationButton.DISMISS) }
+                actionDone.setDebouncedOnClickListener { handleButtonClick(DialogNavigationButton.SAVE) }
+            }
         }
 
         tabLayout = baseViewBinding.tabLayout

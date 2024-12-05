@@ -14,9 +14,9 @@ import com.galixo.autoClicker.core.common.overlays.dialog.implementation.navBar.
 import com.galixo.autoClicker.core.common.ui.bindings.dialogs.DialogNavigationButton
 import com.galixo.autoClicker.core.scenarios.domain.model.Scenario
 import com.galixo.autoClicker.feature.config.databinding.FragmentLoadBinding
-import com.galixo.autoClicker.feature.config.ui.actions.saveOrLoad.callback.ScriptItemCallback
 import com.galixo.autoClicker.feature.config.ui.actions.savingLoading.ScenarioSavingLoadingViewModel
 import com.galixo.autoClicker.feature.config.ui.actions.savingLoading.adapter.LoadListAdapter
+import com.galixo.autoClicker.feature.config.ui.actions.savingLoading.callback.ScriptItemCallback
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 

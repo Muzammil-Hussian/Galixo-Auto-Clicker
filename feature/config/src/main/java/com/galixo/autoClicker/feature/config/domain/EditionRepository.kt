@@ -1,6 +1,7 @@
 package com.galixo.autoClicker.feature.config.domain
 
 import android.util.Log
+import com.galixo.autoClicker.core.common.base.identifier.DATABASE_ID_INSERTION
 import com.galixo.autoClicker.core.scenarios.domain.IMainRepository
 import com.galixo.autoClicker.core.scenarios.domain.model.Action
 import com.galixo.autoClicker.core.scenarios.domain.model.Scenario
@@ -30,10 +31,13 @@ class EditionRepository @Inject constructor(
     /** Save editions changes in the database. */
     suspend fun saveEditions() {
         val scenarioToSave = _editedScenario.value ?: return
-        Log.d(TAG, "Save editions $scenarioToSave")
 
-        mainRepository.updateScenario(scenarioToSave)
-        // stopEdition()
+        when (scenarioToSave.id.databaseId) {
+            DATABASE_ID_INSERTION -> mainRepository.addScenario(scenarioToSave)
+            else -> mainRepository.updateScenario(scenarioToSave)
+        }
+
+        stopEdition()
     }
 
     fun stopEdition() {

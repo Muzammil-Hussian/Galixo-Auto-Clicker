@@ -12,4 +12,5 @@ plugins {
     // PlayStore version only
     alias(libs.plugins.googleCrashlytics) apply false
     alias(libs.plugins.googleGms) apply false
+    alias(libs.plugins.jetbrains.kotlin.jvm) apply false
 }

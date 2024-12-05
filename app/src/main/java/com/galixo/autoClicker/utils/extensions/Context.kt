@@ -87,7 +87,7 @@ fun Context?.openEmailApp(emailAddress: String) {
         emailIntent.type = "message/rfc822"
         emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(emailAddress))
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, appName)
-        emailIntent.putExtra(Intent.EXTRA_TEXT, "Feedback...")
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Please share your feedback with us Here. We'd love to hear your thoughts!...")
         try {
             it.startActivity(Intent.createChooser(emailIntent, "Send mail..."))
         } catch (ex: ActivityNotFoundException) {
@@ -182,7 +182,7 @@ fun Activity?.translateDate(data: String) {
     }
 }
 
- fun Context.isAccessibilitySettingsOn(): Boolean {
+fun Context.isAccessibilitySettingsOn(): Boolean {
     var accessibilityEnabled = 0
     val service = packageName + "/" + AutoClickerService::class.java.canonicalName
     try {

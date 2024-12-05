@@ -146,7 +146,7 @@ internal abstract class ScenarioBackupDataSource<Backup, BackupScenario>(private
     }
 
     /**
-     * Verifies if all smart scenario extracted are correctly formed.
+     * Verifies if all scenario extracted are correctly formed.
      * This should be done after opening the whole zip file because conditions files are checked.
      */
     fun verifyExtractedScenarios(screenSize: Point) {

@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.galixo.autoClicker.core.scenarios.domain.model.Scenario
 import com.galixo.autoClicker.feature.config.databinding.ItemLoadBinding
-import com.galixo.autoClicker.feature.config.ui.actions.saveOrLoad.callback.ScriptItemCallback
+import com.galixo.autoClicker.feature.config.ui.actions.savingLoading.callback.ScriptItemCallback
 
 class LoadListAdapter(private val itemListener: ScriptItemCallback) :
     ListAdapter<Scenario, RecyclerView.ViewHolder>(ScriptDiffUtilCallback) {

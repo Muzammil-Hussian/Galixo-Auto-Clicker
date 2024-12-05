@@ -1,192 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:fillViewport="true"
-    android:scrollbars="none"
-    tools:context=".modules.guide.HowToUseActivity">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:drawableEnd="@drawable/ic_close"
+        android:elevation="1dp"
+        android:gravity="fill_vertical"
+        android:paddingHorizontal="@dimen/padding_16_dp"
+        android:text="@string/how_to_use"
+        android:textAppearance="@style/SubHeadingStyle" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            android:background="@color/white"
-            android:drawableEnd="@drawable/ic_close"
-            android:elevation="1dp"
-            android:gravity="fill_vertical"
-            android:paddingHorizontal="@dimen/padding_16_dp"
-            android:text="@string/how_to_use"
-            android:textAppearance="@style/SubHeadingStyle" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/padding_16_dp"
-            android:background="@drawable/bg_round_16_dp"
-            android:elevation="1dp"
-            android:orientation="vertical"
-            android:padding="@dimen/padding_8_dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_8_dp"
-                android:drawableStart="@drawable/ic_play"
-                android:drawablePadding="@dimen/padding_8_dp"
-                android:gravity="center_vertical"
-                android:text="@string/start_auto_clicker"
-                android:textAppearance="@style/Description" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_8_dp"
-                android:drawableStart="@drawable/ic_pause"
-                android:drawablePadding="@dimen/padding_8_dp"
-                android:gravity="center_vertical"
-                android:text="@string/stop_auto_clicker"
-                android:textAppearance="@style/Description" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_8_dp"
-                android:drawableStart="@drawable/ic_add_click"
-                android:drawablePadding="@dimen/padding_8_dp"
-                android:gravity="center_vertical"
-                android:text="@string/add_clicking_target"
-                android:textAppearance="@style/Description" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_8_dp"
-                android:drawableStart="@drawable/ic_remove_click"
-                android:drawablePadding="@dimen/padding_8_dp"
-                android:gravity="center_vertical"
-                android:text="@string/remove_clicking_target"
-                android:textAppearance="@style/Description" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_8_dp"
-                android:drawableStart="@drawable/ic_swipe"
-                android:drawablePadding="@dimen/padding_8_dp"
-                android:drawableTint="@color/paragraphTextColor"
-                android:gravity="center_vertical"
-                android:text="@string/add_swiping_target"
-                android:textAppearance="@style/Description" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_8_dp"
-                android:drawableStart="@drawable/ic_save"
-                android:drawablePadding="@dimen/padding_8_dp"
-                android:gravity="center_vertical"
-                android:text="@string/save_script"
-                android:textAppearance="@style/Description" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_8_dp"
-                android:drawableStart="@drawable/ic_setting"
-                android:drawablePadding="@dimen/padding_8_dp"
-                android:gravity="center_vertical"
-                android:text="@string/edit_script_setting"
-                android:textAppearance="@style/Description" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_8_dp"
-                android:drawableStart="@drawable/ic_target_1"
-                android:drawablePadding="@dimen/padding_8_dp"
-                android:gravity="center_vertical"
-                android:text="@string/drag_action"
-                android:textAppearance="@style/Description" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_8_dp"
-                android:drawableStart="@drawable/ic_swipe_target"
-                android:drawablePadding="@dimen/padding_8_dp"
-                android:gravity="center_vertical"
-                android:text="@string/drag_n_swipe_action"
-                android:textAppearance="@style/Description" />
-
-        </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        tools:context=".modules.guide.HowToUseActivity">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/padding_16_dp"
-            android:background="@drawable/bg_round_16_dp"
-            android:elevation="1dp"
-            android:orientation="vertical"
-            android:padding="@dimen/padding_16_dp">
+            android:orientation="vertical">
 
-            <com.google.android.material.textview.MaterialTextView
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/interval"
-                android:textAppearance="@style/ContainerHeading" />
+                android:layout_margin="@dimen/padding_16_dp"
+                android:background="@drawable/bg_round_16_dp"
+                android:elevation="1dp"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_8_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title">
 
-            <com.google.android.material.textview.MaterialTextView
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8_dp"
+                    android:drawableStart="@drawable/ic_play"
+                    android:drawablePadding="@dimen/padding_8_dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/start_auto_clicker"
+                    android:textAppearance="@style/Description" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8_dp"
+                    android:drawableStart="@drawable/ic_pause"
+                    android:drawablePadding="@dimen/padding_8_dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/stop_auto_clicker"
+                    android:textAppearance="@style/Description" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8_dp"
+                    android:drawableStart="@drawable/ic_add_click"
+                    android:drawablePadding="@dimen/padding_8_dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/add_clicking_target"
+                    android:textAppearance="@style/Description" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8_dp"
+                    android:drawableStart="@drawable/ic_remove_click"
+                    android:drawablePadding="@dimen/padding_8_dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/remove_clicking_target"
+                    android:textAppearance="@style/Description" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8_dp"
+                    android:drawableStart="@drawable/ic_swipe"
+                    android:drawablePadding="@dimen/padding_8_dp"
+                    android:drawableTint="@color/paragraphTextColor"
+                    android:gravity="center_vertical"
+                    android:text="@string/add_swiping_target"
+                    android:textAppearance="@style/Description" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8_dp"
+                    android:drawableStart="@drawable/ic_save"
+                    android:drawablePadding="@dimen/padding_8_dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/save_script"
+                    android:textAppearance="@style/Description" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8_dp"
+                    android:drawableStart="@drawable/ic_setting"
+                    android:drawablePadding="@dimen/padding_8_dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/edit_script_setting"
+                    android:textAppearance="@style/Description" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8_dp"
+                    android:drawableStart="@drawable/ic_target_1"
+                    android:drawablePadding="@dimen/padding_8_dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/drag_action"
+                    android:textAppearance="@style/Description" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_8_dp"
+                    android:drawableStart="@drawable/ic_swipe_target"
+                    android:drawablePadding="@dimen/padding_8_dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/drag_n_swipe_action"
+                    android:textAppearance="@style/Description" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/padding_8_dp"
-                android:text="@string/interval_desc"
-                android:textAppearance="@style/Description" />
+                android:layout_marginHorizontal="@dimen/padding_16_dp"
+                android:background="@drawable/bg_round_16_dp"
+                android:elevation="1dp"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_16_dp">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/intervalHelperText"
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interval"
+                    android:textAppearance="@style/ContainerHeading" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_8_dp"
+                    android:text="@string/interval_desc"
+                    android:textAppearance="@style/Description" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/intervalHelperText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_8_dp"
+                    android:textAppearance="@style/Tagline"
+                    android:textColor="@color/primaryColor"
+                    tools:text="@string/interval_desc_2" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/padding_8_dp"
-                android:textAppearance="@style/Tagline"
-                android:textColor="@color/primaryColor"
-                tools:text="@string/interval_desc_2" />
+                android:layout_margin="@dimen/padding_16_dp"
+                android:background="@drawable/bg_round_16_dp"
+                android:elevation="1dp"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_16_dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/anti_detection"
+                    android:textAppearance="@style/ContainerHeading" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_8_dp"
+                    android:text="@string/anti_detection_desc"
+                    android:textAppearance="@style/Description" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/padding_16_dp"
-            android:background="@drawable/bg_round_16_dp"
-            android:elevation="1dp"
-            android:orientation="vertical"
-            android:padding="@dimen/padding_16_dp">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/anti_detection"
-                android:textAppearance="@style/ContainerHeading" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/padding_8_dp"
-                android:text="@string/anti_detection_desc"
-                android:textAppearance="@style/Description" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</ScrollView>
+    </ScrollView>
+</LinearLayout>

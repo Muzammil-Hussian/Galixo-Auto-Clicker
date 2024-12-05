@@ -88,14 +88,18 @@ open class MainMenu(
     }
 
     private fun removeViews() {
-        CoroutineScope(Dispatchers.IO).launch {
-            clickViews.forEach { it.remove() }
-            swipeViews.forEach { it.remove() }
+        try {
+            CoroutineScope(Dispatchers.IO).launch {
+                clickViews.forEach { it.remove() }
+                swipeViews.forEach { it.remove() }
 
-            withContext(Dispatchers.Main) {
-                clickViews.clear()
-                swipeViews.clear()
+                withContext(Dispatchers.Main) {
+                    clickViews.clear()
+                    swipeViews.clear()
+                }
             }
+        } catch (e: Exception) {
+            Log.e(TAG, "removeViews: exception: ${e.printStackTrace()}", e.cause)
         }
     }
 
@@ -155,10 +159,6 @@ open class MainMenu(
                                 displayConfigManager,
                                 action,
                                 onViewMoved = { updatedPosition ->
-                                    Log.i(
-                                        TAG,
-                                        "updateActionsOnScreen: updatedPosition: $updatedPosition"
-                                    )
                                     lifecycleScope.launch(Dispatchers.IO) {
                                         val updatedAction = action.copy(position = updatedPosition)
                                         viewModel.updateAction(updatedAction)
@@ -177,16 +177,11 @@ open class MainMenu(
                                 windowManager,
                                 action,
                                 onPositionChanged = {
-                                    Log.i(TAG, "updateActionsOnScreen: updatedPosition: $it")
                                     lifecycleScope.launch(Dispatchers.IO) {
                                         viewModel.updateAction(it)
                                     }
                                 },
-                                onPointClick = { viewType, position ->
-                                    Log.i(
-                                        TAG,
-                                        "updateActionsOnScreen: viewType: $viewType, position: $position"
-                                    )
+                                onPointClick = { _, _ ->
                                     if (viewModel.isPlaying.value.not()) showSwipeDialog(action)
                                 }
                             )
@@ -222,7 +217,6 @@ open class MainMenu(
     }
 
     private fun updateMenuPlayingState(isPlaying: Boolean) {
-        Log.i(TAG, "updateMenuPlayingState: isPlaying: $isPlaying")
         clickViews.forEach { it.toggleTouch(!isPlaying) }
         swipeViews.forEach { it.toggleTouch(!isPlaying) }
 
@@ -283,12 +277,12 @@ open class MainMenu(
     }
 
     private fun onSaveActions() {
-        Log.i(TAG, "onSaveActions: onSaveAction dialog will be shown here and on save all action will be saved in database.")
         overlayManager.navigateTo(
             context = context,
             newOverlay = ScenarioSaveLoadDialog(
                 onConfigSaved = {
                     viewModel.saveEditions()
+                    onStopClicked.invoke()
                 },
                 onConfigDiscarded = {}
             ),
@@ -301,12 +295,10 @@ open class MainMenu(
             context = context,
             newOverlay = SaveDialog(
                 onDiscard = {
-                    removeViews()
                     viewModel.stopEdition()
                     onStopClicked.invoke()
                 }, onSave = {
                     viewModel.saveEditions()
-                    removeViews()
                     onStopClicked.invoke()
                 }), hideCurrent = false
         )
@@ -324,4 +316,4 @@ open class MainMenu(
     }
 }
 
-private const val TAG = "MainMenu"
+private const val TAG = "OverlayMainMenuLogs"

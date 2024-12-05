@@ -17,7 +17,7 @@ class SaveActionContent(appContext: Context) : NavBarDialogContent(appContext) {
     override fun onCreateView(container: ViewGroup): ViewGroup {
         viewBinding = FragmentSaveBinding.inflate(LayoutInflater.from(context), container, false).apply {
 
-            fieldName.setText("Script 1")
+            fieldName.setText("MyScript")
         }
 
         return viewBinding.root

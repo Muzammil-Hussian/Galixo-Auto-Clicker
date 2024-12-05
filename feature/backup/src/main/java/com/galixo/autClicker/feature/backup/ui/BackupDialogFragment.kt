@@ -137,11 +137,11 @@ class BackupDialogFragment : DialogFragment() {
 
             layoutCompatWarning.visibility = state.compatWarningVisibility
 
-            iconStatus.apply {
+       /*     iconStatus.apply {
                 visibility = state.iconStatusVisibility
                 state.iconStatus?.let { setImageResource(it) }
                 state.iconTint?.let { drawable.setTint(it) }
-            }
+            }*/
 
             setDialogButtonsEnabledState(
                 enabledPositive = state.dialogOkButtonEnabled,

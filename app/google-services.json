@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "966670425207",
+    "project_id": "galixo-testing",
+    "storage_bucket": "galixo-testing.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966670425207:android:08ad3a04570876163ffa72",
+        "android_client_info": {
+          "package_name": "com.galixo.autoClicker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC11aPvoDvnDSTnWiTk2oMPHplJmEnFpY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

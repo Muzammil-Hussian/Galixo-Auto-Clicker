@@ -5,7 +5,6 @@ import android.graphics.Point
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.galixo.autoClicker.core.common.base.identifier.DATABASE_ID_INSERTION
 import com.galixo.autoClicker.core.scenarios.domain.model.Action
 import com.galixo.autoClicker.core.scenarios.domain.model.Scenario
 import com.galixo.autoClicker.core.scenarios.engine.ScenarioEngine
@@ -43,12 +42,8 @@ class MainMenuViewModel @Inject constructor(
     }
 
     fun saveEditions() {
-        val editedScenario = editionRepository.editedScenario.value ?: return
         viewModelScope.launch(Dispatchers.IO) {
-            when (editedScenario.id.databaseId) {
-                DATABASE_ID_INSERTION -> editionRepository.mainRepository.addScenario(editedScenario)
-                else -> editionRepository.mainRepository.updateScenario(editedScenario)
-            }
+            editionRepository.saveEditions()
         }
     }
 

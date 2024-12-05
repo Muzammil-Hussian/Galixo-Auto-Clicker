@@ -1,14 +1,5 @@
 @file:Suppress("UnstableApiUsage")
 
-include(":core:scenarios")
-
-
-include(":feature:notifications")
-
-
-include(":feature:config")
-
-
 pluginManagement {
     includeBuild("build-logic")
     repositories {
@@ -35,9 +26,14 @@ dependencyResolutionManagement {
 rootProject.name = "Galixo Clicker"
 include(":app")
 
-include(":feature:backup")
 include(":core:common:display")
 include(":core:common:base")
 include(":core:common:overlays")
 include(":core:common:ui")
 include(":core:common:permissions")
+
+include(":core:scenarios")
+
+include(":feature:backup")
+include(":feature:notifications")
+include(":feature:config")

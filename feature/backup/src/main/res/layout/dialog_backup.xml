@@ -33,7 +33,6 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:visibility="gone" />
-
         </FrameLayout>
 
         <com.google.android.material.button.MaterialButton

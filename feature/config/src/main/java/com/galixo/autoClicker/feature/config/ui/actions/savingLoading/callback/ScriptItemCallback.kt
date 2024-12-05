@@ -1,4 +1,4 @@
-package com.galixo.autoClicker.feature.config.ui.actions.saveOrLoad.callback
+package com.galixo.autoClicker.feature.config.ui.actions.savingLoading.callback
 
 import android.view.MenuItem
 import com.galixo.autoClicker.core.scenarios.domain.model.Scenario

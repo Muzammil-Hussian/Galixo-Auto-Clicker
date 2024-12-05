@@ -27,7 +27,7 @@ class ScenarioViewModel @Inject constructor(
 ) : ViewModel() {
 
 
-    /** Callback upon the availability of the [SmartAutoClickerService]. */
+    /** Callback upon the availability of the [AutoClickerService]. */
     private val serviceConnection: (ILocalService?) -> Unit = { localService ->
         clickerService = localService
     }

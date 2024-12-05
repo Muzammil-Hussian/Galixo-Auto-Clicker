@@ -42,6 +42,7 @@ googleFirebaseCrashlytics = "19.2.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
+jetbrainsKotlinJvm = "1.9.0"
 
 [libraries]
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -107,6 +108,9 @@ jetbrainsKotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization
 galixo-androidApplication = { id = "com.galixo.ai.gradle.android.application", version = "unspecified" }
 galixo-androidLibrary = { id = "com.galixo.ai.gradle.android.library", version = "unspecified" }
 galixo-androidRoom = { id = "com.galixo.ai.gradle.android.room", version = "unspecified" }
+galixo-androidSigning = { id = "com.galixo.ai.gradle.android.signing", version = "unspecified" }
+galixo-buildParameters = { id = "com.galixo.ai.gradle.build.parameters", version = "unspecified" }
 galixo-crashlytics = { id = "com.galixo.ai.gradle.crashlytics", version = "unspecified" }
 galixo-hilt = { id = "com.galixo.ai.gradle.android.hilt", version = "unspecified" }
 galixo-kotlinSerialization = { id = "com.galixo.ai.gradle.android.kotlin.serialization", version = "unspecified" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }

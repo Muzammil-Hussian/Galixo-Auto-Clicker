@@ -20,10 +20,13 @@ class SaveDialog(
     override fun onCreateView(): ViewGroup {
         viewBinding = DialogSaveBinding.inflate(LayoutInflater.from(context)).apply {
 
+            actionButtons.apply {
+                actionCancel.text = "Discard"
+                actionDone.text = "Save"
 
-            discard.setDebouncedOnClickListener { onDiscardButtonClicked() }
-
-            save.setDebouncedOnClickListener { onSaveButtonClicked() }
+                actionCancel.setDebouncedOnClickListener { onDiscardButtonClicked() }
+                actionDone.setDebouncedOnClickListener { onSaveButtonClicked() }
+            }
         }
 
         return viewBinding.root
@@ -34,8 +37,8 @@ class SaveDialog(
 
 
     private fun onDiscardButtonClicked() {
-        onDiscard.invoke()
         back()
+        onDiscard.invoke()
     }
 
     private fun onSaveButtonClicked() {

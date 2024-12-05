@@ -7,8 +7,4 @@
     <integer name="default_swipe_duration">350</integer>
 
     <integer name="default_repeat_count_interval" translatable="false">100</integer>
-
-
-    <string name="default_pause_name" translatable="false">Wait</string>
-    <integer name="default_pause_duration">50</integer>
 </resources>

@@ -25,7 +25,7 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 
 /**
- * AccessibilityService implementation for the SmartAutoClicker.
+ * AccessibilityService implementation for the AutoClicker.
  *
  * Started automatically by Android once the user has defined this service has an accessibility service, it provides
  * an API to start and stop the DetectorEngine correctly in order to display the overlay UI and record the screen for
@@ -153,7 +153,7 @@ class AutoClickerService : AccessibilityService(), AndroidExecutor {
     override fun dump(fd: FileDescriptor?, writer: PrintWriter?, args: Array<out String>?) {
         if (writer == null) return
 
-        writer.append("* SmartAutoClickerService:").println()
+        writer.append("*AutoClickerService:").println()
         writer.append(Dumpable.DUMP_DISPLAY_TAB).append("- isStarted=")
             .append("${(LOCAL_SERVICE_INSTANCE as? LocalService)?.isStarted ?: false}; ")
             .append("scenarioName=")

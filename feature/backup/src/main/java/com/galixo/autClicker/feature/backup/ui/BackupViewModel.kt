@@ -32,6 +32,7 @@ class BackupViewModel @Inject constructor(
 
     /** The state of the backup. Null if not started yet. */
     private val _backupState = MutableStateFlow<BackupDialogUiState?>(null)
+
     /** The current UI state of the backup. Null if not started yet. */
     val backupState: StateFlow<BackupDialogUiState?> = _backupState
 
@@ -48,7 +49,7 @@ class BackupViewModel @Inject constructor(
         Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
             addCategory(Intent.CATEGORY_OPENABLE)
             type = MIME_TYPE_ZIP
-            putExtra(Intent.EXTRA_TITLE, "SmartAutoClicker-Backup.zip")
+            putExtra(Intent.EXTRA_TITLE, "AutoClicker-Backup.zip")
         }
 
     /** @return the intent for selecting the file containing the imported backup. */
@@ -71,7 +72,6 @@ class BackupViewModel @Inject constructor(
         uri: Uri,
         isImport: Boolean,
         scenarios: List<Long> = emptyList(),
-        smartScenarios: List<Long> = emptyList(),
     ) {
         viewModelScope.launch(Dispatchers.IO) {
             if (isImport) {
@@ -180,6 +180,7 @@ class BackupViewModel @Inject constructor(
             !isImport -> context.getString(R.string.message_backup_create_completed)
             backup.failureCount == 0 ->
                 context.getString(R.string.message_backup_import_completed, backup.successCount)
+
             else -> {
                 iconStatus = R.drawable.ic_warning
                 context.getString(

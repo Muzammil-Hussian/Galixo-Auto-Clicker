@@ -62,7 +62,7 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
             languageButton.setOnClickListener { LanguageDialogFragment().show(childFragmentManager, LanguageDialogFragment.LANGUAGE_DIALOG) }
             rateUs.setOnClickListener { context?.openPlayStoreApp() }
             feedback.setOnClickListener { context?.openEmailApp(R.string.galixo_ai_email) }
-            privacyPolicy.setOnClickListener { requireContext().openWebUrl("https://galixo.ai/gallery/privacy-policy") }
+            privacyPolicy.setOnClickListener { requireContext().openWebUrl(R.string.galixo_ai_privacy_policy_url) }
         }
     }
 
@@ -88,7 +88,7 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
                     textField.filters = arrayOf<InputFilter>(InputFilter.LengthFilter(MAX_LENGTH))
                     setOnTextChangedListener {
                         val enteredValue = it.toString().toLongOrNull()
-                        val convertedValue = enteredValue?.toDurationMs(viewModel.getSelectedIntervalUnitTime()) ?: 0L
+                        val convertedValue = enteredValue?.toDurationMs(viewModel.getSelectedIntervalUnitTime()) ?: 100L
                         viewModel.setIntervalValue(convertedValue)
 
                         val isValid = viewModel.validateInput(convertedValue, viewModel.getSelectedIntervalUnitTime())
@@ -116,7 +116,7 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
                     textField.filters = arrayOf<InputFilter>(InputFilter.LengthFilter(MAX_LENGTH))
                     setOnTextChangedListener {
                         val enteredValue = it.toString().toLongOrNull()
-                        val convertedValue = enteredValue?.toDurationMs(viewModel.getSelectedSwipeDurationTimeUnit()) ?: 0L
+                        val convertedValue = enteredValue?.toDurationMs(viewModel.getSelectedSwipeDurationTimeUnit()) ?: 350L
                         viewModel.setSwipeDurationValue(convertedValue)
 
                         val isValid = viewModel.validateInput(convertedValue, viewModel.getSelectedSwipeDurationTimeUnit())
@@ -124,7 +124,7 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
                     }
                     onEditorActionListener {
                         val enteredValue = it.toLongOrNull()
-                        val valueToSave = enteredValue?.toDurationMs(viewModel.getSelectedSwipeDurationTimeUnit()) ?: 100L
+                        val valueToSave = enteredValue?.toDurationMs(viewModel.getSelectedSwipeDurationTimeUnit()) ?: 350L
                         Log.i(TAG, "setupCardViews: swipeDuration: $enteredValue and valueToSave: $valueToSave")
                         viewModel.saveSwipeDurationValue(if (valueToSave >= 300) valueToSave else 300)
                     }

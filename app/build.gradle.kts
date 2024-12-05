@@ -1,7 +1,11 @@
 plugins {
     alias(libs.plugins.galixo.androidApplication)
+
     alias(libs.plugins.androidxNavigationSafeArgs)
     alias(libs.plugins.galixo.hilt)
+
+    alias(libs.plugins.galixo.buildParameters)
+    alias(libs.plugins.galixo.crashlytics)
 }
 
 android {
@@ -10,13 +14,30 @@ android {
 
     defaultConfig {
         applicationId = "com.galixo.autoClicker"
+//        applicationId = "com.autoclicker.tapping.autoclick.automatictap"
 
         versionCode = 1
         versionName = "1.0"
 
         setProperty("archivesBaseName", "Auto Click VC_${versionCode}_VN_${versionName}")
     }
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+    signingConfigs {
+        create("release") {
+            storeFile = file("D:\\Projects\\Keystore\\galixoai.jks")
+            storePassword = buildParameters["galixoai"].asString()
+            keyAlias = buildParameters["galixoai"].asString()
+            keyPassword = buildParameters["galixoai"].asString()
+        }
+    }
 }
+
+// Apply signature convention after declaring the signingConfigs
+apply { plugin(libs.plugins.galixo.androidSigning.get().pluginId) }
 
 dependencies {
 

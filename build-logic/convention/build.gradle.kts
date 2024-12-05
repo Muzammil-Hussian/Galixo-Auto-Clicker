@@ -49,6 +49,11 @@ gradlePlugin {
             implementationClass = "com.galixo.ai.gradle.convention.AndroidRoomConventionPlugin"
         }
 
+        register("androidSigning") {
+            id = "com.galixo.ai.gradle.android.signing"
+            implementationClass = "com.galixo.ai.gradle.convention.AndroidSigningConvention"
+        }
+
         register("crashlytics") {
             id = "com.galixo.ai.gradle.crashlytics"
             implementationClass = "com.galixo.ai.gradle.convention.CrashlyticsConventionPlugin"
