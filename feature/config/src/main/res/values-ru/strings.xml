@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">Действия</string>
+    <string name="menu_item_title_config">Конфигурация</string>
+
+    <string name="content_desc_show_actions">Показать или скрыть созданные действия</string>
+    <string name="content_desc_open_action_list">Открыть список действий</string>
+
+    <string name="never_stop">Никогда не останавливайся</string>
+    <string name="action_point">Точка действия</string>
+    <string name="create_new">Создать новое</string>
+    <string name="import_script">Импортировать скрипт</string>
+    <string name="page_load">Загрузить</string>
+    <string name="page_save">Сохранить</string>
+    <string name="stop_after">Остановиться после</string></resources>

@@ -24,4 +24,12 @@
     <string name="input_field_label_scenario_name">سناریو نام</string>
     <string name="input_field_label_swipe_duration">(ثانیھ میلی) کشیدن زمان مدت</string>
     <string name="input_field_error_required">الزامی</string>
+    <string name="never_stop">هرگز متوقف نشو</string>
+    <string name="apply">اعمال</string>
+    <string name="new_action">عمل جدید</string>
+    <string name="anti_detection">ضد شناسایی</string>
+    <string name="discard">دور انداختن</string>
+    <string name="save">ذخیره</string>
+    <string name="save_dialog_desc">آیا می‌خواهید تغییرات خود را ذخیره کنید یا دور بریزید؟</string>
+
 </resources>

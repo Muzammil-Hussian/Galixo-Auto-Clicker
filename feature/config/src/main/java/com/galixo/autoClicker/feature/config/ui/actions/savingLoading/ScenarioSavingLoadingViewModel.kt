@@ -37,7 +37,7 @@ class ScenarioSavingLoadingViewModel @Inject constructor(
                     actions = emptyList(),
                     repeatCount = 1,
                     isRepeatInfinite = false,
-                    maxDurationMin = 1,
+                    maxDurationSec = 30,
                     isDurationInfinite = true,
                     randomize = false,
                     scenarioMode = scenarioMode

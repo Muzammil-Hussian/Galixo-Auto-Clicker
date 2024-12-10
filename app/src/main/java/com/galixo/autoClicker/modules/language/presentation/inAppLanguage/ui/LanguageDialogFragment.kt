@@ -56,10 +56,10 @@ class LanguageDialogFragment : DialogFragment() {
         return MaterialAlertDialogBuilder(requireContext())
             .setTitle(R.string.select_language)
             .setView(viewBinding.root)
-            .setNegativeButton("Cancel") { dialog, _ ->
+            .setNegativeButton(R.string.cancel) { dialog, _ ->
                 dialog.dismiss()
             }
-            .setPositiveButton("Apply") { _, _ ->
+            .setPositiveButton(R.string.apply) { _, _ ->
 
                 viewModel.applyLanguage()
                 dismiss()

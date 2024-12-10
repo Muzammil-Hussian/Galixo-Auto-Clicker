@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">Hành động</string>
+    <string name="menu_item_title_config">Cấu hình</string>
+
+    <string name="content_desc_show_actions">Hiển thị hoặc ẩn các hành động đã tạo</string>
+    <string name="content_desc_open_action_list">Mở danh sách hành động</string>
+
+    <string name="never_stop">Không bao giờ dừng lại</string>
+    <string name="action_point">Điểm hành động</string>
+    <string name="create_new">Tạo mới</string>
+    <string name="import_script">Nhập kịch bản</string>
+    <string name="page_load">Tải</string>
+    <string name="page_save">Lưu</string>
+    <string name="stop_after">Dừng sau</string></resources>

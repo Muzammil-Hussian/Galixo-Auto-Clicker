@@ -13,8 +13,8 @@ android {
     buildFeatures.viewBinding = true
 
     defaultConfig {
-        applicationId = "com.galixo.autoClicker"
-//        applicationId = "com.autoclicker.tapping.autoclick.automatictap"
+//        applicationId = "com.galixo.autoClicker"
+        applicationId = "com.autoclicker.tapping.autoclick.automatictap"
 
         versionCode = 1
         versionName = "1.0"
@@ -23,21 +23,11 @@ android {
     }
     bundle {
         language {
+            @Suppress("UnstableApiUsage")
             enableSplit = false
         }
     }
-    signingConfigs {
-        create("release") {
-            storeFile = file("D:\\Projects\\Keystore\\galixoai.jks")
-            storePassword = buildParameters["galixoai"].asString()
-            keyAlias = buildParameters["galixoai"].asString()
-            keyPassword = buildParameters["galixoai"].asString()
-        }
-    }
 }
-
-// Apply signature convention after declaring the signingConfigs
-apply { plugin(libs.plugins.galixo.androidSigning.get().pluginId) }
 
 dependencies {
 

@@ -1,6 +1,6 @@
 package com.galixo.autoClicker.modules.settings.dialog.repeatMode.model
 
-import com.galixo.autoClicker.modules.settings.dialog.repeatMode.enum.RepeatMode
+import com.galixo.autoClicker.core.common.ui.enum.RepeatMode
 
 data class RepeatModeState(
     val selectedMode: RepeatMode = RepeatMode.NEVER_STOP,

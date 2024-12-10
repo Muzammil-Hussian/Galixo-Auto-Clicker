@@ -6,12 +6,12 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.galixo.autoClicker.core.common.base.extensions.beVisibleIf
-import com.google.android.material.snackbar.Snackbar
 import com.galixo.autoClicker.databinding.ActivityLanguageBinding
 import com.galixo.autoClicker.modules.base.activity.BaseActivity
 import com.galixo.autoClicker.modules.language.presentation.inAppLanguage.adapter.AdapterInAppLanguage
 import com.galixo.autoClicker.modules.language.presentation.inAppLanguage.viewmodels.InAppLanguageViewModel
 import com.galixo.autoClicker.modules.permissions.ui.PermissionActivity
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -36,10 +36,6 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>(ActivityLanguageB
                     adapter.submitList(state.languages)
                     showLoading(state.isLoading)
 
-                    if (state.isLanguageApplied) {
-                        startNextActivity()
-                    }
-
                     state.errorMessage?.let { showSnackBar(it) }
                 }
             }
@@ -48,7 +44,8 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>(ActivityLanguageB
 
     private fun onClickListener() {
         binding.continueButton.setOnClickListener {
-            applyLanguage()
+            viewModel.applyLanguage()
+            startNextActivity()
         }
     }
 
@@ -69,9 +66,6 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>(ActivityLanguageB
             }.show()
     }
 
-    private fun applyLanguage() {
-        viewModel.applyLanguage()
-    }
 
     private fun updateLanguage(selectedCode: String) {
         viewModel.updateLanguage(selectedCode)

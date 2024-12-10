@@ -30,4 +30,12 @@
     <string name="input_field_label_scenario_name">திைரᾺபடᾷதிᾹ ெபய᾽</string>
     <string name="input_field_label_swipe_duration">ᾐைடᾺபிᾹ ேநரΆ
 (மி᾿ᾢெசகᾶᾌக῀)</string>
-    <string name="input_field_error_required">ேதைவ</string></resources>
+    <string name="input_field_error_required">ேதைவ</string>
+    <string name="never_stop">ஒருபோதும் நிறுத்தாதே</string>
+    <string name="apply">பயன்படுத்தவும்</string>
+    <string name="new_action">புதிய செயல்</string>
+    <string name="anti_detection">எதிர்ப்பு கண்டறிதல்</string>
+    <string name="discard">நிராகரிக்கவும்</string>
+    <string name="save">சேமி</string>
+    <string name="save_dialog_desc">நீங்கள் உங்கள் மாற்றங்களை சேமிக்க விரும்புகிறீர்களா அல்லது நீக்க விரும்புகிறீர்களா?</string>
+</resources>

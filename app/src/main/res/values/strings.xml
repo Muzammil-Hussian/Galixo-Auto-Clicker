@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Auto Clicker</string>
     <string name="title_home">Home</string>
     <string name="title_script">Script</string>
     <string name="title_setting">Setting</string>
@@ -51,7 +50,7 @@
     <string name="drag_action">Drag the target action point to move it anywhere</string>
     <string name="drag_n_swipe_action">Drag the start/end target action point to move it anywhere. Either set interval on both points.</string>
     <string name="interval_desc">Interval is the time gap between two consecutive clicks.</string>
-    <string name="anti_detection">Anti-Detection</string>
+    <string name="anti_detection">Anti detection</string>
     <string name="anti_detection_desc">Generate a random amount of time and radius after each click to behave more like human.</string>
     <string name="interval_before_the_next_action">Interval before the next action</string>
     <string name="swipe_duration">Swipe duration</string>
@@ -101,7 +100,8 @@
     <string name="preferences">Preferences</string>
     <string name="battery_optimization">Battery optimization</string>
     <string name="permission_granted">Permission Granted</string>
-    <string name="permission_missing">Permission Missing</string>
+    <string name="permission_missing">P
+        ermission Missing</string>
     <string name="only_with_these_permissions">Only with these permissions:</string>
     <string name="permission_point_1">1. You don’t have to set accessibility permission every time you open the app.</string>
     <string name="permission_point_2">2. Our app can safely run in the background and provide stable service.</string>
@@ -116,4 +116,5 @@
     <string name="fix_it_now">Fix it Now</string>
     <string name="permission_needed">Permission Needed!</string>
     <string name="permission_needed_desc">To keep Auto Clicker working, please turn the accessibility permission back on</string>
+    <string name="app_name">Auto Clicker</string>
 </resources>

@@ -25,4 +25,12 @@ ada</string>
     <string name="input_field_label_pause_duration">Durasi Jeda</string>
     <string name="input_field_label_scenario_name">Nama Skenario</string>
     <string name="input_field_label_swipe_duration">Durasi Geser (ms)</string>
-    <string name="input_field_error_required">Diperlukan</string></resources>
+    <string name="input_field_error_required">Diperlukan</string>
+    <string name="never_stop">Jangan pernah berhenti</string>
+    <string name="apply">Terapkan</string>
+    <string name="new_action">Tindakan Baru</string>
+    <string name="anti_detection">Anti deteksi</string>
+    <string name="discard">Buang</string>
+    <string name="save">Simpan</string>
+    <string name="save_dialog_desc">Apakah Anda ingin menyimpan perubahan Anda atau membuangnya?</string>
+</resources>

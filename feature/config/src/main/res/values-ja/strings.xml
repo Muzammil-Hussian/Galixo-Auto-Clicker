@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">アクション</string>
+    <string name="menu_item_title_config">設定</string>
+
+    <string name="content_desc_show_actions">作成したアクションを表示または非表示にする</string>
+    <string name="content_desc_open_action_list">アクションリストを開く</string>
+
+    <string name="never_stop">決して止まらない</string>
+    <string name="action_point">アクションポイント</string>
+    <string name="create_new">新しく作成</string>
+    <string name="import_script">スクリプトをインポート</string>
+    <string name="page_load">読み込む</string>
+    <string name="page_save">保存</string>
+    <string name="stop_after">後に停止</string></resources>

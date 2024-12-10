@@ -26,7 +26,6 @@ class ScenarioSaveLoadDialog(
         creator = { scenarioSavingLoadingViewModel() }
     )
 
-
     override fun inflateMenu(tabLayout: TabLayout) {
         Log.i(TAG, "inflateMenu: ")
         tabLayout.apply {

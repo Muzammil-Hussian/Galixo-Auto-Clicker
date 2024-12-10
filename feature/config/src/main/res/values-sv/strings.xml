@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">Åtgärder</string>
+    <string name="menu_item_title_config">Konfiguration</string>
+
+    <string name="content_desc_show_actions">Visa eller dölja skapade åtgärder</string>
+    <string name="content_desc_open_action_list">Öppna åtgärdslistan</string>
+
+    <string name="never_stop">Sluta aldrig</string>
+    <string name="action_point">Åtgärdspunkt</string>
+    <string name="create_new">Skapa ny</string>
+    <string name="import_script">Importera script</string>
+    <string name="page_load">Ladda</string>
+    <string name="page_save">Spara</string>
+    <string name="stop_after">Stoppa efter</string></resources>

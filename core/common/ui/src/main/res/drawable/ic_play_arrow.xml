@@ -1,10 +1,9 @@
-<vector
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="128dp"
     android:height="128dp"
+    android:tint="?attr/colorControlNormal"
     android:viewportWidth="128"
-    android:viewportHeight="128"
-    android:tint="?attr/colorControlNormal">
+    android:viewportHeight="128">
 
 
     <group
@@ -16,11 +15,11 @@
 
         <path
             android:name="iconPath"
+            android:fillColor="@color/md_theme_light_primary"
             android:pathData="@string/path_play"
-            android:fillColor="#7159FF"
             android:strokeLineCap="butt"
             android:strokeLineJoin="miter"
-            android:strokeMiterLimit="10"/>
+            android:strokeMiterLimit="10" />
 
     </group>
 

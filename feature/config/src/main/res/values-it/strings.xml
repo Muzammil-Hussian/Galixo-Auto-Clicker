@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">Azioni</string>
+    <string name="menu_item_title_config">Configurazione</string>
+
+    <string name="content_desc_show_actions">Mostra o nascondi le azioni create</string>
+    <string name="content_desc_open_action_list">Apri la lista delle azioni</string>
+
+    <string name="never_stop">Non fermarti mai</string>
+    <string name="action_point">Punto d\'azione</string>
+    <string name="create_new">Crea nuovo</string>
+    <string name="import_script">Importa script</string>
+    <string name="page_load">Carica</string>
+    <string name="page_save">Salva</string>
+    <string name="stop_after">Fermati dopo</string></resources>

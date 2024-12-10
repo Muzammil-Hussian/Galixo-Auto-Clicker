@@ -35,9 +35,9 @@ class MainMenuViewModel @Inject constructor(
         }.stateIn(viewModelScope, SharingStarted.Eagerly, emptyList())
 
 
-    fun startTemporaryEdition(scenarioId: Scenario) {
+    fun startTemporaryEdition(scenario: Scenario) {
         viewModelScope.launch(Dispatchers.IO) {
-            editionRepository.startTemporaryEdition(scenarioId)
+            editionRepository.startTemporaryEdition(scenario)
         }
     }
 

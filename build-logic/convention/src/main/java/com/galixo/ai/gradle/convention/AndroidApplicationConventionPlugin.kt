@@ -31,9 +31,16 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             }
 
             buildTypes {
+                debug {
+                    isMinifyEnabled = false
+                    isShrinkResources = false
+                    isDebuggable = true
+                    proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+                }
                 release {
                     isMinifyEnabled = true
                     isShrinkResources = true
+                    isDebuggable = false
                     proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
                 }
             }

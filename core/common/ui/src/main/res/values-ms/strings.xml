@@ -26,4 +26,12 @@ sedia ada</string>
     <string name="input_field_label_pause_duration">Tempoh Jeda</string>
     <string name="input_field_label_scenario_name">Nama Senario</string>
     <string name="input_field_label_swipe_duration">Tempoh Leret (ms)</string>
-    <string name="input_field_error_required">Diperlukan</string></resources>
+    <string name="input_field_error_required">Diperlukan</string>
+    <string name="never_stop">Jangan berhenti</string>
+    <string name="apply">Guna</string>
+    <string name="new_action">Tindakan Baru</string>
+    <string name="anti_detection">Anti-pengesanan</string>
+    <string name="discard">Buang</string>
+    <string name="save">Simpan</string>
+    <string name="save_dialog_desc">Adakah anda mahu menyimpan perubahan anda atau membuangnya?</string>
+</resources>

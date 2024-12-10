@@ -10,7 +10,7 @@ internal fun ScenarioWithActions.toDomain(asDomain: Boolean = false): Scenario =
         name = scenario.name,
         repeatCount = scenario.repeatCount,
         isRepeatInfinite = scenario.isRepeatInfinite,
-        maxDurationMin = scenario.maxDurationMin,
+        maxDurationSec = scenario.maxDurationMin,
         isDurationInfinite = scenario.isDurationInfinite,
         randomize = scenario.randomize,
         actions = actions
@@ -25,7 +25,7 @@ internal fun Scenario.toEntity(): ScenarioEntity =
         name = name,
         repeatCount = repeatCount,
         isRepeatInfinite = isRepeatInfinite,
-        maxDurationMin = maxDurationMin,
+        maxDurationMin = maxDurationSec,
         isDurationInfinite = isDurationInfinite,
         randomize = randomize,
         scenarioMode = scenarioMode

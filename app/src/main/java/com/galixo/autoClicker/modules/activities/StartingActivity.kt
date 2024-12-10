@@ -17,7 +17,7 @@ class StartingActivity : BaseActivity<ActivityStartingBinding>(ActivityStartingB
 
     val handler by lazy { Handler(Looper.getMainLooper()) }
     private var progressStatus = 0
-    private val updateInterval by lazy { 40L }
+    private val updateInterval by lazy { 10L }
 
     private val runnable: Runnable = object : Runnable {
         override fun run() {

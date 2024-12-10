@@ -27,4 +27,12 @@ Elements</string>
     <string name="input_field_label_pause_duration">Pausendauer</string>
     <string name="input_field_label_scenario_name">Szenarioname</string>
     <string name="input_field_label_swipe_duration">Wischdauer (ms)</string>
-    <string name="input_field_error_required">Erforderlich</string></resources>
+    <string name="input_field_error_required">Erforderlich</string>
+    <string name="never_stop">Nie stoppen</string>
+    <string name="apply">Anwenden</string>
+    <string name="new_action">Neue Aktion</string>
+    <string name="anti_detection">Anti-Erkennung</string>
+    <string name="discard">Verwerfen</string>
+    <string name="save">Speichern</string>
+    <string name="save_dialog_desc">Möchten Sie Ihre Änderungen speichern oder verwerfen?</string>
+</resources>

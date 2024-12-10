@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">اقدامات</string>
+    <string name="menu_item_title_config">پیکربندی</string>
+
+    <string name="content_desc_show_actions">نمایش یا مخفی کردن اقدامات ایجاد شده</string>
+    <string name="content_desc_open_action_list">باز کردن لیست اقدامات</string>
+
+    <string name="never_stop">هرگز متوقف نشو</string>
+    <string name="action_point">نقطه اقدام</string>
+    <string name="create_new">ایجاد جدید</string>
+    <string name="import_script">وارد کردن اسکریپت</string>
+    <string name="page_load">بارگذاری</string>
+    <string name="page_save">ذخیره</string>
+    <string name="stop_after">بعد از متوقف شود</string></resources>

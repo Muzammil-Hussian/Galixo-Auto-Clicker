@@ -7,7 +7,8 @@ import com.google.android.material.card.MaterialCardView
 
 
 fun MaterialCardView.updateStrokeColor(isSelected: Boolean) {
-    changeColor(if (isSelected) R.color.primaryColor else R.color.border_stroke_color_black_alpha_12)
+//    changeColor(if (isSelected) R.color.primaryColor else R.color.border_stroke_color_black_alpha_12)
+    changeColor(R.color.border_stroke_color_black_alpha_12)
 }
 
 fun MaterialCardView.updateCardBackgroundColor(isSelected: Boolean) {

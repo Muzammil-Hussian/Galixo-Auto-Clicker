@@ -6,6 +6,8 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Point
 import android.graphics.PointF
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -39,8 +41,11 @@ class CreateSwipeView(
     private lateinit var toViewBinding: ClickPointViewBinding
 
     private val fromPosition = swipeDescription.fromPosition
-
     private val toPosition = swipeDescription.toPosition
+
+    private val postHandler = Handler(Looper.getMainLooper())
+    private var isClickAllowed = true
+    private val debounceDuration = 600L
 
     private val paint = Paint().apply {
         color = ContextCompat.getColor(context, R.color.overlayViewPrimaryBackground)
@@ -108,7 +113,7 @@ class CreateSwipeView(
             drawLine()
         }
 
-        with(binding) {
+    /*    with(binding) {
             clickIndex.text = swipeDescription.priority.toString()
             root.apply {
                 setOnTouchListener { v, event ->
@@ -143,6 +148,50 @@ class CreateSwipeView(
                 setOnClickListener {
                     Log.d(TAG, "Clicked on $viewType")
                     onPointClick.invoke(viewType, PointF(position.x.toFloat(), position.y.toFloat()))
+                }
+            }
+        }*/
+        with(binding) {
+            clickIndex.text = swipeDescription.priority.toString()
+            root.apply {
+                setOnTouchListener { v, event ->
+                    when (event.action) {
+                        MotionEvent.ACTION_DOWN -> {
+                            initialX = event.rawX
+                            initialY = event.rawY
+                            viewTouchEventHandler.onTouchEvent(v, event)
+                            true
+                        }
+
+                        MotionEvent.ACTION_MOVE -> {
+                            viewTouchEventHandler.onTouchEvent(v, event)
+                            true
+                        }
+
+                        MotionEvent.ACTION_UP -> {
+                            val deltaX = (event.rawX - initialX).toInt()
+                            val deltaY = (event.rawY - initialY).toInt()
+                            val distanceMoved = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble())
+
+                            if (distanceMoved < TAP_THRESHOLD && isClickAllowed) {
+                                isClickAllowed = false
+                                postHandler.postDelayed({ isClickAllowed = true }, debounceDuration)
+                                onPointClick.invoke(viewType, PointF(position.x.toFloat(), position.y.toFloat()))
+                            }
+                            onPositionChanged.invoke(swipeDescription)
+                            true
+                        }
+
+                        else -> false
+                    }
+                }
+                setOnClickListener {
+                    if (isClickAllowed) {
+                        isClickAllowed = false
+                        postHandler.postDelayed({ isClickAllowed = true }, debounceDuration)
+                        Log.d(TAG, "Clicked on $viewType")
+                        onPointClick.invoke(viewType, PointF(position.x.toFloat(), position.y.toFloat()))
+                    }
                 }
             }
         }

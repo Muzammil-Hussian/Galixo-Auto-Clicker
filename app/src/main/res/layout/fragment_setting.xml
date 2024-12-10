@@ -56,10 +56,10 @@
             android:layout_marginTop="@dimen/margin_vertical_extra_large"
             android:background="@drawable/bg_round_16_dp"
             android:buttonTint="@color/primaryColor"
-            tools:checked="true"
             android:padding="@dimen/margin_horizontal_default"
-            android:text="Anti detection"
-            android:textAppearance="@style/DescriptionHeading" />
+            android:text="@string/anti_detection"
+            android:textAppearance="@style/DescriptionHeading"
+            tools:checked="true" />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"

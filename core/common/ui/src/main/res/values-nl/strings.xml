@@ -25,4 +25,12 @@ te maken</string>
     <string name="input_field_label_pause_duration">Pauzeduur</string>
     <string name="input_field_label_scenario_name">Scenario naam</string>
     <string name="input_field_label_swipe_duration">Veegduur (ms)</string>
-    <string name="input_field_error_required">Vereist</string></resources>
+    <string name="input_field_error_required">Vereist</string>
+    <string name="never_stop">Nooit stoppen</string>
+    <string name="apply">Toepassen</string>
+    <string name="new_action">Nieuwe Actie</string>
+    <string name="anti_detection">Anti-detectie</string>
+    <string name="discard">Weggooien</string>
+    <string name="save">Opslaan</string>
+    <string name="save_dialog_desc">Wilt u uw wijzigingen opslaan of weggooien?</string>
+</resources>

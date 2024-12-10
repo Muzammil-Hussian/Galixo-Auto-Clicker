@@ -25,4 +25,12 @@
     <string name="input_field_label_scenario_name">시나리오 이름</string>
     <string name="input_field_label_swipe_duration">스와이프 시간 (밀리초)</string>
     <string name="input_field_error_required">필수</string>
+    <string name="never_stop">절대 멈추지 않음</string>
+    <string name="apply">적용</string>
+    <string name="new_action">새 작업</string>
+    <string name="anti_detection">감지 방지</string>
+    <string name="discard">폐기</string>
+    <string name="save">저장</string>
+    <string name="save_dialog_desc">변경 사항을 저장하시겠습니까, 아니면 폐기하시겠습니까?</string>
+
 </resources>

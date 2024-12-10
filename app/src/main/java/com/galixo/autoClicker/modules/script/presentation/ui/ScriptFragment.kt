@@ -35,7 +35,6 @@ import com.galixo.autoClicker.modules.script.presentation.ui.dialog.ScriptCreati
 import com.galixo.autoClicker.modules.script.presentation.ui.listener.Listener
 import com.galixo.autoClicker.modules.script.presentation.viewModel.ScenarioListViewModel
 import com.galixo.autoClicker.modules.troubleShoot.ui.TroubleShootingActivity
-import com.galixo.autoClicker.utils.extensions.isAccessibilitySettingsOn
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -70,7 +69,6 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
                 setTitle(R.string.permission_needed)
                 setDescription(R.string.permission_needed_desc)
             }
-            Log.i(TAG, "initViews: isAccessibilitySettingsOn: ${requireContext().isAccessibilitySettingsOn()} and canDrawOverlay: ${canShowDrawOverlays()}")
             list.adapter = this@ScriptFragment.adapter
         }
     }
@@ -157,12 +155,14 @@ class ScriptFragment : BaseFragment<FragmentScriptBinding>(FragmentScriptBinding
      * Will update the list/empty view according to the current click scenarios
      */
     private fun updateScenarioList(listContent: List<Scenario>) {
+        Log.i(TAG, "updateScenarioList: ${listContent.size}")
         val isEmpty = listContent.isEmpty()
         binding.apply {
             list.beGoneIf(isEmpty)
             createScriptFab.beGoneIf(isEmpty)
             layoutEmpty.beVisibleIf(isEmpty)
         }
+        adapter.submitList(null)
         adapter.submitList(listContent)
     }
 

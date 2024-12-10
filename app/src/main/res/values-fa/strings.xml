@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">OfficeAutoClicker</string>
     <string name="title_home">خانھ</string>
     <string name="title_script">اسکریپت</string>
     <string name="title_setting">تنظیمات</string>
@@ -114,5 +113,10 @@
    <string name="troubleshooting">عیب‌یابی</string>
    <string name="allow_permission">اجازه دادن به مجوز</string>
    <string name="troubleshoot_desc">مجوز اساسی برای اپلیکیشن کلیک خودکار. باید مجوز مورد نیاز را داشته باشید.</string>
-
+    <string name="script_name">نام اسکریپت</string>
+    <string name="mode_selection">انتخاب حالت</string>
+    <string name="fix_it_now">الان درستش کن</string>
+    <string name="permission_needed">نیاز به مجوز!</string>
+    <string name="permission_needed_desc">برای ادامه عملکرد Auto Clicker لطفاً مجوز دسترسی را دوباره فعال کنید</string>
+    <string name="app_name">کلیک خودکار</string>
 </resources>

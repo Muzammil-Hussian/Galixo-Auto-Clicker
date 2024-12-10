@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">செயல்கள்</string>
+    <string name="menu_item_title_config">கான்பிகிரேஷன்</string>
+
+    <string name="content_desc_show_actions">உருவாக்கிய செயலைக் காட்டவும் அல்லது மறைக்கவும்</string>
+    <string name="content_desc_open_action_list">செயல் பட்டியலை திறக்கவும்</string>
+
+    <string name="never_stop">என்றும் நிறுத்தவே மாட்டேன்</string>
+    <string name="action_point">செயல் புள்ளி</string>
+    <string name="create_new">புதியதை உருவாக்கவும்</string>
+    <string name="import_script">ச்கிரிப்ட் இறக்குமதி செய்யவும்</string>
+    <string name="page_load">பதிவிறக்கம்</string>
+    <string name="page_save">சேமி</string>
+    <string name="stop_after">நிறுத்தவும்</string></resources>

@@ -26,4 +26,12 @@ element</string>
     <string name="input_field_label_pause_duration">Pausevarighed</string>
     <string name="input_field_label_scenario_name">Scenarionavn</string>
     <string name="input_field_label_swipe_duration">Stryg varighed (ms)</string>
-    <string name="input_field_error_required">Påkrævet</string></resources>
+    <string name="input_field_error_required">Påkrævet</string>
+    <string name="never_stop">Stop aldrig</string>
+    <string name="apply">Anvend</string>
+    <string name="new_action">Ny handling</string>
+    <string name="anti_detection">Anti-detektion</string>
+    <string name="discard">Kassér</string>
+    <string name="save">Gem</string>
+    <string name="save_dialog_desc">Vil du gemme ændringerne eller kassere dem?</string>
+</resources>

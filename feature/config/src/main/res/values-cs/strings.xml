@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">Akce</string>
+    <string name="menu_item_title_config">Nastavení</string>
+
+    <string name="content_desc_show_actions">Zobrazit nebo skrýt vytvořené akce</string>
+    <string name="content_desc_open_action_list">Otevřít seznam akcí</string>
+
+    <string name="never_stop">Nikdy nezkončit</string>
+    <string name="action_point">Bod akce</string>
+    <string name="create_new">Vytvořit nové</string>
+    <string name="import_script">Importovat skript</string>
+    <string name="page_load">Načíst</string>
+    <string name="page_save">Uložit</string>
+    <string name="stop_after">Zastavit po</string></resources>

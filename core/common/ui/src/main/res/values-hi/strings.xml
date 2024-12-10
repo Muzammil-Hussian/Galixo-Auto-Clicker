@@ -24,4 +24,12 @@
     <string name="input_field_label_pause_duration">िवराम अविध</string>
     <string name="input_field_label_scenario_name">पᳯरदृ᭫य का नाम</string>
     <string name="input_field_label_swipe_duration">᭭वाइप अविध (िमलीसेकंड)</string>
-    <string name="input_field_error_required">आव᭫यक</string></resources>
+    <string name="input_field_error_required">आव᭫यक</string>
+    <string name="never_stop">कभी नहीं रुकें</string>
+    <string name="apply">लागू करें</string>
+    <string name="new_action">नई क्रिया</string>
+    <string name="anti_detection">एंटी डिटेक्शन</string>
+    <string name="discard">अस्वीकार करें</string>
+    <string name="save">सहेजें</string>
+    <string name="save_dialog_desc">क्या आप अपने बदलाव सहेजना चाहते हैं या अस्वीकार करना चाहते हैं?</string>
+</resources>

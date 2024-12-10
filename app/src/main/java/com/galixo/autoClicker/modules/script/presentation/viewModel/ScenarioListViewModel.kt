@@ -24,7 +24,7 @@ class ScenarioListViewModel @Inject constructor(private val mainRepository: IMai
             actions = scenario.actions,
             repeatCount = scenario.repeatCount,
             isRepeatInfinite = scenario.isRepeatInfinite,
-            maxDurationMin = scenario.maxDurationMin,
+            maxDurationSec = scenario.maxDurationSec,
             isDurationInfinite = scenario.isDurationInfinite,
             randomize = scenario.randomize,
             scenarioMode = scenario.scenarioMode

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">작업</string>
+    <string name="menu_item_title_config">설정</string>
+
+    <string name="content_desc_show_actions">생성된 작업을 표시 또는 숨기기</string>
+    <string name="content_desc_open_action_list">작업 목록 열기</string>
+
+    <string name="never_stop">절대 멈추지 않음</string>
+    <string name="action_point">작업 포인트</string>
+    <string name="create_new">새로 만들기</string>
+    <string name="import_script">스크립트 가져오기</string>
+    <string name="page_load">로드</string>
+    <string name="page_save">저장</string>
+    <string name="stop_after">후에 멈추기</string></resources>

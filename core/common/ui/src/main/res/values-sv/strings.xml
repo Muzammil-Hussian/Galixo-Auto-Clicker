@@ -25,4 +25,12 @@ element</string>
     <string name="input_field_label_pause_duration">Pausvaraktighet</string>
     <string name="input_field_label_scenario_name">Scenariots namn</string>
     <string name="input_field_label_swipe_duration">Sveptid (ms)</string>
-    <string name="input_field_error_required">Obligatorisk</string></resources>
+    <string name="input_field_error_required">Obligatorisk</string>
+    <string name="never_stop">Sluta aldrig</string>
+    <string name="apply">Tillämpa</string>
+    <string name="new_action">Ny åtgärd</string>
+    <string name="anti_detection">Anti-detektering</string>
+    <string name="discard">Kasta</string>
+    <string name="save">Spara</string>
+    <string name="save_dialog_desc">Vill du spara dina ändringar eller kasta dem?</string>
+</resources>

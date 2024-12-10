@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "966670425207",
-    "project_id": "galixo-testing",
-    "storage_bucket": "galixo-testing.firebasestorage.app"
+    "project_number": "269492516016",
+    "project_id": "auto-clicker-ac917",
+    "storage_bucket": "auto-clicker-ac917.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:966670425207:android:08ad3a04570876163ffa72",
+        "mobilesdk_app_id": "1:269492516016:android:94f662b22c658807297775",
         "android_client_info": {
-          "package_name": "com.galixo.autoClicker"
+          "package_name": "com.autoclicker.tapping.autoclick.automatictap"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC11aPvoDvnDSTnWiTk2oMPHplJmEnFpY4"
+          "current_key": "AIzaSyBff_kWZ2v3eA5zZwl0X43Jb-npdxd0KWQ"
         }
       ],
       "services": {

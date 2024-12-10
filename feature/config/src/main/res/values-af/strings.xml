@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">Aksies</string>
+    <string name="menu_item_title_config">Konfigurasie</string>
+
+    <string name="content_desc_show_actions">Wys of versteek die aksies wat geskep is</string>
+    <string name="content_desc_open_action_list">Maak die lys van aksies oop</string>
+
+    <string name="never_stop">Moet nooit stop nie</string>
+    <string name="action_point">Aksie Punt</string>
+    <string name="create_new">Skep nuut</string>
+    <string name="import_script">Laai script in</string>
+    <string name="page_load">Laai</string>
+    <string name="page_save">Berg op</string>
+    <string name="stop_after">Stop na</string>
+</resources>

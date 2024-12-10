@@ -23,12 +23,12 @@ import com.galixo.autoClicker.core.common.ui.bindings.fields.onEditorActionListe
 import com.galixo.autoClicker.core.common.ui.bindings.fields.setOnTextChangedListener
 import com.galixo.autoClicker.core.common.ui.bindings.fields.setText
 import com.galixo.autoClicker.core.common.ui.databinding.IncludeDialogViewBinding
+import com.galixo.autoClicker.core.common.ui.enum.RepeatMode
 import com.galixo.autoClicker.databinding.FragmentSettingBinding
 import com.galixo.autoClicker.modules.base.fragment.BaseFragment
 import com.galixo.autoClicker.modules.language.presentation.inAppLanguage.ui.LanguageDialogFragment
 import com.galixo.autoClicker.modules.settings.Settings.Companion.MAX_LENGTH
 import com.galixo.autoClicker.modules.settings.dialog.repeatMode.RepeatModeDialog
-import com.galixo.autoClicker.modules.settings.dialog.repeatMode.enum.RepeatMode
 import com.galixo.autoClicker.utils.PreferenceUtils
 import com.galixo.autoClicker.utils.extensions.openEmailApp
 import com.galixo.autoClicker.utils.extensions.openPlayStoreApp
@@ -150,7 +150,7 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
                     val text = when (mode) {
                         RepeatMode.NEVER_STOP -> getString(R.string.never_stop)
                         RepeatMode.STOP_AFTER_DURATION -> "$duration Ms"
-                        RepeatMode.STOP_AFTER_REPEATS -> "$repeats Reps"
+                        RepeatMode.STOP_AFTER_REPEATS_COUNT -> "$repeats Reps"
                     }
                     setText(text)
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">OfficeAutoClicker</string>
     <string name="title_home">ホーム</string>
     <string name="title_script">スクリプト</string>
     <string name="title_setting">設定</string>
@@ -127,5 +126,11 @@
     <string name="troubleshooting">トラブルシューティング</string>
     <string name="allow_permission">権限を許可</string>
     <string name="troubleshoot_desc">自動クリックアプリの基本的な権限。必要な権限が必要です。</string>
+    <string name="script_name">スクリプト名</string>
+    <string name="mode_selection">モード選択</string>
+    <string name="fix_it_now">今すぐ修正</string>
+    <string name="permission_needed">権限が必要です！</string>
+    <string name="permission_needed_desc">Auto Clickerを正常に動作させるために、アクセシビリティの権限を再度有効にしてください</string>
+    <string name="app_name">自動クリック</string>
 
 </resources>

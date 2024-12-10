@@ -1,5 +1,6 @@
 package com.galixo.autoClicker.modules.script.presentation.adapter
 
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.MenuItem
@@ -22,19 +23,19 @@ class ScriptAdapter(private val itemListener: ScriptItemCallback) :
         return ScriptViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) =
-        (holder as ScriptViewHolder).bind(getItem(position))
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) = (holder as ScriptViewHolder).bind(getItem(position), position)
 
 
     inner class ScriptViewHolder(private val binding: ItemScriptBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Scenario) {
+        fun bind(item: Scenario, position: Int) {
+            Log.i(TAG, "bind: $currentList and position: $position")
             binding.apply {
                 scriptName.text = item.name
                 scriptMode.text = item.scenarioMode.name
-                (layoutPosition + 1).apply { itemIndex.text = this.toString() }
-                btnPlay.setOnClickListener { itemListener.onStartScenario(item) }
+                (position + 1).apply { itemIndex.text = this.toString() }
+                root.setOnClickListener { itemListener.onStartScenario(item) }
 
                 moreMenu.setOnClickListener {
                     PopupMenu(root.context, this.moreMenu, Gravity.END, 0, R.style.popupMenuStyle).apply {
@@ -68,3 +69,5 @@ interface ScriptItemCallback {
     fun onItemMenuClick(menuItem: MenuItem, item: Scenario)
     fun onStartScenario(item: Scenario)
 }
+
+private const val TAG = "ScriptAdapter"

@@ -14,6 +14,7 @@ fun IncludeTimeInputBinding.setText(text: String?, type: Int = InputType.TYPE_CL
         inputType = type
         imeOptions = EditorInfo.IME_ACTION_DONE
         setText(text)
+        setSelection(text?.length ?: 0)
     }
 }
 

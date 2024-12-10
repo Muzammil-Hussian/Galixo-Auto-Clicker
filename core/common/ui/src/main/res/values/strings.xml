@@ -28,5 +28,12 @@
     <string name="input_field_label_scenario_name">Scenario name</string>
     <string name="input_field_label_swipe_duration">Swipe duration (ms)</string>
     <string name="input_field_error_required">Required</string>
+
     <string name="never_stop">Never stop</string>
+    <string name="apply">Apply</string>
+    <string name="new_action">New Action</string>
+    <string name="anti_detection">Anti detection</string>
+    <string name="discard">Discard</string>
+    <string name="save">Save</string>
+    <string name="save_dialog_desc">Do you want to save your changes or discard them?</string>
 </resources>

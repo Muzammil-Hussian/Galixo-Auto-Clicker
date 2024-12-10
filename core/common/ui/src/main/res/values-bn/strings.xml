@@ -27,4 +27,13 @@
     <string name="input_field_label_scenario_name">িসনািরওর নাম</string>
     <string name="input_field_label_swipe_duration">সুইপ সময়কাল (িমিলেসেকন্ড)</string>
     <string name="input_field_error_required">প্রেয়াজন</string>
+
+    <string name="never_stop">কখনও থামবে না</string>
+    <string name="apply">প্রয়োগ করুন</string>
+    <string name="new_action">নতুন ক্রিয়া</string>
+    <string name="anti_detection">অ্যান্টি ডিটেকশন</string>
+    <string name="discard">বাতিল করুন</string>
+    <string name="save">সংরক্ষণ</string>
+    <string name="save_dialog_desc">আপনার পরিবর্তনগুলি সংরক্ষণ বা বাতিল করতে চান?</string>
+
 </resources>

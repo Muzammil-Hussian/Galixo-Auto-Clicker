@@ -27,4 +27,13 @@
     <string name="input_field_label_pause_duration">Длительность паузы</string>
     <string name="input_field_label_scenario_name">Название сценария</string>
     <string name="input_field_label_swipe_duration">Длительность свайпа (мс)</string>
-    <string name="input_field_error_required">Обязательно</string></resources>
+    <string name="input_field_error_required">Обязательно</string>
+    <string name="never_stop">Не останавливайся</string>
+    <string name="apply">Применить</string>
+    <string name="new_action">Новое действие</string>
+    <string name="anti_detection">Анти-обнаружение</string>
+    <string name="discard">Отменить</string>
+    <string name="save">Сохранить</string>
+    <string name="save_dialog_desc">Хотите сохранить изменения или отменить их?</string>
+
+</resources>

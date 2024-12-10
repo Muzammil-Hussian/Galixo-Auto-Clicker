@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">OfficeAutoClicker</string>
     <string name="title_home">홈</string>
     <string name="title_script">스크립트</string>
     <string name="title_setting">설정</string>
@@ -117,5 +116,11 @@
     <string name="troubleshooting">문제 해결</string>
     <string name="allow_permission">권한 허용</string>
     <string name="troubleshoot_desc">자동 클릭기 앱을 위한 기본 권한. 필요한 권한이 있어야 합니다.</string>
+    <string name="script_name">스크립트 이름</string>
+    <string name="mode_selection">모드 선택</string>
+    <string name="fix_it_now">지금 수정</string>
+    <string name="permission_needed">권한 필요!</string>
+    <string name="permission_needed_desc">Auto Clicker가 작동하려면 접근성 권한을 다시 활성화하십시오</string>
+    <string name="app_name">자동 클릭</string>
 
 </resources>

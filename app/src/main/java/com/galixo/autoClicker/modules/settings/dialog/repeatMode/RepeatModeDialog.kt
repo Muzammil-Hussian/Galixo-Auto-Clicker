@@ -12,7 +12,7 @@ import com.galixo.autoClicker.core.common.ui.bindings.fields.setHelperText
 import com.galixo.autoClicker.core.common.ui.bindings.fields.setOnTextChangedListener
 import com.galixo.autoClicker.core.common.ui.bindings.fields.setText
 import com.galixo.autoClicker.core.common.ui.databinding.DialogNeverStopBinding
-import com.galixo.autoClicker.modules.settings.dialog.repeatMode.enum.RepeatMode
+import com.galixo.autoClicker.core.common.ui.enum.RepeatMode
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -40,7 +40,7 @@ class RepeatModeDialog(private val callback: (mode: RepeatMode, duration : Long,
                         hours.setText(it.hours.toString())
                         minutes.setText(it.minutes.toString())
                         seconds.setText(it.seconds.toString())
-                        repeatCycles.setText(it.repeats.toString())
+                        repeatCycles.setText(it.repeatCount.toString())
                     }
                 }
             }
@@ -50,7 +50,7 @@ class RepeatModeDialog(private val callback: (mode: RepeatMode, duration : Long,
     private fun updateRadioButton(selectedMode: RepeatMode) {
         viewBinding.neverStopRadioButton.isChecked = selectedMode == RepeatMode.NEVER_STOP
         viewBinding.stopAfterDurationRadioButton.isChecked = selectedMode == RepeatMode.STOP_AFTER_DURATION
-        viewBinding.stopAfterRepeatsRadioButton.isChecked = selectedMode == RepeatMode.STOP_AFTER_REPEATS
+        viewBinding.stopAfterRepeatsRadioButton.isChecked = selectedMode == RepeatMode.STOP_AFTER_REPEATS_COUNT
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,7 +73,7 @@ class RepeatModeDialog(private val callback: (mode: RepeatMode, duration : Long,
             }
 
             stopAfterRepeats.setOnClickListener {
-                viewModel.updateRepeatMode(RepeatMode.STOP_AFTER_REPEATS)
+                viewModel.updateRepeatMode(RepeatMode.STOP_AFTER_REPEATS_COUNT)
             }
 
             // Set up listeners for time inputs
@@ -106,7 +106,7 @@ class RepeatModeDialog(private val callback: (mode: RepeatMode, duration : Long,
             actionButtons.actionDone.setOnClickListener {
                 val state = viewModel.state.value
                 val duration = (state.hours * 3600 + state.minutes * 60 + state.seconds).toLong()
-                callback.invoke(state.selectedMode, duration, state.repeats)
+                callback.invoke(state.selectedMode, duration, state.repeatCount)
                 dismiss()
             }
         }

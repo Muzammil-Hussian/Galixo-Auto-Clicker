@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">操作</string>
+    <string name="menu_item_title_config">配置</string>
+
+    <string name="content_desc_show_actions">显示或隐藏已创建的操作</string>
+    <string name="content_desc_open_action_list">打开操作列表</string>
+
+    <string name="never_stop">永不停止</string>
+    <string name="action_point">操作点</string>
+    <string name="create_new">创建新</string>
+    <string name="import_script">导入脚本</string>
+    <string name="page_load">加载</string>
+    <string name="page_save">保存</string>
+    <string name="stop_after">停止后</string></resources>

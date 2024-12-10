@@ -8,7 +8,7 @@
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New Action"
+        android:text="@string/new_action"
         android:textAppearance="@style/SubHeadingStyle" />
 
     <include
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_vertical_extra_large"
         android:layout_marginBottom="@dimen/margin_vertical_default"
-        android:text="Stop after"
+        android:text="@string/stop_after"
         android:textAppearance="@style/DescriptionHeading" />
 
     <include
@@ -38,7 +38,7 @@
         android:layout_marginTop="@dimen/margin_vertical_extra_large"
         android:buttonTint="@color/primaryColor"
         android:checked="true"
-        android:text="Anti detection"
+        android:text="@string/anti_detection"
         android:textAppearance="@style/DescriptionHeading" />
 
     <include

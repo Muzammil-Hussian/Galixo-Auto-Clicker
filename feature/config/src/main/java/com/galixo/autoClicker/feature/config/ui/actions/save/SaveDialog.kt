@@ -21,8 +21,8 @@ class SaveDialog(
         viewBinding = DialogSaveBinding.inflate(LayoutInflater.from(context)).apply {
 
             actionButtons.apply {
-                actionCancel.text = "Discard"
-                actionDone.text = "Save"
+                actionCancel.setText(R.string.discard)
+                actionDone.setText(R.string.save)
 
                 actionCancel.setDebouncedOnClickListener { onDiscardButtonClicked() }
                 actionDone.setDebouncedOnClickListener { onSaveButtonClicked() }

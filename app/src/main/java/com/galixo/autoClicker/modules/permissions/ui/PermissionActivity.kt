@@ -17,9 +17,9 @@ class PermissionActivity : BaseActivity<ActivityPermissionBinding>(ActivityPermi
 
     override fun onCreated() {
         binding.apply {
-            watchTutorial.setOnClickListener {
+         /*   watchTutorial.setOnClickListener {
                 WatchTutorialDialog().show(supportFragmentManager, WatchTutorialDialog.WATCH_TUTORIAL_DIALOG_TAG)
-            }
+            }*/
             grantPermission.setOnClickListener {
                 permissionViewModel.startPermissionFlowIfNeeded((this@PermissionActivity)) {
                     PreferenceUtils.runningAppScreenFirstTime = false

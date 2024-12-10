@@ -196,24 +196,28 @@ open class MainMenu(
     }
 
     private fun showClickDialog(action: Action.Click) {
-        overlayManager.navigateTo(context, ClickPointDialog(action, onConfirmClicked = {
-            viewModel.updateAction(it)
-        }, onDismissClicked = {}))
+        lifecycleScope.launch {
+            overlayManager.navigateTo(context, ClickPointDialog(action,
+                onConfirmClicked = { viewModel.updateAction(it) }, onDismissClicked = {})
+            )
+        }
     }
 
     private fun showSwipeDialog(action: Action.Swipe) {
-        overlayManager.navigateTo(
-            context, SwipePointDialog(action,
-                onConfirmClicked = {
-                    viewModel.updateAction(it)
-                },
-                onDismissClicked = {}
+        lifecycleScope.launch {
+            overlayManager.navigateTo(
+                context, SwipePointDialog(action,
+                    onConfirmClicked = {
+                        viewModel.updateAction(it)
+                    },
+                    onDismissClicked = {}
+                )
             )
-        )
+        }
     }
 
     private fun updatePlayPauseButtonEnabledState(canStartDetection: Boolean) {
-        setMenuItemViewEnabled(viewBinding.btnPlay, canStartDetection)
+        setMenuItemViewEnabled(view = viewBinding.btnPlay, enabled = canStartDetection)
     }
 
     private fun updateMenuPlayingState(isPlaying: Boolean) {

@@ -27,4 +27,12 @@ scenario</string>
     <string name="input_field_label_pause_duration">Durata della pausa</string>
     <string name="input_field_label_scenario_name">Nome dello scenario</string>
     <string name="input_field_label_swipe_duration">Durata dello swipe (ms)</string>
-    <string name="input_field_error_required">Obbligatorio</string></resources>
+    <string name="input_field_error_required">Obbligatorio</string>
+    <string name="never_stop">Non fermarti mai</string>
+    <string name="apply">Applica</string>
+    <string name="new_action">Nuova azione</string>
+    <string name="anti_detection">Anti rilevamento</string>
+    <string name="discard">Scarta</string>
+    <string name="save">Salva</string>
+    <string name="save_dialog_desc">Vuoi salvare le modifiche o scartarle?</string>
+</resources>

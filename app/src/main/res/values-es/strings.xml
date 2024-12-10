@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">OfficeAutoClicker</string>
     <string name="title_home">Inicio</string>
     <string name="title_script">Script</string>
     <string name="title_setting">Configuración</string>
@@ -123,5 +122,10 @@ servicio” en configuración\n2. Busca “Auto Clicker”\n3. Activa el permiso
     <string name="troubleshooting">Solución de problemas</string>
     <string name="allow_permission">Permitir Permiso</string>
     <string name="troubleshoot_desc">Permiso fundamental para la aplicación de clics automáticos. Debes tener el permiso necesario.</string>
-
+    <string name="script_name">Nombre del script</string>
+    <string name="mode_selection">Selección de modo</string>
+    <string name="fix_it_now">Reparar ahora</string>
+    <string name="permission_needed">¡Permiso necesario!</string>
+    <string name="permission_needed_desc">Para que Auto Clicker siga funcionando, por favor vuelve a activar el permiso de accesibilidad</string>
+    <string name="app_name">Auto Clicker</string>
 </resources>

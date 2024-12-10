@@ -49,108 +49,98 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="@dimen/padding_16_dp" />
 
-    <com.google.android.material.card.MaterialCardView
+    <LinearLayout
         android:id="@+id/accessibilityPermission"
-        style="?materialCardViewFilledStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/white"
-        app:cardElevation="0.5dp"
+        android:layout_marginTop="@dimen/margin_vertical_extra_large"
+        android:background="@drawable/bg_round_16_dp"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_16_dp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/emptyView">
 
-        <LinearLayout
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_accessibility" />
+
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/padding_16_dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/accessibility_permission"
+            android:textAppearance="@style/ContainerHeading" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_accessibility" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/accessibility_permission_desc"
+            android:textAppearance="@style/Description" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/accessibility_permission"
-                android:textAppearance="@style/ContainerHeading" />
+    </LinearLayout>
 
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/accessibility_permission_desc"
-                android:textAppearance="@style/Description" />
-
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
+    <LinearLayout
         android:id="@+id/whyNeedsPermission"
-        style="?materialCardViewFilledStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_12_dp"
-        android:backgroundTint="@color/white"
-        app:cardElevation="0.5dp"
+        android:layout_marginTop="@dimen/margin_vertical_large"
+        android:background="@drawable/bg_round_16_dp"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_16_dp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/accessibilityPermission">
 
-        <LinearLayout
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_how_to_use" />
+
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/padding_16_dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/why_permission_desc"
+            android:textAppearance="@style/ContainerHeading" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_how_to_use" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/permission_use_desc"
+            android:textAppearance="@style/Description" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/why_permission_desc"
-                android:textAppearance="@style/ContainerHeading" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/simulating_click_point"
+            android:textAppearance="@style/Tagline" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/permission_use_desc"
-                android:textAppearance="@style/Description" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/simulating_click_point"
-                android:textAppearance="@style/Tagline" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/simulating_swipe_point"
-                android:textAppearance="@style/Tagline" />
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/simulating_swipe_point"
+            android:textAppearance="@style/Tagline" />
+    </LinearLayout>
 
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textDataCollect"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_vertical_large"
-        android:text="Do we collect data? No."
-        android:textAppearance="@style/DescriptionHeading"
+        android:background="@drawable/bg_round_16_dp"
+        android:drawableStart="@drawable/ic_protect"
+        android:drawablePadding="@dimen/padding_8_dp"
+        android:padding="@dimen/margin_horizontal_default"
+        android:text="We don't collect your data."
+        android:textAppearance="@style/ContainerHeading"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@id/whyNeedsPermission" />
 

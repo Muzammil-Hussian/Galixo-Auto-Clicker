@@ -27,4 +27,12 @@ scenariusz</string>
     <string name="input_field_label_pause_duration">Czas trwania pauzy</string>
     <string name="input_field_label_scenario_name">Nazwa scenariusza</string>
     <string name="input_field_label_swipe_duration">Czas trwania przesunięcia (ms)</string>
-    <string name="input_field_error_required">Wymagane</string></resources>
+    <string name="input_field_error_required">Wymagane</string>
+
+    <string name="never_stop">Nigdy się nie zatrzymuj</string>
+    <string name="apply">Zastosuj</string>
+    <string name="new_action">Nowe działanie</string>
+    <string name="anti_detection">Anti wykrywanie</string>
+    <string name="discard">Odrzuć</string>
+    <string name="save">Zapisz</string>
+    <string name="save_dialog_desc">Chcesz zapisać zmiany, czy je odrzucić?</string></resources>

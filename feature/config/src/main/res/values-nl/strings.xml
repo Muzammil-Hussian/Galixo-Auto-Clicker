@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">Acties</string>
+    <string name="menu_item_title_config">Instellingen</string>
+
+    <string name="content_desc_show_actions">Toon of verberg de gemaakte acties</string>
+    <string name="content_desc_open_action_list">Open de lijst met acties</string>
+
+    <string name="never_stop">Nooit stoppen</string>
+    <string name="action_point">Actiepunt</string>
+    <string name="create_new">Maak nieuw</string>
+    <string name="import_script">Script importeren</string>
+    <string name="page_load">Laden</string>
+    <string name="page_save">Opslaan</string>
+    <string name="stop_after">Stop na</string></resources>

@@ -25,4 +25,11 @@ chặn bất thường)]]></string>
     <string name="input_field_label_scenario_name">Tên kịch bản</string>
     <string name="input_field_label_swipe_duration">Thời gian vuốt (ms)</string>
     <string name="input_field_error_required">Bắt buộc</string>
+    <string name="never_stop">Không bao giờ dừng lại</string>
+    <string name="apply">Áp dụng</string>
+    <string name="new_action">Hành động mới</string>
+    <string name="anti_detection">Chống phát hiện</string>
+    <string name="discard">Bỏ qua</string>
+    <string name="save">Lưu</string>
+    <string name="save_dialog_desc">Bạn có muốn lưu thay đổi của mình hay bỏ qua chúng?</string>
 </resources>

@@ -1,4 +1,3 @@
-
 plugins {
     alias(libs.plugins.galixo.androidLibrary)
     alias(libs.plugins.galixo.androidRoom)
@@ -19,4 +18,5 @@ android {
 
 dependencies {
     implementation(project(":core:common:base"))
+    implementation(project(":core:common:ui"))
 }

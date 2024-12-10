@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">OfficeAutoClicker</string>
     <string name="title_home">Hem</string>
     <string name="title_script">Skript</string>
     <string name="title_setting">Inställningar</string>
@@ -118,5 +117,10 @@ positioner</string>
     <string name="troubleshooting">Felsökning</string>
     <string name="allow_permission">Tillåt Behörighet</string>
     <string name="troubleshoot_desc">Grundläggande behörighet för automatisk klick-app. Du måste ha den nödvändiga behörigheten.</string>
-
+    <string name="script_name">Skriptets namn</string>
+    <string name="mode_selection">Val av läge</string>
+    <string name="fix_it_now">Fixa nu</string>
+    <string name="permission_needed">Behörighet krävs!</string>
+    <string name="permission_needed_desc">För att hålla Auto Clicker igång, vänligen slå på tillgångstillståndet igen</string>
+    <string name="app_name">Auto Clicker</string>
 </resources>

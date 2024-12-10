@@ -27,4 +27,12 @@
     <string name="input_field_label_pause_duration">一時停止の持続時間</string>
     <string name="input_field_label_scenario_name">シナリオ名</string>
     <string name="input_field_label_swipe_duration">スワイプ時間 (ミリ秒)</string>
-    <string name="input_field_error_required">必須</string></resources>
+    <string name="input_field_error_required">必須</string>
+    <string name="never_stop">決して止まらない</string>
+    <string name="apply">適用</string>
+    <string name="new_action">新しいアクション</string>
+    <string name="anti_detection">検出防止</string>
+    <string name="discard">破棄</string>
+    <string name="save">保存</string>
+    <string name="save_dialog_desc">変更を保存しますか、それとも破棄しますか？</string>
+</resources>

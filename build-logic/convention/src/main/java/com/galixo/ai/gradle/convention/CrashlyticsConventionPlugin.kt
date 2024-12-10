@@ -19,7 +19,6 @@ class CrashlyticsConventionPlugin : Plugin<Project> {
 
         dependencies {
             implementation(platform(libs.getLibrary("google.firebase.bom")))
-            implementation(libs.getLibrary("com.google.firebase.analytics.ktx"))
             implementation(libs.getLibrary("google.firebase.crashlytics.ktx"))
         }
     }

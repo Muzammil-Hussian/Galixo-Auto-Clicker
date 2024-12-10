@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">Tindakan</string>
+    <string name="menu_item_title_config">Konfigurasi</string>
+
+    <string name="content_desc_show_actions">Tunjukkan atau sembunyikan tindakan yang dibuat</string>
+    <string name="content_desc_open_action_list">Buka senarai tindakan</string>
+
+    <string name="never_stop">Jangan berhenti</string>
+    <string name="action_point">Titik Tindakan</string>
+    <string name="create_new">Cipta baru</string>
+    <string name="import_script">Import skrip</string>
+    <string name="page_load">Muat</string>
+    <string name="page_save">Simpan</string>
+    <string name="stop_after">Henti selepas</string></resources>

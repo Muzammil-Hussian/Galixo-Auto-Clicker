@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">क्रियाएँ</string>
+    <string name="menu_item_title_config">कॉन्फ़िग</string>
+
+    <string name="content_desc_show_actions">निर्मित क्रियाएँ दिखाएँ या छिपाएँ</string>
+    <string name="content_desc_open_action_list">क्रियाओं की सूची खोलें</string>
+
+    <string name="never_stop">कभी नहीं रुकें</string>
+    <string name="action_point">क्रिया बिंदु</string>
+    <string name="create_new">नया बनाएँ</string>
+    <string name="import_script">स्क्रिप्ट आयात करें</string>
+    <string name="page_load">लोड करें</string>
+    <string name="page_save">सहेजें</string>
+    <string name="stop_after">के बाद रुकें</string></resources>

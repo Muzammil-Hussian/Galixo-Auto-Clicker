@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">ক্রিয়া</string>
+    <string name="menu_item_title_config">কনফিগ</string>
+
+    <string name="content_desc_show_actions">তৈরি করা ক্রিয়া গুলি দেখান অথবা লুকান</string>
+    <string name="content_desc_open_action_list">ক্রিয়ার তালিকা খুলুন</string>
+
+    <string name="never_stop">কখনও থামবে না</string>
+    <string name="action_point">ক্রিয়া পয়েন্ট</string>
+    <string name="create_new">নতুন তৈরি করুন</string>
+    <string name="import_script">স্ক্রিপ্ট আমদানি করুন</string>
+    <string name="page_load">লোড</string>
+    <string name="page_save">সংরক্ষণ</string>
+    <string name="stop_after">পরবর্তী থামুন</string></resources>

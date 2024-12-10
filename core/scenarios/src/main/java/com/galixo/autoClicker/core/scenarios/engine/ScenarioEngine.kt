@@ -21,7 +21,7 @@ import kotlinx.coroutines.launch
 import java.io.PrintWriter
 import javax.inject.Inject
 import javax.inject.Singleton
-import kotlin.time.Duration.Companion.minutes
+import kotlin.time.Duration.Companion.seconds
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @Singleton
@@ -108,14 +108,14 @@ class ScenarioEngine @Inject constructor(
 
         Log.d(TAG, "startScenario ${scenario.id} with ${scenario.actions.size} actions")
 
-        if (!scenario.isDurationInfinite) timeoutJob = startTimeoutJob(scenario.maxDurationMin)
+        if (!scenario.isDurationInfinite) timeoutJob = startTimeoutJob(scenario.maxDurationSec)
         executionJob = startScenarioExecutionJob(scenario)
     }
 
-    private fun startTimeoutJob(timeoutDurationMinutes: Int): Job? =
+    private fun startTimeoutJob(timeoutDurationSeconds: Int): Job? =
         processingScope?.launch {
-            Log.d(TAG, "startTimeoutJob: timeoutDurationMinutes=$timeoutDurationMinutes")
-            delay(timeoutDurationMinutes.minutes.inWholeMilliseconds)
+            Log.d(TAG, "startTimeoutJob: timeoutDurationMinutes=$timeoutDurationSeconds")
+            delay(timeoutDurationSeconds.seconds.inWholeMilliseconds)
 
             processingScope?.launch { stopScenario() }
         }

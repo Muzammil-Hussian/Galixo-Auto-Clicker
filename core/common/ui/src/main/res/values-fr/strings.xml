@@ -27,4 +27,13 @@ scénario</string>
     <string name="input_field_label_pause_duration">Durée de pause</string>
     <string name="input_field_label_scenario_name">Nom du scénario</string>
     <string name="input_field_label_swipe_duration">Durée du balayage (ms)</string>
-    <string name="input_field_error_required">Obligatoire</string></resources>
+    <string name="input_field_error_required">Obligatoire</string>
+    <string name="never_stop">Ne jamais arrêter</string>
+    <string name="apply">Appliquer</string>
+    <string name="new_action">Nouvelle action</string>
+    <string name="anti_detection">Anti-détection</string>
+    <string name="discard">Annuler</string>
+    <string name="save">Sauvegarder</string>
+    <string name="save_dialog_desc">Voulez-vous sauvegarder vos modifications ou les annuler ?</string>
+
+</resources>

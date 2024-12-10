@@ -271,7 +271,7 @@ abstract class OverlayMenu(
     protected fun setMenuItemViewEnabled(view: View, enabled: Boolean, clickable: Boolean = false) {
         view.apply {
             isEnabled = enabled || clickable
-            alpha = if (enabled) 1.0f else disabledItemAlpha
+            alpha = if (enabled) 1.0f else 0.8F
         }
     }
 

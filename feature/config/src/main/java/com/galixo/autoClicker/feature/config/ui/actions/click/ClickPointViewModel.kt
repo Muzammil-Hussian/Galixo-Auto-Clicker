@@ -39,6 +39,7 @@ class ClickPointViewModel @Inject constructor() : ViewModel() {
     fun getEditedClick(): Action.Click? = _editedClick.value
 
     fun setRepeatDelay(delayMs: Long) {
+
         _editedClick.value = _editedClick.value?.let { oldValue ->
             val newDelayMs = delayMs.toDurationMs(_selectedUnitItem.value)
             if (oldValue.repeatDelayMs == newDelayMs) return

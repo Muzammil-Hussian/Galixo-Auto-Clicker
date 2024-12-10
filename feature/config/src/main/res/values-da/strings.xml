@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">Handlinger</string>
+    <string name="menu_item_title_config">Indstillinger</string>
+
+    <string name="content_desc_show_actions">Vis eller skjul de oprettede handlinger</string>
+    <string name="content_desc_open_action_list">Åbn listen over handlinger</string>
+
+    <string name="never_stop">Stop aldrig</string>
+    <string name="action_point">Handlingspunkt</string>
+    <string name="create_new">Opret ny</string>
+    <string name="import_script">Importer script</string>
+    <string name="page_load">Indlæs</string>
+    <string name="page_save">Gem</string>
+    <string name="stop_after">Stop efter</string></resources>

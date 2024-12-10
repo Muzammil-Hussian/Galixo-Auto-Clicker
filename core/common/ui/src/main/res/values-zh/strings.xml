@@ -24,4 +24,12 @@
     <string name="input_field_label_scenario_name">场景名称</string>
     <string name="input_field_label_swipe_duration">滑动时长 (毫秒)</string>
     <string name="input_field_error_required">必填</string>
+
+    <string name="never_stop">永不停止</string>
+    <string name="apply">应用</string>
+    <string name="new_action">新动作</string>
+    <string name="anti_detection">反检测</string>
+    <string name="discard">放弃</string>
+    <string name="save">保存</string>
+    <string name="save_dialog_desc">您想保存更改还是放弃它们？</string>
 </resources>

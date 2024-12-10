@@ -54,11 +54,13 @@ class ScenarioConfigDialog(
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 launch { viewModel.isValid.collect(::updateDoneButtonState) }
-
                 launch { viewModel.intervalDuration.collect(::updateIntervalDuration) }
                 launch { viewModel.selectedIntervalTimeUnit.collect(::updateIntervalDurationTimeUnit) }
                 launch { viewModel.swipeDuration.collect(::updateSwipeDuration) }
                 launch { viewModel.selectedSwipeDurationTimeUnit.collect(::updateSwipeDurationTimeUnit) }
+
+                launch { viewModel.repeatMode.collect(viewBinding.repeatMode.textField::setText) }
+
             }
         }
     }
@@ -119,7 +121,6 @@ class ScenarioConfigDialog(
 
         viewBinding.repeatMode.textField.apply {
             filters = arrayOf<InputFilter>(InputFilter.LengthFilter(30))
-            setText(R.string.never_stop)
 
             setDebouncedOnClickListener {
                 overlayManager.navigateTo(
@@ -159,7 +160,6 @@ class ScenarioConfigDialog(
     private fun updateSwipeDuration(duration: String) = viewBinding.swipeDuration.fieldText.setText(duration, InputType.TYPE_CLASS_NUMBER)
     private fun updateSwipeDurationTimeUnit(item: DropdownItem) = viewBinding.swipeDuration.timeUnitField.setSelectedItem(item = item)
 
-
     private fun DialogScenarioConfigBinding.setupActionButtons() {
         with(actionButtons) {
             actionCancel.apply {
@@ -193,6 +193,5 @@ class ScenarioConfigDialog(
 }
 
 private const val MAX_LENGTH = 6
-
 
 enum class ButtonAction { CANCEL, DONE }

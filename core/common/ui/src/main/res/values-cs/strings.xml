@@ -26,4 +26,12 @@ prvku</string>
     <string name="input_field_label_scenario_name">Název scénáře</string>
     <string name="input_field_label_swipe_duration">Doba přejetí (ms)</string>
     <string name="input_field_error_required">Povinné</string>
+
+    <string name="never_stop">Nikdy nezkončit</string>
+    <string name="apply">Použít</string>
+    <string name="new_action">Nová akce</string>
+    <string name="anti_detection">Proti detekci</string>
+    <string name="discard">Zahodit</string>
+    <string name="save">Uložit</string>
+    <string name="save_dialog_desc">Chcete uložit změny nebo je zahodit?</string>
 </resources>

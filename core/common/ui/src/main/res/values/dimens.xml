@@ -50,7 +50,7 @@
 
     <dimen name="bottom_sheet_min_height">600dp</dimen>
 
-    <dimen name="overlay_menu_btn_size">32dp</dimen>
+    <dimen name="overlay_menu_btn_size">24dp</dimen>
 
     <dimen name="overlay_position_selector_thickness">6dp</dimen>
     <dimen name="overlay_position_selector_radius">20dp</dimen>

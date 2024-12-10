@@ -83,7 +83,7 @@ class ScenarioCreationViewModel @Inject constructor(
             } else emptyList(),
             repeatCount = 1,
             isRepeatInfinite = true,
-            maxDurationMin = 1,
+            maxDurationSec = 30,
             isDurationInfinite = true,
             randomize = context.getDefaultRandomize(),
             scenarioMode = scenarioMode

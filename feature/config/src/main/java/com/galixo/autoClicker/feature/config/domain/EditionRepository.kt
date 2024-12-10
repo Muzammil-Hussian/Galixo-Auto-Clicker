@@ -12,7 +12,7 @@ import javax.inject.Singleton
 
 @Singleton
 class EditionRepository @Inject constructor(
-    val mainRepository: IMainRepository,
+    private val mainRepository: IMainRepository,
 ) {
 
     private val _editedScenario: MutableStateFlow<Scenario?> = MutableStateFlow(null)

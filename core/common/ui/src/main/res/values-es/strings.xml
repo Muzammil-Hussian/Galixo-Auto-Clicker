@@ -26,4 +26,12 @@ existente</string>
     <string name="input_field_label_pause_duration">Duración de la pausa</string>
     <string name="input_field_label_scenario_name">Nombre del escenario</string>
     <string name="input_field_label_swipe_duration">Duración del deslizamiento (ms)</string>
-    <string name="input_field_error_required">Requerido</string></resources>
+    <string name="input_field_error_required">Requerido</string>
+    <string name="never_stop">Nunca detenerse</string>
+    <string name="apply">Aplicar</string>
+    <string name="new_action">Nueva acción</string>
+    <string name="anti_detection">Antidetección</string>
+    <string name="discard">Descartar</string>
+    <string name="save">Guardar</string>
+    <string name="save_dialog_desc">¿Quieres guardar tus cambios o descartarlos?</string>
+</resources>

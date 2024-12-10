@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.PixelFormat
 import android.graphics.Point
+import android.os.Handler
+import android.os.Looper
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -29,6 +31,9 @@ class ClickPointView(
     private lateinit var binding: ClickPointViewBinding
 
     private val position = clickDescription.position
+    private val postHandler = Handler(Looper.getMainLooper())
+    private var isClickAllowed = true
+    private val debounceDuration = 600L
 
     private val params = LayoutParams(
         LayoutParams.WRAP_CONTENT,
@@ -48,7 +53,6 @@ class ClickPointView(
     init {
         setupTargetView()
     }
-
 
     @SuppressLint("ClickableViewAccessibility")
     private fun setupTargetView() {
@@ -97,7 +101,11 @@ class ClickPointView(
                             val distanceMoved = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble())
 
                             if (distanceMoved < TAP_THRESHOLD) {
-                                onClickView()
+                                if (isClickAllowed) {
+                                    isClickAllowed = false
+                                    postHandler.postDelayed({ isClickAllowed = true }, debounceDuration)
+                                    onClickView()
+                                }
                             } else if (moved) {
                                 onViewMoved(position)
                                 clickDescription.position = position
@@ -113,13 +121,8 @@ class ClickPointView(
         windowManager.addView(binding.root, params)
     }
 
-
     fun toggleTouch(isTouchable: Boolean) {
-        params.flags =  if (isTouchable) {
-            params.flags and LayoutParams.FLAG_NOT_TOUCHABLE.inv()
-        } else {
-            params.flags or LayoutParams.FLAG_NOT_TOUCHABLE
-        }
+        params.flags = (if (isTouchable) params.flags and LayoutParams.FLAG_NOT_TOUCHABLE.inv() else params.flags or LayoutParams.FLAG_NOT_TOUCHABLE)
         windowManager.updateViewLayout(binding.root, params)
     }
 

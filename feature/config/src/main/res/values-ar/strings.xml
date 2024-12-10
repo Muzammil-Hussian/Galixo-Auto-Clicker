@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_title_actions">الإجراءات</string>
+    <string name="menu_item_title_config">الإعدادات</string>
+
+    <string name="content_desc_show_actions">عرض أو إخفاء الإجراءات التي تم إنشاؤها</string>
+    <string name="content_desc_open_action_list">فتح قائمة الإجراءات</string>
+
+    <string name="never_stop">لا تتوقف أبداً</string>
+    <string name="action_point">نقطة إجراء</string>
+    <string name="create_new">إنشاء جديد</string>
+    <string name="import_script">استيراد السكربت</string>
+    <string name="page_load">تحميل</string>
+    <string name="page_save">حفظ</string>
+    <string name="stop_after">التوقف بعد</string></resources>
