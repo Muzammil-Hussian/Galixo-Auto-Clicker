@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><!-- dialog_theme.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Loading text when fetching data -->
+    <TextView
+        android:id="@+id/loadingTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Loading..."
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <!-- Radio Group for Theme Brand -->
+    <RadioGroup
+        android:id="@+id/themeBrandRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp">
+        <!-- Add radio buttons for theme brand selection -->
+        <RadioButton
+            android:id="@+id/themeBrandDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Default" />
+
+        <RadioButton
+            android:id="@+id/themeBrandDynamic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dynamic" />
+    </RadioGroup>
+
+    <!-- Radio Group for Gradient Color Preference -->
+
+    <RadioGroup
+        android:id="@+id/gradientColorRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp"
+        android:visibility="gone">
+        <!-- Add radio buttons for gradient color preference -->
+        <RadioButton
+            android:id="@+id/gradientColorYes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yes" />
+
+        <RadioButton
+            android:id="@+id/gradientColorNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No" />
+    </RadioGroup>
+
+    <!-- Radio Group for Dark Theme Preference -->
+    <RadioGroup
+        android:id="@+id/darkThemeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp">
+        <!-- Add radio buttons for dark mode selection -->
+        <RadioButton
+            android:id="@+id/darkThemeSystemDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="System default" />
+
+        <RadioButton
+            android:id="@+id/darkThemeLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Light" />
+
+        <RadioButton
+            android:id="@+id/darkThemeDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dark" />
+    </RadioGroup>
+</LinearLayout>

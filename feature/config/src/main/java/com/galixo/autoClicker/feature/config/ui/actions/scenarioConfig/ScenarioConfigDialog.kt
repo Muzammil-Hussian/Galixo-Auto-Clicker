@@ -4,13 +4,12 @@ import android.text.InputFilter
 import android.text.InputType
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.galixo.autoClicker.core.common.base.extensions.beGoneIf
 import com.galixo.autoClicker.core.common.overlays.base.viewModels
-import com.galixo.autoClicker.core.common.overlays.dialog.OverlayDialog
+import com.galixo.autoClicker.core.common.overlays.dialog.bottomSheet.OverlayDialogSheet
 import com.galixo.autoClicker.core.common.ui.bindings.dropdown.DropdownItem
 import com.galixo.autoClicker.core.common.ui.bindings.dropdown.TimeUnitDropDownItem
 import com.galixo.autoClicker.core.common.ui.bindings.dropdown.setItems
@@ -24,13 +23,14 @@ import com.galixo.autoClicker.feature.config.R
 import com.galixo.autoClicker.feature.config.databinding.DialogScenarioConfigBinding
 import com.galixo.autoClicker.feature.config.di.ConfigViewModelsEntryPoint
 import com.galixo.autoClicker.feature.config.ui.actions.repeatMode.RepeatModeDialog
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.textview.MaterialTextView
 import kotlinx.coroutines.launch
 
 class ScenarioConfigDialog(
     private val onConfigSaved: () -> Unit,
     private val onConfigDiscarded: () -> Unit,
-) : OverlayDialog(R.style.AppTheme) {
+) : OverlayDialogSheet(R.style.AppTheme) {
 
     /** View model for the container dialog. */
     private val viewModel: ScenarioConfigViewModel by viewModels(
@@ -45,7 +45,7 @@ class ScenarioConfigDialog(
         return viewBinding.root
     }
 
-    override fun onDialogCreated(dialog: AlertDialog) {
+    override fun onDialogCreated(dialog: BottomSheetDialog) {
         setupViews()
         setupObservers()
     }
@@ -58,7 +58,6 @@ class ScenarioConfigDialog(
                 launch { viewModel.selectedIntervalTimeUnit.collect(::updateIntervalDurationTimeUnit) }
                 launch { viewModel.swipeDuration.collect(::updateSwipeDuration) }
                 launch { viewModel.selectedSwipeDurationTimeUnit.collect(::updateSwipeDurationTimeUnit) }
-
                 launch { viewModel.repeatMode.collect(viewBinding.repeatMode.textField::setText) }
 
             }
@@ -85,6 +84,7 @@ class ScenarioConfigDialog(
                         val valueToSave = enteredValue?.toDurationMs(viewModel.getSelectedIntervalUnitTime()) ?: 100L
                         viewModel.saveIntervalValue((if (valueToSave >= 100) valueToSave else 100))
                     }
+                    hideSoftInputOnFocusLoss(textField)
                 }
                 timeUnitField.setItems(items = timeUnitDropdownItems, onItemSelected = { selectedUnit ->
                     viewModel.setSelectedIntervalTimeUnit(selectedUnit)
@@ -109,6 +109,7 @@ class ScenarioConfigDialog(
                         val valueToSave = enteredValue?.toDurationMs(viewModel.getSelectedSwipeDurationTimeUnit()) ?: 100L
                         viewModel.saveSwipeDurationValue(if (valueToSave >= 300) valueToSave else 300)
                     }
+                    hideSoftInputOnFocusLoss(textField)
                 }
                 timeUnitField.setItems(items = timeUnitDropdownItems, onItemSelected = { selectedUnit ->
                     viewModel.setSwipeDurationTimeUnit(selectedUnit)

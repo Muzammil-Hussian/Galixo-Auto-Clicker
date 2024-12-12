@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <color name="white">#0D0D0D</color>
+
+    <color name="headingTextColor">#F2F2F2</color>
+    <color name="normalTextColor">#B2B2B2</color>
+
+    <color name="green">#C4F2CF</color>
+
+    <color name="card_background_color">#202020</color>
+    <color name="card_stroke_color">#202020</color>
+
+</resources>

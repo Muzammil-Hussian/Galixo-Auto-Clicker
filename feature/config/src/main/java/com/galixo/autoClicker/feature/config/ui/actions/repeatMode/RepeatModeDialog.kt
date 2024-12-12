@@ -2,12 +2,11 @@ package com.galixo.autoClicker.feature.config.ui.actions.repeatMode
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.galixo.autoClicker.core.common.overlays.base.viewModels
-import com.galixo.autoClicker.core.common.overlays.dialog.OverlayDialog
+import com.galixo.autoClicker.core.common.overlays.dialog.bottomSheet.OverlayDialogSheet
 import com.galixo.autoClicker.core.common.ui.bindings.fields.setHelperText
 import com.galixo.autoClicker.core.common.ui.bindings.fields.setOnTextChangedListener
 import com.galixo.autoClicker.core.common.ui.bindings.fields.setText
@@ -20,6 +19,7 @@ import com.galixo.autoClicker.feature.config.R
 import com.galixo.autoClicker.feature.config.di.ConfigViewModelsEntryPoint
 import com.galixo.autoClicker.feature.config.ui.actions.scenarioConfig.ButtonAction
 import com.galixo.autoClicker.feature.config.ui.actions.scenarioConfig.ScenarioConfigViewModel
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -27,7 +27,7 @@ import kotlinx.coroutines.launch
 class RepeatModeDialog(
     private val onConfigDiscarded: () -> Unit,
     private val onConfigSaved: () -> Unit,
-) : OverlayDialog(R.style.AppTheme) {
+) : OverlayDialogSheet(R.style.AppTheme) {
 
     private val viewModel: ScenarioConfigViewModel by viewModels(
         entryPoint = ConfigViewModelsEntryPoint::class.java,
@@ -81,7 +81,7 @@ class RepeatModeDialog(
         return viewBinding.root
     }
 
-    override fun onDialogCreated(dialog: AlertDialog) {
+    override fun onDialogCreated(dialog: BottomSheetDialog) {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.state.collectLatest {

@@ -3,13 +3,12 @@ package com.galixo.autoClicker.feature.config.ui.actions.click
 import android.text.InputType
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.galixo.autoClicker.core.common.base.extensions.beGoneIf
 import com.galixo.autoClicker.core.common.overlays.base.viewModels
-import com.galixo.autoClicker.core.common.overlays.dialog.OverlayDialog
+import com.galixo.autoClicker.core.common.overlays.dialog.bottomSheet.OverlayDialogSheet
 import com.galixo.autoClicker.core.common.ui.R
 import com.galixo.autoClicker.core.common.ui.bindings.dropdown.TimeUnitDropDownItem
 import com.galixo.autoClicker.core.common.ui.bindings.dropdown.setItems
@@ -24,6 +23,7 @@ import com.galixo.autoClicker.core.scenarios.domain.model.REPEAT_DELAY_MAX_MS
 import com.galixo.autoClicker.core.scenarios.domain.model.REPEAT_DELAY_MIN_MS
 import com.galixo.autoClicker.feature.config.databinding.DialogConfigClickActionBinding
 import com.galixo.autoClicker.feature.config.di.ConfigViewModelsEntryPoint
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.coroutines.launch
 import kotlin.time.Duration.Companion.hours
 import kotlin.time.Duration.Companion.minutes
@@ -33,7 +33,7 @@ class ClickPointDialog(
     val click: Action.Click,
     private val onConfirmClicked: (Action.Click) -> Unit,
     private val onDismissClicked: () -> Unit,
-) : OverlayDialog(R.style.AppTheme) {
+) : OverlayDialogSheet(R.style.AppTheme) {
 
     private val viewModel: ClickPointViewModel by viewModels(
         entryPoint = ConfigViewModelsEntryPoint::class.java,
@@ -61,6 +61,7 @@ class ClickPointDialog(
                         updateHelperText(isValid, viewModel.getTimeUnit())
                         updateSaveAction(isValid)
                     }
+                    hideSoftInputOnFocusLoss(textField)
                 }
 
                 timeUnitField.setItems(items = timeUnitDropdownItems, onItemSelected = { selectedUnit ->
@@ -89,7 +90,7 @@ class ClickPointDialog(
         return viewBinding.root
     }
 
-    override fun onDialogCreated(dialog: AlertDialog) {
+    override fun onDialogCreated(dialog: BottomSheetDialog) {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 launch { viewModel.repeatDelay.collect(::updateClickRepeatDelay) }

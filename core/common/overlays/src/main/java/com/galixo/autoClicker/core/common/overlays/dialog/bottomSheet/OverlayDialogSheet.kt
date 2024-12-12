@@ -1,4 +1,4 @@
-package com.galixo.autoClicker.core.common.overlays.dialog
+package com.galixo.autoClicker.core.common.overlays.dialog.bottomSheet
 
 import android.view.KeyEvent
 import android.view.MotionEvent
@@ -8,28 +8,27 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import androidx.annotation.CallSuper
 import androidx.annotation.StyleRes
-import androidx.appcompat.app.AlertDialog
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.galixo.autoClicker.core.common.base.addDumpTabulationLvl
 import com.galixo.autoClicker.core.common.base.extensions.WindowManagerCompat
-import com.galixo.autoClicker.core.common.overlays.R
 import com.galixo.autoClicker.core.common.overlays.base.BaseOverlay
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.io.PrintWriter
 
 /**
  * Controller for a dialog opened from a service as an overlay.
  *
- * This class ensures that all dialogs opened from a service will have the same behavior. It provides basic lifecycle
+ * This class ensure that all dialogs opened from a service will have the same behaviour. It provides basic lifecycle
  * alike methods to ease the view initialization/cleaning.
  */
-abstract class OverlayDialog(@StyleRes theme: Int? = null) :
-    BaseOverlay(theme, recreateOnRotation = true) {
+abstract class OverlayDialogSheet(@StyleRes theme: Int? = null) : BaseOverlay(theme, recreateOnRotation = true) {
 
-    /** The Android InputMethodManager, for ensuring the keyboard dismiss on dialog dismiss. */
+    /** The Android InputMethodManger, for ensuring the keyboard dismiss on dialog dismiss. */
     private lateinit var inputMethodManager: InputMethodManager
 
     /** Touch listener hiding the software keyboard and propagating the touch event normally. */
-    private val hideSoftInputTouchListener = { view: View, _: MotionEvent ->
+    protected val hideSoftInputTouchListener = { view: View, _: MotionEvent ->
         hideSoftInput()
         view.performClick()
     }
@@ -41,51 +40,63 @@ abstract class OverlayDialog(@StyleRes theme: Int? = null) :
      * The dialog currently displayed by this controller.
      * Null until [onDialogCreated] is called, or if it has been dismissed.
      */
-    protected var dialog: AlertDialog? = null
+    protected var dialog: BottomSheetDialog? = null
         private set
 
+    /**
+     * The coordinator layout of the dialog.
+     * Null until [onDialogCreated] is called, or if the dialog has been dismissed.
+     */
+    protected var dialogCoordinatorLayout: CoordinatorLayout? = null
+        private set
 
     /**
      * Creates the dialog shown by this controller.
      * Note that the cancelable value and the dismiss listener will be overridden with internal values once, so any
      * values for them defined here will not be kept.
      *
-     * @return the view for the dialog to be created.
+     * @return the builder for the dialog to be created.
      */
     protected abstract fun onCreateView(): ViewGroup
 
     /**
      * Setup the dialog view.
-     * Called once the dialog is created and first shown, it allows the implementation to initialize the content views.
+     * Called once the dialog is created and first show, it allows the implementation to initialize the content views.
      *
      * @param dialog the newly created dialog.
      */
-    protected abstract fun onDialogCreated(dialog: AlertDialog)
+    protected abstract fun onDialogCreated(dialog: BottomSheetDialog)
 
     final override fun onCreate() {
         inputMethodManager = context.getSystemService(InputMethodManager::class.java)
 
-        val view = onCreateView()
+        dialog = BottomSheetDialog(context).apply {
+            val view = onCreateView()
 
-        // Create a Material Alert Dialog with rounded corners
-        dialog = MaterialAlertDialogBuilder(context, R.style.MaterialAlertDialog_Rounded)
-            .setView(view)
-            .setCancelable(false)
-            .setOnKeyListener { _, keyCode, event ->
+            setContentView(view)
+            setCancelable(false)
+            setOnKeyListener { _, keyCode, event ->
                 if (keyCode == KeyEvent.KEYCODE_BACK && event.action == KeyEvent.ACTION_UP) {
-                    this@OverlayDialog.back()
+                    this@OverlayDialogSheet.back()
                     true
                 } else {
                     false
                 }
             }
-            .create()
+            create()
 
-        // Set additional properties for the dialog's window
-        dialog?.window?.apply {
-            setType(WindowManagerCompat.TYPE_COMPAT_OVERLAY)
-            setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
-            decorView.setOnTouchListener(hideSoftInputTouchListener)
+            window?.apply {
+                setType(WindowManagerCompat.TYPE_COMPAT_OVERLAY)
+                setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+                decorView.setOnTouchListener(hideSoftInputTouchListener)
+            }
+
+            dialogCoordinatorLayout = (view.parent.parent as CoordinatorLayout)
+
+            behavior.apply {
+                state = BottomSheetBehavior.STATE_EXPANDED
+                isDraggable = false
+            }
         }
 
         onDialogCreated(dialog!!)
@@ -120,7 +131,7 @@ abstract class OverlayDialog(@StyleRes theme: Int? = null) :
         dialog = null
     }
 
-    /** Hide automatically the software keyboard when the provided view loses focus. */
+    /** Hide automatically the software keyboard when the provided view lose the focus. */
     fun hideSoftInputOnFocusLoss(view: View) {
         view.setOnFocusChangeListener { v, hasFocus ->
             if (view.id == v.id && !hasFocus) {

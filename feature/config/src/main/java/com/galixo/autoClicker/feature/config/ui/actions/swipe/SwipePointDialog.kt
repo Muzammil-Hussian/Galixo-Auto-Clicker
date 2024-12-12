@@ -3,14 +3,13 @@ package com.galixo.autoClicker.feature.config.ui.actions.swipe
 import android.text.InputType
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.galixo.autoClicker.core.common.base.GESTURE_DURATION_MAX_VALUE
 import com.galixo.autoClicker.core.common.base.extensions.beGoneIf
 import com.galixo.autoClicker.core.common.overlays.base.viewModels
-import com.galixo.autoClicker.core.common.overlays.dialog.OverlayDialog
+import com.galixo.autoClicker.core.common.overlays.dialog.bottomSheet.OverlayDialogSheet
 import com.galixo.autoClicker.core.common.ui.bindings.dropdown.TimeUnitDropDownItem
 import com.galixo.autoClicker.core.common.ui.bindings.dropdown.setItems
 import com.galixo.autoClicker.core.common.ui.bindings.dropdown.setSelectedItem
@@ -25,6 +24,7 @@ import com.galixo.autoClicker.core.scenarios.domain.model.REPEAT_DELAY_MIN_MS
 import com.galixo.autoClicker.feature.config.R
 import com.galixo.autoClicker.feature.config.databinding.DialogConfigSwipeActionBinding
 import com.galixo.autoClicker.feature.config.di.ConfigViewModelsEntryPoint
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.textview.MaterialTextView
 import kotlinx.coroutines.launch
 import kotlin.time.Duration.Companion.hours
@@ -35,7 +35,7 @@ class SwipePointDialog(
     private val swipeAction: Action.Swipe,
     private val onConfirmClicked: (Action.Swipe) -> Unit,
     private val onDismissClicked: () -> Unit,
-) : OverlayDialog(R.style.AppTheme) {
+) : OverlayDialogSheet(R.style.AppTheme) {
 
     private val viewModel: SwipePointViewModel by viewModels(
         entryPoint = ConfigViewModelsEntryPoint::class.java,
@@ -64,6 +64,7 @@ class SwipePointDialog(
                         updateHelperText(helperText, isValid, viewModel.getIntervalUnit())
                         updateSaveAction(isValid)
                     }
+                    hideSoftInputOnFocusLoss(textField)
 
                     timeUnitField.setItems(items = timeUnitDropdownItems, onItemSelected = { selectedUnit ->
                         viewModel.setIntervalUnit(selectedUnit)
@@ -88,6 +89,8 @@ class SwipePointDialog(
                         updateHelperText(helperText, isValid, viewModel.getSwipeDurationUnit())
                         updateSaveAction(isValid)
                     }
+                    hideSoftInputOnFocusLoss(textField)
+
 
                     timeUnitField.setItems(items = timeUnitDropdownItems, onItemSelected = { selectedUnit ->
                         viewModel.setSwipeDurationUnit(selectedUnit)
@@ -107,7 +110,7 @@ class SwipePointDialog(
         return viewBinding.root
     }
 
-    override fun onDialogCreated(dialog: AlertDialog) {
+    override fun onDialogCreated(dialog: BottomSheetDialog) {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 launch { viewModel.repeatDelay.collect(::updateRepeatInterval) }

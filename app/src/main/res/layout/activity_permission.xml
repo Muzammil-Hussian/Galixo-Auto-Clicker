@@ -166,7 +166,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/padding_16_dp"
         android:backgroundTint="@color/primaryColor"
+        android:minHeight="51dp"
         android:text="@string/grant_permission"
+        android:textAppearance="@style/ButtonHeading"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart" />

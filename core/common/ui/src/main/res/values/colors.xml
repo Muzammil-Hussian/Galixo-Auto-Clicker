@@ -8,14 +8,13 @@
     <color name="textHint">#88FFFFFF</color>
     <color name="listBackground">#EAEAEA</color>
 
-    <color name="overlayMenuButtons">#FFFFFF</color>
     <color name="overlayViewPrimary">#7159FF</color>
     <color name="overlayViewPrimaryBackground">#1F7159FF</color>
     <color name="overlayGestureRecorder">#FFF00006</color>
 
     <color name="iconColor">@color/md_theme_light_onPrimaryContainer</color>
 
-    <!-- Material 3 Theme colors -->
+    <!-- Material 3 Light Theme colors -->
     <color name="seed">#7159FF</color>
     <color name="primaryColor">#7159FF</color>
     <color name="md_theme_light_primary">#7159FF</color>
@@ -48,8 +47,11 @@
     <color name="md_theme_light_surfaceTint">#7159FF</color>
     <color name="md_theme_light_outlineVariant">#C0C7CD</color>
     <color name="md_theme_light_scrim">#000000</color>
-    <color name="md_theme_dark_primary">#75D1FF</color>
-    <color name="md_theme_dark_onPrimary">#003548</color>
+
+
+    <!-- Material 3 Dark Theme colors -->
+    <color name="md_theme_dark_primary">#7159FF</color>
+    <color name="md_theme_dark_onPrimary">#FFFFFF</color>
     <color name="md_theme_dark_primaryContainer">#004D67</color>
     <color name="md_theme_dark_onPrimaryContainer">#C2E8FF</color>
     <color name="md_theme_dark_secondary">#B5C9D7</color>
@@ -64,7 +66,7 @@
     <color name="md_theme_dark_errorContainer">#93000A</color>
     <color name="md_theme_dark_onError">#690005</color>
     <color name="md_theme_dark_onErrorContainer">#FFDAD6</color>
-    <color name="md_theme_dark_background">#191C1E</color>
+    <color name="md_theme_dark_background">#0D0D0D</color>
     <color name="md_theme_dark_onBackground">#E1E2E5</color>
     <color name="md_theme_dark_surface">#191C1E</color>
     <color name="md_theme_dark_onSurface">#E1E2E5</color>
@@ -98,4 +100,9 @@
 
     <color name="edit_text_box_background">#0A7159FF</color>
     <color name="field_border_color">#BFBFC3</color>
+
+    <color name="green">#2ABF4B</color>
+
+    <color name="card_background_color">#FFFFFF</color>
+    <color name="card_stroke_color">#E2E8F0</color>
 </resources>

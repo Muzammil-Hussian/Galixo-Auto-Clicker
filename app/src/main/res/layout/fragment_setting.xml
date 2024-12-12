@@ -29,6 +29,7 @@
 
 
         <LinearLayout
+            android:id="@+id/repeatModeLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_vertical_large"
@@ -45,21 +46,36 @@
 
             <include
                 android:id="@+id/repeatMode"
-                layout="@layout/include_input_field_dropdown" />
+                layout="@layout/include_input_field_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
-        <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/switchAntiDetection"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_vertical_extra_large"
+            android:layout_marginTop="@dimen/margin_vertical_large"
             android:background="@drawable/bg_round_16_dp"
-            android:buttonTint="@color/primaryColor"
-            android:padding="@dimen/margin_horizontal_default"
-            android:text="@string/anti_detection"
-            android:textAppearance="@style/DescriptionHeading"
-            tools:checked="true" />
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/margin_horizontal_default">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/anti_detection"
+                android:textAppearance="@style/DescriptionHeading" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchAntiDetection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primaryColor"
+                tools:checked="true" />
+
+        </LinearLayout>
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
@@ -71,10 +87,61 @@
             android:textAppearance="@style/Tagline" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/languageButton"
+            android:id="@+id/appThemeButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_round_16_dp"
+            android:padding="@dimen/padding_16_dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/appThemeIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_change_language" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lblAppTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="App theme"
+                android:textAppearance="@style/DescriptionHeading"
+                app:layout_constraintBottom_toTopOf="@+id/selectedAppTheme"
+                app:layout_constraintStart_toEndOf="@+id/appThemeIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/selectedAppTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_4_dp"
+                android:text="System default"
+                android:textAppearance="@style/Tagline"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lblAppTheme"
+                app:layout_constraintTop_toBottomOf="@+id/lblAppTheme" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_forward" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/languageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
             android:background="@drawable/bg_round_16_dp"
             android:padding="@dimen/padding_16_dp">
 

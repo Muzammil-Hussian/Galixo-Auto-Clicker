@@ -32,8 +32,7 @@ class ScenarioCreationViewModel @Inject constructor(
 ) : ViewModel() {
 
 
-    private val _selectedType: MutableStateFlow<ScenarioMode> =
-        MutableStateFlow(ScenarioMode.MULTI_MODE)
+    private val _selectedType: MutableStateFlow<ScenarioMode> = MutableStateFlow(ScenarioMode.MULTI_MODE)
 
     val scenarioTypeSelectionState: Flow<ScenarioModeSelectionState> =
         _selectedType.map { selectedType ->

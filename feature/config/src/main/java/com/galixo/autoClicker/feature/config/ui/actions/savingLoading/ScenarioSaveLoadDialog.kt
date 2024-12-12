@@ -1,7 +1,6 @@
 package com.galixo.autoClicker.feature.config.ui.actions.savingLoading
 
 import android.util.Log
-import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -13,6 +12,7 @@ import com.galixo.autoClicker.feature.config.R
 import com.galixo.autoClicker.feature.config.di.ConfigViewModelsEntryPoint
 import com.galixo.autoClicker.feature.config.ui.actions.savingLoading.load.LoadActionContent
 import com.galixo.autoClicker.feature.config.ui.actions.savingLoading.save.SaveActionContent
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.tabs.TabLayout
 import kotlinx.coroutines.launch
 
@@ -43,7 +43,7 @@ class ScenarioSaveLoadDialog(
         }
     }
 
-    override fun onDialogCreated(dialog: AlertDialog) {
+    override fun onDialogCreated(dialog: BottomSheetDialog) {
         super.onDialogCreated(dialog)
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {

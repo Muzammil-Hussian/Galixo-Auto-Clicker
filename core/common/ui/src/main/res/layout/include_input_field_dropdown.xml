@@ -24,6 +24,7 @@
         android:gravity="center"
         android:inputType="none"
         android:lines="1"
+        android:paddingStart="@dimen/padding_8_dp"
         android:textAppearance="@style/Description"
         tools:text="@string/dropdown_label_time_unit_ms" />
 

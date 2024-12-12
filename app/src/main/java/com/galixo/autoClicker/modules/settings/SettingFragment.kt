@@ -13,6 +13,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.galixo.autoClicker.R
 import com.galixo.autoClicker.core.common.base.extensions.beGoneIf
+import com.galixo.autoClicker.core.common.theme.dialog.ThemeDialogFragment
 import com.galixo.autoClicker.core.common.ui.bindings.dropdown.DropdownItem
 import com.galixo.autoClicker.core.common.ui.bindings.dropdown.TimeUnitDropDownItem
 import com.galixo.autoClicker.core.common.ui.bindings.dropdown.setItems
@@ -59,6 +60,7 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>(FragmentSettingBind
 
     private fun onClickListener() {
         binding.apply {
+            appThemeButton.setOnClickListener { ThemeDialogFragment().show(childFragmentManager, ThemeDialogFragment.TAG) }
             languageButton.setOnClickListener { LanguageDialogFragment().show(childFragmentManager, LanguageDialogFragment.LANGUAGE_DIALOG) }
             rateUs.setOnClickListener { context?.openPlayStoreApp() }
             feedback.setOnClickListener { context?.openEmailApp(R.string.galixo_ai_email) }

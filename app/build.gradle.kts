@@ -16,8 +16,8 @@ android {
 //        applicationId = "com.galixo.autoClicker"
         applicationId = "com.autoclicker.tapping.autoclick.automatictap"
 
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
 
         setProperty("archivesBaseName", "Auto Click VC_${versionCode}_VN_${versionName}")
     }
@@ -25,6 +25,16 @@ android {
         language {
             @Suppress("UnstableApiUsage")
             enableSplit = false
+        }
+    }
+    sourceSets {
+        getByName("debug") {
+            java.srcDirs("src/debug/java")
+            res.srcDirs("src/debug/res")
+        }
+        getByName("release") {
+            java.srcDirs("src/release/java")
+            res.srcDirs("src/release/res")
         }
     }
 }
@@ -58,6 +68,7 @@ dependencies {
     implementation(project(":core:common:base"))
     implementation(project(":core:common:display"))
     implementation(project(":core:common:overlays"))
+    implementation(project(":core:common:theme"))
     implementation(project(":core:common:ui"))
 
     implementation(project(":core:scenarios"))

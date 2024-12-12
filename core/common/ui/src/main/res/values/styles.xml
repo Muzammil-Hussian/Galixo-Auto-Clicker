@@ -131,6 +131,7 @@
         <item name="android:textSize">24sp</item>
         <item name="android:lineSpacingExtra">14.4sp</item>
         <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textColor">@color/headingTextColor</item>
     </style>
 
     <style name="SubHeadingStyle">
@@ -170,7 +171,7 @@
         <item name="android:textSize">12sp</item>
         <item name="android:lineSpacingExtra">2.52sp</item>
         <item name="android:letterSpacing">0.025</item>
-        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textColor">@color/normalTextColor</item>
     </style>
 
     <style name="CustomCardViewStyle" parent="@style/Widget.Material3.CardView.Elevated">

@@ -3,15 +3,15 @@ package com.galixo.autoClicker.core.common.overlays.dialog.implementation.tab
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.StyleRes
-import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Lifecycle
 import com.galixo.autoClicker.core.common.overlays.databinding.DialogBaseNavBarBinding
-import com.galixo.autoClicker.core.common.overlays.dialog.OverlayDialog
+import com.galixo.autoClicker.core.common.overlays.dialog.bottomSheet.OverlayDialogSheet
 import com.galixo.autoClicker.core.common.overlays.dialog.implementation.navBar.NavBarDialogContent
 import com.galixo.autoClicker.core.common.ui.bindings.dialogs.DialogNavigationButton
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.tabs.TabLayout
 
-abstract class TabDialog(@StyleRes theme: Int) : OverlayDialog(theme) {
+abstract class TabDialog(@StyleRes theme: Int) : OverlayDialogSheet(theme) {
 
     /** Map of tab item id to their content view. */
     private val contentMap: MutableMap<Int, NavBarDialogContent> = mutableMapOf()
@@ -56,7 +56,7 @@ abstract class TabDialog(@StyleRes theme: Int) : OverlayDialog(theme) {
         return baseViewBinding.root
     }
 
-    override fun onDialogCreated(dialog: AlertDialog) {
+    override fun onDialogCreated(dialog: BottomSheetDialog) {
         updateContentView(
             tabId = tabLayout.selectedTabPosition,
         )
@@ -91,6 +91,9 @@ abstract class TabDialog(@StyleRes theme: Int) : OverlayDialog(theme) {
             pause()
             stop()
         }
+
+        // Remove all views from the content container to avoid overlap
+        baseViewBinding.dialogContent.removeAllViews()
 
         // Get new content. If it does not exist yet, create it.
         var content = contentMap[tabId]
