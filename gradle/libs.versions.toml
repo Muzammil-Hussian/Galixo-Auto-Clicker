@@ -20,7 +20,7 @@ androidxDatastore = "1.1.1"
 androidxFragmentKtx = "1.8.5"
 androidxLifecycle = "2.8.7"
 androidxLifecycleExtension = "2.2.0"
-androidxNavigation = "2.8.4"
+androidxNavigation = "2.8.5"
 androidxRecyclerView = "1.3.2"
 androidxRoom = "2.6.1"
 androidxSplashScreen = "1.0.1"
@@ -29,13 +29,13 @@ androidxSplashScreen = "1.0.1"
 airbnbLottie = "6.5.0"
 googleMaterial = "1.12.0"
 kotlinSerializationJson = "1.6.3"
-googleDaggerHilt = "2.51"
+googleDaggerHilt = "2.53.1"
 
 # PlayStore only
-googleFirebaseBom = "33.6.0"
-googleFirebaseAnalytics = "21.2.1"
-googleFirebaseCrashlytics = "19.2.1"
-jetbrainsKotlinJvm = "1.9.0"
+googleFirebaseBom = "33.7.0"
+googleFirebaseAnalytics = "22.1.2"
+googleFirebaseCrashlytics = "19.3.0"
+jetbrainsKotlinJvm = "2.1.0"
 
 [libraries]
 #Gradle plugin will be added on build.gradle(:project)
