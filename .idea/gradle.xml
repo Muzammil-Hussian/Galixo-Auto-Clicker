@@ -33,6 +33,7 @@
             <option value="$PROJECT_DIR$/core/common/display" />
             <option value="$PROJECT_DIR$/core/common/overlays" />
             <option value="$PROJECT_DIR$/core/common/permissions" />
+            <option value="$PROJECT_DIR$/core/common/theme" />
             <option value="$PROJECT_DIR$/core/common/ui" />
             <option value="$PROJECT_DIR$/core/scenarios" />
             <option value="$PROJECT_DIR$/feature" />

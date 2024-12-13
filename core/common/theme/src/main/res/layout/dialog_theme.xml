@@ -2,10 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/margin_horizontal_default"
+    android:paddingVertical="@dimen/margin_vertical_default">
 
-    <!-- Loading text when fetching data -->
     <TextView
         android:id="@+id/loadingTextView"
         android:layout_width="match_parent"
@@ -16,71 +17,50 @@
         android:visibility="gone"
         tools:visibility="visible" />
 
-    <!-- Radio Group for Theme Brand -->
-    <RadioGroup
-        android:id="@+id/themeBrandRadioGroup"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="12dp">
-        <!-- Add radio buttons for theme brand selection -->
-        <RadioButton
-            android:id="@+id/themeBrandDefault"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Default" />
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="App theme"
+        android:textAppearance="@style/SubHeadingStyle" />
 
-        <RadioButton
-            android:id="@+id/themeBrandDynamic"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Dynamic" />
-    </RadioGroup>
-
-    <!-- Radio Group for Gradient Color Preference -->
-
-    <RadioGroup
-        android:id="@+id/gradientColorRadioGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="12dp"
-        android:visibility="gone">
-        <!-- Add radio buttons for gradient color preference -->
-        <RadioButton
-            android:id="@+id/gradientColorYes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Yes" />
-
-        <RadioButton
-            android:id="@+id/gradientColorNo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No" />
-    </RadioGroup>
-
-    <!-- Radio Group for Dark Theme Preference -->
     <RadioGroup
         android:id="@+id/darkThemeRadioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="12dp">
-        <!-- Add radio buttons for dark mode selection -->
-        <RadioButton
+        android:layout_marginVertical="@dimen/margin_vertical_extra_large">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/darkThemeSystemDefault"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="System default" />
+            android:text="System default"
+            android:textAppearance="@style/DescriptionHeading"
+            tools:checked="true" />
 
-        <RadioButton
+        <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/darkThemeLight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Light" />
+            android:text="Light"
+            android:textAppearance="@style/DescriptionHeading" />
 
-        <RadioButton
+        <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/darkThemeDark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dark" />
+            android:text="Dark"
+            android:textAppearance="@style/DescriptionHeading" />
     </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/applyThemeButton"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="Apply"
+        android:textAppearance="@style/ButtonHeading" />
 </LinearLayout>

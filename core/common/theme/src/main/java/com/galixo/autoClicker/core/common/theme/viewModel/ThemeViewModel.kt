@@ -1,11 +1,10 @@
 package com.galixo.autoClicker.core.common.theme.viewModel
 
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.galixo.autoClicker.core.common.theme.data.ThemeDataRepository
-import com.galixo.autoClicker.core.common.theme.model.UserEditableTheme
-import com.galixo.autoClicker.core.common.theme.utils.DarkThemeConfig
-import com.galixo.autoClicker.core.common.theme.utils.ThemeBrand
+import com.galixo.autoClicker.core.common.theme.utils.ThemeConfig
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.SharingStarted
@@ -23,7 +22,7 @@ class ThemeViewModel @Inject constructor(
 
     val themeUiState: StateFlow<ThemeUiState> =
         themeDataRepository
-            .userEditableTheme
+            .userThemeConfig
             .map { ThemeUiState.Success(it) }
             .stateIn(
                 scope = viewModelScope,
@@ -31,26 +30,24 @@ class ThemeViewModel @Inject constructor(
                 started = SharingStarted.WhileSubscribed(5_000),
             )
 
-    fun updateThemeBrand(themeBrand: ThemeBrand) {
-        viewModelScope.launch(Dispatchers.IO) {
-            themeDataRepository.setThemeBrand(themeBrand)
-        }
-    }
 
-    fun updateDarkThemeConfig(darkThemeConfig: DarkThemeConfig) {
+    fun updateDarkThemeConfig(darkThemeConfig: ThemeConfig) {
         viewModelScope.launch(Dispatchers.IO) {
             themeDataRepository.setDarkThemeConfig(darkThemeConfig)
         }
     }
 
-    fun updateGradientColorsPreference(useGradientColors: Boolean) {
-        viewModelScope.launch(Dispatchers.IO) {
-            themeDataRepository.setGradientColorsPreference(useGradientColors)
+    fun applyTheme(darkThemeConfig: ThemeConfig) {
+        val mode = when (darkThemeConfig) {
+            ThemeConfig.LIGHT -> AppCompatDelegate.MODE_NIGHT_NO
+            ThemeConfig.DARK -> AppCompatDelegate.MODE_NIGHT_YES
+            else -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
         }
+        AppCompatDelegate.setDefaultNightMode(mode)
     }
 }
 
 sealed interface ThemeUiState {
     data object Loading : ThemeUiState
-    data class Success(val theme: UserEditableTheme) : ThemeUiState
+    data class Success(val theme: ThemeConfig) : ThemeUiState
 }

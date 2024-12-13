@@ -113,46 +113,47 @@ class CreateSwipeView(
             drawLine()
         }
 
-    /*    with(binding) {
-            clickIndex.text = swipeDescription.priority.toString()
-            root.apply {
-                setOnTouchListener { v, event ->
-                    when (event.action) {
-                        MotionEvent.ACTION_DOWN -> {
-                            initialX = event.rawX
-                            initialY = event.rawY
-                            viewTouchEventHandler.onTouchEvent(v, event)
-                            true
-                        }
-
-                        MotionEvent.ACTION_MOVE -> {
-                            viewTouchEventHandler.onTouchEvent(v, event)
-                            true
-                        }
-
-                        MotionEvent.ACTION_UP -> {
-                            val deltaX = (event.rawX - initialX).toInt()
-                            val deltaY = (event.rawY - initialY).toInt()
-                            val distanceMoved = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble())
-
-                            if (distanceMoved < TAP_THRESHOLD) {
-                                v.performClick()
+        /*    with(binding) {
+                clickIndex.text = swipeDescription.priority.toString()
+                root.apply {
+                    setOnTouchListener { v, event ->
+                        when (event.action) {
+                            MotionEvent.ACTION_DOWN -> {
+                                initialX = event.rawX
+                                initialY = event.rawY
+                                viewTouchEventHandler.onTouchEvent(v, event)
+                                true
                             }
-                            onPositionChanged.invoke(swipeDescription)
-                            true
-                        }
 
-                        else -> false
+                            MotionEvent.ACTION_MOVE -> {
+                                viewTouchEventHandler.onTouchEvent(v, event)
+                                true
+                            }
+
+                            MotionEvent.ACTION_UP -> {
+                                val deltaX = (event.rawX - initialX).toInt()
+                                val deltaY = (event.rawY - initialY).toInt()
+                                val distanceMoved = sqrt((deltaX * deltaX + deltaY * deltaY).toDouble())
+
+                                if (distanceMoved < TAP_THRESHOLD) {
+                                    v.performClick()
+                                }
+                                onPositionChanged.invoke(swipeDescription)
+                                true
+                            }
+
+                            else -> false
+                        }
+                    }
+                    setOnClickListener {
+                        Log.d(TAG, "Clicked on $viewType")
+                        onPointClick.invoke(viewType, PointF(position.x.toFloat(), position.y.toFloat()))
                     }
                 }
-                setOnClickListener {
-                    Log.d(TAG, "Clicked on $viewType")
-                    onPointClick.invoke(viewType, PointF(position.x.toFloat(), position.y.toFloat()))
-                }
-            }
-        }*/
+            }*/
         with(binding) {
-            clickIndex.text = swipeDescription.priority.toString()
+            val indexedValue = (swipeDescription.priority + 1).toString()
+            clickIndex.text = indexedValue
             root.apply {
                 setOnTouchListener { v, event ->
                     when (event.action) {

@@ -1,7 +1,10 @@
 package com.galixo.autoClicker.core.scenarios.engine
 
 import android.accessibilityservice.GestureDescription
+import android.annotation.SuppressLint
+import android.content.res.Resources
 import android.graphics.Path
+import android.util.TypedValue
 import com.galixo.autoClicker.core.common.base.AndroidExecutor
 import com.galixo.autoClicker.core.common.base.extensions.buildSingleStroke
 import com.galixo.autoClicker.core.common.base.extensions.nextIntInOffset
@@ -22,26 +25,35 @@ internal class ActionExecutor(private val androidExecutor: AndroidExecutor) {
 
     suspend fun executeAction(action: Action, randomize: Boolean) {
         this.randomize = randomize
+        val adjustment = 20F.dpToPx().toInt()
+        val statusBarHeight = getStatusBarHeight() // Use root view dynamically
         when (action) {
-            is Action.Click -> executeClick(action)
-            is Action.Swipe -> executeSwipe(action)
+            is Action.Click -> executeClick(action, adjustment)
+            is Action.Swipe -> executeSwipe(action, adjustment, statusBarHeight)
         }
     }
 
-    private suspend fun executeClick(click: Action.Click) {
+    private suspend fun executeClick(click: Action.Click, adjustment: Int) {
         val clickGesture = GestureDescription.Builder().buildSingleStroke(
-            path = Path().apply { moveTo(click.position.x + 50, click.position.y + 50) },
+            path = Path().apply { moveTo(click.position.x + adjustment, click.position.y + adjustment) },
             durationMs = click.pressDurationMs.randomizeDurationIfNeeded(),
         )
 
         executeRepeatableGesture(clickGesture, click)
     }
 
-    private suspend fun executeSwipe(swipe: Action.Swipe) {
+    private suspend fun executeSwipe(swipe: Action.Swipe, adjustment: Int, statusBarHeight: Int) {
+
         val swipeGesture = GestureDescription.Builder().buildSingleStroke(
             path = Path().apply {
-                moveTo(swipe.fromPosition.x, swipe.fromPosition.y + 130)
-                lineTo(swipe.toPosition.x, swipe.toPosition.y + 130)
+                moveTo(
+                    swipe.fromPosition.x + adjustment,
+                    swipe.fromPosition.y + statusBarHeight + adjustment
+                )
+                lineTo(
+                    swipe.toPosition.x + adjustment,
+                    swipe.toPosition.y + statusBarHeight + adjustment
+                )
             },
             durationMs = swipe.swipeDurationMs.randomizeDurationIfNeeded(),
         )
@@ -49,6 +61,19 @@ internal class ActionExecutor(private val androidExecutor: AndroidExecutor) {
         executeRepeatableGesture(swipeGesture, swipe)
     }
 
+    @SuppressLint("InternalInsetResource", "DiscouragedApi")
+    fun getStatusBarHeight(): Int {
+        val resourceId = Resources.getSystem().getIdentifier("status_bar_height", "dimen", "android")
+        return if (resourceId > 0) Resources.getSystem().getDimensionPixelSize(resourceId) else 0
+    }
+
+    private fun Float.dpToPx(): Float {
+        return TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_DIP,
+            this,
+            Resources.getSystem().displayMetrics
+        )
+    }
 
     private suspend fun executeRepeatableGesture(gesture: GestureDescription, repeatable: Repeatable) {
         repeatable.repeat {
@@ -80,5 +105,5 @@ internal class ActionExecutor(private val androidExecutor: AndroidExecutor) {
 }
 
 
-private const val RANDOMIZATION_POSITION_MAX_OFFSET_PX = 5
-private const val RANDOMIZATION_DURATION_MAX_OFFSET_MS = 5L
+private const val RANDOMIZATION_POSITION_MAX_OFFSET_PX = 15
+private const val RANDOMIZATION_DURATION_MAX_OFFSET_MS = 15L

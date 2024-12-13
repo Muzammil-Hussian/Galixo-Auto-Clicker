@@ -3,20 +3,38 @@ package com.galixo.autoClicker.modules.base.activity
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.viewbinding.ViewBinding
+import com.galixo.autoClicker.core.common.theme.viewModel.ThemeUiState
+import com.galixo.autoClicker.core.common.theme.viewModel.ThemeViewModel
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 private const val TAG = "BaseActivity"
+
 abstract class BaseActivity<T : ViewBinding>(private val bindingFactory: (LayoutInflater) -> T) : AppCompatActivity() {
 
     protected val binding by lazy { bindingFactory(layoutInflater) }
+    private val themeViewModel: ThemeViewModel by viewModels()
     protected var includeTopPadding = false
     protected var includeBottomPadding = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Observe the theme and apply it on startup
+        lifecycleScope.launch {
+            themeViewModel.themeUiState.collectLatest { themeUiState ->
+                if (themeUiState is ThemeUiState.Success) {
+                    themeViewModel.applyTheme(themeUiState.theme)
+                }
+            }
+        }
+
         setContentView(binding.root)
         onCreated()
     }

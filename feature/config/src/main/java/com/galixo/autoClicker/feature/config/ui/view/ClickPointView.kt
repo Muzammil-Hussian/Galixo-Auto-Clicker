@@ -78,7 +78,8 @@ class ClickPointView(
         }
 
         with(binding) {
-            clickIndex.text = clickDescription.priority.toString()
+            val index = (clickDescription.priority + 1).toString()
+            clickIndex.text = index
             root.apply {
                 setOnTouchListener { v, event ->
                     when (event.action) {
